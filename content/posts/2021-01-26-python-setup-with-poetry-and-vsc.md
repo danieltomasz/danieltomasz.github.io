@@ -14,20 +14,26 @@ Still. pointing in `Visual Studio Code`  project to the right Python version is 
 
 ## Pyenv
 
-1 You could install poetry using `brew`
-```
-brew install pyenv
-```
-I prefer [Pyenv](https://github.com/pyenv/pyenv-installer) installed from github. The solution below is copied from github
-``` 
-git clone https://github.com/pyenv/pyenv.git ~/.pyenv
-```
+1. You could install poetry using `brew`
+
+    ```bash
+    brew install pyenv
+    ```
+
+  I prefer [Pyenv](https://github.com/pyenv/pyenv-installer) installed from github. The solution below is copied from github
+
+  ```bash
+  git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+  ```
+
 2. Define environment variable `PYENV_ROOT` to point to the path where pyenv repo is cloned and add `$PYENV_ROOT/bin` to your `$PATH` for access to the pyenv command-line utility.
-```
-echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
-echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
-```
-3. Add pyenv init to your shell to enable shims and autocompletion. Please make sure eval `"$(pyenv init -)"` is placed toward the end of the shell configuration file since it manipulates PATH during the initialization. Restart shell.
+   
+  ```bash
+  echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
+  echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
+  ```
+
+1. Add pyenv init to your shell to enable shims and autocompletion. Please make sure eval `"$(pyenv init -)"` is placed toward the end of the shell configuration file since it manipulates PATH during the initialization. Restart shell.
 ```
 echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.zshrc
 ```
@@ -70,3 +76,11 @@ In my case (I use venv directly in the folder of the specific project )
 "python.venvPath": "~/path/to/folder/.venv/"
 "python.pythonPath": "~/path/to/folder/.venv/bin/python"
 ```
+
+## Use Black for code formating
+
+-  editor integration
+- version control integration
+- use precommit
+
+https://dev.to/notsag/python-code-formatting-using-black-2fe1
