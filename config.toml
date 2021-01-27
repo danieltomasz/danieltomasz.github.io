@@ -1,6 +1,6 @@
 baseURL = "https://danieltomasz.github.io"
 languageCode = "en-us"
-title = "Daniel Borek site"
+title = "single oscillator"
 theme = "hermit"
 
 
