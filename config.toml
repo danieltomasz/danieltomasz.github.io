@@ -1,4 +1,4 @@
-baseURL = "https://danieltomasz.github.io/"
+baseURL = "https://danieltomasz.github.io"
 languageCode = "en-us"
 title = "Daniel Borek site"
 theme = "hermit"
