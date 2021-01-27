@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Daniel Borek site</title>
+    <title>single oscillator</title>
     <link>https://danieltomasz.github.io/</link>
-    <description>Recent content on Daniel Borek site</description>
+    <description>Recent content on single oscillator</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><atom:link href="https://danieltomasz.github.io/index.xml" rel="self" type="application/rss+xml" />
