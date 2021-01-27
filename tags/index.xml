@@ -1,46 +1,46 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Random thoughts and notes</title>
-    <link>http://danieltomasz.github.io/tags/</link>
-    <description>Recent content in Tags on Random thoughts and notes</description>
+    <title>Tags on Daniel Borek site</title>
+    <link>https://danieltomasz.github.io/tags/</link>
+    <description>Recent content in Tags on Daniel Borek site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Wed, 27 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://danieltomasz.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 27 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://danieltomasz.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>poetry</title>
-      <link>http://danieltomasz.github.io/tags/poetry/</link>
+      <link>https://danieltomasz.github.io/tags/poetry/</link>
       <pubDate>Wed, 27 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>http://danieltomasz.github.io/tags/poetry/</guid>
+      <guid>https://danieltomasz.github.io/tags/poetry/</guid>
       <description></description>
     </item>
     
     <item>
       <title>python</title>
-      <link>http://danieltomasz.github.io/tags/python/</link>
+      <link>https://danieltomasz.github.io/tags/python/</link>
       <pubDate>Wed, 27 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>http://danieltomasz.github.io/tags/python/</guid>
+      <guid>https://danieltomasz.github.io/tags/python/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Demo</title>
-      <link>http://danieltomasz.github.io/tags/demo/</link>
+      <link>https://danieltomasz.github.io/tags/demo/</link>
       <pubDate>Mon, 01 Oct 2018 16:15:09 +0800</pubDate>
       
-      <guid>http://danieltomasz.github.io/tags/demo/</guid>
+      <guid>https://danieltomasz.github.io/tags/demo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Image</title>
-      <link>http://danieltomasz.github.io/tags/image/</link>
+      <link>https://danieltomasz.github.io/tags/image/</link>
       <pubDate>Mon, 01 Oct 2018 16:15:09 +0800</pubDate>
       
-      <guid>http://danieltomasz.github.io/tags/image/</guid>
+      <guid>https://danieltomasz.github.io/tags/image/</guid>
       <description></description>
     </item>
     
