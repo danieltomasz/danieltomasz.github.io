@@ -1,0 +1,44 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Posts on single oscillator</title>
+		<link>https://danieltomasz.github.io/posts/</link>
+		<description>Recent content in Posts on single oscillator</description>
+		<generator>Hugo -- gohugo.io</generator>
+		<language>en-us</language>
+		<copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+		<lastBuildDate>Wed, 27 Jan 2021 00:00:00 +0000</lastBuildDate>
+		<atom:link href="https://danieltomasz.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+		
+		<item>
+			<title>Hugo tricks</title>
+			<link>https://danieltomasz.github.io/posts/hugo/</link>
+			<pubDate>Wed, 27 Jan 2021 00:00:00 +0000</pubDate>
+			
+			<guid>https://danieltomasz.github.io/posts/hugo/</guid>
+			<description>How to make Hugo render drafted content? Here you could find source for this advice/
+ Add option to config.toml:  title = &amp;quot;Hugo example site&amp;quot; baseurl = &amp;quot;https://www.example.com&amp;quot; buildDrafts = true Generate drafted files during the current Hugo build  hugo server --buildDrafts or
+hugo server -D To not generate draft content when building our static website, use one of the following command flags:
+hugo --buildDrafts=false hugo -D=false hugo -D=F </description>
+			<content type="html"><![CDATA[<h2 id="how-to--make-hugo-render-drafted-content">How to  make Hugo render drafted content?</h2>
+<p><a href="https://kodify.net/hugo/pages/generate-draft-content/">Here</a> you could find source for this advice/</p>
+<ol>
+<li>Add option to <code>config.toml</code>:</li>
+</ol>
+<pre><code>title = &quot;Hugo example site&quot;
+baseurl = &quot;https://www.example.com&quot;
+buildDrafts = true
+</code></pre><ol start="2">
+<li>Generate drafted files during the current Hugo build</li>
+</ol>
+<pre><code>hugo server --buildDrafts
+</code></pre><p>or</p>
+<pre><code>hugo server -D
+</code></pre><p>To not generate draft content when building our static website, use one of the following command flags:</p>
+<pre><code>hugo --buildDrafts=false
+hugo -D=false
+hugo -D=F
+</code></pre>]]></content>
+		</item>
+		
+	</channel>
+</rss>
