@@ -3,53 +3,21 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://danieltomasz.github.io/</loc>
+    <loc>https://danieltomasz.github.io/about-me/</loc>
     <lastmod>2021-01-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://danieltomasz.github.io/tags/poetry/</loc>
-    <lastmod>2021-01-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://danieltomasz.github.io/posts/</loc>
-    <lastmod>2021-01-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://danieltomasz.github.io/tags/python/</loc>
-    <lastmod>2021-01-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://danieltomasz.github.io/posts/python-setup-with-poetry-and-vsc/</loc>
-    <lastmod>2021-01-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://danieltomasz.github.io/tags/</loc>
-    <lastmod>2021-01-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://danieltomasz.github.io/tags/demo/</loc>
-    <lastmod>2018-10-01T16:15:09+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://danieltomasz.github.io/tags/image/</loc>
-    <lastmod>2018-10-01T16:15:09+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://danieltomasz.github.io/posts/post-with-featured-image/</loc>
-    <lastmod>2018-10-01T16:15:09+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://danieltomasz.github.io/about-hugo/</loc>
-    <lastmod>2014-04-09T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://danieltomasz.github.io/</loc>
+  </url>
+  
+  <url>
+    <loc>https://danieltomasz.github.io/tags/</loc>
   </url>
   
 </urlset>
