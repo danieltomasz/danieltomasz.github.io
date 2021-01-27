@@ -1,6 +1,6 @@
-baseURL = "http://danieltomasz.github.io/"
+baseURL = "https://danieltomasz.github.io/"
 languageCode = "en-us"
-title = "Random thoughts and notes"
+title = "Daniel Borek site"
 theme = "hermit"
 
 
@@ -37,7 +37,7 @@ enableEmoji = true  # Shorthand emojis in content files - https://gohugo.io/func
   # images = [""]
   themeColor = "#494f5c"
 
-  homeSubtitle = "Random content and thought."
+  homeSubtitle = "Random content and thoughts."
   footerCopyright = ' &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
   # bgImg = ""  # Homepage background-image URL
 
