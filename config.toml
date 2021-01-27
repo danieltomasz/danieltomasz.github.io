@@ -4,6 +4,8 @@ title = "Daniel Borek site"
 theme = "hermit"
 
 
+
+
 # enableGitInfo = true
 pygmentsCodefences  = true
 pygmentsUseClasses  = true
@@ -75,5 +77,5 @@ enableEmoji = true  # Shorthand emojis in content files - https://gohugo.io/func
 
   [[menu.main]]
     name = "About"
-    url = "about-hugo/"
+    url = "about-me/"
     weight = 20
