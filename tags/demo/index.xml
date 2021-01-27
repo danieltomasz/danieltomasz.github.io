@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Demo on Random thoughts and notes</title>
+    <link>http://danieltomasz.github.io/tags/demo/</link>
+    <description>Recent content in Demo on Random thoughts and notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Mon, 01 Oct 2018 16:15:09 +0800</lastBuildDate><atom:link href="http://danieltomasz.github.io/tags/demo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Post With Featured Image</title>
+      <link>http://danieltomasz.github.io/posts/post-with-featured-image/</link>
+      <pubDate>Mon, 01 Oct 2018 16:15:09 +0800</pubDate>
+      
+      <guid>http://danieltomasz.github.io/posts/post-with-featured-image/</guid>
+      <description>Just define the image URL in the content’s front matter, the featured image will be displayed as the background.
+For example:
+---images:- https://picsum.photos/1024/768/?random---This is an array, you can set multiple urls, only the first url will be used. These images is also used in Twitter Cards and the Open Graph metadata.</description>
+    </item>
+    
+  </channel>
+</rss>
