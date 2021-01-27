@@ -1,7 +1,7 @@
 ---
 title: 'Hugo tricks'
 date: 2021-01-27
-draft: true
+draft: false
 featuredImg: ""
 tags: 
   - python
