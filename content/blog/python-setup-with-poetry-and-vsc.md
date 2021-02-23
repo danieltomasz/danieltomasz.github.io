@@ -16,9 +16,9 @@ Still. pointing in `Visual Studio Code`  project to the right Python version is 
 
 1. You could install poetry using `brew`
 
-    ```bash
-    brew install pyenv
-    ```
+```bash
+brew install pyenv
+```
 
   I prefer [Pyenv](https://github.com/pyenv/pyenv-installer) installed from github. The solution below is copied from github
 
@@ -33,22 +33,28 @@ Still. pointing in `Visual Studio Code`  project to the right Python version is 
   echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
   ```
 
-1. Add pyenv init to your shell to enable shims and autocompletion. Please make sure eval `"$(pyenv init -)"` is placed toward the end of the shell configuration file since it manipulates PATH during the initialization. Restart shell.
-```
+3. Add pyenv init to your shell to enable shims and autocompletion. Please make sure eval `"$(pyenv init -)"` is placed toward the end of the shell configuration file since it manipulates PATH during the initialization. Restart shell.
+
+```bash
 echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.zshrc
 ```
+
 4. Install one of the listed Python version
-```
+
+```bash
 pyenv install --list
 ```
+
 5. Make specific python version local or global
-```
+  
+```bash
 pyenv local <python-version>
 ```
+
 ### Update:
 To upgrade to a specific release of pyenv, check out the corresponding tag:
 
-```
+```bash
 cd $(pyenv root)
 git fetch
 git tag
@@ -72,10 +78,10 @@ In my case (I use venv directly in the folder of the specific project )
 <!--"python.pythonPath": "~/PhD/Projects/rhythmical/.venv/bin/python"-->
 
 
-```
-"python.venvPath": "~/path/to/folder/.venv/"
-"python.pythonPath": "~/path/to/folder/.venv/bin/python"
-```
+  ```bash
+  "python.venvPath": "~/path/to/folder/.venv/"
+  "python.pythonPath": "~/path/to/folder/.venv/bin/python"
+  ```
 
 ## Use Black for code formating
 

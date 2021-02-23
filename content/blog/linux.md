@@ -12,3 +12,5 @@ tags:
 ```bash
 busctl --user call org.gnome.Shell /org/gnome/Shell org.gnome.Shell Eval s 'Meta.restart("Restarting…")'
 ```
+
+## Problem with NVidia card not detecing laptop screen after update

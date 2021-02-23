@@ -1,13 +1,14 @@
 ---
-title:
+title: "Useful git commands"
 date: 2021-01-30 
-draft: true 
-description:
+draft: false 
+description: "Some commands I want to remember"
 tags: 
  -  git
+ -  tips
 ---
 
-# Most  useful github commnads for me
+ I am adding  here some commands that were useful for me.
 
 ### Only add tracked files
 ```
@@ -21,7 +22,7 @@ git add -u
 git commit --amend --no-edit
 git push --force
 ```
-
+or 
 ```
 git commit --amend --no-edit -a
 ```
@@ -34,3 +35,11 @@ to add the currently changed files.
 
 Don't rebase public history 
 
+## Submodules
+
+A submodule is a link to a repository within a Git repository.
+
+```bash
+git submodule add https://github.com/link
+git submodule update --remote --recursive
+```
