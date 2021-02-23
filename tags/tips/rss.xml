@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tips on Daniel Borek</title>
+    <link>https://danieltomasz.github.io/tags/tips/</link>
+    <description>Recent content in tips on Daniel Borek</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 30 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://danieltomasz.github.io/tags/tips/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Useful git commands</title>
+      <link>https://danieltomasz.github.io/blog/favourite-git-commands/</link>
+      <pubDate>Sat, 30 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://danieltomasz.github.io/blog/favourite-git-commands/</guid>
+      <description>I am adding here some commands that were useful for me.
+Only add tracked files git add -u Amend commit with new files git add -u git commit --amend --no-edit git push --force or
+git commit --amend --no-edit -a to add the currently changed files.
+What is git rebase?  Rebasing is the process of moving or combining a sequence of commits to a new base commit.
+ Don&amp;rsquo;t rebase public history</description>
+    </item>
+    
+  </channel>
+</rss>

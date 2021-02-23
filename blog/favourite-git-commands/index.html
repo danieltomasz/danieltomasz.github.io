@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/images/favicon.png" />
+    <title>Useful git commands | Daniel Borek</title>
+    <meta name="description" content="Some commands I want to remember" />
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <link rel="stylesheet" href="/css/custom.css"/>
+</head>
+<body>
+<header>
+  <h1>Useful git commands</h1>
+  <p>Some commands I want to remember</p>
+  <nav>
+  <a href="/" title="">Home</a><a href="/blog" title="">Blog</a>
+</nav>
+</header>
+<main>
+<p>📅 30 Jan 2021</p>
+
+<p>I am adding  here some commands that were useful for me.</p>
+<h3 id="only-add-tracked-files">Only add tracked files</h3>
+<pre><code>git add -u
+</code></pre><h3 id="amend-commit-with-new-files">Amend commit with new files</h3>
+<pre><code>git add -u
+git commit --amend --no-edit
+git push --force
+</code></pre><p>or</p>
+<pre><code>git commit --amend --no-edit -a
+</code></pre><p>to add the currently changed files.</p>
+<h2 id="what-is-git-rebase">What is git rebase?</h2>
+<blockquote>
+<p>Rebasing is the process of moving or combining a sequence of commits to a new base commit.</p>
+</blockquote>
+<p>Don&rsquo;t rebase public history</p>
+<h2 id="submodules">Submodules</h2>
+<p>A submodule is a link to a repository within a Git repository.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git submodule add https://github.com/link
+git submodule update --remote --recursive
+</code></pre></div>
+
+<br>
+<hr>
+
+<h2>💬 Looking for comments?</h2>
+
+<p>I don't have comments on this site as they're difficult to manage and take up too much time. I'd rather concentrate on producing content than managing comments.</p>
+
+<p>Instead of leaving a comment, feel free to contact me ✉️ <a href="/contact">contact me</a> instead.</p>
+</main>
+<footer>
+  <p>This site was made by myself and was made using <a href="https://gohugo.io">Hugo</a> and
+  <a href="https://simplecss.org">Simple.css</a>.</p>
+</footer>
+</body>
+</html>

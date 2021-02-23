@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/images/favicon.png" />
+    <title>Hugo tricks | Daniel Borek</title>
+    <meta name="description" content="Note to myself how to setup Hugo." />
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <link rel="stylesheet" href="/css/custom.css"/>
+</head>
+<body>
+<header>
+  <h1>Hugo tricks</h1>
+  <p>Note to myself how to setup Hugo.</p>
+  <nav>
+  <a href="/" title="">Home</a><a href="/blog" title="">Blog</a>
+</nav>
+</header>
+<main>
+<p>📅 27 Jan 2021</p>
+
+<h2 id="how-to-setup-a-hugo-page-with-github-pages-and-hugo">How to setup a Hugo page with Github pages and Hugo</h2>
+<p>My first iteretion of this page used several Jekyll themes. I didn&rsquo;t write much through the years, in 2021 I decided to refresh this site and start writing more often.</p>
+<p>Hugo is really popular static site generator. Before Hugo I used Jekyll. Configuring Hugo to use your page on Github is little more complicated than with Jekyll.</p>
+<p>Here you could find the <a href="https://levelup.gitconnected.com/build-a-personal-website-with-github-pages-and-hugo-6c68592204c7">tutorial</a>.</p>
+<p>First I use `hermit' theme, but then i switched to simple.css. <a href="https://mogwai.be/creating-a-simple.css-site-with-hugo/">Here</a> you could find more about how to setup it with hugo.</p>
+<p>When you use setup with <code>gh-pages</code> branch remember to set Jekyll theme (even when your page doesn&rsquo;t use Jekyll).</p>
+<p>Adding empty also file <code>.nojekyll</code> helps.</p>
+<p>Here yuou could find interesting blogpost about <a href="https://jpdroege.com/blog/hugo-file-organization/">guide to file structure and organisation</a>.</p>
+<h2 id="how-to-make-hugo-render-drafted-content">How to make Hugo render drafted content?</h2>
+<p><a href="https://kodify.net/hugo/pages/generate-draft-content/">Here</a> you could find source for this advice/</p>
+<ol>
+<li>Add option to <code>config.toml</code>:</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#ae81ff">title = &#34;Hugo example site&#34;</span>
+<span style="color:#ae81ff">baseurl = &#34;https://www.example.com&#34;</span>
+<span style="color:#ae81ff">buildDrafts = true</span>
+</code></pre></div><ol start="2">
+<li>Generate drafted files during the current Hugo build</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo server --buildDrafts
+</code></pre></div><p>or</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo server -D
+</code></pre></div><p>To not generate draft content when building our static website, use one of the following command flags:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo --buildDrafts<span style="color:#f92672">=</span>false
+hugo -D<span style="color:#f92672">=</span>false
+hugo -D<span style="color:#f92672">=</span>F
+</code></pre></div>
+
+<br>
+<hr>
+
+<h2>💬 Looking for comments?</h2>
+
+<p>I don't have comments on this site as they're difficult to manage and take up too much time. I'd rather concentrate on producing content than managing comments.</p>
+
+<p>Instead of leaving a comment, feel free to contact me ✉️ <a href="/contact">contact me</a> instead.</p>
+</main>
+<footer>
+  <p>This site was made by myself and was made using <a href="https://gohugo.io">Hugo</a> and
+  <a href="https://simplecss.org">Simple.css</a>.</p>
+</footer>
+</body>
+</html>
