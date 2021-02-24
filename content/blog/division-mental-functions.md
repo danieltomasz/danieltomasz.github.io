@@ -1,7 +1,7 @@
 ---
-title: "Mental function and cognitive ontologies"
+title: "Mental functions and cognitive ontologies"
 date: 2021-02-24T15:26:12+01:00
-description: "Are there escape from William James ideas?"
+description: "Is there an escape from the ideas of William James?"
 draft: false
 tags: 
  - Cognitive_Science 
