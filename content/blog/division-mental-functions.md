@@ -16,4 +16,4 @@ This echoes discussion between two camps, which most famous proponents are curre
 Maybe I state something trivial, but I think all these terms used in Cognitive Science are a little bit blurry.
 It allows scientists to escape any clear borders between processes defined by these terms. On the other hand, scientists in a theory are well aware that there is no process in isolation (but this sometimes is much harder to operationalize in practice).
 
-Many different philosophers and neuroscientists told much about this topic. Currently, neuroinformatics could provide some nice tools. Read more this [review by Russell A. Poldrack and Tal Yarkoni](https://www.annualreviews.org/doi/abs/10.1146/annurev-psych-122414-033729).
+Many different philosophers and neuroscientists told much about this topic. Currently, neuroinformatics could provide some nice tools. Read more in this [review by Russell A. Poldrack and Tal Yarkoni](https://www.annualreviews.org/doi/abs/10.1146/annurev-psych-122414-033729).
