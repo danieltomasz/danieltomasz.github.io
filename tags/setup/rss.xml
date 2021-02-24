@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>python on Daniel Borek</title>
-    <link>https://danieltomasz.github.io/tags/python/</link>
-    <description>Recent content in python on Daniel Borek</description>
+    <title>setup on Daniel Borek</title>
+    <link>https://danieltomasz.github.io/tags/setup/</link>
+    <description>Recent content in setup on Daniel Borek</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 27 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://danieltomasz.github.io/tags/python/rss.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 27 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://danieltomasz.github.io/tags/setup/rss.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo tricks</title>
       <link>https://danieltomasz.github.io/blog/hugo-setup/</link>

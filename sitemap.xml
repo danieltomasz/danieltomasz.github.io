@@ -33,17 +33,17 @@
   </url>
   
   <url>
+    <loc>https://danieltomasz.github.io/tags/hugo/</loc>
+    <lastmod>2021-01-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://danieltomasz.github.io/blog/hugo-setup/</loc>
     <lastmod>2021-01-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danieltomasz.github.io/tags/poetry/</loc>
-    <lastmod>2021-01-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://danieltomasz.github.io/tags/python/</loc>
+    <loc>https://danieltomasz.github.io/tags/setup/</loc>
     <lastmod>2021-01-27T00:00:00+00:00</lastmod>
   </url>
   
@@ -52,11 +52,11 @@
   </url>
   
   <url>
-    <loc>https://danieltomasz.github.io/categories/</loc>
+    <loc>https://danieltomasz.github.io/contact/</loc>
   </url>
   
   <url>
-    <loc>https://danieltomasz.github.io/contact/</loc>
+    <loc>https://danieltomasz.github.io/true/</loc>
   </url>
   
 </urlset>
