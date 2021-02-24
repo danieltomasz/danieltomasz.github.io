@@ -2,7 +2,7 @@
 title: Agile academy
 date: 2021-01-30 
 draft: true 
-description:
+description: "Do agile academy is possible?"
 tags: 
  - Academy
  - Agile 

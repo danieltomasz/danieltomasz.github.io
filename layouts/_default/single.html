@@ -1,3 +1,18 @@
-{{ define "main" }}
+<!-- {{ define "main" }}
 {{ .Content }}
 {{ end }}
+ -->
+ {{ partial "header.html" . }}
+  <main>
+    <article>
+      <header>
+        <h1>{{ .Title }}</h1>
+        <time>{{ .Date.Format "02 Jan 2006" }}</time>
+      </header>
+      <section>
+        {{ .Content }}
+      </section>
+      {{ partial "tags.html" . }}
+    </article>
+  </main>
+{{ partial "footer.html" . }}

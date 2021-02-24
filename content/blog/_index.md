@@ -1,4 +1,4 @@
 ---
 title: "Blog"
-description: "Random thoughts and tips on science, linux and more"
+description: "Random tips and thoughts on science, linux and more"
 ---

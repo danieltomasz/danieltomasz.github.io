@@ -3,6 +3,11 @@ languageCode = "en-us"
 title = "Daniel Borek"
 #theme = "hermit"
 
+[taxonomies]
+  tag = "tags"
+  preserveTaxonomyNames = true
+
+
 [menu]
   [[menu.main]]
     identifier = "home"

@@ -5,8 +5,8 @@ description: "Note to myself how to setup Hugo."
 draft: false
 featuredImg: ''
 tags:
-  - python
-  - poetry
+  - hugo
+  - setup
 ---
 
 ## How to setup a Hugo page with Github pages and Hugo
