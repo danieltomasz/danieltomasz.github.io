@@ -1,15 +1,7 @@
-<!-- layouts/taxonomy/tag.html
-{{ define "main" }}
-<div class="container">
-<ul>
-    {{ range .Data.Pages }}
-    <li>
-      <a href="{{.RelPermalink}}">{{ .Title }}</a>
-    </li>
-    {{ end }}
-  </ul>
-</div>
-{{ end }} -->
+<!-- layouts/taxonomy/tag.html -->
+{{ partial "head.html" . -}}
+<body>
+{{ partial "header.html" . -}}
 <h1>Posts tagged "{{ .Title }}"</h1>
 <ul>
   {{ range .Data.Pages }}
@@ -18,3 +10,6 @@
     </li>
   {{ end }}
 </ul>
+
+{{ partial "footer.html" . -}}
+</body>

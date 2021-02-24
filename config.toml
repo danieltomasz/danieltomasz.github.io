@@ -5,8 +5,6 @@ title = "Daniel Borek"
 
 [taxonomies]
   tag = "tags"
-  preserveTaxonomyNames = true
-
 
 [menu]
   [[menu.main]]
