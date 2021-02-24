@@ -1,8 +1,4 @@
-{{ define "header" }}
-    {{ partial "header.html" . }}
-{{ end }}
-
-{{ define "content" }}
+{{ define "main" }}
     <div class="post">
         <h1><i class="fas fa-tags"></i> {{ .Title }}</h1>
         {{ .Content }}
@@ -30,8 +26,4 @@
       {{ end }}
     {{ end }}
     </div>
-{{ end }}
-
-{{ define "footer" }}
-    {{ partial "page-list/footer.html" . }}
 {{ end }}
