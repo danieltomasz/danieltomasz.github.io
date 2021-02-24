@@ -1,12 +1,13 @@
-<!-- layouts/taxonomy/tag.html -->
 {{ partial "head.html" . -}}
 <body>
-{{ partial "header.html" . -}}
+{{ partial "headerconstant.html" . -}}
 <h1>Posts tagged "{{ .Title }}"</h1>
 <ul>
   {{ range .Data.Pages }}
     <li>
-      <a href="{{.RelPermalink}}">{{ .Title }}</a>
+      <p></p><a href="{{.RelPermalink}}">{{ .Title }}</a><br>
+      {{ .Description }}<br></p>
+
     </li>
   {{ end }}
 </ul>
