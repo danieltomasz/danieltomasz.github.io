@@ -9,10 +9,10 @@
     <lastBuildDate>Sat, 30 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://danieltomasz.github.io/tags/tips/rss.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Useful git commands</title>
-      <link>https://danieltomasz.github.io/blog/favourite-git-commands/</link>
+      <link>https://danieltomasz.github.io/useful-git-commands/</link>
       <pubDate>Sat, 30 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://danieltomasz.github.io/blog/favourite-git-commands/</guid>
+      <guid>https://danieltomasz.github.io/useful-git-commands/</guid>
       <description>I am adding here some commands that were useful for me.
 Only add tracked files git add -u Amend commit with new files git add -u git commit --amend --no-edit git push --force or
 git commit --amend --no-edit -a to add the currently changed files.

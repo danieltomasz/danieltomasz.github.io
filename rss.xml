@@ -1,44 +1,30 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>About me on Daniel Borek</title>
+    <title>top-of-mind on Daniel Borek</title>
     <link>https://danieltomasz.github.io/rss.xml</link>
-    <description>Recent content in About me on Daniel Borek</description>
+    <description>Recent content in top-of-mind on Daniel Borek</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 24 Feb 2021 15:26:12 +0100</lastBuildDate><atom:link href="https://danieltomasz.github.io/rss.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mental functions and cognitive ontologies</title>
-      <link>https://danieltomasz.github.io/blog/division-mental-functions/</link>
+      <link>https://danieltomasz.github.io/mental-functions-and-cognitive-ontologies/</link>
       <pubDate>Wed, 24 Feb 2021 15:26:12 +0100</pubDate>
       
-      <guid>https://danieltomasz.github.io/blog/division-mental-functions/</guid>
+      <guid>https://danieltomasz.github.io/mental-functions-and-cognitive-ontologies/</guid>
       <description>There is a recurring discussion going on in Cognitive Science, this time on Twitter. Luiz Pessoa asked about why we divide cognitive functions like attention, memory, executive control the way we did. He tracks it to the beginning of psychology as discipline and influence of William James and later, when the cognitive revolution started, to Ulric Neisser’s Cognitive Psychology book. There is a really interesting discussion below this tweet.
 1) In neuroscience, we study things like 𝗮𝘁𝘁𝗲𝗻𝘁𝗶𝗼𝗻, 𝗺𝗲𝗺𝗼𝗿𝘆, 𝗲𝗺𝗼𝘁𝗶𝗼𝗻, 𝗱𝗲𝗰𝗶𝘀𝗶𝗼𝗻 𝗺𝗮𝗸𝗶𝗻𝗴, 𝗲𝘅𝗲𝗰𝘂𝘁𝗶𝘃𝗲 𝗰𝗼𝗻𝘁𝗿𝗼𝗹, etc.</description>
     </item>
     
     <item>
-      <title>Useful git commands</title>
-      <link>https://danieltomasz.github.io/blog/favourite-git-commands/</link>
-      <pubDate>Sat, 30 Jan 2021 00:00:00 +0000</pubDate>
+      <title>contact</title>
+      <link>https://danieltomasz.github.io/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://danieltomasz.github.io/blog/favourite-git-commands/</guid>
-      <description>I am adding here some commands that were useful for me.
-Only add tracked files git add -u Amend commit with new files git add -u git commit --amend --no-edit git push --force or
-git commit --amend --no-edit -a to add the currently changed files.
-What is git rebase?  Rebasing is the process of moving or combining a sequence of commits to a new base commit.
- Don&amp;rsquo;t rebase public history</description>
-    </item>
-    
-    <item>
-      <title>Hugo tricks</title>
-      <link>https://danieltomasz.github.io/blog/hugo-setup/</link>
-      <pubDate>Wed, 27 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://danieltomasz.github.io/blog/hugo-setup/</guid>
-      <description>How to setup a Hugo page with Github pages and Hugo My first iteretion of this page used several Jekyll themes. I didn&amp;rsquo;t write much through the years, in 2021 I decided to refresh this site and start writing more often.
-Hugo is really popular static site generator. Before Hugo I used Jekyll. Configuring Hugo to use your page on Github is little more complicated than with Jekyll.
-Here you could find the tutorial.</description>
+      <guid>https://danieltomasz.github.io/contact/</guid>
+      <description>You can contact or observe me through:
+ email: daniel dot borek at ugent dot be twitter: @danieltomasz github: @danieltomasz discord: danieltomasz#5748  </description>
     </item>
     
   </channel>

@@ -1,68 +1,43 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
-  <url>
-    <loc>https://danieltomasz.github.io/</loc>
-    <lastmod>2021-02-24T15:26:12+01:00</lastmod>
-  </url>
-  
   <url>
     <loc>https://danieltomasz.github.io/blog/</loc>
     <lastmod>2021-02-24T15:26:12+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://danieltomasz.github.io/tags/cognitive_science/</loc>
+  </url><url>
+    <loc>https://danieltomasz.github.io/tags/cognitive-science/</loc>
     <lastmod>2021-02-24T15:26:12+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://danieltomasz.github.io/blog/division-mental-functions/</loc>
+  </url><url>
+    <loc>https://danieltomasz.github.io/mental-functions-and-cognitive-ontologies/</loc>
     <lastmod>2021-02-24T15:26:12+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://danieltomasz.github.io/tags/</loc>
     <lastmod>2021-02-24T15:26:12+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>https://danieltomasz.github.io/</loc>
+    <lastmod>2021-02-24T15:26:12+01:00</lastmod>
+  </url><url>
     <loc>https://danieltomasz.github.io/tags/git/</loc>
     <lastmod>2021-01-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://danieltomasz.github.io/tags/tips/</loc>
     <lastmod>2021-01-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://danieltomasz.github.io/blog/favourite-git-commands/</loc>
+  </url><url>
+    <loc>https://danieltomasz.github.io/til/</loc>
     <lastmod>2021-01-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>https://danieltomasz.github.io/useful-git-commands/</loc>
+    <lastmod>2021-01-30T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://danieltomasz.github.io/tags/hugo/</loc>
     <lastmod>2021-01-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://danieltomasz.github.io/blog/hugo-setup/</loc>
+  </url><url>
+    <loc>https://danieltomasz.github.io/hugo-tricks/</loc>
     <lastmod>2021-01-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://danieltomasz.github.io/tags/setup/</loc>
     <lastmod>2021-01-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://danieltomasz.github.io/about/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://danieltomasz.github.io/contact/</loc>
   </url>
-  
 </urlset>
