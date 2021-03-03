@@ -35,11 +35,6 @@ theme = "simplecss"
     weight = 40
 
 
-[permalinks]
-  blog = "/:title/"
-  til = "/:title/"
-
-
 [outputs]
   home = [ "RSS", "HTML"]
   section  = ["HTML"]
