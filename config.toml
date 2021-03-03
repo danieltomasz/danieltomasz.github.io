@@ -31,7 +31,7 @@ theme = "simplecss"
 [[menu.main]]
     identifier = "contact"
     name = "contact"
-    url = "/contact"
+    url = "/contact/"
     weight = 40
 
 
