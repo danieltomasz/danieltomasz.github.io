@@ -14,7 +14,7 @@
     <h1>Hugo tricks</h1>
     <p>Note to myself how to setup Hugo.</p>
     <nav>
-  <a href="/" title="">home</a><a href="/blog" title="">blog</a><a href="/til" title="">today I learned</a><a href="/contact" title="">contact</a>
+  <a href="/" title="">home</a><a href="/blog" title="">blog</a><a href="/til" title="">today I learned</a><a href="/contact/" title="">contact</a>
 </nav>
 </header><main>
 <p>📅 27 Jan 2021</p>
@@ -57,11 +57,22 @@ hugo -D<span style="color:#f92672">=</span>F
 <br>
 <hr>
 
-<h2>💬 Looking for comments?</h2>
+<div class="article-container"></div>
+<p>I am using a  lightweight comments widget built on GitHub issues.<br>
+     Instead of leaving a comment, you could also  contact me ✉️ <a href="/contact">contact me</a>.</p>
 
-<p>I don't have comments on this site as they're difficult to manage and take up too much time. I'd rather concentrate on producing content than managing comments.</p>
 
-<p>Instead of leaving a comment, feel free to contact me ✉️ <a href="/contact">contact me</a> instead.</p>
+<script src="https://utteranc.es/client.js"
+        repo="danieltomasz/danieltomasz.github.io"
+        issue-term="title"
+        label="comment"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>
+</div>
+
+
 </main>
 <footer>
     <p>This site was made by myself and was made using <a href="https://gohugo.io">Hugo</a> and
