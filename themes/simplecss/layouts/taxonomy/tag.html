@@ -1,0 +1,20 @@
+{{ partial "head.html" . -}}
+<body>
+{  <header>
+  <h1>Posts tagged "{{ .Title }}"</h1>
+  <p>Random thoughts and tips on science, linux and more</p>
+  {{ partial "navigation.html" . -}}
+</header>
+<main>
+<ul>
+  {{ range .Data.Pages }}
+    <li>
+      <p></p><a href="{{.RelPermalink}}">{{ .Title }}</a><br>
+      {{ .Description }}<br>
+      📅 {{ .Date.Format "2 Jan 2006" }}</p>
+    </li>
+  {{ end }}
+</ul>
+</main>
+{{ partial "footer.html" . -}}
+</body>

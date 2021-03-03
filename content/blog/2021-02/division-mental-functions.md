@@ -4,7 +4,7 @@ date: 2021-02-24T15:26:12+01:00
 description: "Is there an escape from the ideas of William James?"
 draft: false
 tags: 
- - Cognitive_Science 
+ - 'cognitive science'
 ---
 
 There is a recurring discussion going on in Cognitive Science, this time on Twitter. Luiz Pessoa asked about why we divide cognitive functions like attention, memory, executive control the way we did. He tracks it to the beginning of psychology as discipline and influence of  William James and later, when the cognitive revolution started, to  Ulric Neisser’s Cognitive Psychology book. There is a really interesting discussion below this tweet.

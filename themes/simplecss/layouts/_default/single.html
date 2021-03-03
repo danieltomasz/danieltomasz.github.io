@@ -1,10 +1,8 @@
 {{ define "main" }}
 <p>📅 {{ .Date.Format "2 Jan 2006" }}</p>
-
-{{ .Content }}
-<h4>🏷️Tags</h4>
 {{ partial "tags.html" .}}
 
+{{ .Content }}
 <br>
 <hr>
 

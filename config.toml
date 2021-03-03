@@ -1,7 +1,8 @@
 baseURL = "https://danieltomasz.github.io"
 languageCode = "en-us"
 title = "Daniel Borek"
-#theme = "hermit"
+theme = "simplecss"
+
 
 [taxonomies]
   tag = "tags"
@@ -9,30 +10,35 @@ title = "Daniel Borek"
 [menu]
   [[menu.main]]
     identifier = "home"
-    name = "Home"
+    name = "home"
     url = "/"
     weight = 10
 
+
   [[menu.main]]
     identifier = "blog"
-    name = "Blog"
+    name = "blog"
     url = "/blog"
     weight = 20
 
-  # [[menu.main]]
-  #   identifier = "about"
-  #   name = "About"
-  #   url = "/about"
-  #   weight = 30
 
-  # [[menu.main]]
-  #   identifier = "contact"
-  #   name = "Contact"
-  #   url = "/contact"
-  #   weight = 40
+  [[menu.main]]
+    identifier = "til"
+    name = "today I learned"
+    url = "/til"
+    weight = 30
+
+[[menu.main]]
+    identifier = "contact"
+    name = "contact"
+    url = "/contact/"
+    weight = 40
+
 
 [permalinks]
-  posts = "/:title/"
+  blog = "/:title/"
+  til = "/:title/"
+
 
 [outputs]
   home = [ "RSS", "HTML"]
@@ -46,4 +52,3 @@ title = "Daniel Borek"
 [markup]
   [markup.highlight]
     style = "monokai"
-

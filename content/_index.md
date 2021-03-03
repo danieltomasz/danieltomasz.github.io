@@ -1,5 +1,5 @@
 ---
-title: "About me"
+title: "top-of-mind"
 description: "Random thoughts and tips on science, linux and more"
 ---
 
