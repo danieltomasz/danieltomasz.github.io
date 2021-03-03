@@ -1,4 +1,4 @@
-<strong>🏷️Tags</strong>:
+<strong>🏷️ </strong>
     {{ range $key, $value := .Params.tags }}
        <a href="/tags/{{ $value | urlize }}">{{ $value }}</a>{{ if ne $key (sub (len $.Params.tags) 1) }}, {{ else }}{{ end }}
     {{ end }}
