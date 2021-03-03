@@ -1,12 +1,89 @@
 [
-
-    {
-      "id": "Lessig 2002",
-      "author": [
-          {
-              "family": "Lessig",
-              "given": "Lawrence"
-          }
-      ]
-  }
+	{
+		"id": "donoghue2020",
+		"type": "article-journal",
+		"abstract": "<h3>Abstract</h3> <p>A common analysis measure for neuro-electrophysiological recordings is to compute the power ratio between two frequency bands. Applications of band ratio measures include investigations of cognitive processes as well as biomarkers for conditions such as attention-deficit hyperactivity disorder. Band ratio measures are typically interpreted as reflecting quantitative measures of periodic, or oscillatory, activity, which implicitly assumes that a ratio is measuring the relative powers of two distinct periodic components that are well captured by predefined frequency ranges. However, electrophysiological signals contain periodic components and a 1/f-like aperiodic component, which contributes power across all frequencies. In this work, we investigate whether band ratio measures reflect power differences between two oscillations, as intended. We examine to what extent ratios may instead reflect other periodic changes—such as in center frequency or bandwidth—and/or aperiodic activity. We test this first in simulation, exploring how band ratio measures relate to changes in multiple spectral features. In simulation, we show how multiple periodic and aperiodic features affect band ratio measures. We then validate these findings in a large electroencephalography (EEG) dataset, comparing band ratio measures to parameterizations of power spectral features. In EEG, we find that multiple disparate features influence ratio measures. For example, the commonly applied theta / beta ratio is most reflective of differences in aperiodic activity, and not oscillatory theta or beta power. Collectively, we show how periodic and aperiodic features can drive the same observed changes in band ratio measures. Our results demonstrate how ratio measures reflect different features in different contexts, inconsistent with their typical interpretations. We conclude that band ratio measures are non-specific, conflating multiple possible underlying spectral changes. Explicit parameterization of neural power spectra is better able to provide measurement specificity, elucidating which components of the data change in what ways, allowing for more appropriate physiological interpretations.</p><h3>Materials Descriptions &amp; Availability Statements</h3> <h3>Project Repository</h3> <p>This project is also made openly available through an online project repository in which the code and data are made available, with step-by-step guides through the analyses.</p><p>Project Repository: http://github.com/voytekresearch/BandRatios</p><h3>Datasets</h3> <p>This project uses simulated data, literature text mining data, and electroencephalography data.</p><h3>Simulated Data</h3> <p>The simulations used in this project are created with openly available software packages. Settings and code to re-generate simulated data is available with the open-access code for the project. Copies of the simulated data that were used in this investigation are available in the project repository.</p><h3>Literature Data</h3> <p>Literature data for this project was collected from the PubMed database. Exact search terms used to collect the data are available in the project repository. The exact data collected from the literature and meta-data about the collection are saved and available in the project repository.</p><h3>EEG Data</h3> <p>The EEG data used in this project is from the openly available dataset, the ‘Multimodal Resource for Studying Information processing in the Developing Brain’ (MIPDB) database. This dataset is created and released by the Childmind Institute. This dataset was released and is re-used here under the terms of the Creative Commons-Attribution-Non-Commercial-Share-Alike License (CC-BY-NC-SA), and is described in (Langer et al., 2017).</p><p>Child Mind Institute: https://childmind.org</p><p>Data Portal: http://fcon_1000.projects.nitrc.org/indi/cmi_eeg/</p><h3>Software</h3> <p>Code used and written for this project was written in the Python programming language. All the code used within this project is deposited in the project repository and is made openly available and licensed for re-use.</p><p>As well as standard library Python, this project uses 3<sup>rd</sup> party software packages <i>numpy</i> and <i>pandas</i> for data management, <i>scipy</i> for data processing, <i>matplotlib</i> and <i>seaborn</i> for data visualization and <i>MNE</i> for managing and pre-processing data.</p><p>This project also uses open-source Python packages developed and released by the authors:</p><p>Simulations and spectral parameterization were done using the FOOOF toolbox.</p><p>Code Repository: https://github.com/fooof-tools/fooof</p><p>Literature collection and analyses were done using the LISC toolbox.</p><p>Code Repository: https://github.com/lisc-tools/lisc</p>",
+		"container-title": "bioRxiv",
+		"DOI": "10/ggkwj6",
+		"language": "en",
+		"note": "tex.ids: donoghue2020a, donoghue2020b\nDOI: 10.1101/2020.01.11.900977",
+		"page": "2020.01.11.900977",
+		"source": "www.biorxiv.org",
+		"title": "Electrophysiological Frequency Band Ratio Measures Conflate Periodic and Aperiodic Neural Activity",
+		"URL": "https://www.biorxiv.org/content/10.1101/2020.01.11.900977v1",
+		"author": [
+			{
+				"family": "Donoghue",
+				"given": "Thomas"
+			},
+			{
+				"family": "Dominguez",
+				"given": "Julio"
+			},
+			{
+				"family": "Voytek",
+				"given": "Bradley"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2020",
+					2,
+					15
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2020",
+					1,
+					11
+				]
+			]
+		}
+	},
+	{
+		"id": "waschke2021",
+		"type": "report",
+		"abstract": "A hallmark of electrophysiological brain activity is its 1/f-like spectrum – power decreases with increasing frequency. The steepness of this “roll-off” is approximated by the spectral exponent, which in invasively recorded neural populations reflects the balance of excitatory to inhibitory neural activity (E:I balance). Here, we first demonstrate that the spectral exponent of noninvasive electroencephalography (EEG) recordings is highly sensitive to general, anaesthesiadriven as well as specific, attention-driven changes in E:I balance. We then present results from an EEG experiment during which participants detected faint target stimuli in streams of simultaneously presented auditory and visual noise. EEG spectral exponents over auditory and visual sensory cortices tracked stimulus spectral exponents of the corresponding domain, while evoked responses remained unchanged. Crucially, the degree of this stimulus–brain spectral-exponent coupling was positively linked to behavioural performance. Our results highlight the relevance of neural 1/f-like activity and enable the study of neural processes previously thought to be inaccessible in non-invasive human recordings.",
+		"language": "en",
+		"page": "22",
+		"source": "Zotero",
+		"title": "Modality-specific tracking of attention and sensory statistics in the human electrophysiological spectral exponent",
+		"author": [
+			{
+				"family": "Waschke",
+				"given": "Leonhard"
+			},
+			{
+				"family": "Donoghue",
+				"given": "Thomas"
+			},
+			{
+				"family": "Fiedler",
+				"given": "Lorenz"
+			},
+			{
+				"family": "Smith",
+				"given": "Sydney"
+			},
+			{
+				"family": "Voytek",
+				"given": "Bradley"
+			},
+			{
+				"family": "Obleser",
+				"given": "Jonas"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2021"
+				]
+			]
+		}
+	}
 ]
