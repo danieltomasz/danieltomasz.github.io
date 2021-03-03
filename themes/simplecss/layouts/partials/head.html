@@ -8,5 +8,6 @@
         {{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
     {{ end -}}
     <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ "/hugo-cite.css" | relURL }}" />
     <link rel="stylesheet" href="/css/custom.css"/>
 </head>
