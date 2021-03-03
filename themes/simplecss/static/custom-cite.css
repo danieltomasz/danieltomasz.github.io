@@ -1,20 +1,6 @@
 /* =============================================================================
 /* Hugo-Cite.css
 /* ----------------------------------------------------------------------------- */
-
-/* Set the global variables for everything. Change these to use your own fonts/colours. */
-:root {
-
-  --bg: #FFF;
-  --text: #212121;
-
-/* Dark theme */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #212121;
-    --text: #DCDCDC;
-  }
-
 .hugo-cite-intext {
   display: inline-block;
   vertical-align: baseline; /*compensate for lower height */
