@@ -1,8 +1,8 @@
 ---
-title: "Get Pathlib relative path to jour file and join with string"
+title: "Get Pathlib relative path to jour file and join with a string"
 date: 2021-03-04T11:58:31+01:00
 draft: false
-description: "Pathlib will not join Path object with string starting with slash"
+description: "Pathlib will not join Path object with a string starting with a slash"
 tags: 
  -  python
 ---
@@ -18,7 +18,7 @@ from pathlib import Path
 
 def get_project_root() -> Path:
     try:
-        # This will give you Path object pointing  to the parent of the folder  where the script is located.
+        # This will give you a Path object pointing to the parent of the folder where the script is located.
         # If your script is `/root/scripts/script.py`, the result will be an absolute path '/root'.
         return Path(__file__).parent.parent
     except NameError as error:
