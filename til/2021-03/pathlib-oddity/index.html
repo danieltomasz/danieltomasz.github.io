@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/images/favicon.png" />
+    <title>Get  a relative path to your file with Pathlib and join it with a string | Daniel Borek</title>
+    <meta name="description" content="Pathlib will not join Path object with a string starting with a slash" />
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <link rel="stylesheet" href="/css/custom.css"/>
+</head>
+<body>
+<header>
+    <h1>Get  a relative path to your file with Pathlib and join it with a string</h1>
+    <p>Pathlib will not join Path object with a string starting with a slash</p>
+    <nav>
+  <a href="/" title="">home</a><a href="/blog" title="">blog</a><a href="/til" title="">today I learned</a><a href="/contact/" title="">contact</a>
+</nav>
+</header><main>
+<p>📅 4 Mar 2021</p>
+<strong>🏷️ </strong>
+    
+       <a href="/tags/python">python</a>
+    
+
+ 
+
+<p>Problem statement: Get an absolute path of your project where a file/notebook is located and join it with a string pointing to a folder.</p>
+<p>Solution:</p>
+<p>This function will give you an absolute Path in relationship to a current python script or notebook.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> pathlib <span style="color:#f92672">import</span> Path
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_project_root</span>() <span style="color:#f92672">-&gt;</span> Path:
+    <span style="color:#66d9ef">try</span>:
+        <span style="color:#75715e"># This will give you a Path object pointing to the parent of the folder where the script is located.</span>
+        <span style="color:#75715e"># If your script is `/root/scripts/script.py`, the result will be an absolute path &#39;/root&#39;.</span>
+        <span style="color:#66d9ef">return</span> Path(__file__)<span style="color:#f92672">.</span>parent<span style="color:#f92672">.</span>parent
+    <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">NameError</span> <span style="color:#66d9ef">as</span> error:
+        <span style="color:#75715e"># This will give you  root folder of the project if this runned through jupyter notebook</span>
+        <span style="color:#66d9ef">return</span> Path()<span style="color:#f92672">.</span>joinpath()<span style="color:#f92672">.</span>absolute()<span style="color:#f92672">.</span>parents[<span style="color:#ae81ff">0</span>]
+    <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">Exception</span> <span style="color:#66d9ef">as</span> exception:
+        <span style="color:#66d9ef">print</span>(exception)
+</code></pre></div><p>When you will work with <code>Path</code> paths don&rsquo;t add trailing slashes when joining paths. Code below</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">root<span style="color:#f92672">=</span> get_project_root()
+path_to_file <span style="color:#f92672">=</span> Path<span style="color:#f92672">.</span>joinpath(root, <span style="color:#e6db74">&#39;data/data.feather&#39;</span>)
+</code></pre></div><p>will result in <code>path_to_file = /data/final.feather</code>. To obtain <code>path_to_file = /root/data/final.feather</code> you shouldn&rsquo;t use the slash at the begining:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">root<span style="color:#f92672">=</span> get_project_root()
+path_to_file <span style="color:#f92672">=</span> Path<span style="color:#f92672">.</span>joinpath(root, <span style="color:#e6db74">&#39;data/data.feather&#39;</span>)
+</code></pre></div>
+<br>
+<hr>
+
+<div class="article-container"></div>
+<p>I am using a  lightweight comments widget built on GitHub issues.<br>
+     Instead of leaving a comment, you could also  contact me ✉️ <a href="/contact">contact me</a>.</p>
+
+
+<script src="https://utteranc.es/client.js"
+        repo="danieltomasz/danieltomasz.github.io"
+        issue-term="title"
+        label="comment"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>
+</div>
+
+
+</main>
+<footer>
+    <p>This site was made by myself and was made using <a href="https://gohugo.io">Hugo</a> and
+    <a href="https://simplecss.org">Simple.css</a>.</p>
+  </footer>
+  </body>
+</html>
