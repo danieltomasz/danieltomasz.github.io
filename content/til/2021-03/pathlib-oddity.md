@@ -1,5 +1,5 @@
 ---
-title: "Get Pathlib relative path to jour file and join with a string"
+title: "Get  a relative path to your file with Pathlib and join it with a string"
 date: 2021-03-04T11:58:31+01:00
 draft: false
 description: "Pathlib will not join Path object with a string starting with a slash"
@@ -33,7 +33,8 @@ When you will work with `Path` paths don't add trailing slashes when joining pat
 root= get_project_root()
 path_to_file = Path.joinpath(root, 'data/data.feather')
 ```
-will result in `path_to_file = /data/final.feather`. To obtain `path_to_file = /root/data/final.feather` you shouldn't use the slash at the begiing:
+will result in `path_to_file = /data/final.feather`. To obtain `path_to_file = /root/data/final.feather` you shouldn't use the slash at the begining:
+
 ```python
 root= get_project_root()
 path_to_file = Path.joinpath(root, 'data/data.feather')
