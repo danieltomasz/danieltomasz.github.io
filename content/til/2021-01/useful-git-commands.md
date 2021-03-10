@@ -29,7 +29,7 @@ git commit --amend --no-edit -a
 
 to add the currently changed files.
 
-# Keep fork up to date
+## Keep fork up to date
 
 ```
 cd  fork_folder/
