@@ -29,6 +29,16 @@ git commit --amend --no-edit -a
 
 to add the currently changed files.
 
+# Keep fork up to date
+
+```
+cd  fork_folder/
+git remote add upstream git://github.com/devname/orginal-repo.git
+git remote -v
+git fetch upstream
+git checkout main
+git merge upstream/main
+```
 ## What is git rebase?
 
 >Rebasing is the process of moving or combining a sequence of commits to a new base commit.
