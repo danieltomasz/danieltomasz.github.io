@@ -37,7 +37,14 @@ git push --force
 </code></pre><p>or</p>
 <pre><code>git commit --amend --no-edit -a
 </code></pre><p>to add the currently changed files.</p>
-<h2 id="what-is-git-rebase">What is git rebase?</h2>
+<h1 id="keep-fork-up-to-date">Keep fork up to date</h1>
+<pre><code>cd  fork_folder/
+git remote add upstream git://github.com/devname/orginal-repo.git
+git remote -v
+git fetch upstream
+git checkout main
+git merge upstream/main
+</code></pre><h2 id="what-is-git-rebase">What is git rebase?</h2>
 <blockquote>
 <p>Rebasing is the process of moving or combining a sequence of commits to a new base commit.</p>
 </blockquote>
