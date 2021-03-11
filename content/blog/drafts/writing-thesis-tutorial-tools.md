@@ -37,6 +37,11 @@ I wrote my master using LateX. Although there exist many templates for thesis in
 There exist many of possibilities
 - **Jupyter Lab** - this is kind of IDE for Jupyter notebooks, allow you for writing comments as a markdown cells and code to execute in the same file.
 	- I really recommend the  latest Jupyter 3, this the newest version, when you installed python via anaconda you can install 
+		```
+		conda uninstall jupyterlab
+		conda install -c conda-forge jupyterlab=3
+
+		```
 	- there are many plugins, my favorite is [jupyterlab-variableInspector](https://github.com/lckr/jupyterlab-variableInspector) Is a plugin that allow you to see defined variables in your active kernel
 	- to reload your custom functions you loaded from scrips you need to put this lines at the beginning of your script
 		 ```py
