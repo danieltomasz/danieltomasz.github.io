@@ -3,10 +3,10 @@
 title: 'Writing master thesis tips about tools'
 date: 2021-03-11
 draft: true
-featuredImg: ""
 tags: 
   - python
-  - markdown teaching
+  - markdown 
+  - teaching
 ---
 
 
