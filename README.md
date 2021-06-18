@@ -1,6 +1,5 @@
-# hugo-simple.css
-A [Hugo](https://gohugo.io/) website that's based on [Simple.css](https://simplecss.org/).
+# Personal site
 
-This repository contains the Hugo code that you would end up with after following the tutorial blog posts: [here](https://mogwai.be/creating-a-simple.css-site-with-hugo/) and [here](https://mogwai.be/adding-an-rss-feed).
+This directory contain personal site available under https://danielborek.me/
 
-These tutorials are based upon an [original post](https://kevq.uk/how-to-build-jekyll-site-simple-css/) showing how to set up a [Simple.css](https://simplecss.org/) website using Jekyll.
+This theme of this site is based on [cactus theme for hugo](https://github.com/monkeyWzr/hugo-theme-cactus).
