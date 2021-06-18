@@ -6,14 +6,14 @@
     <description>Recent content in python on Daniel Borek</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 04 Mar 2021 11:58:31 +0100</lastBuildDate><atom:link href="https://danieltomasz.github.io/tags/python/rss.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 04 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://danieltomasz.github.io/tags/python/rss.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Get  a relative path to your file with Pathlib and join it with a string</title>
-      <link>https://danieltomasz.github.io/til/2021-03/pathlib-oddity/</link>
-      <pubDate>Thu, 04 Mar 2021 11:58:31 +0100</pubDate>
+      <title>Get relative path of script or notebook in Python</title>
+      <link>https://danieltomasz.github.io/blog/2020/pathlib-oddity/</link>
+      <pubDate>Thu, 04 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://danieltomasz.github.io/til/2021-03/pathlib-oddity/</guid>
-      <description>Problem statement: Get an absolute path of your project where a file/notebook is located and join it with a string pointing to a folder.
+      <guid>https://danieltomasz.github.io/blog/2020/pathlib-oddity/</guid>
+      <description>Get relative path of script or notebook in Python Problem statement: Get an absolute path of your project where a file/notebook is located and join it with a string pointing to a folder.
 Solution:
 This function will give you an absolute Path in relationship to a current python script or notebook.
 from pathlib import Path def get_project_root() -&amp;gt; Path: try: # This will give you a Path object pointing to the parent of the folder where the script is located.</description>

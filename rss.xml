@@ -6,15 +6,69 @@
     <description>Recent content in top-of-mind on Daniel Borek</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 04 Mar 2021 11:58:31 +0100</lastBuildDate><atom:link href="https://danieltomasz.github.io/rss.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 04 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://danieltomasz.github.io/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Get relative path of script or notebook in Python</title>
+      <link>https://danieltomasz.github.io/blog/2020/pathlib-oddity/</link>
+      <pubDate>Thu, 04 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://danieltomasz.github.io/blog/2020/pathlib-oddity/</guid>
+      <description>Get relative path of script or notebook in Python Problem statement: Get an absolute path of your project where a file/notebook is located and join it with a string pointing to a folder.
+Solution:
+This function will give you an absolute Path in relationship to a current python script or notebook.
+from pathlib import Path def get_project_root() -&amp;gt; Path: try: # This will give you a Path object pointing to the parent of the folder where the script is located.</description>
+    </item>
+    
     <item>
       <title>Mental functions and cognitive ontologies</title>
-      <link>https://danieltomasz.github.io/blog/2021-02/division-mental-functions/</link>
+      <link>https://danieltomasz.github.io/blog/2020/division-mental-functions/</link>
       <pubDate>Wed, 24 Feb 2021 15:26:12 +0100</pubDate>
       
-      <guid>https://danieltomasz.github.io/blog/2021-02/division-mental-functions/</guid>
-      <description>There is a recurring discussion going on in Cognitive Science, this time on Twitter. Luiz Pessoa asked about why we divide cognitive functions like attention, memory, executive control the way we did. He tracks it to the beginning of psychology as discipline and influence of William James and later, when the cognitive revolution started, to Ulric Neisser’s Cognitive Psychology book. There is a really interesting discussion below this tweet.
-1) In neuroscience, we study things like 𝗮𝘁𝘁𝗲𝗻𝘁𝗶𝗼𝗻, 𝗺𝗲𝗺𝗼𝗿𝘆, 𝗲𝗺𝗼𝘁𝗶𝗼𝗻, 𝗱𝗲𝗰𝗶𝘀𝗶𝗼𝗻 𝗺𝗮𝗸𝗶𝗻𝗴, 𝗲𝘅𝗲𝗰𝘂𝘁𝗶𝘃𝗲 𝗰𝗼𝗻𝘁𝗿𝗼𝗹, etc.</description>
+      <guid>https://danieltomasz.github.io/blog/2020/division-mental-functions/</guid>
+      <description>Mental functions and cognitive ontologies There is a recurring discussion going on in Cognitive Science, this time on Twitter. Luiz Pessoa asked about why we divide cognitive functions like attention, memory, executive control the way we did. He tracks it to the beginning of psychology as discipline and influence of William James and later, when the cognitive revolution started, to Ulric Neisser’s Cognitive Psychology book. There is a really interesting discussion below this tweet.</description>
+    </item>
+    
+    <item>
+      <title>Useful git commands</title>
+      <link>https://danieltomasz.github.io/blog/2020/useful-git-commands/</link>
+      <pubDate>Sat, 30 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://danieltomasz.github.io/blog/2020/useful-git-commands/</guid>
+      <description>Useful git commands I am adding here some commands that were useful for me.
+Only add tracked files git add -u Amend commit with new files git add -u git commit --amend --no-edit git push --force or
+git commit --amend --no-edit -a to add the currently changed files.
+Keep fork up to date cd fork_folder/ git remote add upstream git://github.com/devname/orginal-repo.git git remote -v git fetch upstream git checkout main git merge upstream/main What is git rebase?</description>
+    </item>
+    
+    <item>
+      <title>How to setup a Hugo page with Github pages and Hugo</title>
+      <link>https://danieltomasz.github.io/blog/2020/hugo-setup/</link>
+      <pubDate>Wed, 27 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://danieltomasz.github.io/blog/2020/hugo-setup/</guid>
+      <description>How to setup a Hugo page with Github pages and Hugo My first iteretion of this page used several Jekyll themes. I didn&amp;rsquo;t write much through the years, in 2021 I decided to refresh this site and start writing more often.
+Hugo is really popular static site generator. Before Hugo I used Jekyll. Configuring Hugo to use your page on Github is little more complicated than with Jekyll.
+Here you could find the tutorial.</description>
+    </item>
+    
+    <item>
+      <title>contact</title>
+      <link>https://danieltomasz.github.io/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danieltomasz.github.io/contact/</guid>
+      <description>You can contact or observe me through:
+ email: daniel dot borek at ugent dot be twitter: @danieltomasz github: @danieltomasz discord: danieltomasz#5748  </description>
+    </item>
+    
+    <item>
+      <title>top-of-mind</title>
+      <link>https://danieltomasz.github.io/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danieltomasz.github.io/about/</guid>
+      <description>Hi there! 👋 I’m Daniel, a productivity nerd, open science and linux enthusiast and a PhD candidate working to learn more about the nature of neural oscillations.
+👨‍💻 My Work I graduated Bachelor and Master studies at the University of Warsaw, obtaining the diploma in physics at College of Inter-Faculty Individual Studies in Mathematics and Natural Sciences (MISMaP). I worked in a one of the departaments of Polish Ministry of Health doing statistics and data visualisation in R.</description>
     </item>
     
   </channel>
