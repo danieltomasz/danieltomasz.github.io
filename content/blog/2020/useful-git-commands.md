@@ -8,6 +8,8 @@ tags:
  -  tips
 ---
 
+# Useful git commands
+
  I am adding  here some commands that were useful for me.
 
 ### Only add tracked files
@@ -49,7 +51,7 @@ Don't rebase public history
 
 A submodule is a link to a repository within a Git repository.
 
-```bash
+```
 git submodule add https://github.com/link
 git submodule update --remote --recursive
 ```

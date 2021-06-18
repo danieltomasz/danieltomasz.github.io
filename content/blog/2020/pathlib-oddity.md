@@ -1,11 +1,13 @@
 ---
-title: "Get  a relative path to your file with Pathlib and join it with a string"
-date: 2021-03-04T11:58:31+01:00
+title: "Get relative path of script or notebook in Python"
+date: 2021-03-04
 draft: false
 description: "Pathlib will not join Path object with a string starting with a slash"
 tags: 
  -  python
 ---
+
+# Get relative path of script or notebook in Python
 
 Problem statement: Get an absolute path of your project where a file/notebook is located and join it with a string pointing to a folder.
 

@@ -1,7 +1,7 @@
 baseURL = "https://danieltomasz.github.io"
 languageCode = "en-us"
 title = "Daniel Borek"
-theme = "simplecss"
+theme = "cactus"
 
 
 [taxonomies]
@@ -21,18 +21,15 @@ theme = "simplecss"
     url = "/blog"
     weight = 20
 
-
-  [[menu.main]]
-    identifier = "til"
-    name = "today I learned"
-    url = "/til"
-    weight = 30
+[[menu.main]]
+name = "tags"
+url = "/tags"
+weight = 30
 
 [[menu.main]]
-    identifier = "contact"
-    name = "contact"
-    url = "/contact/"
-    weight = 40
+name = "about"
+url = "/about"
+weight = 40
 
 
 [outputs]
@@ -46,4 +43,22 @@ theme = "simplecss"
 
 [markup]
   [markup.highlight]
-    style = "monokai"
+    style = "github"
+
+    
+[params]
+mainSectionTitle = "blog"
+  colortheme = "classic" # dark, light, white, or classic
+    description = "Hi there! 👋 I’m Daniel, a productivity nerd, open science and linux enthusiast and a PhD candidate working to learn more about the nature of neural oscillations."
+
+[[params.social]]
+  name = "github"
+  link = "https://github.com/danieltomasz"
+[[params.social]]
+  name = "linkedin"
+  link = "https://www.linkedin.com/in/daniel-borek-209003a6/"
+  [[params.social]]
+  name = "twitter"
+  link = "https://www.twitter.com/danieltomasz"
+
+

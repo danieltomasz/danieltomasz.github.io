@@ -1,5 +1,5 @@
 ---
-title: Linux useful command
+title: Linux useful commands
 date: 2021-01-30 
 draft: true 
 description:

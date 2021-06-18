@@ -1,6 +1,6 @@
 ---
-title: Hugo tricks
-date: 2021-01-27T00:00:00.000Z
+title: How to setup a Hugo page with Github pages and Hugo
+date: 2021-01-27
 description: "Note to myself how to setup Hugo."
 draft: false
 featuredImg: ''
@@ -9,7 +9,7 @@ tags:
   - setup
 ---
 
-## How to setup a Hugo page with Github pages and Hugo
+# How to setup a Hugo page with Github pages and Hugo
 
 My first iteretion of this page used several Jekyll themes. I didn't write much through the years, in 2021 I decided to refresh this site and start writing more often.
 
