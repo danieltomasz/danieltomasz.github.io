@@ -1,6 +1,7 @@
 ---
-title: "top-of-mind"
+title: "about me"
 description: "Random thoughts and tips on science, linux and more"
+type: "top"
 ---
 
 Hi there! 👋 I’m Daniel, a productivity nerd, open science and linux enthusiast and a PhD candidate learning more about the nature of neural oscillations.
