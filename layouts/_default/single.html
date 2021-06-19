@@ -1,0 +1,16 @@
+{{ define "main" }}
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+<!-- TODO: gallery -->
+  <div class="content" itemprop="articleBody">
+  {{ if (eq .Type "search") }}
+    <!-- TODO: search https://gohugo.io/tools/search/ -->
+  {{ else }}
+    {{ .Content }}
+    {{ partial "comments.html" . }}
+
+  {{ end }}
+  </div>
+
+</article>
+
+{{ end }}

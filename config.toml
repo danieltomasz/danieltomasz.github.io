@@ -49,7 +49,7 @@ weight = 40
 [params]
 mainSectionTitle = "blog"
   colortheme = "classic" # dark, light, white, or classic
-    description = "Hi there! 👋 I’m Daniel, a productivity nerd, open science and linux enthusiast and a PhD candidate working to learn more about the nature of neural oscillations."
+    description = "Hi there! 👋 I’m Daniel, a productivity nerd, open science and linux enthusiast and a PhD researcher working to learn more about the nature of neural oscillations."
 
 [[params.social]]
   name = "github"
