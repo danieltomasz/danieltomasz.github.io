@@ -3,7 +3,7 @@ title: "top-of-mind"
 description: "Random thoughts and tips on science, linux and more"
 ---
 
-Hi there! 👋 I’m Daniel, a productivity nerd, open science and linux enthusiast and a PhD candidate working to learn more about the nature of neural oscillations.
+Hi there! 👋 I’m Daniel, a productivity nerd, open science and linux enthusiast and a PhD candidate learning more about the nature of neural oscillations.
 
 ## 👨‍💻 My Work
 
