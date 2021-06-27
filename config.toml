@@ -45,11 +45,16 @@ weight = 40
   [markup.highlight]
     style = "github"
 
+
     
 [params]
 mainSectionTitle = "blog"
-  colortheme = "classic" # dark, light, white, or classic
-    description = "Hi there! 👋 I’m Daniel, a productivity nerd, open science and linux enthusiast and a PhD researcher working to learn more about the nature of neural oscillations."
+colortheme = "classic" # dark, light, white, or classic
+description = "Hi there! 👋 I’m Daniel, a productivity nerd, open science and linux enthusiast and a PhD researcher working to learn more about the nature of neural oscillations."
+tagsOverview = true
+showProjectsList = true
+projectsUrl = "https://github.com/danieltomasz/"
+
 
 [[params.social]]
   name = "github"

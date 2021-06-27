@@ -1,12 +1,13 @@
 ---
 title: How to setup a Hugo page with Github pages and Hugo
 date: 2021-01-27
-description: "Note to myself how to setup Hugo."
-draft: false
-featuredImg: ''
 tags:
   - hugo
   - setup
+description: "Note to myself how to setup Hugo."
+draft: false
+featuredImg: ''
+
 ---
 
 # How to setup a Hugo page with Github pages and Hugo
