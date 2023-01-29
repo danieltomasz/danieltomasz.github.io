@@ -6,7 +6,17 @@
     <description>Recent content in top-of-mind on Daniel Borek</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 29 Jan 2023 14:30:32 +0100</lastBuildDate><atom:link href="https://danieltomasz.github.io/rss.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 29 Jan 2023 15:03:23 +0100</lastBuildDate><atom:link href="https://danieltomasz.github.io/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>W4 2023: Automated EEG pipeline for biomarker discovery and last year PhD student musings</title>
+      <link>https://danieltomasz.github.io/neuropsych/neurolinks-2023-w4/</link>
+      <pubDate>Sun, 29 Jan 2023 15:03:23 +0100</pubDate>
+      
+      <guid>https://danieltomasz.github.io/neuropsych/neurolinks-2023-w4/</guid>
+      <description>2023-01-29 A subjective choice of articles I read last week (or links to interesting books) in the wide area of neuroscience and psychology.
+Neuroscience DISCOVER-EEG: an open, fully automated EEG pipeline for biomarker discovery in clinical neuroscience | bioRxiv PhD life New Year&amp;rsquo;s resolutions of a final-year PhD student </description>
+    </item>
+    
     <item>
       <title>Links 2023 W4</title>
       <link>https://danieltomasz.github.io/weekly/links-2023-w4/</link>
