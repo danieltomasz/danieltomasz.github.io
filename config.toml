@@ -23,7 +23,7 @@ theme = "cactus"
 
 [[menu.main]]
 name = "neuro & psychology"
-url = "/neuro_psych"
+url = "/neuropsych"
 weight = 30
 
 [[menu.main]]

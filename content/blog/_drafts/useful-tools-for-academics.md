@@ -10,4 +10,4 @@ draft: true
      {{< tweet 1370854729203474436 >}}
 
 - Espanso
-  -  Use espanso to enter today date 
+  -  Use espanso to enter today date using `:today` 

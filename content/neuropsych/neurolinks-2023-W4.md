@@ -1,9 +1,11 @@
 ---
-title: "Neuro_links 2023 W4"
+title: "W4 2023: Automated EEG pipeline for biomarker discovery and last year PhD student musings"
 date: 2023-01-29T15:03:23+01:00
-draft: true
+draft: false
 ---
 # 2023-01-29
+
+*A subjective choice of articles I read last week (or links to interesting books) in the wide area of neuroscience and psychology.*
 
 ## Neuroscience
 
