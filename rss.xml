@@ -6,7 +6,17 @@
     <description>Recent content in top-of-mind on Daniel Borek</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 04 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://danieltomasz.github.io/rss.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 29 Jan 2023 14:30:32 +0100</lastBuildDate><atom:link href="https://danieltomasz.github.io/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Links 2023 W4</title>
+      <link>https://danieltomasz.github.io/weekly/links-2023-w4/</link>
+      <pubDate>Sun, 29 Jan 2023 14:30:32 +0100</pubDate>
+      
+      <guid>https://danieltomasz.github.io/weekly/links-2023-w4/</guid>
+      <description>A subjective choice of articles I read last week.
+Data sharing, AI, healthcare Ready, set, share: Researchers brace for new data-sharing rules | Science | AAAS The reproducibility issues that haunt health-care AI Hunting for the best bioscience software tool? Check this database PhD life New Year&amp;rsquo;s resolutions of a final-year PhD student Neuroscience DISCOVER-EEG: an open, fully automated EEG pipeline for biomarker discovery in clinical neuroscience | bioRxiv Cancer research The race to supercharge cancer-fighting T cells Curia On the origin of the Olivier salad, known in Poland as &amp;ldquo;sałatka jarzynowa&amp;rdquo; and in many other part of the world as the &amp;ldquo;Rusian salad&amp;rdquo;: Olivier salad - Wikipedia Not alpha male but alpha female leads the pack - an update to the famous study on the Yellowstone wolfs social behaviours: Book review - The Alpha Female Wolf: The Fierce Legacy of Yellowstone&amp;rsquo;s 06 | The Inquisitive Biologist </description>
+    </item>
+    
     <item>
       <title>Get relative path of script or notebook in Python</title>
       <link>https://danieltomasz.github.io/blog/2020/pathlib-oddity/</link>
@@ -68,7 +78,7 @@ Here you could find the tutorial.</description>
       
       <guid>https://danieltomasz.github.io/contact/</guid>
       <description>You can contact or observe me through:
- email: daniel dot borek at ugent dot be twitter: @danieltomasz github: @danieltomasz discord: danieltomasz#5748  </description>
+email: daniel dot borek at ugent dot be twitter: @danieltomasz github: @danieltomasz discord: danieltomasz#5748 </description>
     </item>
     
   </channel>

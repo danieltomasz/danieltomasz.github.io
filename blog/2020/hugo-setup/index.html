@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <script type="text/javascript" src="https://latest.cactus.chat/cactus.js"></script>
+  <link rel="stylesheet" href="https://latest.cactus.chat/style.css" type="text/css">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title> How to setup a Hugo page with Github pages and Hugo | Daniel Borek</title>
-  <meta name="description" content="Hi there! 👋 I’m Daniel, a productivity nerd, open science and linux enthusiast and a PhD researcher working to learn more about the nature of neural oscillations.">
+  <link rel = 'canonical' href = 'https://danieltomasz.github.io/blog/2020/hugo-setup/'>
+  <meta name="description" content="Hi there! 👋 I&#39;m Daniel, a productivity nerd, open science and linux enthusiast and a PhD researcher working to learn more about the nature of neural oscillations.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="all,follow">
   <meta name="googlebot" content="index,follow,snippet,archive">
@@ -12,9 +19,8 @@
 <meta property="og:description" content="Note to myself how to setup Hugo." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://danieltomasz.github.io/blog/2020/hugo-setup/" /><meta property="article:section" content="blog" />
-<meta property="article:published_time" content="2021-01-27T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-01-27T00:00:00&#43;00:00" />
-
+<meta property="article:published_time" content="2021-01-27T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-01-27T00:00:00+00:00" />
 
   <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="How to setup a Hugo page with Github pages and Hugo"/>
@@ -25,7 +31,8 @@
     
   
   
-  <link rel="stylesheet" href="https://danieltomasz.github.io/css/style-classic.css">
+  <link rel="stylesheet" href="https://danieltomasz.github.io/css/styles.4c2b9aa1d874d6766f554b2d404e8fd62ab4761f51ee9b3f358d12e81e7fa43a1b4378db995bc1926bbe5ed98c060be5e7bd4f2470504cf94f22b4b3a74e62b6.css" integrity="sha512-TCuaodh01nZvVUstQE6P1iq0dh9R7ps/NY0S6B5/pDobQ3jbmVvBkmu&#43;XtmMBgvl571PJHBQTPlPIrSzp05itg=="> 
+
   
   
   
@@ -64,6 +71,8 @@
       
         <li><a href="/blog">blog</a></li>
       
+        <li><a href="/weekly">weekly links</a></li>
+      
         <li><a href="/tags">tags</a></li>
       
         <li><a href="/about">about</a></li>
@@ -83,7 +92,7 @@
 <p>My first iteretion of this page used several Jekyll themes. I didn&rsquo;t write much through the years, in 2021 I decided to refresh this site and start writing more often.</p>
 <p>Hugo is really popular static site generator. Before Hugo I used Jekyll. Configuring Hugo to use your page on Github is little more complicated than with Jekyll.</p>
 <p>Here you could find the <a href="https://levelup.gitconnected.com/build-a-personal-website-with-github-pages-and-hugo-6c68592204c7">tutorial</a>.</p>
-<p>First I use `hermit' theme, but then i switched to simple.css. <a href="https://mogwai.be/creating-a-simple.css-site-with-hugo/">Here</a> you could find more about how to setup it with hugo.</p>
+<p>First I use `hermit&rsquo; theme, but then i switched to simple.css. <a href="https://mogwai.be/creating-a-simple.css-site-with-hugo/">Here</a> you could find more about how to setup it with hugo.</p>
 <p>When you use setup with <code>gh-pages</code> branch remember to set Jekyll theme (even when your page doesn&rsquo;t use Jekyll).</p>
 <p>Adding empty also file <code>.nojekyll</code> helps.</p>
 <p>Here yuou could find interesting blogpost about <a href="https://jpdroege.com/blog/hugo-file-organization/">guide to file structure and organisation</a>.</p>
@@ -92,20 +101,20 @@
 <ol>
 <li>Add option to <code>config.toml</code>:</li>
 </ol>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">title = &#34;Hugo example site&#34;<span style="color:#bbb">
-</span><span style="color:#bbb"></span>baseurl = &#34;https://www.example.com&#34;<span style="color:#bbb">
-</span><span style="color:#bbb"></span>buildDrafts = true<span style="color:#bbb">
-</span></code></pre></div><ol start="2">
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>title = &#34;Hugo example site&#34;<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>baseurl = &#34;https://www.example.com&#34;<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>buildDrafts = true<span style="color:#bbb">
+</span></span></span></code></pre></div><ol start="2">
 <li>Generate drafted files during the current Hugo build</li>
 </ol>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo server --buildDrafts
-</code></pre></div><p>or</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo server -D
-</code></pre></div><p>To not generate draft content when building our static website, use one of the following command flags:</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo --buildDrafts<span style="color:#000;font-weight:bold">=</span><span style="color:#0086b3">false</span>
-hugo -D<span style="color:#000;font-weight:bold">=</span><span style="color:#0086b3">false</span>
-hugo -D<span style="color:#000;font-weight:bold">=</span>F
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo server --buildDrafts
+</span></span></code></pre></div><p>or</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo server -D
+</span></span></code></pre></div><p>To not generate draft content when building our static website, use one of the following command flags:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo --buildDrafts<span style="color:#000;font-weight:bold">=</span><span style="color:#0086b3">false</span>
+</span></span><span style="display:flex;"><span>hugo -D<span style="color:#000;font-weight:bold">=</span><span style="color:#0086b3">false</span>
+</span></span><span style="display:flex;"><span>hugo -D<span style="color:#000;font-weight:bold">=</span>F
+</span></span></code></pre></div>
     <p><i>Instead of leaving a comment, you could also <a href="/contact">contact me ✉️</a>.</i></p>
 
 
@@ -127,7 +136,7 @@ hugo -D<span style="color:#000;font-weight:bold">=</span>F
 
     <footer id="footer">
   <div class="footer-left">
-    Copyright  &copy; 2021  Daniel Borek 
+    Copyright  &copy; 2023  Daniel Borek 
   </div>
   <div class="footer-right">
     <nav>
@@ -136,6 +145,8 @@ hugo -D<span style="color:#000;font-weight:bold">=</span>F
         <li><a href="/">home</a></li>
          
         <li><a href="/blog">blog</a></li>
+         
+        <li><a href="/weekly">weekly links</a></li>
          
         <li><a href="/tags">tags</a></li>
          

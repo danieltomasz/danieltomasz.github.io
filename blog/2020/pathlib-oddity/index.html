@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <script type="text/javascript" src="https://latest.cactus.chat/cactus.js"></script>
+  <link rel="stylesheet" href="https://latest.cactus.chat/style.css" type="text/css">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title> Get relative path of script or notebook in Python | Daniel Borek</title>
-  <meta name="description" content="Hi there! 👋 I’m Daniel, a productivity nerd, open science and linux enthusiast and a PhD researcher working to learn more about the nature of neural oscillations.">
+  <link rel = 'canonical' href = 'https://danieltomasz.github.io/blog/2020/pathlib-oddity/'>
+  <meta name="description" content="Hi there! 👋 I&#39;m Daniel, a productivity nerd, open science and linux enthusiast and a PhD researcher working to learn more about the nature of neural oscillations.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="all,follow">
   <meta name="googlebot" content="index,follow,snippet,archive">
@@ -12,9 +19,8 @@
 <meta property="og:description" content="Pathlib will not join Path object with a string starting with a slash" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://danieltomasz.github.io/blog/2020/pathlib-oddity/" /><meta property="article:section" content="blog" />
-<meta property="article:published_time" content="2021-03-04T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-03-04T00:00:00&#43;00:00" />
-
+<meta property="article:published_time" content="2021-03-04T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-03-04T00:00:00+00:00" />
 
   <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Get relative path of script or notebook in Python"/>
@@ -25,7 +31,8 @@
     
   
   
-  <link rel="stylesheet" href="https://danieltomasz.github.io/css/style-classic.css">
+  <link rel="stylesheet" href="https://danieltomasz.github.io/css/styles.4c2b9aa1d874d6766f554b2d404e8fd62ab4761f51ee9b3f358d12e81e7fa43a1b4378db995bc1926bbe5ed98c060be5e7bd4f2470504cf94f22b4b3a74e62b6.css" integrity="sha512-TCuaodh01nZvVUstQE6P1iq0dh9R7ps/NY0S6B5/pDobQ3jbmVvBkmu&#43;XtmMBgvl571PJHBQTPlPIrSzp05itg=="> 
+
   
   
   
@@ -64,6 +71,8 @@
       
         <li><a href="/blog">blog</a></li>
       
+        <li><a href="/weekly">weekly links</a></li>
+      
         <li><a href="/tags">tags</a></li>
       
         <li><a href="/about">about</a></li>
@@ -83,25 +92,25 @@
 <p>Problem statement: Get an absolute path of your project where a file/notebook is located and join it with a string pointing to a folder.</p>
 <p>Solution:</p>
 <p>This function will give you an absolute Path in relationship to a current python script or notebook.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#000;font-weight:bold">from</span> <span style="color:#555">pathlib</span> <span style="color:#000;font-weight:bold">import</span> Path
-
-<span style="color:#000;font-weight:bold">def</span> <span style="color:#900;font-weight:bold">get_project_root</span>() <span style="color:#000;font-weight:bold">-&gt;</span> Path:
-    <span style="color:#000;font-weight:bold">try</span>:
-        <span style="color:#998;font-style:italic"># This will give you a Path object pointing to the parent of the folder where the script is located.</span>
-        <span style="color:#998;font-style:italic"># If your script is `/root/scripts/script.py`, the result will be an absolute path &#39;/root&#39;.</span>
-        <span style="color:#000;font-weight:bold">return</span> Path(__file__)<span style="color:#000;font-weight:bold">.</span>parent<span style="color:#000;font-weight:bold">.</span>parent
-    <span style="color:#000;font-weight:bold">except</span> <span style="color:#900;font-weight:bold">NameError</span> <span style="color:#000;font-weight:bold">as</span> error:
-        <span style="color:#998;font-style:italic"># This will give you  root folder of the project if this runned through jupyter notebook</span>
-        <span style="color:#000;font-weight:bold">return</span> Path()<span style="color:#000;font-weight:bold">.</span>joinpath()<span style="color:#000;font-weight:bold">.</span>absolute()<span style="color:#000;font-weight:bold">.</span>parents[<span style="color:#099">0</span>]
-    <span style="color:#000;font-weight:bold">except</span> <span style="color:#900;font-weight:bold">Exception</span> <span style="color:#000;font-weight:bold">as</span> exception:
-        <span style="color:#000;font-weight:bold">print</span>(exception)
-</code></pre></div><p>When you will work with <code>Path</code> paths don&rsquo;t add trailing slashes when joining paths. Code below</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">root<span style="color:#000;font-weight:bold">=</span> get_project_root()
-path_to_file <span style="color:#000;font-weight:bold">=</span> Path<span style="color:#000;font-weight:bold">.</span>joinpath(root, <span style="color:#d14">&#39;data/data.feather&#39;</span>)
-</code></pre></div><p>will result in <code>path_to_file = /data/final.feather</code>. To obtain <code>path_to_file = /root/data/final.feather</code> you shouldn&rsquo;t use the slash at the begining:</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">root<span style="color:#000;font-weight:bold">=</span> get_project_root()
-path_to_file <span style="color:#000;font-weight:bold">=</span> Path<span style="color:#000;font-weight:bold">.</span>joinpath(root, <span style="color:#d14">&#39;data/data.feather&#39;</span>)
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">from</span> <span style="color:#555">pathlib</span> <span style="color:#000;font-weight:bold">import</span> Path
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">def</span> <span style="color:#900;font-weight:bold">get_project_root</span>() <span style="color:#000;font-weight:bold">-&gt;</span> Path:
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">try</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#998;font-style:italic"># This will give you a Path object pointing to the parent of the folder where the script is located.</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#998;font-style:italic"># If your script is `/root/scripts/script.py`, the result will be an absolute path &#39;/root&#39;.</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">return</span> Path(__file__)<span style="color:#000;font-weight:bold">.</span>parent<span style="color:#000;font-weight:bold">.</span>parent
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">except</span> <span style="color:#900;font-weight:bold">NameError</span> <span style="color:#000;font-weight:bold">as</span> error:
+</span></span><span style="display:flex;"><span>        <span style="color:#998;font-style:italic"># This will give you  root folder of the project if this runned through jupyter notebook</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">return</span> Path()<span style="color:#000;font-weight:bold">.</span>joinpath()<span style="color:#000;font-weight:bold">.</span>absolute()<span style="color:#000;font-weight:bold">.</span>parents[<span style="color:#099">0</span>]
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">except</span> <span style="color:#900;font-weight:bold">Exception</span> <span style="color:#000;font-weight:bold">as</span> exception:
+</span></span><span style="display:flex;"><span>        <span style="color:#0086b3">print</span>(exception)
+</span></span></code></pre></div><p>When you will work with <code>Path</code> paths don&rsquo;t add trailing slashes when joining paths. Code below</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>root<span style="color:#000;font-weight:bold">=</span> get_project_root()
+</span></span><span style="display:flex;"><span>path_to_file <span style="color:#000;font-weight:bold">=</span> Path<span style="color:#000;font-weight:bold">.</span>joinpath(root, <span style="color:#d14">&#39;data/data.feather&#39;</span>)
+</span></span></code></pre></div><p>will result in <code>path_to_file = /data/final.feather</code>. To obtain <code>path_to_file = /root/data/final.feather</code> you shouldn&rsquo;t use the slash at the begining:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>root<span style="color:#000;font-weight:bold">=</span> get_project_root()
+</span></span><span style="display:flex;"><span>path_to_file <span style="color:#000;font-weight:bold">=</span> Path<span style="color:#000;font-weight:bold">.</span>joinpath(root, <span style="color:#d14">&#39;data/data.feather&#39;</span>)
+</span></span></code></pre></div>
     <p><i>Instead of leaving a comment, you could also <a href="/contact">contact me ✉️</a>.</i></p>
 
 
@@ -123,7 +132,7 @@ path_to_file <span style="color:#000;font-weight:bold">=</span> Path<span style=
 
     <footer id="footer">
   <div class="footer-left">
-    Copyright  &copy; 2021  Daniel Borek 
+    Copyright  &copy; 2023  Daniel Borek 
   </div>
   <div class="footer-right">
     <nav>
@@ -132,6 +141,8 @@ path_to_file <span style="color:#000;font-weight:bold">=</span> Path<span style=
         <li><a href="/">home</a></li>
          
         <li><a href="/blog">blog</a></li>
+         
+        <li><a href="/weekly">weekly links</a></li>
          
         <li><a href="/tags">tags</a></li>
          
