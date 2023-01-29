@@ -22,13 +22,9 @@ theme = "cactus"
     url = "/blog"
     weight = 20
 
-[[menu.main]]
-name = "what I read in science"
-url = "/neuropsych"
-weight = 30
 
 [[menu.main]]
-name = "bookmarks"
+name = "what I  have read"
 url = "/bookmarks"
 weight = 40
 

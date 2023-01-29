@@ -1,5 +1,5 @@
 ---
-title: "January 2023"
+title: "January 2023: Miscellaneus links"
 date: 2023-01-29T14:30:32+01:00
 draft: false
 ---
@@ -9,12 +9,13 @@ draft: false
 
 *A subjective choice of articles I read last month (or links to interesting books).*
 
-### Reading
 
-- Sarnecka, Barbara W. *The writing workshop: Write more, write better, be happier in academia*. 2019.
-- Derra, Aleksandra. *Filozofia, nauka, feminizm. Wybór tekstów*, Wydawnictwo UMK, 2023.
-- Krzyworzeka, Amanda. *Rolnicze strategie pracy i przetrwania. Studium z antropologii ekonomicznej*. Wydawnictwa Uniwersytetu Warszawskiego, 2014.
+## Philsophy of Science
+- [Alyssa Battistoni, Latour’s Metamorphosis — Sidecar](https://newleftreview.org/sidecar/posts/latours-metamorphosis?pc=1492)
 
+
+## World
+- [What explains the unstoppable rise of maize in Asia? | Aeon Essays](https://aeon.co/essays/what-explains-the-unstoppable-rise-of-maize-in-asia?utm_source=Aeon+Newsletter&utm_campaign=810124dfa6-EMAIL_CAMPAIGN_2023_01_12_11_36&utm_medium=email&utm_term=0_-810124dfa6-%5BLIST_EMAIL_ID%5D)
 
 
 ## Sociology
