@@ -4,4 +4,4 @@ git:
 	git push
 
 publish:
-	bash ./publish_to_ghpages.sh
+	 ./publish_to_ghpages.sh
