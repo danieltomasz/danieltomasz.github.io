@@ -22,14 +22,19 @@ theme = "cactus"
     weight = 20
 
 [[menu.main]]
+name = "weekly links"
+url = "/weekly"
+weight = 30
+
+[[menu.main]]
 name = "tags"
 url = "/tags"
-weight = 30
+weight = 40
 
 [[menu.main]]
 name = "about"
 url = "/about"
-weight = 40
+weight = 50
 
 
 [outputs]
@@ -46,11 +51,10 @@ weight = 40
     style = "github"
 
 
-    
 [params]
 mainSectionTitle = "blog"
 colortheme = "classic" # dark, light, white, or classic
-description = "Hi there! 👋 I’m Daniel, a productivity nerd, open science and linux enthusiast and a PhD researcher working to learn more about the nature of neural oscillations."
+description = "Hi there! 👋 I'm Daniel, a productivity nerd, open science and linux enthusiast and a PhD researcher working to learn more about the nature of neural oscillations."
 tagsOverview = true
 showProjectsList = true
 projectsUrl = "https://github.com/danieltomasz/"
