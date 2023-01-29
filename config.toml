@@ -23,13 +23,13 @@ theme = "cactus"
     weight = 20
 
 [[menu.main]]
-name = "neurolinks"
+name = "what I read in science"
 url = "/neuropsych"
 weight = 30
 
 [[menu.main]]
-name = "curia"
-url = "/weekly"
+name = "bookmarks"
+url = "/bookmarks"
 weight = 40
 
 [[menu.main]]

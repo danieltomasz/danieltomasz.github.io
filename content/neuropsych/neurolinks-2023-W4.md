@@ -15,3 +15,15 @@ draft: false
 ## PhD life
 
 - [New Year's resolutions of a final-year PhD student](https://www.nature.com/articles/d41586-023-00005-4)
+
+
+
+## Data sharing, AI, healthcare
+
+- [Ready, set, share: Researchers brace for new data-sharing rules | Science | AAAS](https://www.science.org/content/article/ready-set-share-researchers-brace-new-data-sharing-rules)
+- [The reproducibility issues that haunt health-care AI](https://www.nature.com/articles/d41586-023-00023-2)
+- [Hunting for the best bioscience software tool? Check this database](https://www.nature.com/articles/d41586-023-00053-w)
+
+
+## Cancer research
+- [The race to supercharge cancer-fighting T cells](https://www.nature.com/articles/d41586-023-00177-z)
