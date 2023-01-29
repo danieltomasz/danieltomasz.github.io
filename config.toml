@@ -22,19 +22,24 @@ theme = "cactus"
     weight = 20
 
 [[menu.main]]
+name = "neuro & psychology"
+url = "/neuro_psych"
+weight = 30
+
+[[menu.main]]
 name = "weekly links"
 url = "/weekly"
-weight = 30
+weight = 40
 
 [[menu.main]]
 name = "tags"
 url = "/tags"
-weight = 40
+weight = 50
 
 [[menu.main]]
 name = "about"
 url = "/about"
-weight = 50
+weight = 60
 
 
 [outputs]

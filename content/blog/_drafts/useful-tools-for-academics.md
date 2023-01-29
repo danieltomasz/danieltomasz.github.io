@@ -8,3 +8,6 @@ draft: true
 
 - [Recoll](https://www.lesbonscomptes.com/recoll/)
      {{< tweet 1370854729203474436 >}}
+
+- Espanso
+  -  Use espanso to enter today date 
