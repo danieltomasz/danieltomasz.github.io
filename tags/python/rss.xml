@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>python on Daniel Borek</title>
-    <link>https://danieltomasz.github.io/tags/python/</link>
+    <link>/tags/python/</link>
     <description>Recent content in python on Daniel Borek</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 04 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://danieltomasz.github.io/tags/python/rss.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 04 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/python/rss.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Get relative path of script or notebook in Python</title>
-      <link>https://danieltomasz.github.io/blog/2020/pathlib-oddity/</link>
+      <link>/blog/2020/pathlib-oddity/</link>
       <pubDate>Thu, 04 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://danieltomasz.github.io/blog/2020/pathlib-oddity/</guid>
+      <guid>/blog/2020/pathlib-oddity/</guid>
       <description>Get relative path of script or notebook in Python Problem statement: Get an absolute path of your project where a file/notebook is located and join it with a string pointing to a folder.
 Solution:
 This function will give you an absolute Path in relationship to a current python script or notebook.

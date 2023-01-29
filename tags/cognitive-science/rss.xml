@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>cognitive science on Daniel Borek</title>
-    <link>https://danieltomasz.github.io/tags/cognitive-science/</link>
+    <link>/tags/cognitive-science/</link>
     <description>Recent content in cognitive science on Daniel Borek</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 24 Feb 2021 15:26:12 +0100</lastBuildDate><atom:link href="https://danieltomasz.github.io/tags/cognitive-science/rss.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 24 Feb 2021 15:26:12 +0100</lastBuildDate><atom:link href="/tags/cognitive-science/rss.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mental functions and cognitive ontologies</title>
-      <link>https://danieltomasz.github.io/blog/2020/division-mental-functions/</link>
+      <link>/blog/2020/division-mental-functions/</link>
       <pubDate>Wed, 24 Feb 2021 15:26:12 +0100</pubDate>
       
-      <guid>https://danieltomasz.github.io/blog/2020/division-mental-functions/</guid>
+      <guid>/blog/2020/division-mental-functions/</guid>
       <description>Mental functions and cognitive ontologies There is a recurring discussion going on in Cognitive Science, this time on Twitter. Luiz Pessoa asked about why we divide cognitive functions like attention, memory, executive control the way we did. He tracks it to the beginning of psychology as discipline and influence of William James and later, when the cognitive revolution started, to Ulric Neisser’s Cognitive Psychology book. There is a really interesting discussion below this tweet.</description>
     </item>
     

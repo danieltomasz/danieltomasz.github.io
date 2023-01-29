@@ -2,37 +2,37 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>top-of-mind on Daniel Borek</title>
-    <link>https://danieltomasz.github.io/rss.xml</link>
+    <link>/rss.xml</link>
     <description>Recent content in top-of-mind on Daniel Borek</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 29 Jan 2023 15:03:23 +0100</lastBuildDate><atom:link href="https://danieltomasz.github.io/rss.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 29 Jan 2023 15:03:23 +0100</lastBuildDate><atom:link href="/rss.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>W4 2023: Automated EEG pipeline for biomarker discovery and last year PhD student musings</title>
-      <link>https://danieltomasz.github.io/neuropsych/neurolinks-2023-w4/</link>
+      <link>/neuropsych/neurolinks-2023-w4/</link>
       <pubDate>Sun, 29 Jan 2023 15:03:23 +0100</pubDate>
       
-      <guid>https://danieltomasz.github.io/neuropsych/neurolinks-2023-w4/</guid>
+      <guid>/neuropsych/neurolinks-2023-w4/</guid>
       <description>2023-01-29 A subjective choice of articles I read last week (or links to interesting books) in the wide area of neuroscience and psychology.
 Neuroscience DISCOVER-EEG: an open, fully automated EEG pipeline for biomarker discovery in clinical neuroscience | bioRxiv PhD life New Year&amp;rsquo;s resolutions of a final-year PhD student </description>
     </item>
     
     <item>
       <title>Links 2023 W4</title>
-      <link>https://danieltomasz.github.io/weekly/links-2023-w4/</link>
+      <link>/weekly/links-2023-w4/</link>
       <pubDate>Sun, 29 Jan 2023 14:30:32 +0100</pubDate>
       
-      <guid>https://danieltomasz.github.io/weekly/links-2023-w4/</guid>
+      <guid>/weekly/links-2023-w4/</guid>
       <description>2023-01-29 A subjective choice of articles I read last week (or links to interesting books).
 Data sharing, AI, healthcare Ready, set, share: Researchers brace for new data-sharing rules | Science | AAAS The reproducibility issues that haunt health-care AI Hunting for the best bioscience software tool? Check this database Cancer research The race to supercharge cancer-fighting T cells Books Filozofia, nauka, feminizm. Wybór tekstów - Aleksandra Derra (eBook) - Księgarnia PWN Curia On the origin of the Olivier salad, known in Poland as &amp;ldquo;sałatka jarzynowa&amp;rdquo; and in many other part of the world as the &amp;ldquo;Rusian salad&amp;rdquo;: Olivier salad - Wikipedia Not alpha male but alpha female leads the pack - an update to the famous study on the Yellowstone wolfs social behaviours: Book review - The Alpha Female Wolf: The Fierce Legacy of Yellowstone&amp;rsquo;s 06 | The Inquisitive Biologist </description>
     </item>
     
     <item>
       <title>Get relative path of script or notebook in Python</title>
-      <link>https://danieltomasz.github.io/blog/2020/pathlib-oddity/</link>
+      <link>/blog/2020/pathlib-oddity/</link>
       <pubDate>Thu, 04 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://danieltomasz.github.io/blog/2020/pathlib-oddity/</guid>
+      <guid>/blog/2020/pathlib-oddity/</guid>
       <description>Get relative path of script or notebook in Python Problem statement: Get an absolute path of your project where a file/notebook is located and join it with a string pointing to a folder.
 Solution:
 This function will give you an absolute Path in relationship to a current python script or notebook.
@@ -41,19 +41,19 @@ from pathlib import Path def get_project_root() -&amp;gt; Path: try: # This will
     
     <item>
       <title>Mental functions and cognitive ontologies</title>
-      <link>https://danieltomasz.github.io/blog/2020/division-mental-functions/</link>
+      <link>/blog/2020/division-mental-functions/</link>
       <pubDate>Wed, 24 Feb 2021 15:26:12 +0100</pubDate>
       
-      <guid>https://danieltomasz.github.io/blog/2020/division-mental-functions/</guid>
+      <guid>/blog/2020/division-mental-functions/</guid>
       <description>Mental functions and cognitive ontologies There is a recurring discussion going on in Cognitive Science, this time on Twitter. Luiz Pessoa asked about why we divide cognitive functions like attention, memory, executive control the way we did. He tracks it to the beginning of psychology as discipline and influence of William James and later, when the cognitive revolution started, to Ulric Neisser’s Cognitive Psychology book. There is a really interesting discussion below this tweet.</description>
     </item>
     
     <item>
       <title>Useful git commands</title>
-      <link>https://danieltomasz.github.io/blog/2020/useful-git-commands/</link>
+      <link>/blog/2020/useful-git-commands/</link>
       <pubDate>Sat, 30 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://danieltomasz.github.io/blog/2020/useful-git-commands/</guid>
+      <guid>/blog/2020/useful-git-commands/</guid>
       <description>Useful git commands I am adding here some commands that were useful for me.
 Only add tracked files git add -u Amend commit with new files git add -u git commit --amend --no-edit git push --force or
 git commit --amend --no-edit -a to add the currently changed files.
@@ -62,10 +62,10 @@ Keep fork up to date cd fork_folder/ git remote add upstream git://github.com/de
     
     <item>
       <title>How to setup a Hugo page with Github pages and Hugo</title>
-      <link>https://danieltomasz.github.io/blog/2020/hugo-setup/</link>
+      <link>/blog/2020/hugo-setup/</link>
       <pubDate>Wed, 27 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://danieltomasz.github.io/blog/2020/hugo-setup/</guid>
+      <guid>/blog/2020/hugo-setup/</guid>
       <description>How to setup a Hugo page with Github pages and Hugo My first iteretion of this page used several Jekyll themes. I didn&amp;rsquo;t write much through the years, in 2021 I decided to refresh this site and start writing more often.
 Hugo is really popular static site generator. Before Hugo I used Jekyll. Configuring Hugo to use your page on Github is little more complicated than with Jekyll.
 Here you could find the tutorial.</description>
@@ -73,20 +73,20 @@ Here you could find the tutorial.</description>
     
     <item>
       <title>about me</title>
-      <link>https://danieltomasz.github.io/about/</link>
+      <link>/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://danieltomasz.github.io/about/</guid>
+      <guid>/about/</guid>
       <description>Hi there! 👋 I’m Daniel, a productivity nerd, open science and linux enthusiast and a PhD candidate learning more about the nature of neural oscillations.
 👨‍💻 My Work I graduated Bachelor and Master studies at the University of Warsaw, obtaining the diploma in physics at College of Inter-Faculty Individual Studies in Mathematics and Natural Sciences (MISMaP). I worked in a one of the departaments of Polish Ministry of Health doing statistics and data visualisation in R.</description>
     </item>
     
     <item>
       <title>contact</title>
-      <link>https://danieltomasz.github.io/contact/</link>
+      <link>/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://danieltomasz.github.io/contact/</guid>
+      <guid>/contact/</guid>
       <description>You can contact or observe me through:
 email: daniel dot borek at ugent dot be twitter: @danieltomasz github: @danieltomasz discord: danieltomasz#5748 </description>
     </item>

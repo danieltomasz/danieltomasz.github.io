@@ -2,59 +2,59 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://danieltomasz.github.io/neuropsych/</loc>
+    <loc>/neuropsych/</loc>
     <lastmod>2023-01-29T15:03:23+01:00</lastmod>
   </url><url>
-    <loc>https://danieltomasz.github.io/</loc>
+    <loc>/</loc>
     <lastmod>2023-01-29T15:03:23+01:00</lastmod>
   </url><url>
-    <loc>https://danieltomasz.github.io/neuropsych/neurolinks-2023-w4/</loc>
+    <loc>/neuropsych/neurolinks-2023-w4/</loc>
     <lastmod>2023-01-29T15:03:23+01:00</lastmod>
   </url><url>
-    <loc>https://danieltomasz.github.io/weekly/links-2023-w4/</loc>
+    <loc>/weekly/links-2023-w4/</loc>
     <lastmod>2023-01-29T14:30:32+01:00</lastmod>
   </url><url>
-    <loc>https://danieltomasz.github.io/weekly/</loc>
+    <loc>/weekly/</loc>
     <lastmod>2023-01-29T14:30:32+01:00</lastmod>
   </url><url>
-    <loc>https://danieltomasz.github.io/blog/</loc>
+    <loc>/blog/</loc>
     <lastmod>2021-03-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://danieltomasz.github.io/blog/2020/pathlib-oddity/</loc>
+    <loc>/blog/2020/pathlib-oddity/</loc>
     <lastmod>2021-03-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://danieltomasz.github.io/tags/python/</loc>
+    <loc>/tags/python/</loc>
     <lastmod>2021-03-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://danieltomasz.github.io/tags/</loc>
+    <loc>/tags/</loc>
     <lastmod>2021-03-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://danieltomasz.github.io/tags/cognitive-science/</loc>
+    <loc>/tags/cognitive-science/</loc>
     <lastmod>2021-02-24T15:26:12+01:00</lastmod>
   </url><url>
-    <loc>https://danieltomasz.github.io/blog/2020/division-mental-functions/</loc>
+    <loc>/blog/2020/division-mental-functions/</loc>
     <lastmod>2021-02-24T15:26:12+01:00</lastmod>
   </url><url>
-    <loc>https://danieltomasz.github.io/tags/git/</loc>
+    <loc>/tags/git/</loc>
     <lastmod>2021-01-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://danieltomasz.github.io/tags/tips/</loc>
+    <loc>/tags/tips/</loc>
     <lastmod>2021-01-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://danieltomasz.github.io/blog/2020/useful-git-commands/</loc>
+    <loc>/blog/2020/useful-git-commands/</loc>
     <lastmod>2021-01-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://danieltomasz.github.io/blog/2020/hugo-setup/</loc>
+    <loc>/blog/2020/hugo-setup/</loc>
     <lastmod>2021-01-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://danieltomasz.github.io/tags/hugo/</loc>
+    <loc>/tags/hugo/</loc>
     <lastmod>2021-01-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://danieltomasz.github.io/tags/setup/</loc>
+    <loc>/tags/setup/</loc>
     <lastmod>2021-01-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://danieltomasz.github.io/about/</loc>
+    <loc>/about/</loc>
   </url><url>
-    <loc>https://danieltomasz.github.io/contact/</loc>
+    <loc>/contact/</loc>
   </url>
 </urlset>

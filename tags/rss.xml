@@ -2,62 +2,62 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Daniel Borek</title>
-    <link>https://danieltomasz.github.io/tags/</link>
+    <link>/tags/</link>
     <description>Recent content in Tags on Daniel Borek</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 04 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://danieltomasz.github.io/tags/rss.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 04 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/rss.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>python</title>
-      <link>https://danieltomasz.github.io/tags/python/</link>
+      <link>/tags/python/</link>
       <pubDate>Thu, 04 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://danieltomasz.github.io/tags/python/</guid>
+      <guid>/tags/python/</guid>
       <description></description>
     </item>
     
     <item>
       <title>cognitive science</title>
-      <link>https://danieltomasz.github.io/tags/cognitive-science/</link>
+      <link>/tags/cognitive-science/</link>
       <pubDate>Wed, 24 Feb 2021 15:26:12 +0100</pubDate>
       
-      <guid>https://danieltomasz.github.io/tags/cognitive-science/</guid>
+      <guid>/tags/cognitive-science/</guid>
       <description></description>
     </item>
     
     <item>
       <title>git</title>
-      <link>https://danieltomasz.github.io/tags/git/</link>
+      <link>/tags/git/</link>
       <pubDate>Sat, 30 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://danieltomasz.github.io/tags/git/</guid>
+      <guid>/tags/git/</guid>
       <description></description>
     </item>
     
     <item>
       <title>tips</title>
-      <link>https://danieltomasz.github.io/tags/tips/</link>
+      <link>/tags/tips/</link>
       <pubDate>Sat, 30 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://danieltomasz.github.io/tags/tips/</guid>
+      <guid>/tags/tips/</guid>
       <description></description>
     </item>
     
     <item>
       <title>hugo</title>
-      <link>https://danieltomasz.github.io/tags/hugo/</link>
+      <link>/tags/hugo/</link>
       <pubDate>Wed, 27 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://danieltomasz.github.io/tags/hugo/</guid>
+      <guid>/tags/hugo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>setup</title>
-      <link>https://danieltomasz.github.io/tags/setup/</link>
+      <link>/tags/setup/</link>
       <pubDate>Wed, 27 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://danieltomasz.github.io/tags/setup/</guid>
+      <guid>/tags/setup/</guid>
       <description></description>
     </item>
     
