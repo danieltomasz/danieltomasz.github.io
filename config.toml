@@ -1,4 +1,5 @@
-baseURL = "https://danieltomasz.github.io"
+baseURL = ""
+relativeURLs = "True"
 languageCode = "en-us"
 title = "Daniel Borek"
 theme = "cactus"
@@ -22,12 +23,12 @@ theme = "cactus"
     weight = 20
 
 [[menu.main]]
-name = "neuro & psychology"
+name = "neurolinks"
 url = "/neuropsych"
 weight = 30
 
 [[menu.main]]
-name = "weekly links"
+name = "curia"
 url = "/weekly"
 weight = 40
 
