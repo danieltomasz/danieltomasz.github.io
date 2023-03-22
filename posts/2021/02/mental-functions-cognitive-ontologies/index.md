@@ -5,6 +5,8 @@ date: 2021-02-24
 date-modified: 2023-03-22
 categories: [cognitive sciences]
 draft: false
+title-block-banner: false
+
 ---
 
 # Mental functions and cognitive ontologies

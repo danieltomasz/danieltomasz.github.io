@@ -4,3 +4,4 @@ themes/cactus
 /.luarc.json
 
 /.quarto/
+.Rproj.user

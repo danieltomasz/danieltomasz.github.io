@@ -11,7 +11,7 @@ project:
 
 website:
   page-navigation: true
-  title: "Daniel Borek"
+  title: "Embracing complexity"
   site-url: "https://danielborek.me"
   page-footer:
       left: "Blog made with 💜 and [Quarto](https://quarto.org/), by Daniel Borek. License: [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/)."
@@ -23,6 +23,8 @@ website:
         - icon: envelope
           href: mailto:daniel.borek@ugent.be
   navbar:
+    left:
+      -  text: "Daniel Borek"
     right:
       - text: "posts"
         file: index.qmd
@@ -32,10 +34,10 @@ website:
 format:
   html:
     highlight-style: a11y
-    theme:
-      light: ember.scss
-      dark: darkly
-    css: styles.css
+    theme: styles.scss
+    toc: true
+    toc-depth: 3
+    toc-location: left
 
 comments:
   giscus:

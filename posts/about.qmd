@@ -12,6 +12,9 @@ about:
     - icon: github
       text: Github
       href: https://github.com/danieltomasz
+    - icon: mastodon
+      text: Mastodon
+      href: https://scholar.social/about
 comments: false
 ---
 
