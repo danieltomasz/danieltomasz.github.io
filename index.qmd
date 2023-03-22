@@ -4,6 +4,16 @@ listing:
     contents:
       - "posts/*/*/*/*.md"
       - "posts/*/*/*/*.qmd"
+      - "!posts/*/*/til*/*.md"
+    sort: "date desc"
+    type: default
+    categories: true
+    sort-ui: false
+    filter-ui: false
+    feed: true
+  - id: til
+    contents:
+      - "posts/*/*/til*/*.md"
     sort: "date desc"
     type: default
     categories: true
@@ -12,10 +22,18 @@ listing:
     feed: true
 page-layout: full
 comments: false
-title-block-banner: false
+title-block-banner: true
 ---
 
-## Recent posts 
+
+
+
+### Posts
 
 ::: {#posts}
+:::
+
+### Notes
+
+::: {#til}
 :::

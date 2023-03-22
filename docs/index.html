@@ -88,6 +88,34 @@ ul.task-list li input[type="checkbox"] {
       window['quarto-listing-loaded']();
     }
   })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-til .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-til'] = new List('listing-til', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
   </script>
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -139,7 +167,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#recent-posts" id="toc-recent-posts" class="nav-link active" data-scroll-target="#recent-posts">Recent posts</a></li>
+  <li><a href="#posts" id="toc-posts" class="nav-link active" data-scroll-target="#posts">Posts</a></li>
+  <li><a href="#notes" id="toc-notes" class="nav-link" data-scroll-target="#notes">Notes</a></li>
   </ul>
 </nav>
 </nav>
@@ -148,56 +177,15 @@ ul.task-list li input[type="checkbox"] {
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
     <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Pathlib">Pathlib <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Python">Python <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cognitive sciences">cognitive sciences <span class="quarto-category-count">(1)</span></div><div class="category" data-category="howto">howto <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
-<main class="content column-body" id="quarto-document-content">
+<main class="content quarto-banner-title-block column-body" id="quarto-document-content">
 
 
 
-<section id="recent-posts" class="level2">
-<h2 class="anchored" data-anchor-id="recent-posts">Recent posts</h2>
+<section id="posts" class="level3">
+<h3 class="anchored" data-anchor-id="posts">Posts</h3>
 <div id="listing-posts" class="quarto-listing quarto-listing-container-default">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="Python,Pathlib,howto" data-listing-date-sort="1614812400000" data-listing-file-modified-sort="1679481213867" data-listing-date-modified-sort="1679439600000" data-listing-reading-time-sort="2">
-<div class="thumbnail">
-<p><a href="./posts/2021/03/relative-path-notebook/index.html"> <div class="listing-item-img-placeholder" >&nbsp;</div> </a></p>
-</div>
-<div class="body">
-<a href="./posts/2021/03/relative-path-notebook/index.html">
-<h3 class="no-anchor listing-title">
-How to get relative path of script or notebook in Python with Pathlib library
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Python'); return false;">
-Python
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Pathlib'); return false;">
-Pathlib
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('howto'); return false;">
-howto
-</div>
-</div>
-<a href="./posts/2021/03/relative-path-notebook/index.html">
-<div class="listing-description">
-<em>Problem statement</em>: You want to get an absolute path of your project where a file/notebook is located and join it with a string pointing to a folder.
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/2021/03/relative-path-notebook/index.html">
-<div class="listing-date">
-Mar 4, 2021
-</div>
-<div class="listing-author">
-Daniel Borek
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="cognitive sciences" data-listing-date-sort="1614121200000" data-listing-file-modified-sort="1679495758625" data-listing-date-modified-sort="1679439600000" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="0" data-categories="cognitive sciences" data-listing-date-sort="1614121200000" data-listing-file-modified-sort="1679495758625" data-listing-date-modified-sort="1679439600000" data-listing-reading-time-sort="1">
 <div class="thumbnail">
 <p><a href="./posts/2021/02/mental-functions-cognitive-ontologies/index.html"> <div class="listing-item-img-placeholder" >&nbsp;</div> </a></p>
 </div>
@@ -225,6 +213,57 @@ There is a ongoing discussion in cognitive sciences about cognitive ontologies. 
 <a href="./posts/2021/02/mental-functions-cognitive-ontologies/index.html">
 <div class="listing-date">
 Feb 24, 2021
+</div>
+<div class="listing-author">
+Daniel Borek
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+</section>
+<section id="notes" class="level3">
+<h3 class="anchored" data-anchor-id="notes">Notes</h3>
+<div id="listing-til" class="quarto-listing quarto-listing-container-default">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="Python,Pathlib,howto" data-listing-date-sort="1614812400000" data-listing-file-modified-sort="1679500394977" data-listing-date-modified-sort="1679439600000" data-listing-reading-time-sort="2">
+<div class="thumbnail">
+<p><a href="./posts/2021/03/til-relative-path-notebook/index.html"> <div class="listing-item-img-placeholder" >&nbsp;</div> </a></p>
+</div>
+<div class="body">
+<a href="./posts/2021/03/til-relative-path-notebook/index.html">
+<h3 class="no-anchor listing-title">
+How to get relative path of script or notebook in Python with Pathlib library
+</h3>
+<div class="listing-subtitle">
+
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Python'); return false;">
+Python
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Pathlib'); return false;">
+Pathlib
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('howto'); return false;">
+howto
+</div>
+</div>
+<a href="./posts/2021/03/til-relative-path-notebook/index.html">
+<div class="listing-description">
+<em>Problem statement</em>: You want to get an absolute path of your project where a file/notebook is located and join it with a string pointing to a folder.
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./posts/2021/03/til-relative-path-notebook/index.html">
+<div class="listing-date">
+Mar 4, 2021
 </div>
 <div class="listing-author">
 Daniel Borek
