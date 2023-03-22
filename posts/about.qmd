@@ -1,7 +1,7 @@
 ---
 title: "Daniel Borek"
 about:
-  template: jolla
+  template: trestles
   links:
     - icon: twitter
       text: Twitter
@@ -18,6 +18,6 @@ about:
 comments: false
 ---
 
-Hi there! 👋  I'm Daniel, a productivity nerd, an open science and unix/linux enthusiast and a PhD candidate learning more about the nature of neural oscillations.
+Hi there! 👋  I'm Daniel, an open science and unix/linux enthusiast and a PhD candidate learning more about the nature of neural oscillations.
 
 Currently I am based in  Brussels, Belgium.  I studied physics within MISMaP programme and philosophy at University of Warsaw, I worked  as data analyst  doing data visualisation in R.  I ❤️ cinema.

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2021/02/mental-functions-cognitive-ontologies/index.md",
+                "file": "about.qmd",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -72,7 +72,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2021/02/mental-functions-cognitive-ontologies/index.md"
+                "file": "about.qmd"
               }
             }
           }
@@ -117,28 +117,30 @@
       "random-note:Open random note": false
     }
   },
-  "active": "4d1633bfdacea066",
+  "active": "6008b8dd256146f5",
   "lastOpenFiles": [
     "about.html",
     "about_files/mediabag",
     "about_files",
-    "2021/02/mental-functions-cognitive-ontologies/index.html",
-    "2021/02/mental-functions-cognitive-ontologies/index_files/mediabag",
-    "2021/02/mental-functions-cognitive-ontologies/index_files",
-    "2021/03/til-relative-path-notebook/index.html",
-    "2021/03/til-relative-path-notebook/index_files/mediabag",
-    "2021/03/til-relative-path-notebook/index_files",
-    "2021/03/til-relative-path-notebook/index.md",
-    "2021/03/til-relative-path-notebook",
+    "profile.png",
+    "Profile1.png",
+    "Profile1.JPG.sb-9a4e57f2-chd8Tl",
+    "Profile1.JPG",
+    "templates/blogpost.md",
+    "2021/02/mental-functions-cognitive-ontologies/index.md",
     "2023/03/start-with-quarto/index.html",
+    "2023/03/start-with-quarto/index_files/mediabag",
+    "2023/03/start-with-quarto/index_files",
+    "2023/03/aperiodic-dreams/index.html",
+    "2023/03/aperiodic-dreams/index_files/mediabag",
+    "2023/03/aperiodic-dreams/index_files",
+    "2021/03/til-relative-path-notebook/index.md",
     "2021/03/relative-path-notebook/index.md",
     "2023/03/start-with-quarto/index.md",
     "2023/03/aperiodic-dreams/index.md",
-    "2021/02/mental-functions-cognitive-ontologies/index.md",
     "2021/03/relative-path-notebook/index.md.md",
     "2023/03/start-with-quarto/thumbnail.jpg",
     "2021/02/mental-functions-cognitive-ontologies/index.md.md",
-    "templates/blogpost.md",
     "2023/03/welcome/thumbnail.jpg",
     "2023/03/post-no-code/index.md",
     "posts/2022-03-02-post-no-code.md"
