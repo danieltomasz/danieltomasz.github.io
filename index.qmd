@@ -1,15 +1,31 @@
 ---
 listing:
-  contents:
-    - "posts/*/*/*/*.md"
-    - "posts/*/*/*/*.qmd"
-  sort: "date desc"
-  type: default
-  categories: true
-  sort-ui: false
-  filter-ui: false
-  feed: true
+  - id: posts
+    contents:
+      - "posts/*/*/*/*.md"
+      - "posts/*/*/*/*.qmd"
+    sort: "date desc"
+    type: default
+    categories: true
+    sort-ui: false
+    filter-ui: false
+    feed: true
+  - id: posts
+    contents:
+      - "posts/*/*/*/*.md"
+      - "posts/*/*/*/*.qmd"
+    sort: "date desc"
+    type: default
+    categories: true
+    sort-ui: false
+    filter-ui: false
+    feed: true
 page-layout: full
+comments: false
 title-block-banner: false
 ---
 
+## Recent posts 
+
+::: {#posts}
+:::

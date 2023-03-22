@@ -1,5 +1,6 @@
 [
   "obsidian-custom-file-extensions-plugin",
   "templater-obsidian",
-  "nldates-obsidian"
+  "nldates-obsidian",
+  "obsidian-front-matter-title-plugin"
 ]

@@ -9,7 +9,7 @@ draft: false
 
 # Mental functions and cognitive ontologies
 
-There is a ongoing discussion in cognitive sciences, the last installment was on twitter. Luiz Pessoa asked about why we divide cognitive functions like attention, memory, executive control the way we did. He tracks it to the beginning of psychology as discipline and influence of  William James and later, when the cognitive revolution started, to  Ulric Neisser's Cognitive Psychology book. There was a really interesting discussion in replies to this tweet.
+There is a ongoing discussion in cognitive sciences about cognitive ontologies. Luiz Pessoa asked about why we divide cognitive functions like attention, memory, executive control the way we did. He tracks it to the beginning of psychology as discipline and influence of  William James and later, when the cognitive revolution started, to  Ulric Neisser's Cognitive Psychology book. There was a really interesting discussion in replies to this tweet.
 
 {{< tweet user=PessoaBrain id=1364264706505121797 >}}
 

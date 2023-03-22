@@ -8,14 +8,27 @@ project:
     - "!posts/templates/"
 
 
+
 website:
-  title: "Daniel Borek blog"
+  page-navigation: true
+  title: "Daniel Borek"
+  site-url: "https://danielborek.me"
+  page-footer:
+      left: "Blog made with 💜 and [Quarto](https://quarto.org/), by Daniel Borek. License: [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/)."
+      right:
+        - icon: github
+          href: https://github.com/danieltomasz/
+        - icon: twitter
+          href: https://twitter.com/danieltomasz
+        - icon: envelope
+          href: mailto:daniel.borek@ugent.be
   navbar:
-    left:
+    right:
       - text: "posts"
         file: index.qmd
       - text: "about"
         file: posts/about.qmd
+
 format:
   html:
     highlight-style: a11y
@@ -24,7 +37,9 @@ format:
       dark: darkly
     css: styles.css
 
-
+comments:
+  giscus:
+    repo: danieltomasz/danieltomasz.github.io
 
 resources:
   - CNAME
