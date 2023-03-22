@@ -1,6 +1,0 @@
-<strong>🏷️ </strong>
-    {{ range $key, $value := .Params.tags }}
-       <a href="/tags/{{ $value | urlize }}">{{ $value }}</a>{{ if ne $key (sub (len $.Params.tags) 1) }}, {{ else }}{{ end }}
-    {{ end }}
-
- <!-- source https://discourse.gohugo.io/t/howto-delimiter-separated-tags/146/8? //-->

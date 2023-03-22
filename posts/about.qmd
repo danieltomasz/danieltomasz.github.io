@@ -1,0 +1,20 @@
+---
+title: "About this blog"
+about:
+  template: jolla
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/danieltomasz
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/daniel-borek-209003a6/
+    - icon: github
+      text: Github
+      href: https://github.com/danieltomasz
+
+---
+
+Hi there! 👋  Here is my  overdue #introduction! I'm Daniel, a productivity nerd, an open science and unix/linux enthusiast and a PhD candidate learning more about the nature of neural oscillations.
+
+Currently I am based in  Brussels, Belgium.  I studied physics within MISMaP programme and philosophy at University of Warsaw, I worked  as data analyst  doing data visualisation in R.  I ❤️ cinema.

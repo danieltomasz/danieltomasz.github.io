@@ -1,0 +1,136 @@
+{
+  "main": {
+    "id": "0c7431ede19840ca",
+    "type": "split",
+    "children": [
+      {
+        "id": "a6ee878d3ae7d53c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8196f862c5999e0d",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "8e347cc12916a74c",
+    "type": "split",
+    "children": [
+      {
+        "id": "9953da120352c38c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4d1633bfdacea066",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "2ae0aaced63e89f9",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "dfb45aefa8c6d956",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          },
+          {
+            "id": "73cfd88b0b1cfc4d",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "668233b6175a7429",
+    "type": "split",
+    "children": [
+      {
+        "id": "7b6d21083e2a48f8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d1d86c439934e09f",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "command-palette:Open command palette": false,
+      "templater-obsidian:Templater": false,
+      "random-note:Open random note": false
+    }
+  },
+  "active": "8196f862c5999e0d",
+  "lastOpenFiles": [
+    "2023/03/start-with-quarto/index.md",
+    "2023/03/aperiodic-dreams/index.md",
+    "2021/02/mental-functions-cognitive-ontologies/index.html",
+    "2021/02/mental-functions-cognitive-ontologies/index_files/mediabag",
+    "2021/02/mental-functions-cognitive-ontologies/index_files",
+    "2021/03/relative-path-notebook/index.html",
+    "2021/03/relative-path-notebook/index_files/mediabag",
+    "2021/03/relative-path-notebook/index_files",
+    "2021/02/mental-functions-cognitive-ontologies/index.md",
+    "2021/03/relative-path-notebook/index.md.md",
+    "2021/03/relative-path-notebook/index.qmd",
+    "2023/03/aperiodic-dreams/index.qmd",
+    "2021/03/relative-path-notebook/index.md.html",
+    "2021/03/relative-path-notebook/index.md_files/mediabag",
+    "2023/03/start-with-quarto/thumbnail.jpg",
+    "2021/02/mental-functions-cognitive-ontologies/index.md.md",
+    "templates/blogpost.md",
+    "2023/03/welcome/thumbnail.jpg",
+    "2023/03/post-no-code/index.md",
+    "posts/2022-03-02-post-no-code.md"
+  ]
+}

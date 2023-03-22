@@ -1,2 +1,6 @@
 public
 themes/cactus
+
+/.luarc.json
+
+/.quarto/

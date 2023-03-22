@@ -1,0 +1,30 @@
+project:
+  type: website
+  output-dir: docs
+  render:
+    - "*.qmd"
+    - "*.md"
+    - "!templates/"
+    - "!posts/templates/"
+
+
+website:
+  title: "Daniel Borek blog"
+  navbar:
+    left:
+      - text: "posts"
+        file: index.qmd
+      - text: "about"
+        file: posts/about.qmd
+format:
+  html:
+    highlight-style: a11y
+    theme:
+      light: ember.scss
+      dark: darkly
+    css: styles.css
+
+
+
+resources:
+  - CNAME
