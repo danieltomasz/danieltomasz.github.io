@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "about.qmd",
+                "file": "2021/02/mental-functions-cognitive-ontologies/index.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -72,7 +72,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "about.qmd"
+                "file": "2021/02/mental-functions-cognitive-ontologies/index.md"
               }
             }
           }
@@ -119,9 +119,6 @@
   },
   "active": "6008b8dd256146f5",
   "lastOpenFiles": [
-    "about.html",
-    "about_files/mediabag",
-    "about_files",
     "2023/03/start-with-quarto/index.html",
     "2023/03/start-with-quarto/index_files/mediabag",
     "2023/03/start-with-quarto/index_files",
@@ -130,6 +127,9 @@
     "2023/03/aperiodic-dreams/index_files",
     "2021/03/til-relative-path-notebook/index.html",
     "2021/03/til-relative-path-notebook/index_files/mediabag",
+    "2021/03/til-relative-path-notebook/index_files",
+    "2021/02/mental-functions-cognitive-ontologies/index.html",
+    "2021/02/mental-functions-cognitive-ontologies/index_files/mediabag",
     "profile.png",
     "Profile1.png",
     "Profile1.JPG",

@@ -34,7 +34,7 @@ website:
 format:
   html:
     highlight-style: a11y
-    theme: ember.scss
+    theme: styles.scss
     toc: true
     toc-depth: 3
     toc-location: left

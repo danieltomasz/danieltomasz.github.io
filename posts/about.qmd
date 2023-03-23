@@ -1,7 +1,7 @@
 ---
 title: "About"
 about:
-  template: trestles
+  template: jolla
   links:
     - icon: twitter
       text: Twitter
@@ -19,9 +19,10 @@ about:
 comments: false
 toc: false
 title-block-banner: false
+
 ---
 
-## About this blog
+About this blog
 
 Hi there! 👋  I'm Daniel Borek, an open science and unix/linux enthusiast and a PhD candidate learning more about the nature of neural oscillations.
 
