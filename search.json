@@ -1,17 +1,17 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
+    "objectID": "blog.html",
+    "href": "blog.html",
     "title": "Embracing complexity",
     "section": "",
     "text": "Posts\n\n\n\n\n\n\nMental functions and cognitive ontologies\n\n\n\n\n\n\n\ncognitive sciences\n\n\n\n\n\n\n\n\n\n\n\nFeb 24, 2021\n\n\nDaniel Borek\n\n\n\n\n\n\nNo matching items\n\n\n\n\nNotes\n\n\n\n\n\n\nHow to get relative path of script or notebook in Python with Pathlib library\n\n\n\n\n\n\n\nPython\n\n\nPathlib\n\n\nhowto\n\n\n\n\n\n\n\n\n\n\n\nMar 4, 2021\n\n\nDaniel Borek\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "posts/about.html",
-    "href": "posts/about.html",
-    "title": "About",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Daniel Borek",
     "section": "",
-    "text": "About this blog\nHi there! 👋 I’m Daniel Borek, an open science and unix/linux enthusiast and a PhD candidate learning more about the nature of neural oscillations.\nCurrently I am based in Brussels, Belgium. I studied physics within MISMaP programme and philosophy at University of Warsaw, I worked as data analyst doing data visualisation in R. I ❤️ cinema."
+    "text": "Academic and Data Scientist\nI’m Daniel Borek, a PhD candidate at Ghent University learning more about the nature of neural oscillations. I studied physics within MISMaP programme and philosophy at University of Warsaw.\nBefore starting PhD, I worked as a data analyst in the health policy area, doing data analysis,visualisation and raport automation in R. I am pasionate about health data and and using data visualisation to provide new insights.\nCurrently I am based in Brussels, Belgium. I ❤️ cinema."
   },
   {
     "objectID": "posts/2021/02/mental-functions-cognitive-ontologies/index.html",

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Embracing complexity</title>
+<link>https://danielborek.me/blog.html</link>
+<atom:link href="https://danielborek.me/blog.xml" rel="self" type="application/rss+xml"/>
+<description></description>
+<generator>quarto-1.2.475</generator>
+<lastBuildDate>Thu, 04 Mar 2021 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>How to get relative path of script or notebook in Python with Pathlib library</title>
+  <dc:creator>Daniel Borek</dc:creator>
+  <link>https://danielborek.me/posts/2021/03/til-relative-path-notebook/index.html</link>
+  <description><![CDATA[ 
+
+
+
+<p><em>Problem statement</em>: You want to get an absolute path of your project where a file/notebook is located and join it with a string pointing to a folder.</p>
+<p>Solution:</p>
+<p>This function will give you an absolute path in relation to a current python script or notebook.</p>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;">from</span> pathlib <span class="im" style="color: #00769E;">import</span> Path</span>
+<span id="cb1-2"></span>
+<span id="cb1-3"><span class="kw" style="color: #003B4F;">def</span> get_project_root() <span class="op" style="color: #5E5E5E;">-&gt;</span> Path:</span>
+<span id="cb1-4">    <span class="cf" style="color: #003B4F;">try</span>:</span>
+<span id="cb1-5">        <span class="co" style="color: #5E5E5E;"># This will give you a Path object pointing to the parent of the folder where the script is located.</span></span>
+<span id="cb1-6">        <span class="co" style="color: #5E5E5E;"># If your script is `/root/scripts/script.py`, the result will be an absolute path '/root'.</span></span>
+<span id="cb1-7">        <span class="cf" style="color: #003B4F;">return</span> Path(<span class="va" style="color: #111111;">__file__</span>).parent.parent</span>
+<span id="cb1-8">    <span class="cf" style="color: #003B4F;">except</span> <span class="pp" style="color: #AD0000;">NameError</span> <span class="im" style="color: #00769E;">as</span> error:</span>
+<span id="cb1-9">        <span class="co" style="color: #5E5E5E;"># This will give you  root folder of the project if this runned through jupyter notebook</span></span>
+<span id="cb1-10">        <span class="cf" style="color: #003B4F;">return</span> Path().joinpath().absolute().parents[<span class="dv" style="color: #AD0000;">0</span>]</span>
+<span id="cb1-11">    <span class="cf" style="color: #003B4F;">except</span> <span class="pp" style="color: #AD0000;">Exception</span> <span class="im" style="color: #00769E;">as</span> exception:</span>
+<span id="cb1-12">        <span class="bu" style="color: null;">print</span>(exception)</span></code></pre></div>
+<p>When you will work with <code>Path</code> paths don’t add trailing slashes when joining paths. The code below:</p>
+<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1">root<span class="op" style="color: #5E5E5E;">=</span> get_project_root()</span>
+<span id="cb2-2">path_to_file <span class="op" style="color: #5E5E5E;">=</span> Path.joinpath(root, <span class="st" style="color: #20794D;">'/data/data.feather'</span>)</span></code></pre></div>
+<p>will result in <code>path_to_file = /data/final.feather</code>.</p>
+<p>To obtain <code>path_to_file = /root/data/final.feather</code> you shouldn’t use the slash at the begining:</p>
+<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1">root<span class="op" style="color: #5E5E5E;">=</span> get_project_root()</span>
+<span id="cb3-2">path_to_file <span class="op" style="color: #5E5E5E;">=</span> Path.joinpath(root, <span class="st" style="color: #20794D;">'data/data.feather'</span>)</span></code></pre></div>
+
+
+
+ ]]></description>
+  <category>Python</category>
+  <category>Pathlib</category>
+  <category>howto</category>
+  <guid>https://danielborek.me/posts/2021/03/til-relative-path-notebook/index.html</guid>
+  <pubDate>Thu, 04 Mar 2021 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Mental functions and cognitive ontologies</title>
+  <dc:creator>Daniel Borek</dc:creator>
+  <link>https://danielborek.me/posts/2021/02/mental-functions-cognitive-ontologies/index.html</link>
+  <description><![CDATA[ 
+
+
+
+<section id="mental-functions-and-cognitive-ontologies" class="level1">
+<h1>Mental functions and cognitive ontologies</h1>
+<p>There is a ongoing discussion in cognitive sciences about cognitive ontologies. Luiz Pessoa asked about why we divide cognitive functions like attention, memory, executive control the way we did. He tracks it to the beginning of psychology as discipline and influence of William James and later, when the cognitive revolution started, to Ulric Neisser’s Cognitive Psychology book. There was a really interesting discussion in replies to this tweet.</p>
+<p></p><div id="tweet-42340"></div><script>tweet={"url":"https:\/\/twitter.com\/PessoaBrain\/status\/1364264706505121797","author_name":"Luiz Pessoa","author_url":"https:\/\/twitter.com\/PessoaBrain","html":"\u003Cblockquote class=\"twitter-tweet\" align=\"center\"\u003E\u003Cp lang=\"en\" dir=\"ltr\"\u003E1) In neuroscience, we study things like \uD835\uDDEE\uD835\uDE01\uD835\uDE01\uD835\uDDF2\uD835\uDDFB\uD835\uDE01\uD835\uDDF6\uD835\uDDFC\uD835\uDDFB, \uD835\uDDFA\uD835\uDDF2\uD835\uDDFA\uD835\uDDFC\uD835\uDDFF\uD835\uDE06, \uD835\uDDF2\uD835\uDDFA\uD835\uDDFC\uD835\uDE01\uD835\uDDF6\uD835\uDDFC\uD835\uDDFB, \uD835\uDDF1\uD835\uDDF2\uD835\uDDF0\uD835\uDDF6\uD835\uDE00\uD835\uDDF6\uD835\uDDFC\uD835\uDDFB \uD835\uDDFA\uD835\uDDEE\uD835\uDDF8\uD835\uDDF6\uD835\uDDFB\uD835\uDDF4, \uD835\uDDF2\uD835\uDE05\uD835\uDDF2\uD835\uDDF0\uD835\uDE02\uD835\uDE01\uD835\uDDF6\uD835\uDE03\uD835\uDDF2 \uD835\uDDF0\uD835\uDDFC\uD835\uDDFB\uD835\uDE01\uD835\uDDFF\uD835\uDDFC\uD835\uDDF9, etc. \u003Cbr\u003EBuy why do we carve mental function this was?\u003Cbr\u003EAny good references that discuss this issue?\u003Cbr\u003EPlease share with possible\u003C\/p\u003E&mdash; Luiz Pessoa (@PessoaBrain) \u003Ca href=\"https:\/\/twitter.com\/PessoaBrain\/status\/1364264706505121797?ref_src=twsrc%5Etfw\"\u003EFebruary 23, 2021\u003C\/a\u003E\u003C\/blockquote\u003E\n\u003Cscript async src=\"https:\/\/platform.twitter.com\/widgets.js\" charset=\"utf-8\"\u003E\u003C\/script\u003E\n","width":550,"height":null,"type":"rich","cache_age":"3153600000","provider_name":"Twitter","provider_url":"https:\/\/twitter.com","version":"1.0"};document.getElementById("tweet-42340").innerHTML = tweet["html"];</script><p></p>
+<p>This echoes discussion between two camps, which most famous proponents are currently György Buzsáki and David Poeppel. Here is a discussion between them in one of “Brain inspired” <a href="https://braininspired.co/podcast/84/">episodes</a>.</p>
+<p>Maybe I state something trivial, but I think all these terms used in cognitive sciences are a little bit blurry. It allows scientists to escape any clear borders between processes defined by these terms. On the other hand, scientists in a theory are well aware that there is no process in isolation (but this sometimes is much harder to operationalize in practice).</p>
+<p>Many different philosophers and neuroscientists told much about this topic. Currently, neuroinformatics could provide some nice tools. Read more in this <a href="https://www.annualreviews.org/doi/abs/10.1146/annurev-psych-122414-033729">review by Russell A. Poldrack and Tal Yarkoni</a>.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>cognitive sciences</category>
+  <guid>https://danielborek.me/posts/2021/02/mental-functions-cognitive-ontologies/index.html</guid>
+  <pubDate>Wed, 24 Feb 2021 00:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>
