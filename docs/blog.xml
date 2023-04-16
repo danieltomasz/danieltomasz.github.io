@@ -6,8 +6,8 @@
       version="2.0">
 <channel>
 <title>Embracing complexity</title>
-<link>https://danielborek.me/index.html</link>
-<atom:link href="https://danielborek.me/index.xml" rel="self" type="application/rss+xml"/>
+<link>https://danielborek.me/blog.html</link>
+<atom:link href="https://danielborek.me/blog.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.3.326</generator>
 <lastBuildDate>Wed, 03 Mar 2021 23:00:00 GMT</lastBuildDate>

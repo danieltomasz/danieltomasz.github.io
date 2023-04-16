@@ -28,16 +28,15 @@ website:
     right:
       - text: "about"
         file: index.qmd
-#      - text: "posts"
-#        file: blog.qmd
+      - text: "posts"
+        file: blog.qmd
+
 
 format:
   html:
+    theme: morph
+    css: styles.css
     highlight-style: a11y
-    theme: styles-copy.scss
-#    toc: true
-#    toc-depth: 3
-#    toc-location: left
 
 
 comments:

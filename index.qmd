@@ -1,39 +1,37 @@
 ---
-listing:
-  - id: posts
-    contents:
-      - "posts/*/*/*/*.md"
-      - "posts/*/*/*/*.qmd"
-      - "!posts/*/*/til*/*.md"
-    sort: "date desc"
-    type: default
-    categories: true
-    sort-ui: false
-    filter-ui: false
-    feed: true
-  - id: til
-    contents:
-      - "posts/*/*/til*/*.md"
-    sort: "date desc"
-    type: default
-    categories: true
-    sort-ui: false
-    filter-ui: false
-    feed: true
-page-layout: full
+title: "Daniel Borek"
+image: profile.jpg
+about:
+  template: jolla
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/danieltomasz
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/daniel-borek-209003a6/
+    - icon: github
+      text: Github
+      href: https://github.com/danieltomasz
+    - icon: mastodon
+      text: Mastodon
+      href: https://scholar.social/about
+
 comments: false
-title-block-banner: true
+toc: false
+title-block-banner: false
+format:
+  html:
+    highlight-style: a11y
+    theme: styles-copy.scss
+    toc: false
+
 ---
 
+Academic and Data Scientist
 
+I'm Daniel Borek, a PhD candidate at Ghent University learning more about the nature of neural oscillations. I studied physics within MISMaP programme and philosophy at University of Warsaw.
 
+Before starting PhD, I worked as a data analyst in the health policy area, doing data analysis,visualisation and raport automation in R. I am  pasionate about health data and and using data visualisation to provide new insights.
 
-### Posts
-
-::: {#posts}
-:::
-
-### Notes
-
-::: {#til}
-:::
+Currently I am based in  Brussels, Belgium. I ❤️ cinema.
