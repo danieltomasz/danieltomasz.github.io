@@ -28,10 +28,10 @@ format:
 
 ---
 
-Academic and Data Scientist
+##### Academic and Data Scientist
 
-I'm Daniel Borek, a PhD candidate at Ghent University learning more about the nature of neural oscillations. I studied physics within MISMaP programme and philosophy at University of Warsaw.
+I'm Daniel Borek, a PhD candidate at Ghent University learning more about the nature of neural oscillations. I studied physics within MISMaP interdisciplinary programme and philosophy at University of Warsaw.
 
-Before starting PhD, I worked as a data analyst in the health policy area, doing data analysis,visualisation and raport automation in R. I am  pasionate about health data and and using data visualisation to provide new insights.
+Before starting PhD, I worked as a data analyst in the health policy area, doing data analysis, visualisation and raport automation in R. I am  pasionate about health data and using data visualisation to provide new insights.
 
 Currently I am based in  Brussels, Belgium. I ❤️ cinema.

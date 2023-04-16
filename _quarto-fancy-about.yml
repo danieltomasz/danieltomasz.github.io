@@ -34,7 +34,7 @@ website:
 format:
   html:
     highlight-style: a11y
-    theme: morph
+    theme: styles-copy.scss
 #    toc: true
 #    toc-depth: 3
 #    toc-location: left
