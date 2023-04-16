@@ -1,12 +1,5 @@
 [
   {
-    "listing": "/index.html",
-    "items": [
-      "/posts/2021/02/mental-functions-cognitive-ontologies/index.html",
-      "/posts/2021/03/til-relative-path-notebook/index.html"
-    ]
-  },
-  {
     "listing": "/blog.html",
     "items": [
       "/posts/2021/02/mental-functions-cognitive-ontologies/index.html",

@@ -1,17 +1,17 @@
 [
   {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Embracing complexity",
+    "section": "",
+    "text": "Posts\n\n\n\n\n  \n\n\n\n\nMental functions and cognitive ontologies\n\n\n\n\n\n\n\ncognitive sciences\n\n\n\n\n\n\n\n\n\n\n\nFeb 24, 2021\n\n\nDaniel Borek\n\n\n\n\n\n\nNo matching items\n\n\n\n\nNotes\n\n\n\n\n  \n\n\n\n\nHow to get relative path of script or notebook in Python with Pathlib library\n\n\n\n\n\n\n\nPython\n\n\nPathlib\n\n\nhowto\n\n\n\n\n\n\n\n\n\n\n\nMar 4, 2021\n\n\nDaniel Borek\n\n\n\n\n\n\nNo matching items"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Daniel Borek",
     "section": "",
     "text": "Academic and Data Scientist\nI’m Daniel Borek, a PhD candidate at Ghent University learning more about the nature of neural oscillations. I studied physics within MISMaP interdisciplinary programme and philosophy at University of Warsaw.\nBefore starting PhD, I worked as a data analyst in the health policy area, doing data analysis, visualisation and raport automation in R. I am pasionate about health data and using data visualisation to provide new insights.\nCurrently I am based in Brussels, Belgium. I ❤️ cinema."
-  },
-  {
-    "objectID": "posts/about.html",
-    "href": "posts/about.html",
-    "title": "Daniel Borek",
-    "section": "",
-    "text": "Academic and Data Scientist\nDaniel Borek is an academic and data scientist.\nHi there! 👋 I’m Daniel Borek, an open science and unix/linux enthusiast and a PhD candidate learning more about the nature of neural oscillations.\nCurrently I am based in Brussels, Belgium. I studied physics within MISMaP programme and philosophy at University of Warsaw, I worked as data analyst doing data visualisation in R. I ❤️ cinema."
   },
   {
     "objectID": "posts/2021/02/mental-functions-cognitive-ontologies/index.html",
@@ -26,12 +26,5 @@
     "title": "How to get relative path of script or notebook in Python with Pathlib library",
     "section": "",
     "text": "Problem statement: You want to get an absolute path of your project where a file/notebook is located and join it with a string pointing to a folder.\nSolution:\nThis function will give you an absolute path in relation to a current python script or notebook.\nfrom pathlib import Path\n\ndef get_project_root() -&gt; Path:\n    try:\n        # This will give you a Path object pointing to the parent of the folder where the script is located.\n        # If your script is `/root/scripts/script.py`, the result will be an absolute path '/root'.\n        return Path(__file__).parent.parent\n    except NameError as error:\n        # This will give you  root folder of the project if this runned through jupyter notebook\n        return Path().joinpath().absolute().parents[0]\n    except Exception as exception:\n        print(exception)\nWhen you will work with Path paths don’t add trailing slashes when joining paths. The code below:\nroot= get_project_root()\npath_to_file = Path.joinpath(root, '/data/data.feather')\nwill result in path_to_file = /data/final.feather.\nTo obtain path_to_file = /root/data/final.feather you shouldn’t use the slash at the begining:\nroot= get_project_root()\npath_to_file = Path.joinpath(root, 'data/data.feather')"
-  },
-  {
-    "objectID": "blog.html",
-    "href": "blog.html",
-    "title": "Embracing complexity",
-    "section": "",
-    "text": "Posts\n\n\n\n\n  \n\n\n\n\nMental functions and cognitive ontologies\n\n\n\n\n\n\n\ncognitive sciences\n\n\n\n\n\n\n\n\n\n\n\nFeb 24, 2021\n\n\nDaniel Borek\n\n\n\n\n\n\nNo matching items\n\n\n\n\nNotes\n\n\n\n\n  \n\n\n\n\nHow to get relative path of script or notebook in Python with Pathlib library\n\n\n\n\n\n\n\nPython\n\n\nPathlib\n\n\nhowto\n\n\n\n\n\n\n\n\n\n\n\nMar 4, 2021\n\n\nDaniel Borek\n\n\n\n\n\n\nNo matching items"
   }
 ]
