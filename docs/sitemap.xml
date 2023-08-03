@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://danielborek.me/posts/2021/02/mental-functions-cognitive-ontologies/index.html</loc>
+    <lastmod>2023-08-03T11:33:59.889Z</lastmod>
+  </url>
+  <url>
     <loc>https://danielborek.me/blog.html</loc>
-    <lastmod>2023-04-16T17:47:50.153Z</lastmod>
+    <lastmod>2023-08-03T11:33:56.940Z</lastmod>
   </url>
   <url>
     <loc>https://danielborek.me/index.html</loc>
-    <lastmod>2023-04-16T17:47:50.499Z</lastmod>
-  </url>
-  <url>
-    <loc>https://danielborek.me/posts/2021/02/mental-functions-cognitive-ontologies/index.html</loc>
-    <lastmod>2023-04-16T17:47:52.263Z</lastmod>
+    <lastmod>2023-08-03T11:34:21.048Z</lastmod>
   </url>
   <url>
     <loc>https://danielborek.me/posts/2021/03/til-relative-path-notebook/index.html</loc>
-    <lastmod>2023-04-16T17:47:53.047Z</lastmod>
+    <lastmod>2023-08-03T11:34:00.817Z</lastmod>
   </url>
 </urlset>

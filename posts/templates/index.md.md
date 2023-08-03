@@ -1,9 +1,9 @@
 ---
 title: 
 author: "Daniel Borek"
-date: <% tp.date.now() %>
+date: 2023-07-14
 categories: []
 draft: true
 ---
 
-<% tp.file.rename("index.md") %>
+

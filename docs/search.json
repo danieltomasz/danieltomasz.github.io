@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "posts/2021/02/mental-functions-cognitive-ontologies/index.html",
+    "href": "posts/2021/02/mental-functions-cognitive-ontologies/index.html",
+    "title": "Mental functions and cognitive ontologies",
+    "section": "",
+    "text": "Mental functions and cognitive ontologies\nThere is a ongoing discussion in cognitive sciences about cognitive ontologies. Luiz Pessoa asked about why we divide cognitive functions like attention, memory, executive control the way we did. He tracks it to the beginning of psychology as discipline and influence of William James and later, when the cognitive revolution started, to Ulric Neisser’s Cognitive Psychology book. There was a really interesting discussion in replies to this tweet.\n\nThis echoes discussion between two camps, which most famous proponents are currently György Buzsáki and David Poeppel. Here is a discussion between them in one of “Brain inspired” episodes.\nMaybe I state something trivial, but I think all these terms used in cognitive sciences are a little bit blurry. It allows scientists to escape any clear borders between processes defined by these terms. On the other hand, scientists in a theory are well aware that there is no process in isolation (but this sometimes is much harder to operationalize in practice).\nMany different philosophers and neuroscientists told much about this topic. Currently, neuroinformatics could provide some nice tools. Read more in this review by Russell A. Poldrack and Tal Yarkoni."
+  },
+  {
     "objectID": "blog.html",
     "href": "blog.html",
     "title": "Embracing complexity",
@@ -12,13 +19,6 @@
     "title": "Daniel Borek",
     "section": "",
     "text": "Academic and Data Scientist\nI’m Daniel Borek, a PhD candidate at Ghent University learning more about the nature of neural oscillations. I studied physics within MISMaP interdisciplinary programme and philosophy at University of Warsaw.\nBefore starting PhD, I worked as a data analyst in the health policy area, doing data analysis, visualisation and raport automation in R. I am pasionate about health data and using data visualisation to provide new insights.\nCurrently I am based in Brussels, Belgium. I ❤️ cinema."
-  },
-  {
-    "objectID": "posts/2021/02/mental-functions-cognitive-ontologies/index.html",
-    "href": "posts/2021/02/mental-functions-cognitive-ontologies/index.html",
-    "title": "Mental functions and cognitive ontologies",
-    "section": "",
-    "text": "Mental functions and cognitive ontologies\nThere is a ongoing discussion in cognitive sciences about cognitive ontologies. Luiz Pessoa asked about why we divide cognitive functions like attention, memory, executive control the way we did. He tracks it to the beginning of psychology as discipline and influence of William James and later, when the cognitive revolution started, to Ulric Neisser’s Cognitive Psychology book. There was a really interesting discussion in replies to this tweet.\n\nThis echoes discussion between two camps, which most famous proponents are currently György Buzsáki and David Poeppel. Here is a discussion between them in one of “Brain inspired” episodes.\nMaybe I state something trivial, but I think all these terms used in cognitive sciences are a little bit blurry. It allows scientists to escape any clear borders between processes defined by these terms. On the other hand, scientists in a theory are well aware that there is no process in isolation (but this sometimes is much harder to operationalize in practice).\nMany different philosophers and neuroscientists told much about this topic. Currently, neuroinformatics could provide some nice tools. Read more in this review by Russell A. Poldrack and Tal Yarkoni."
   },
   {
     "objectID": "posts/2021/03/til-relative-path-notebook/index.html",

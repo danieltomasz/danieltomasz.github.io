@@ -40,9 +40,9 @@ format:
 #    toc-location: left
 
 
-comments:
-  giscus:
-    repo: danieltomasz/danieltomasz.github.io
+#comments:
+#  giscus:
+#    repo: danieltomasz/danieltomasz.github.io
 
 resources:
   - CNAME
