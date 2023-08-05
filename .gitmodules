@@ -5,3 +5,5 @@
 [submodule "themes/lines"]
 	path = themes/lines
 	url = git@github.com:danieltomasz/lines.git
+[submodule "bar1"]
+	branch = master
