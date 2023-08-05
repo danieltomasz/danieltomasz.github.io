@@ -1,4 +1,4 @@
-baseURL = "https://lines-hugo-theme.netlify.app/"
+baseURL = "danielborek.me"
 languageCode = "en-us"
 title = "Daniel Borek personal blog"
 theme = 'lines'
