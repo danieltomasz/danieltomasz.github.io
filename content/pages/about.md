@@ -6,7 +6,7 @@ noComment: true
 
 I studied physics within a MISMaP interdisciplinary programme and philosophy at University of Warsaw.
 
-I came to Belgium to work at Ghent University in a project about spectral parametrization of neural oscillations. This research draws on my physics background to shed light on the brain's rhythmic (and non-rhythmic) activity.
+I came to Belgium to work at Ghent University in a project about spectral parametrization of neural oscillations. This research draws on my computational background to shed light on the brain's rhythmic (and non-rhythmic) activity.
 
 Currently, I am based in Brussels, Belgium.
 
