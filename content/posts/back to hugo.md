@@ -116,14 +116,14 @@ I try this setting within the markup section,
 
 ### Rendering mermaid diagrams
 
-Paul Johnson describe his setup in [ this blogpost](https://www.paulrjohnson.net/2022/09/rendering-mermaid-diagrams-on-a-hugo-website-using-quarto/).
+Paul Johnson describe his setup in [this blogpost](https://www.paulrjohnson.net/2022/09/rendering-mermaid-diagrams-on-a-hugo-website-using-quarto/).
 
 
 ### Adding comments with `giscus`
 
 I followed various blogpost with the configuration advices.
 By default, `giscus` is adding comments to every page, but I wanted to have comments only on my posts. 
-I followed advice[^1] and  I wrapped my addition of `giscus` partial into `footer.html` with `if` statement:
+I followed advice[^2] and  I wrapped my addition of `giscus` partial into `footer.html` with `if` statement:
 
 ```hugo
 {{ if not .Params.noComment }}
@@ -137,7 +137,7 @@ When I don't want to include a comments block, I am adding this in the frontmatt
 noComment: true
 ```
 
-[^1]: [How to disable comments in specific pages? - support - HUGO](https://discourse.gohugo.io/t/how-to-disable-comments-in-specific-pages/22177/2)
+[^2]: [How to disable comments in specific pages? - support - HUGO](https://discourse.gohugo.io/t/how-to-disable-comments-in-specific-pages/22177/2)
 
 Some other useful links: https://www.brycewray.com/posts/2022/05/tips-using-giscus/
 
@@ -145,4 +145,10 @@ Some other useful links: https://www.brycewray.com/posts/2022/05/tips-using-gisc
 
 Some advice how to set up it: [Add a Last Edited Date to Posts · Make with Hugo](https://makewithhugo.com/add-a-last-edited-date/).
 
-Frankly, I wasn't able to get it fully working yet.
+One caveat: setting `enableGitInfo` to `true` in your site’s configuration file is not enough[^3]. You have to add `--enableGitInfo` to get `.GitInfo`:
+
+```bash
+hugo serve --enableGitInfo
+```
+
+[^3]: [Add git commit date as last update date in hugo page](https://djangocas.dev/blog/add-git-commit-date-as-last-update-date-in-hugo-page/)

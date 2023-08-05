@@ -32,23 +32,26 @@ theme = 'lines'
  reactionsEnabled = "1"
 
 [params.assets]
-    favicon = "https://danielborek.me/assets/favicon.ico"
+    favicon = "img/favicon.ico"
 
 enableGitInfo = true
 enableEmoji = true
 
 [frontmatter]
-  date  = [":filename", ":default", "lastmod"]
+#  date  = [":filename", ":default", "lastmod"]
   author = "Daniel Borek"
   github = "danieltomasz"
   facebook = ""
   og_image = ""
   sitename = ""
   twitter = "danieltomasz"
-  lastmod = ["lastmod", ":git", "date", "publishDate"]
-
-
+  date = ["date", "publishDate", "lastmod"]
+  lastmod = [  "lastmod", ":git", "date", ]
+  publishDate = ["publishDate", "date"]
+  expiryDate = ["expiryDate"]
 #disableKinds = ["section", "categories"]
+
+
 disqusShortname = ""
 pygmentsStyle = "pygments"
 pygmentsCodefences = true
