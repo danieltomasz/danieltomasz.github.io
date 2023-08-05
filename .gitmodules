@@ -1,0 +1,7 @@
+[submodule "themes/simplist"]
+	path = themes/simplist
+	url = https://github.com/ronv/simplist.git
+
+[submodule "themes/lines"]
+	path = themes/lines
+	url = https://github.com/ronv/lines.git

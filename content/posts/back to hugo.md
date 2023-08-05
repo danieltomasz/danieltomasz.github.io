@@ -10,7 +10,23 @@ tags:
 ---
 
 I am using the Hugo lines theme, you can find it [here](https://github.com/ronv/lines).
-I was experiment with pure Jekyll, then Hugo and a year ago I switched to Quarto.
+
+## Hugo and Github pages
+
+There is nice tutorial here: https://gohugo.io/hosting-and-deployment/hosting-on-github/.
+But my workflow was failing.
+I add the theme as submodule, but I noticed that  somehow `.gitmodules` file was not added to the repository.
+Because of that, I had to add it manually:
+
+```toml
+[submodule "themes/lines"]
+	path = themes/lines
+	url = https://github.com/ronv/lines.git
+```
+
+## Hugo, Quarto and my history of using static site generators.
+
+Long ago I was experimenting with Jekyll (you can see one of the pages I created [here](https://brainhackwarsaw2017.github.io/)), then Hugo and a year ago I switched to Quarto.
 Quarto is great for scientific publications, but I find it too limiting for a blog.
 
 The structure of the blog require you to put every of your posts into its own folder with `index.qmd` file.
