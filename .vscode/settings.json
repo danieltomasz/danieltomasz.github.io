@@ -8,5 +8,8 @@
         "**/Thumbs.db": true,
         ".git": true
     },
-    "explorerExclude.backup": {}
+    "explorerExclude.backup": {},
+    "yaml.schemas": {
+        "https://json.schemastore.org/hugo.json": "file:///Users/daniel/PhD/thesis-vault/blog/.github/workflows/hugo.yaml"
+    }
 }

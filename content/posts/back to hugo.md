@@ -144,3 +144,9 @@ noComment: true
 [^1]: [How to disable comments in specific pages? - support - HUGO](https://discourse.gohugo.io/t/how-to-disable-comments-in-specific-pages/22177/2)
 
 Some other useful links: https://www.brycewray.com/posts/2022/05/tips-using-giscus/
+
+### Date of last edit directly from github
+
+Some advice how to set up it: [Add a Last Edited Date to Posts · Make with Hugo](https://makewithhugo.com/add-a-last-edited-date/).
+
+Frankly, I wasn't able to get it fully working yet.

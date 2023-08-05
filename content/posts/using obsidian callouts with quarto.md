@@ -1,41 +1,43 @@
 ---
 title: "Obsidian and Quarto callouts"
 date: "2023-05-31"
+url: "2023/05/obsidian-quarto-callouts"
 draft: false
 tags:
 - Quatro
 - Obsidian
 ---
+## About callouts
 
-_Disclaimer: Post was originally published as a [public gist](https://gist.github.com/danieltomasz/87b1321e23c045309d2571f525f856cf)_
-
-## About callouts 
+*Disclaimer: Post was originally published as a [public gist](https://gist.github.com/danieltomasz/87b1321e23c045309d2571f525f856cf)*
 
 Callouts are a great way to add more attention ot certain details of the text (in the form of a box).
 Quarto provides 5 different types of callouts:
 
-- `note`
-- `warning`
-- `important`
-- `tip`
-- `caution`.
+-   `note`
+-   `warning`
+-   `important`
+-   `tip`
+-   `caution`.
 
-The color and icon will be different depending upon the type that you select. You could preview them in the official documentation - [Quarto - Callout Blocks](https://quarto.org/docs/authoring/callouts.html). If you want to check the end effect jump directly to it [here](https://gist.github.com/danieltomasz/87b1321e23c045309d2571f525f856cf#comparison/).
+The color and icon will be different depending upon the type that you select.
+You could preview them in the official documentation - [Quarto - Callout Blocks](https://quarto.org/docs/authoring/callouts.html).
+If you want to check the end effect jump directly to it [here](https://gist.github.com/danieltomasz/87b1321e23c045309d2571f525f856cf#comparison/).
 
 ### The problem:
 
-When writing your text  directly in markdown compiled in Quarto you need to use pandoc `div` syntax
+When writing your text directly in markdown compiled in Quarto you need to use pandoc `div` syntax
 
-```markdown
+``` markdown
 ::: {.callout-note}
 Note that there are five types of callouts, including:
 `note`, `warning`, `important`, `tip`, and `caution`.
 :::
 ```
 
-When you want to edit your text in Obsidian obisidian doesn't pick the pandoc `div`  syntax, instead it will have:
+When you want to edit your text in Obsidian obisidian doesn't pick the pandoc `div` syntax, instead it will have:
 
-```markdown
+``` markdown
 > [!note] My note
 >
 > Note content
@@ -48,11 +50,11 @@ When you want to edit your text in Obsidian obisidian doesn't pick the pandoc `d
 Pandoc can be supplemented by filters written by Lua that might some complex operations with source text.
 
 I found a nice pandoc filter on the Obsidian forum, which I modified, so it support the default callouts in Quarto.
-You need to save it as a pandoc filter and put inro your  project folder and point to it when running quarto command (either via commandline or by putting it into you `_quart.yml` project settings.
+You need to save it as a pandoc filter and put inro your project folder and point to it when running quarto command (either via commandline or by putting it into you `_quart.yml` project settings.
 
 In my case, I created `obsidian-callouts.lua` in `filters` folder and I point to it in the `_quarto,yml` in the root of the folder in the following section (I excluded irrelevant details):
 
-```yml
+``` yml
 project:
   output-dir: _output
 filters:
@@ -61,7 +63,7 @@ filters:
 
 Content of the file `obsidian-callouts.lua` :
 
-```lua
+``` lua
 local stringify = (require "pandoc.utils").stringify
 
 function BlockQuote (el)
@@ -84,13 +86,13 @@ end
 
 As a source I used this thread from Obsidian forum[^1]
 
-[^1]:https://forum.obsidian.md/t/rendering-callouts-similarly-in-pandoc/40020/6
+[^1]: https://forum.obsidian.md/t/rendering-callouts-similarly-in-pandoc/40020/6
 
 ### Tweaks to obsidian CSS
 
-By default Obsidian recognize only `note` and  `warning` callouts, to have the other 3 callouts the same icons and colors as in Quarto add the following CSS snippet `quarto-callout-styllling` to hidden `.snippets` folder and turn it on in the Obsidian appearance section of settings
+By default Obsidian recognize only `note` and `warning` callouts, to have the other 3 callouts the same icons and colors as in Quarto add the following CSS snippet `quarto-callout-styllling` to hidden `.snippets` folder and turn it on in the Obsidian appearance section of settings
 
-```css
+``` css
 /* See https://lucide.dev for icon codes */
 
 /* annotation */
@@ -112,17 +114,17 @@ By default Obsidian recognize only `note` and  `warning` callouts, to have the o
 
 ### Comparison
 
-After applying the css could see the  difference between callouts in Live Preview in  Obsidian 
+After applying the css could see the difference between callouts in Live Preview in Obsidian
 
 ![Image](https://user-images.githubusercontent.com/7980381/242414671-abd8b360-3a98-4fa0-90ea-d62c453855f0.png)
 
-and  PDF generated via Quarto
+and PDF generated via Quarto
 
 ![Image](https://user-images.githubusercontent.com/7980381/242414991-78ff1f8b-e361-400e-a664-2599f7867c1d.png)
 
 Below is the markdown used to generate it
 
-```markdown
+``` markdown
 
 > [!note] My note
 >

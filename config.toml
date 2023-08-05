@@ -34,6 +34,9 @@ theme = 'lines'
 [params.assets]
     favicon = "https://danielborek.me/assets/favicon.ico"
 
+enableGitInfo = true
+enableEmoji = true
+
 [frontmatter]
   date  = [":filename", ":default", "lastmod"]
   author = "Daniel Borek"
@@ -51,7 +54,6 @@ pygmentsStyle = "pygments"
 pygmentsCodefences = true
 pygmentsuseclasses = false
 
-enableGitInfo = true
 
 
 #pygmentsUseClasses = true
@@ -92,7 +94,8 @@ ignoreFiles = [ "\\.qmd$", "\\.ipynb$", "\\.py$" ]
 
 
 [permalinks]
-  posts = "/:year/:month/:day/:filename"
+#  posts = "/:year/:month/:day/:filename"
+  posts = "/:year/:filename"
   pages = "/:slug"
 
 [outputs]

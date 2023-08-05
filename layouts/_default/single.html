@@ -14,7 +14,7 @@
 
         <time itemprop="datePublished" datetime="{{ dateFormat "2006-01-02" .Date }}">{{ dateFormat " January 02, 2006" .Date }}</time> &bull; 
         {{ partial "tags.html" .}}
-        <br> Edited on: {{ $lastmod }}
+        <br> Edited on: <time datetime="{{ .Lastmod }}" title="{{ .Lastmod }}">{{ $lastmod }}</time>
         </p>
 
 
