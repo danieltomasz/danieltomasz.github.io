@@ -1,6 +1,6 @@
 baseURL = "https://danielborek.me"
 languageCode = "en-us"
-title = "Daniel Borek personal blog"
+title = "Daniel Borek"
 theme = 'lines'
 
 [Author]

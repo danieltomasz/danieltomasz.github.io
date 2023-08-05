@@ -116,3 +116,7 @@ I try this setting within the markup section,
 
  but the line numbers section were two lines short than the code section (the code section was customized by the theme `scss`).
  I will try to fix it later.
+
+### Rendering mermaid diagrams
+
+Paul Johnson describe his setup in [ this blogpost](https://www.paulrjohnson.net/2022/09/rendering-mermaid-diagrams-on-a-hugo-website-using-quarto/).
