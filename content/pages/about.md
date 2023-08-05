@@ -2,11 +2,12 @@
 title: About
 noComment: true
 ---
+# Daniel Borek
 
 Hi! My name Daniel Borek.
 
 I live in Brussels, Belgium and I analyse data using R and Python.
-## An academic
+### An academic
 
 I studied physics within a MISMaP interdisciplinary programme and philosophy at University of Warsaw.
 
@@ -17,7 +18,7 @@ This research draws on my computational background to shed light on the brain's 
 
 I am interested in neurophysiology, computational cognitive science, metascience (research on research, especially reproducibility and open science) and philosophy of science.
 
-## … and data scientist
+### … and data scientist
 
 In my projects, I'm constantly switching between Python and R.
 
