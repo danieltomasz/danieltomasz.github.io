@@ -1,17 +1,16 @@
 {
-    {
-        "version": "https://jsonfeed.org/version/1",
-        "title": "{{ .Site.Title }}",
-        "home_page_url": "{{ .Site.BaseURL }}",
-        "feed_url": "{{ .Site.BaseURL }}/feed.json",
-        "description": "{{ .Site.Params.description }}",
-        "icon": "{{ .Site.BaseURL }}/assets/icon.png",
-        "favicon": "{{ .Site.BaseURL }}/assets/favicon.ico",
-        "expired": false,
-        "author": {
-          "name": "{{ .Site.Title }}",
-          "url": "{{ .Site.BaseURL }}"
-        },
+    "version": "https://jsonfeed.org/version/1",
+    "title": "{{ .Site.Title }}",
+    "home_page_url": "{{ .Site.BaseURL }}",
+    "feed_url": "{{ .Site.BaseURL }}/feed.json",
+    "description": "{{ .Site.Params.description }}",
+    "icon": "{{ .Site.BaseURL }}/assets/icon.png",
+    "favicon": "{{ .Site.BaseURL }}/assets/favicon.ico",
+    "expired": false,
+    "author": {
+        "name": "{{ .Site.Title }}",
+        "url": "{{ .Site.BaseURL }}"
+    },
   "items": [
     {{ $list := (where .Site.RegularPages "Section" "posts") }}
     {{ $len := (len $list) }}

@@ -10,10 +10,6 @@ tags:
 - Hugo
 ---
 
-
-
-
-
 ## Hugo, Quarto and my history of using static site generators.
 
 Long ago I was experimenting with Jekyll (you can see one of the pages I created [here](https://brainhackwarsaw2017.github.io/)), then I was trying Hugo and a year ago I switched to Quarto.
