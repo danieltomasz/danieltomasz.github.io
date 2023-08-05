@@ -2,8 +2,8 @@
 listing:
   - id: posts
     contents:
-      - "posts/*/*/*/*.md"
-      - "posts/*/*/*/*.qmd"
+      - "posts/*/*.md"
+      - "posts:/*.qmd"
       - "!posts/*/*/til*/*.md"
     sort: "date desc"
     type: default

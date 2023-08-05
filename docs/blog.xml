@@ -10,11 +10,35 @@
 <atom:link href="https://danielborek.me/blog.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.3.433</generator>
-<lastBuildDate>Wed, 03 Mar 2021 23:00:00 GMT</lastBuildDate>
+<lastBuildDate>Tue, 21 Mar 2023 23:00:00 GMT</lastBuildDate>
+<item>
+  <title>Blogging with quatro</title>
+  <dc:creator>Daniel Borek</dc:creator>
+  <link>https://danielborek.me/posts/2023-03-start-with-quarto/index.html</link>
+  <description><![CDATA[ 
+
+
+
+<p>This post is about</p>
+<p>This is the first post in a Quarto blog. Welcome!</p>
+<p>Since this post doesn’t specify an explicit <code>image</code>, the first image in the post will be used in the listing page of posts.</p>
+<p>Reference to <a href="posts/2022/03/post-no-code">post</a> for a post with code.</p>
+<section id="setting-up-comments" class="level3">
+<h3 class="anchored" data-anchor-id="setting-up-comments">Setting up Comments</h3>
+<p>I am choosing Giscus. - Install giscus</p>
+
+
+</section>
+
+ ]]></description>
+  <category>meta</category>
+  <guid>https://danielborek.me/posts/2023-03-start-with-quarto/index.html</guid>
+  <pubDate>Tue, 21 Mar 2023 23:00:00 GMT</pubDate>
+</item>
 <item>
   <title>How to get relative path of script or notebook in Python with Pathlib library</title>
   <dc:creator>Daniel Borek</dc:creator>
-  <link>https://danielborek.me/posts/2021/03/til-relative-path-notebook/index.html</link>
+  <link>https://danielborek.me/posts/2021-03-til-relative-path-notebook/index.html</link>
   <description><![CDATA[ 
 
 
@@ -98,13 +122,13 @@ font-style: inherit;">'data/data.feather'</span>)</span></code></pre></div>
   <category>Python</category>
   <category>Pathlib</category>
   <category>howto</category>
-  <guid>https://danielborek.me/posts/2021/03/til-relative-path-notebook/index.html</guid>
+  <guid>https://danielborek.me/posts/2021-03-til-relative-path-notebook/index.html</guid>
   <pubDate>Wed, 03 Mar 2021 23:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Mental functions and cognitive ontologies</title>
   <dc:creator>Daniel Borek</dc:creator>
-  <link>https://danielborek.me/posts/2021/02/mental-functions-cognitive-ontologies/index.html</link>
+  <link>https://danielborek.me/posts/2021-02-mental-functions-cognitive-ontologies/index.html</link>
   <description><![CDATA[ 
 
 
@@ -112,7 +136,7 @@ font-style: inherit;">'data/data.feather'</span>)</span></code></pre></div>
 <section id="mental-functions-and-cognitive-ontologies" class="level1">
 <h1>Mental functions and cognitive ontologies</h1>
 <p>There is a ongoing discussion in cognitive sciences about cognitive ontologies. Luiz Pessoa asked about why we divide cognitive functions like attention, memory, executive control the way we did. He tracks it to the beginning of psychology as discipline and influence of William James and later, when the cognitive revolution started, to Ulric Neisser’s Cognitive Psychology book. There was a really interesting discussion in replies to this tweet.</p>
-<p></p><div id="tweet-80273"></div><script>tweet={"url":"https:\/\/twitter.com\/PessoaBrain\/status\/1364264706505121797","author_name":"Luiz Pessoa","author_url":"https:\/\/twitter.com\/PessoaBrain","html":"\u003Cblockquote class=\"twitter-tweet\" align=\"center\"\u003E\u003Cp lang=\"en\" dir=\"ltr\"\u003E1) In neuroscience, we study things like \uD835\uDDEE\uD835\uDE01\uD835\uDE01\uD835\uDDF2\uD835\uDDFB\uD835\uDE01\uD835\uDDF6\uD835\uDDFC\uD835\uDDFB, \uD835\uDDFA\uD835\uDDF2\uD835\uDDFA\uD835\uDDFC\uD835\uDDFF\uD835\uDE06, \uD835\uDDF2\uD835\uDDFA\uD835\uDDFC\uD835\uDE01\uD835\uDDF6\uD835\uDDFC\uD835\uDDFB, \uD835\uDDF1\uD835\uDDF2\uD835\uDDF0\uD835\uDDF6\uD835\uDE00\uD835\uDDF6\uD835\uDDFC\uD835\uDDFB \uD835\uDDFA\uD835\uDDEE\uD835\uDDF8\uD835\uDDF6\uD835\uDDFB\uD835\uDDF4, \uD835\uDDF2\uD835\uDE05\uD835\uDDF2\uD835\uDDF0\uD835\uDE02\uD835\uDE01\uD835\uDDF6\uD835\uDE03\uD835\uDDF2 \uD835\uDDF0\uD835\uDDFC\uD835\uDDFB\uD835\uDE01\uD835\uDDFF\uD835\uDDFC\uD835\uDDF9, etc. \u003Cbr\u003EBuy why do we carve mental function this was?\u003Cbr\u003EAny good references that discuss this issue?\u003Cbr\u003EPlease share with possible\u003C\/p\u003E&mdash; Luiz Pessoa (@PessoaBrain) \u003Ca href=\"https:\/\/twitter.com\/PessoaBrain\/status\/1364264706505121797?ref_src=twsrc%5Etfw\"\u003EFebruary 23, 2021\u003C\/a\u003E\u003C\/blockquote\u003E\n\u003Cscript async src=\"https:\/\/platform.twitter.com\/widgets.js\" charset=\"utf-8\"\u003E\u003C\/script\u003E\n","width":550,"height":null,"type":"rich","cache_age":"3153600000","provider_name":"Twitter","provider_url":"https:\/\/twitter.com","version":"1.0"};document.getElementById("tweet-80273").innerHTML = tweet["html"];</script><p></p>
+<p></p><div id="tweet-66642"></div><script>tweet={"url":"https:\/\/twitter.com\/PessoaBrain\/status\/1364264706505121797","author_name":"Luiz Pessoa","author_url":"https:\/\/twitter.com\/PessoaBrain","html":"\u003Cblockquote class=\"twitter-tweet\" align=\"center\"\u003E\u003Cp lang=\"en\" dir=\"ltr\"\u003E1) In neuroscience, we study things like \uD835\uDDEE\uD835\uDE01\uD835\uDE01\uD835\uDDF2\uD835\uDDFB\uD835\uDE01\uD835\uDDF6\uD835\uDDFC\uD835\uDDFB, \uD835\uDDFA\uD835\uDDF2\uD835\uDDFA\uD835\uDDFC\uD835\uDDFF\uD835\uDE06, \uD835\uDDF2\uD835\uDDFA\uD835\uDDFC\uD835\uDE01\uD835\uDDF6\uD835\uDDFC\uD835\uDDFB, \uD835\uDDF1\uD835\uDDF2\uD835\uDDF0\uD835\uDDF6\uD835\uDE00\uD835\uDDF6\uD835\uDDFC\uD835\uDDFB \uD835\uDDFA\uD835\uDDEE\uD835\uDDF8\uD835\uDDF6\uD835\uDDFB\uD835\uDDF4, \uD835\uDDF2\uD835\uDE05\uD835\uDDF2\uD835\uDDF0\uD835\uDE02\uD835\uDE01\uD835\uDDF6\uD835\uDE03\uD835\uDDF2 \uD835\uDDF0\uD835\uDDFC\uD835\uDDFB\uD835\uDE01\uD835\uDDFF\uD835\uDDFC\uD835\uDDF9, etc. \u003Cbr\u003EBuy why do we carve mental function this was?\u003Cbr\u003EAny good references that discuss this issue?\u003Cbr\u003EPlease share with possible\u003C\/p\u003E&mdash; Luiz Pessoa (@PessoaBrain) \u003Ca href=\"https:\/\/twitter.com\/PessoaBrain\/status\/1364264706505121797?ref_src=twsrc%5Etfw\"\u003EFebruary 23, 2021\u003C\/a\u003E\u003C\/blockquote\u003E\n\u003Cscript async src=\"https:\/\/platform.twitter.com\/widgets.js\" charset=\"utf-8\"\u003E\u003C\/script\u003E\n","width":550,"height":null,"type":"rich","cache_age":"3153600000","provider_name":"Twitter","provider_url":"https:\/\/twitter.com","version":"1.0"};document.getElementById("tweet-66642").innerHTML = tweet["html"];</script><p></p>
 <p>This echoes discussion between two camps, which most famous proponents are currently György Buzsáki and David Poeppel. Here is a discussion between them in one of “Brain inspired” <a href="https://braininspired.co/podcast/84/">episodes</a>.</p>
 <p>Maybe I state something trivial, but I think all these terms used in cognitive sciences are a little bit blurry. It allows scientists to escape any clear borders between processes defined by these terms. On the other hand, scientists in a theory are well aware that there is no process in isolation (but this sometimes is much harder to operationalize in practice).</p>
 <p>Many different philosophers and neuroscientists told much about this topic. Currently, neuroinformatics could provide some nice tools. Read more in this <a href="https://www.annualreviews.org/doi/abs/10.1146/annurev-psych-122414-033729">review by Russell A. Poldrack and Tal Yarkoni</a>.</p>
@@ -122,7 +146,7 @@ font-style: inherit;">'data/data.feather'</span>)</span></code></pre></div>
 
  ]]></description>
   <category>cognitive sciences</category>
-  <guid>https://danielborek.me/posts/2021/02/mental-functions-cognitive-ontologies/index.html</guid>
+  <guid>https://danielborek.me/posts/2021-02-mental-functions-cognitive-ontologies/index.html</guid>
   <pubDate>Tue, 23 Feb 2021 23:00:00 GMT</pubDate>
 </item>
 </channel>
