@@ -31,6 +31,8 @@ theme = 'lines'
  crossorigin="anonymous"
  reactionsEnabled = "1"
 
+[params.assets]
+    favicon = "favicon.ico"
 
 [frontmatter]
   date  = [":filename", ":default", "lastmod"]
