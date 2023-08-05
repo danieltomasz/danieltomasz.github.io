@@ -1,0 +1,119 @@
+baseURL = "https://lines-hugo-theme.netlify.app/"
+languageCode = "en-us"
+title = "Daniel Borek personal blog"
+theme = 'lines'
+
+
+#disableKinds = ["section", "categories"]
+disqusShortname = ""
+pygmentsStyle = "pygments"
+pygmentsCodefences = true
+pygmentsuseclasses = false
+
+
+
+#pygmentsUseClasses = true
+paginate = 999
+minify = true
+
+ignoreFiles = [ "\\.qmd$", "\\.ipynb$", "\\.py$" ]
+
+[markup]
+  defaultMarkdownHandler = "goldmark"
+  [markup.goldmark.renderer]
+    unsafe = true
+  [markup.highlight]
+    # one of: https://xyproto.github.io/splash/docs/ 
+    style = "github"
+    linenos = false
+    lineNumbersInTable = false
+    linenostart = false
+    noClasses = true
+
+[taxonomies]
+  tag = "tags"
+
+[privacy]
+  [privacy.disqus]
+    disable = true
+  [privacy.googleAnalytics]
+    disable = true
+  [privacy.instagram]
+    disable = true
+  [privacy.twitter]
+    disable = true
+  [privacy.vimeo]
+    disable = true
+  [privacy.youtube]
+    disable = true
+
+[Author]
+  name = ""
+
+[params]
+  description = "A personal musings and learning by Daniel Borek"
+  author = "Daniel Borek"
+  copyright = ""
+  logo = ""
+  orgName = "Daniel Borek"
+  orgLocal = ""
+
+[frontmatter]
+  date  = [":filename", ":default"]
+  author = "Daniel Borek"
+  github = "danieltomasz"
+  facebook = ""
+  og_image = ""
+  sitename = ""
+  twitter = "danieltomasz"
+
+[permalinks]
+  posts = "/:year/:month/:day/:filename"
+  pages = "/:slug"
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  section = ["HTML"]
+
+[outputFormats.RSS]
+  mediatype = "application/rss"
+  baseName = "atom"
+
+[outputFormats.JSON]
+  mediatype = "application/json"
+  baseName = "feed"
+
+[sitemap]
+  changefreq = "monthly"
+  filename = "sitemap.xml"
+  priority = 0.5
+
+[menu]
+  [[menu.main]]
+    identifier = "index"
+    name       = "Index"
+    url        = "/"
+    weight     = -111
+
+  [[menu.main]]
+    identifier = "about"
+    name       = "About"
+    url        = "/about/"
+    weight     = -20
+
+#   [[menu.main]]
+#     identifier = "rss"
+#     name       = "RSS"
+#     url        = "/atom.xml"
+#     weight     = -10
+
+
+[[params.social]]
+  name = "github"
+  link = "https://github.com/danieltomasz"
+[[params.social]]
+  name = "linkedin"
+  link = "https://www.linkedin.com/in/daniel-borek-209003a6/"
+  [[params.social]]
+  name = "twitter"
+  link = "https://www.twitter.com/danieltomasz"

@@ -1,0 +1,10 @@
+project:
+  type: hugo
+      
+format: 
+  hugo-md:
+    code-fold: true
+    html-math-method: webtex
+  
+execute: 
+  warning: false
