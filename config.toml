@@ -13,6 +13,24 @@ theme = 'lines'
   logo = ""
   orgName = "Daniel Borek"
   orgLocal = ""
+  disableComments = false
+
+[params.giscus]
+ repo="danieltomasz/danieltomasz.github.io"
+ repo-id="MDEwOlJlcG9zaXRvcnkzMzM0MDUzMzY="
+ category="Comments"
+ category-id="DIC_kwDOE99cmM4CVDXo"
+ mapping="title"
+ strict="0"
+ reactions-enabled="1"
+ emit-metadata="1"
+ input-position="bottom"
+ theme="light"
+ lang="en"
+ loading="lazy"
+ crossorigin="anonymous"
+ reactionsEnabled = "1"
+
 
 [frontmatter]
   date  = [":filename", ":default", "lastmod"]
@@ -124,17 +142,3 @@ ignoreFiles = [ "\\.qmd$", "\\.ipynb$", "\\.py$" ]
   name = "twitter"
   link = "https://www.twitter.com/danieltomasz"
 
-[params.giscus]
- data-repo="danieltomasz/danieltomasz.github.io"
- data-repo-id="MDEwOlJlcG9zaXRvcnkzMzM0MDUzMzY="
- data-category="Comments"
- data-category-id="DIC_kwDOE99cmM4CVDXo"
- data-mapping="title"
- data-strict="0"
- data-reactions-enabled="1"
- data-emit-metadata="1"
- data-input-position="top"
- data-theme="light"
- data-lang="en"
- data-loading="lazy"
- crossorigin="anonymous"

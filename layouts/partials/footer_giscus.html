@@ -1,0 +1,17 @@
+<hr>
+
+<footer>
+
+    {{ if not .Params.noComment }}
+    {{ partial "giscus" . }}
+    {{ end }}
+
+    <nav>
+    <ul>
+        <li>
+        © {{ dateFormat "2006" now }}
+        </li>
+    </ul>
+    </nav>
+    
+</footer>

@@ -120,3 +120,24 @@ I try this setting within the markup section,
 ### Rendering mermaid diagrams
 
 Paul Johnson describe his setup in [ this blogpost](https://www.paulrjohnson.net/2022/09/rendering-mermaid-diagrams-on-a-hugo-website-using-quarto/).
+
+
+### Adding comments with `giscus`
+
+I followed various blogpost with the configuration advices.
+By default, `giscus` is adding comments to every page, but I wanted to have comments only on my posts. 
+I followed advice[^1] and  I wrapped my addition of `giscus` partial into `footer.html` with `if` statement:
+
+```hugo
+{{ if not .Params.noComment }}
+    {{ partial "giscus" . }}
+{{ end }}
+```
+
+When I don't want to include a comments block, I am adding this in the frontmatter of the post (yaml):
+
+```yaml
+noComment: true
+```
+
+[^1]: [How to disable comments in specific pages? - support - HUGO](https://discourse.gohugo.io/t/how-to-disable-comments-in-specific-pages/22177/2)

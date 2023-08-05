@@ -1,6 +1,8 @@
 ---
 title: About
+noComment: true
 ---
+## Daniel Borek
 
 I studied physics within a MISMaP interdisciplinary programme and philosophy at University of Warsaw.
 
