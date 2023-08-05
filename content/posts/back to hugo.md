@@ -2,6 +2,7 @@
 title: "From Quarto back to Hugo"
 description: "Why I switched from Quarto to Hugo  - some thoughts on my blogging setup"
 date: "2023-08-03"
+lastmod: 
 draft: false
 summary: Why I switched  back to Hugo from Quarto
 tags:

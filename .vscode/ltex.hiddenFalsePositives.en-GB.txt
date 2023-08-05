@@ -2,3 +2,4 @@
 {"rule":"PASSIVE_VOICE","sentence":"^\\Qbut the line numbers section were two lines short than the code section (the code section was customized by the theme \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q).\\E$"}
 {"rule":"OXFORD_SPELLING_Z_NOT_S","sentence":"^\\QBefore starting PhD, I worked as a data analyst in the area of health policy, doing data analysis, data visualisation and report automation in R. I am passionate about health data and using data visualisation to provide new insights.\\E$"}
 {"rule":"OXFORD_SPELLING_Z_NOT_S","sentence":"^\\QI am passionate about health data and using data visualisation to provide new insights.\\E$"}
+{"rule":"SUPPORT","sentence":"^\\QI created rudimentary plugin to support QMD files in Obsidian, in the \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q you could find more advices how to streamline work with your qmd files in Quarto:\\E$"}
