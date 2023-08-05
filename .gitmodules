@@ -4,4 +4,4 @@
 
 [submodule "themes/lines"]
 	path = themes/lines
-	url = https://github.com/danieltomasz/lines.git
+	url = git@github.com:danieltomasz/lines.git
