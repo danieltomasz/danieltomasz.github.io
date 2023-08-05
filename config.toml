@@ -24,7 +24,8 @@ theme = 'lines'
   twitter = "danieltomasz"
   lastmod = ["lastmod", ":git", "date", "publishDate"]
 
-
+#[params.meta]
+# favicon = false
 
 #disableKinds = ["section", "categories"]
 disqusShortname = ""
@@ -122,3 +123,18 @@ ignoreFiles = [ "\\.qmd$", "\\.ipynb$", "\\.py$" ]
   [[params.social]]
   name = "twitter"
   link = "https://www.twitter.com/danieltomasz"
+
+[params.giscus]
+ data-repo="danieltomasz/danieltomasz.github.io"
+ data-repo-id="MDEwOlJlcG9zaXRvcnkzMzM0MDUzMzY="
+ data-category="Comments"
+ data-category-id="DIC_kwDOE99cmM4CVDXo"
+ data-mapping="title"
+ data-strict="0"
+ data-reactions-enabled="1"
+ data-emit-metadata="1"
+ data-input-position="top"
+ data-theme="light"
+ data-lang="en"
+ data-loading="lazy"
+ crossorigin="anonymous"
