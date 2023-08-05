@@ -32,7 +32,7 @@ theme = 'lines'
  reactionsEnabled = "1"
 
 [params.assets]
-    favicon = "favicon.ico"
+    favicon = "https://danielborek.me/assets/favicon.ico"
 
 [frontmatter]
   date  = [":filename", ":default", "lastmod"]
@@ -44,8 +44,6 @@ theme = 'lines'
   twitter = "danieltomasz"
   lastmod = ["lastmod", ":git", "date", "publishDate"]
 
-#[params.meta]
-# favicon = false
 
 #disableKinds = ["section", "categories"]
 disqusShortname = ""
