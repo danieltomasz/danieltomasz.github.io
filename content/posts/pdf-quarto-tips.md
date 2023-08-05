@@ -60,6 +60,10 @@ I put number as comments, so you can better understand specific lines.
 <!--Those are setting I am using to render  a working preview of a chapter.
  The final version will be using a font provided by my university: -->
 
+## Use profiles to compile either whole book or thesis or single chapter
+
+Since quarto  1.2  profiles are introduced [^2] In my use case I have on profile  `_quarto-thesis.yml` which include all chapters and preambles, and another `_quarto.yml` which I can use just to compile the current markdown file; If I want to render whole thesis I just use `quarto render --profile thesis`; you could have as many as you want of those profiles (I was procrastinating  that way with different look and templates for my thesis :slight_smile: )
+
 ## Roman numbering for front matter and arabic for main matter
 
 I am inserting roman numbering for front matter and arabic for main matter.
@@ -116,7 +120,7 @@ book:
 
 
 I want to all of my content of to live in the 'chapters' folder.
- Unfortunately currently in `quatro` users always  need to include `index.md` (it makes sense when generating `html` as output, but not always when generating `pdf``).
+ Unfortunately currently in `quatro` users always  need to include `index.md` (it makes sense when generating `html` as output, but not always when generating `pdf`).
 
 I can leave the `index.md` file empty, but then I will have an empty page between my table of content and first chapter.
 I can include the first chapter into index.md but then we were hitting the same problem on smaller scale again.
@@ -124,7 +128,7 @@ I can include the first chapter into index.md but then we were hitting the same 
 ### My solution
 
 By default, latex is adding a page break after each chapter, and the `index.md` file is treated as a chapter, even if empty.
-I am cheating a bit, not solving the problem, but hiding it by relaxing `\clearpage`` behaviour in latex.
+As a hack, I am  hiding the problem by relaxing `\clearpage` behaviour in latex.
 
 I am leaving my `index.md` file almost empty, I'm just adding this latex code [^1]:
 
@@ -147,8 +151,9 @@ In future the `quatro` behaviour might change regarding inclusion of `index.md``
 I just saw this post published on the blog of Cameron Patrick, it contains more useful information about writing thesis with `quarto`: https://cameronpatrick.com/post/2023/07/quarto-thesis-formatting/.
 
 I am personally using modified `quarto-thesis` template for my thesis, you can find it here: https://github.com/nmfs-opensci/quarto-thesis
-If you don't use quarto,  but you want to play with, you can modify it online on the Posit virtual `Rstudio` instance https://rstudio.cloud/content/4383755 (free account required)
+If you don't use quarto,  but you want to play with it, you can modify it online on the Posit virtual `Rstudio` instance https://rstudio.cloud/content/4383755 (free account required)
 
 ## References
 
 [^1]: https://tex.stackexchange.com/a/176109
+[^2]: [Quarto - Project Profiles](https://quarto.org/docs/projects/profiles.html)

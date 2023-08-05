@@ -1,10 +1,10 @@
 [submodule "themes/simplist"]
 	path = themes/simplist
-	url = https://github.com/ronv/simplist.git
+	url = git@github.com:danieltomasz/simplist.git
 
-[submodule "themes/lines"]
-	path = themes/lines
-	url = git@github.com:danieltomasz/lines.git
+# [submodule "themes/lines"]
+# 	path = themes/lines
+# 	url = git@github.com:danieltomasz/lines.git
 
 [submodule "themes/hugo-redirect"]
 	path = themes/hugo-redirect

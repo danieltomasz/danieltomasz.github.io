@@ -137,9 +137,6 @@ ignoreFiles = [ "\\.qmd$", "\\.ipynb$", "\\.py$" ]
     url        = "/atom.xml"
     weight     = -10
 
-[[redirects]]
-  from = "/"
-  to = "/about/"
 
 [[params.social]]
   name = "github"

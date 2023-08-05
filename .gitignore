@@ -4,3 +4,4 @@
 *.DS_Store/
 .luarc.json
 .hugo_build.lock
+.themes
