@@ -3,6 +3,28 @@ languageCode = "en-us"
 title = "Daniel Borek personal blog"
 theme = 'lines'
 
+[Author]
+  name = "Daniel Borek"
+
+[params]
+  description = "A personal musings and learning by Daniel Borek"
+  author = "Daniel Borek"
+  copyright = ""
+  logo = ""
+  orgName = "Daniel Borek"
+  orgLocal = ""
+
+[frontmatter]
+  date  = [":filename", ":default", "lastmod"]
+  author = "Daniel Borek"
+  github = "danieltomasz"
+  facebook = ""
+  og_image = ""
+  sitename = ""
+  twitter = "danieltomasz"
+  lastmod = ["lastmod", ":git", "date", "publishDate"]
+
+
 
 #disableKinds = ["section", "categories"]
 disqusShortname = ""
@@ -10,6 +32,7 @@ pygmentsStyle = "pygments"
 pygmentsCodefences = true
 pygmentsuseclasses = false
 
+enableGitInfo = true
 
 
 #pygmentsUseClasses = true
@@ -47,25 +70,7 @@ ignoreFiles = [ "\\.qmd$", "\\.ipynb$", "\\.py$" ]
   [privacy.youtube]
     disable = true
 
-[Author]
-  name = ""
 
-[params]
-  description = "A personal musings and learning by Daniel Borek"
-  author = "Daniel Borek"
-  copyright = ""
-  logo = ""
-  orgName = "Daniel Borek"
-  orgLocal = ""
-
-[frontmatter]
-  date  = [":filename", ":default"]
-  author = "Daniel Borek"
-  github = "danieltomasz"
-  facebook = ""
-  og_image = ""
-  sitename = ""
-  twitter = "danieltomasz"
 
 [permalinks]
   posts = "/:year/:month/:day/:filename"
@@ -99,13 +104,13 @@ ignoreFiles = [ "\\.qmd$", "\\.ipynb$", "\\.py$" ]
     identifier = "about"
     name       = "About"
     url        = "/about/"
-    weight     = -20
+    weight     = -200
 
-#   [[menu.main]]
-#     identifier = "rss"
-#     name       = "RSS"
-#     url        = "/atom.xml"
-#     weight     = -10
+  [[menu.main]]
+    identifier = "rss"
+    name       = "RSS"
+    url        = "/atom.xml"
+    weight     = -10
 
 
 [[params.social]]

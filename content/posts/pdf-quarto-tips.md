@@ -3,15 +3,20 @@ title: "PDF tweaks and tips with Quarto"
 description: "Some tips and tricks for writing thesis with Quarto"
 date: "2023-08-04"
 draft: false
-format: hugo-md
+lastmod: "2023-08-04"
 tags:
 - Quatro
 - Latex
 ---
 
-## Nicer fonts and better  handling of figures
+_Disclaimer: This is work in progress, I will be updating this post as I standardize and create a separate template/extension repository._
 
-I am sharing with you a fragment of my `_quarto.yml` file, with some tweaks I am using to make my pdf output nicer.
+I wrote my master thesis in LaTeX, but given that markdown is a bit nicer to write, so I decided to switch with my PhD thesis to Markdown.
+I was trying with Pandoc but last year I switched to Quarto, as it is more flexible, and it is easier to customize.
+
+## Nicer fonts and better handling of figures
+
+I am sharing with you a fragment of my `_quarto.yml` file, with some tweaks I am using to make my PDF output nicer.
 
 ```yaml
  format:
@@ -52,14 +57,13 @@ I put number as comments, so you can better understand specific lines.
 3. Forcing figures to be placed where they are in the text
 4. Allowing to use figures from different folders, and allowing to use relative paths to figures.
 
-Those are setting I am using to render  a working preview of a chapter.
-<!-- The final version will be using a font provided by my university: -->
+<!--Those are setting I am using to render  a working preview of a chapter.
+ The final version will be using a font provided by my university: -->
 
 ## Roman numbering for front matter and arabic for main matter
 
-I am  inserting roman numbering for front matter and arabic for main matter.
+I am inserting roman numbering for front matter and arabic for main matter.
 
-```
 ```yaml
  format:
   pdf:

@@ -9,24 +9,13 @@ tags:
 - Hugo
 ---
 
-I am using the Hugo lines theme, you can find it [here](https://github.com/ronv/lines).
 
-## Hugo and Github pages
 
-There is nice tutorial here: https://gohugo.io/hosting-and-deployment/hosting-on-github/.
-But my workflow was failing.
-I add the theme as submodule, but I noticed that  somehow `.gitmodules` file was not added to the repository.
-Because of that, I had to add it manually:
 
-```toml
-[submodule "themes/lines"]
-	path = themes/lines
-	url = https://github.com/ronv/lines.git
-```
 
 ## Hugo, Quarto and my history of using static site generators.
 
-Long ago I was experimenting with Jekyll (you can see one of the pages I created [here](https://brainhackwarsaw2017.github.io/)), then Hugo and a year ago I switched to Quarto.
+Long ago I was experimenting with Jekyll (you can see one of the pages I created [here](https://brainhackwarsaw2017.github.io/)), then I was trying Hugo and a year ago I switched to Quarto.
 Quarto is great for scientific publications, but I find it too limiting for a blog.
 
 The structure of the blog require you to put every of your posts into its own folder with `index.qmd` file.
@@ -86,3 +75,44 @@ As per wikipedia entry[^1]:
 I am stillclose to original meaning, even when I misspell it (_quatro_ means _four_ in Portuguese and Italian).
 
 [^1]: [Quarto - Wikipedia](https://en.wikipedia.org/wiki/Quarto)
+
+## Customizing the theme
+
+I am using the Hugo lines theme, you can find it [here](https://github.com/ronv/lines).
+I however needed to do some customization to make it work for me.
+
+### Hugo and GitHub pages
+
+There is nice tutorial here: https://gohugo.io/hosting-and-deployment/hosting-on-github/.
+But my workflow was failing.
+I added the theme as submodule, but I noticed that somehow `.gitmodules` file isn't in the repository.
+Because of that, I had to add it manually to my `.gitmodules` file.
+Then I noticed that because of the theme is shipping with example content, it is adding a lot of _lorem ipsum_ posts to published version.
+I forked the theme and removed the example content. The finale version of my `.gitmodules` file looks like this:
+
+```toml
+[submodule "themes/lines"]
+    path = "themes/lines"
+    url = "https://github.com/danieltomasz/lines.git"
+```
+
+### Hugo and code highlighting
+
+To get code highlighting in backticks markdown fences I enabled:
+
+```toml
+pygmentsStyle = "pygments"
+pygmentsCodefences = true
+```
+
+I was trying to get code numbering and a separate code that is easy to copy.
+I try this setting within the markup section,
+
+```toml
+  [markup.highlight]
+    linenos = true
+    lineNumbersInTable = true
+```
+
+ but the line numbers section were two lines short than the code section (the code section was customized by the theme `scss`).
+ I will try to fix it later.

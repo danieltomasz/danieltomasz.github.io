@@ -3,14 +3,24 @@ title: About
 ---
 ## Daniel Borek
 
-I’m a PhD candidate at Ghent University learning more about the nature of neural oscillations.
-
 I studied physics within a MISMaP interdisciplinary programme and philosophy at University of Warsaw.
-
-#### An academic and data scientist
-
-Before starting PhD, I worked as a data analyst in the area of health policy, doing data analysis, data visualisation and report automation in R.
-I am passionate about health data and using data visualisation to provide new insights.
+I came to Belgium to work at Ghent University in a project about spectral parametrization of neural oscillations.
 
 Currently, I am based in Brussels, Belgium.
-I ❤️ cinema.
+
+You can find me on [Twitter](https://twitter.com/danielborek), [GitHub](https://github.com/danieltomasz), and [Mastodon](https://scholar.social/@dborek)
+
+### An academic and data scientist
+
+In my projects, I'm constantly switching between Python and R.
+I interested in neurophysiology, computational cognitive science, metascience (research on research, especially reproducibility and open science) and philosophy of science.
+
+Before starting PhD, I worked as a data analyst in the area of health policy, doing data analysis, data visualisation and report automation in R.
+
+I did traineeship at the European Commission, DG Research and Innovation, where I contributed to monitoring of digital and data-sharing aspects of some EU-funded projects on health research.
+
+I am passionate about health data and using data visualisation to provide new insights.
+
+### Hobbies
+
+I ❤️ cinema. 

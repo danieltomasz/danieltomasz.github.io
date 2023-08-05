@@ -1,8 +1,6 @@
 .DS_Store
 
 /.quarto/
-.vscode/
 *.DS_Store/
 .luarc.json
 .hugo_build.lock
-hugo_build.lock
