@@ -14,11 +14,11 @@ tags:
 Callouts are a great way to add more attention ot certain details of the text (in the form of a box).
 Quarto provides 5 different types of callouts:
 
--   `note`
--   `warning`
--   `important`
--   `tip`
--   `caution`.
+- `note`
+- `warning`
+- `important`
+- `tip`
+- `caution`.
 
 The color and icon will be different depending upon the type that you select.
 You could preview them in the official documentation - [Quarto - Callout Blocks](https://quarto.org/docs/authoring/callouts.html).
@@ -42,6 +42,8 @@ When you want to edit your text in Obsidian obisidian doesn't pick the pandoc `d
 >
 > Note content
 ```
+
+Edit on July 2023: Github also introduced callouts with the same syntax under name of [Alerts](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts)
 
 **There is no easy way to have nice formatted callouts in qmd/md files in Obsidian before compiling them to pdf/html**
 
