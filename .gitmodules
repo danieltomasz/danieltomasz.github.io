@@ -1,6 +1,6 @@
 # [submodule "themes/simplist"]
-# 	path = themes/simplist
-# 	url = git@github.com:danieltomasz/simplist.git
+#  	path = themes/simplist
+#  	url = git@github.com:danieltomasz/simplist.git
 
 [submodule "themes/lines"]
  	path = themes/lines
