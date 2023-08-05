@@ -5,5 +5,7 @@
 [submodule "themes/lines"]
 	path = themes/lines
 	url = git@github.com:danieltomasz/lines.git
-[submodule "bar1"]
-	branch = master
+
+[submodule "themes/hugo-redirect"]
+	path = themes/hugo-redirect
+	url = https://github.com/gcc42/hugo-redirect.git

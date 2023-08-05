@@ -1,7 +1,7 @@
 ---
 title: "Obsidian and Quarto callouts"
 date: "2023-05-31"
-url: "2023/05/obsidian-quarto-callouts"
+url: "/2023/obsidian-quarto-callouts"
 draft: false
 tags:
 - Quatro

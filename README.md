@@ -13,3 +13,4 @@ You can find me on [Twitter](https://twitter.com/danielborek), [GitHub](https://
 
 - Fix favicons
 - Fix rendering time of editing  from github
+- Add analytics?

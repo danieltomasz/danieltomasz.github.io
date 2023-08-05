@@ -2,22 +2,24 @@
 title: About
 noComment: true
 ---
-## Daniel Borek
+
+Hi! My name Daniel Borek.
+
+I live in Brussels, Belgium and I analyse data using R and Python.
+## An academic
 
 I studied physics within a MISMaP interdisciplinary programme and philosophy at University of Warsaw.
 
-I came to Belgium to work at Ghent University in a project about spectral parametrization of neural oscillations. This research draws on my computational background to shed light on the brain's rhythmic (and non-rhythmic) activity.
+I came to Belgium to work at Ghent University in a project about spectral parametrization of neural oscillations.
+I am applying my skills and knowledge of statistical inference, data analysing techniques, and data visualisation to problems of understanding human brain.
 
-Currently, I am based in Brussels, Belgium.
+This research draws on my computational background to shed light on the brain's rhythmic (and non-rhythmic) activity.
 
-You can find me on [Twitter](https://twitter.com/danielborek), [GitHub](https://github.com/danieltomasz), and [Mastodon](https://scholar.social/@dborek)
+I am interested in neurophysiology, computational cognitive science, metascience (research on research, especially reproducibility and open science) and philosophy of science.
 
-### An academic and data scientist
+## … and data scientist
 
 In my projects, I'm constantly switching between Python and R.
-
-I am applying my skills and knowledge of statistical inference, data analysing techniques, and data visualisation to problems of understanding human brain.
-I interested in neurophysiology, computational cognitive science, metascience (research on research, especially reproducibility and open science) and philosophy of science.
 
 Before starting PhD, I worked as a data analyst in the area of health policy, doing data analysis, data visualisation and report automation in R.
 
@@ -28,3 +30,5 @@ I am passionate about health data and using data visualisation to provide new in
 ### Hobbies
 
 I ❤️ cinema. 
+
+You can find me on [Twitter](https://twitter.com/danielborek), [GitHub](https://github.com/danieltomasz), and [Mastodon](https://scholar.social/@dborek)

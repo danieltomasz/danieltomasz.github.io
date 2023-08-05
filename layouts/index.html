@@ -1,0 +1,20 @@
+<html lang="en">
+  {{ partial "head.html" . }}
+<body>
+<main>
+    {{ partial "header.html" . }}
+  <section>
+
+    <span itemprop="articleBody">
+
+{{ with .GetPage "pages/about.md" }}
+  {{ .Content }}
+{{ end }}
+</span>
+       
+
+</section>
+{{ partial "footer" . }}
+
+</main>
+</body>

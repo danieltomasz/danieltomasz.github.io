@@ -1,7 +1,7 @@
 baseURL = "https://danielborek.me"
 languageCode = "en-us"
 title = "Daniel Borek"
-theme = 'lines'
+theme = ["hugo-redirect", 'lines']
 
 [Author]
   name = "Daniel Borek"
@@ -35,10 +35,8 @@ theme = 'lines'
     favicon = "img/favicon.ico"
 
 enableGitInfo = true
-enableEmoji = true
 
 [frontmatter]
-#  date  = [":filename", ":default", "lastmod"]
   author = "Daniel Borek"
   github = "danieltomasz"
   facebook = ""
@@ -121,15 +119,17 @@ ignoreFiles = [ "\\.qmd$", "\\.ipynb$", "\\.py$" ]
 [menu]
   [[menu.main]]
     identifier = "index"
-    name       = "Index"
+    name       = "About"
     url        = "/"
-    weight     = -111
+    weight     = -200
+
+
 
   [[menu.main]]
-    identifier = "about"
-    name       = "About"
-    url        = "/about/"
-    weight     = -200
+    identifier = "blog"
+    name       = "Index"
+    url        = "/posts/"
+    weight     = -100
 
   [[menu.main]]
     identifier = "rss"
@@ -137,6 +137,9 @@ ignoreFiles = [ "\\.qmd$", "\\.ipynb$", "\\.py$" ]
     url        = "/atom.xml"
     weight     = -10
 
+[[redirects]]
+  from = "/"
+  to = "/about/"
 
 [[params.social]]
   name = "github"
