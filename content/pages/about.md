@@ -33,7 +33,9 @@ I am passionate about health data and using data visualisation to provide new in
 
 I ❤️ cinema. 
 
-In free time I am learning Dutch and French.
+I like listening to podcasts while I am cooking :). 
+
+During my free time I am learning Dutch and French.
 
 ### Contact
 

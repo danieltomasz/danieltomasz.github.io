@@ -35,6 +35,7 @@ theme = ["hugo-redirect", 'lines']
     favicon = "img/favicon.ico"
 
 enableGitInfo = true
+enableEmoji=true
 
 [frontmatter]
   author = "Daniel Borek"
