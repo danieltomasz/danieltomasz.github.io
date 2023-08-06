@@ -2,6 +2,8 @@ baseURL = "https://danielborek.me"
 languageCode = "en-us"
 title = "Daniel Borek"
 theme = ["hugo-redirect", 'lines']
+enableGitInfo = true
+enableEmoji =true
 
 [Author]
   name = "Daniel Borek"
@@ -34,8 +36,7 @@ theme = ["hugo-redirect", 'lines']
 [params.assets]
     favicon = "img/favicon.ico"
 
-enableGitInfo = true
-enableEmoji=true
+
 
 [frontmatter]
   author = "Daniel Borek"
@@ -55,7 +56,6 @@ disqusShortname = ""
 pygmentsStyle = "pygments"
 pygmentsCodefences = true
 pygmentsuseclasses = false
-
 
 
 #pygmentsUseClasses = true
@@ -78,21 +78,6 @@ ignoreFiles = [ "\\.qmd$", "\\.ipynb$", "\\.py$" ]
 
 [taxonomies]
   tag = "tags"
-
-[privacy]
-  [privacy.disqus]
-    disable = true
-  [privacy.googleAnalytics]
-    disable = true
-  [privacy.instagram]
-    disable = true
-  [privacy.twitter]
-    disable = true
-  [privacy.vimeo]
-    disable = true
-  [privacy.youtube]
-    disable = true
-
 
 
 [permalinks]
@@ -124,8 +109,6 @@ ignoreFiles = [ "\\.qmd$", "\\.ipynb$", "\\.py$" ]
     url        = "/"
     weight     = -200
 
-
-
   [[menu.main]]
     identifier = "blog"
     name       = "Index"
@@ -149,3 +132,17 @@ ignoreFiles = [ "\\.qmd$", "\\.ipynb$", "\\.py$" ]
   name = "twitter"
   link = "https://www.twitter.com/danieltomasz"
 
+
+[privacy]
+  [privacy.disqus]
+    disable = true
+  [privacy.googleAnalytics]
+    disable = true
+  [privacy.instagram]
+    disable = true
+  [privacy.twitter]
+    disable = true
+  [privacy.vimeo]
+    disable = true
+  [privacy.youtube]
+    disable = true

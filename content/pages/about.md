@@ -33,7 +33,7 @@ I am passionate about health data and using data visualisation to provide new in
 
 I ❤️ cinema. 
 
-I like listening to podcasts while I am cooking :). 
+I like listening to podcasts while I am cooking :smile: . 
 
 During my free time I am learning Dutch and French.
 
@@ -43,3 +43,4 @@ You can find me on [Twitter](https://twitter.com/danielborek), [LinkedIn](https:
 
 You might contact me via [email](mailto:daniel.borek@ugent.be) as well.
 
+I :heart: Hugo
