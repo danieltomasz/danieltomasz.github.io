@@ -2,21 +2,22 @@
 title: About
 noComment: true
 ---
-# Daniel Borek
+## Daniel Borek
 
-Hi! My name Daniel Borek.
+Hi! My name is Daniel Borek.
 
 I live in Brussels, Belgium and I analyse data using R and Python.
+
 ### An academic
 
 I studied physics within a MISMaP interdisciplinary programme and philosophy at University of Warsaw.
 
-I came to Belgium to work at Ghent University in a project about spectral parametrization of neural oscillations.
-I am applying my skills and knowledge of statistical inference, data analysing techniques, and data visualisation to problems of understanding human brain.
+My doctoral projects at Ghent University focusing on  spectral parametrization of neural oscillations.
 
 This research draws on my computational background to shed light on the brain's rhythmic (and non-rhythmic) activity.
+I am applying my skills and knowledge of statistical inference, data analysing techniques, and data visualisation to problems of understanding human brain.
 
-I am interested in neurophysiology, computational cognitive science, metascience (research on research, especially reproducibility and open science) and philosophy of science.
+My general scientific interess are neurophysiology, computational cognitive science, metascience (research on research, especially reproducibility and open science) and philosophy of science.
 
 ### … and data scientist
 
@@ -32,4 +33,11 @@ I am passionate about health data and using data visualisation to provide new in
 
 I ❤️ cinema. 
 
-You can find me on [Twitter](https://twitter.com/danielborek), [GitHub](https://github.com/danieltomasz), and [Mastodon](https://scholar.social/@dborek)
+In free time I am learning Dutch and French.
+
+### Contact
+
+You can find me on [Twitter](https://twitter.com/danielborek), [LinkedIn](https://www.linkedin.com/in/daniel-borek-209003a6/), [GitHub](https://github.com/danieltomasz), and [Mastodon](https://scholar.social/@dborek).
+
+You might contact me via [email](mailto:daniel.borek@ugent.be) as well.
+
