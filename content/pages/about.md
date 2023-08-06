@@ -4,22 +4,21 @@ noComment: true
 ---
 ## Daniel Borek
 
-Hi! My name is Daniel Borek.
-
-I live in Brussels, Belgium and I analyse data using R and Python.
+Hi!
+My name is Daniel and I analyse data using Python and R.
 
 ### An academic
 
 I studied physics within a MISMaP interdisciplinary programme and philosophy at University of Warsaw.
 
-My doctoral projects at Ghent University focusing on  spectral parametrization of neural oscillations.
+My doctoral research at Ghent University focuses on spectral parametrization of neural oscillations.
+It draws on my computational background to shed light on the brain's rhythmic (and non-rhythmic) activity.
 
-This research draws on my computational background to shed light on the brain's rhythmic (and non-rhythmic) activity.
 I am applying my skills and knowledge of statistical inference, data analysing techniques, and data visualisation to problems of understanding human brain.
 
-My general scientific interess are neurophysiology, computational cognitive science, metascience (research on research, especially reproducibility and open science) and philosophy of science.
+My general scientific interests are neurophysiology, computational cognitive science, metascience (research on research, especially reproducibility and open science) and philosophy of science.
 
-### … and data scientist
+### … and data scientist/analyst
 
 In my projects, I'm constantly switching between Python and R.
 
@@ -31,11 +30,11 @@ I am passionate about health data and using data visualisation to provide new in
 
 ### Hobbies
 
-I ❤️ cinema. 
+I ❤️ cinema.
 
-I like listening to podcasts while I am cooking :smile: . 
+I like listening to podcasts while I am cooking :smile:.
 
-During my free time I am learning Dutch and French.
+I live in Brussels, so during my free time I am learning Dutch and French.
 
 ### Contact
 
@@ -43,4 +42,3 @@ You can find me on [Twitter](https://twitter.com/danielborek), [LinkedIn](https:
 
 You might contact me via [email](mailto:daniel.borek@ugent.be) as well.
 
-I :heart: Hugo
