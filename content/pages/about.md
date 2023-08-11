@@ -36,11 +36,11 @@ Living in Brussels I spent some  part of my free learning Dutch and French.
 
 I like listening to podcasts while I am cooking :smile:.
 
-You can read here more about what [setup I use]({{< relref "what-I-use" >}})
+[Here]({{< relref "my-setup" >}}) you can read more about what I am using for programming and writing.
 
 ### Contact
 
 You can find me on [Twitter](https://twitter.com/danielborek), [LinkedIn](https://www.linkedin.com/in/daniel-borek-209003a6/), [GitHub](https://github.com/danieltomasz), and [Mastodon](https://scholar.social/@dborek).
 
-You might contact me via [email](mailto:daniel.borek@ugent.be) as well.
+You might contact me via my [academic email](mailto:daniel.borek@ugent.be) as well.
 
