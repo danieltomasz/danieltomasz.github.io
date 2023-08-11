@@ -5,11 +5,18 @@ theme = ["hugo-redirect", 'lines']
 enableGitInfo = true
 enableEmoji =true
 
+[module]
+[[module.mounts]]
+  excludeFiles = 'posts/Index.md'
+  source = 'content'
+  target = 'content'
+
+
 [Author]
   name = "Daniel Borek"
 
 [params]
-  description = "A personal musings and learning by Daniel Borek"
+  description = "Instrumental relexes"
   author = "Daniel Borek"
   copyright = ""
   logo = ""

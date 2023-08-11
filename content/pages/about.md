@@ -32,9 +32,11 @@ I am passionate about health data and using data visualisation to provide new in
 
 I ❤️ cinema.
 
+Living in Brussels I spent some  part of my free learning Dutch and French.
+
 I like listening to podcasts while I am cooking :smile:.
 
-I live in Brussels, so during my free time I am learning Dutch and French.
+You can read here more about what [setup I use]({{< relref "what-I-use" >}})
 
 ### Contact
 
