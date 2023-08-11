@@ -2,7 +2,7 @@
 title: "From Quarto back to Hugo"
 description: "Why I switched from Quarto to Hugo  - some thoughts on my blogging setup"
 date: "2023-08-03"
-lastmod: 
+lastmod:
 draft: false
 summary: Why I switched  back to Hugo from Quarto
 tags:
@@ -18,7 +18,7 @@ Quarto is great for scientific publications, but I find it too limiting for a bl
 The structure of the blog require you to put every of your posts into its own folder with `index.qmd` file.
 
 This is great for showcasing of your blog, but it is not very convenient for writing.
-I am using Pandoc/Quarto almost anywhere I can, but I as the project primary goal is to be a scientific publishing tool, 
+I am using Pandoc/Quarto almost anywhere I can, but I as the project primary goal is to be a scientific publishing tool,
 the blog part will be always a bit of an afterthought. To give the justice to the team, given their limited resources, they are great with fast fixing bug and adding new features. There are nice things planned, like a support (only about people) for `slug` and permalinks ([here](https://github.com/quarto-dev/quarto-cli/issues/6422)) but they don't land there soon.
 It was a bit of point of friction for me, so I decided to change it and returned to Hugo as static site generator.
 
@@ -75,8 +75,8 @@ I am stillclose to original meaning, even when I misspell it (_quatro_ means _fo
 
 ## Customizing the theme
 
-I am using the Hugo lines theme, you can find it [here](https://github.com/ronv/lines).
-I however needed to do some customization to make it work for me.
+I started from the  lines theme, you can find it [here](https://github.com/ronv/lines).
+Later I mixed it with another theme, [simplist](https://github.com/ronv/simplist) by the same author and I added my custom CSS parts.
 
 ### Hugo and GitHub pages
 
@@ -122,7 +122,7 @@ Paul Johnson describe his setup in [this blogpost](https://www.paulrjohnson.net/
 ### Adding comments with `giscus`
 
 I followed various blogpost with the configuration advices.
-By default, `giscus` is adding comments to every page, but I wanted to have comments only on my posts. 
+By default, `giscus` is adding comments to every page, but I wanted to have comments only on my posts.
 I followed advice[^2] and  I wrapped my addition of `giscus` partial into `footer.html` with `if` statement:
 
 ```hugo

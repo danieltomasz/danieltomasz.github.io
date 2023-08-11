@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+{{ partial "head.html" . }}
+
+<body>
+    <main>
+        {{ partial "header.html" . }}
+        <div class="lista">
+            <br>
+            {{ range .Pages }}
+
+            <li>
+
+                <a href="{{ .Params.externalLink | default .RelPermalink }}">{{ .Title }}</a>
+                <div class="meta">
+                    <time>{{ .Date.Format (.Site.Params.dateFormat | default "02·01·2006" ) }}</time>
+
+                    <span>—
+                        {{ $terms := (.GetTerms "tags") }}
+                        {{ range $key, $value := $terms }}
+                        <a href="{{ .Permalink }}">
+                            #{{ .Title | lower }}{{ if ne $key (sub (len $terms) 1) }}, {{ end }}
+                        </a>
+                        {{ end }}
+
+                    </span>
+                </div>
+            </li>
+
+
+            {{- end -}}
+
+
+        </div>
+        {{ partial "footer.html" . }}
+    </main>
+</body>
+
+</html>

@@ -15,3 +15,7 @@ tag:
 	git push origin --delete ${TAG} && \
 	git tag -a ${TAG} && \
 	git push origin --tags
+
+
+%.md:
+	hugo new content/drafts/$@

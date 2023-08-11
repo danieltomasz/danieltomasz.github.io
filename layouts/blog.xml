@@ -11,7 +11,10 @@
           {{ if ne .Kind "section" }}
           <li itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
             <a href="{{ .Permalink }}" title="{{ .Title }}" itemprop="name url">{{ .Title }}</a>
-            <hr>
+            {{ range .Params.tags }}
+            <span class="tag">{{ . }}</span>
+            {{ end }}
+            <!-- <hr> -->
            <time datetime="{{ dateFormat "2006-01-02" .Date }}">{{ dateFormat "2006-01-02" .Date }}</time>
           </li>
           {{ end }}

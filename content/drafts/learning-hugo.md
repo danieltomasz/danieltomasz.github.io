@@ -18,3 +18,11 @@ updating submodules
 
 git submodule update --init --recursive
 git submodule update --remote --merge
+
+
+# Nav menu
+
+
+https://harrycresswell.com/writing/menus-in-hugo/
+https://www.bram.us/2020/01/10/smooth-scrolling-sticky-scrollspy-navigation/
+https://ma.ttias.be/adding-a-sticky-table-of-contents-in-hugo-to-posts/

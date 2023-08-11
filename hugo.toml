@@ -16,7 +16,7 @@ enableEmoji =true
   name = "Daniel Borek"
 
 [params]
-  description = "Instrumental relexes"
+  description = "Instrumental reflexes"
   author = "Daniel Borek"
   copyright = ""
   logo = ""
@@ -76,7 +76,7 @@ ignoreFiles = [ "\\.qmd$", "\\.ipynb$", "\\.py$" ]
   [markup.goldmark.renderer]
     unsafe = true
   [markup.highlight]
-    # one of: https://xyproto.github.io/splash/docs/ 
+    # one of: https://xyproto.github.io/splash/docs/
     style = "github"
     linenos = false
     lineNumbersInTable = false
@@ -112,19 +112,19 @@ ignoreFiles = [ "\\.qmd$", "\\.ipynb$", "\\.py$" ]
 [menu]
   [[menu.main]]
     identifier = "index"
-    name       = "About"
+    name       = "about"
     url        = "/"
     weight     = -200
 
   [[menu.main]]
     identifier = "blog"
-    name       = "Index"
+    name       = "index"
     url        = "/posts/"
     weight     = -100
 
   [[menu.main]]
     identifier = "rss"
-    name       = "RSS"
+    name       = "rss"
     url        = "/atom.xml"
     weight     = -10
 
