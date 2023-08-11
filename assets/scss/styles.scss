@@ -41,6 +41,20 @@ img {
 	text-decoration: none;
 }
 
+.lista .meta span{
+    flex: 1;
+    display: inline-block;
+}
+.lista .meta hr{
+    flex: 1;
+    display: inline-block;
+}
+.lista .meta{
+    align-items: center;
+    display: flex;
+
+}
+
 // a, body {
 // 	color: #353535;
 // }
@@ -214,8 +228,8 @@ nav ul {
 
 }
 .lista ul {
-    // display: flex;
-    // list-style-type: none;
+     display: flex;
+     list-style-type: none;
   }
 
 // lista .meta {
