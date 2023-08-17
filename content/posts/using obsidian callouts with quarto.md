@@ -1,18 +1,22 @@
 ---
-title: "Obsidian and Quarto callouts"
+title: "Using Git/Obsidian Callouts in Quarto Markdown"
 date: "2023-05-31"
 url: "/2023/obsidian-quarto-callouts"
 draft: false
 tags:
 - Quatro
 - Obsidian
+- Lua
+- CSS
 ---
-## About callouts
 
-*Disclaimer: Post was originally published as a [public gist](https://gist.github.com/danieltomasz/87b1321e23c045309d2571f525f856cf)*
+# About Callouts
 
-Callouts are a great way to add more attention ot certain details of the text (in the form of a box).
-Quarto provides 5 different types of callouts:
+*Disclaimer: Previous version of this post was originally published as a [public gist](https://gist.github.com/danieltomasz/87b1321e23c045309d2571f525f856cf)*
+
+Callouts are a great way to highlight important details in your text by adding boxes with icons. Many flavours of markdown support them (but might use different syntax).
+
+Quarto supports 5 callout types:
 
 - `note`
 - `warning`
@@ -20,22 +24,19 @@ Quarto provides 5 different types of callouts:
 - `tip`
 - `caution`.
 
-The color and icon will be different depending upon the type that you select.
-You could preview them in the official documentation - [Quarto - Callout Blocks](https://quarto.org/docs/authoring/callouts.html).
-If you want to check the end effect jump directly to it [here](https://gist.github.com/danieltomasz/87b1321e23c045309d2571f525f856cf#comparison/).
+Each type has a different color and icon. You can see examples in the [Quarto documentation](https://quarto.org/docs/authoring/callouts.html).
 
-### The problem:
+## The Problem
 
-When writing your text directly in markdown compiled in Quarto you need to use pandoc `div` syntax
+To use callouts in Quarto markdown (`qmd`) files, you need to use Pandoc's div syntax:
 
-``` markdown
+```md
 ::: {.callout-note}
-Note that there are five types of callouts, including:
-`note`, `warning`, `important`, `tip`, and `caution`.
+This is a note callout 
 :::
 ```
 
-When you want to edit your text in Obsidian obisidian doesn't pick the pandoc `div` syntax, instead it will have:
+But Obsidian doesn't recognise this syntax. Instead, it uses:
 
 ``` markdown
 > [!note] My note
@@ -43,56 +44,32 @@ When you want to edit your text in Obsidian obisidian doesn't pick the pandoc `d
 > Note content
 ```
 
-Edit on July 2023: Github also introduced callouts with the same syntax under name of [Alerts](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts)
+So there's no easy way to preview nice callouts in Obsidian before compiling to PDF.
 
-**There is no easy way to have nice formatted callouts in qmd/md files in Obsidian before compiling them to pdf/html**
+Github also introduced callouts into its markdown flavour with the same syntax under name of [Alerts](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts)
 
-## Lua filters come as a solution
+# Lua Filters to the Rescue
 
-Pandoc can be supplemented by filters written by Lua that might some complex operations with source text.
+Pandoc supports Lua filters that can modify the markdown before compilation.
 
-I found a nice pandoc filter on the Obsidian forum, which I modified, so it support the default callouts in Quarto.
-You need to save it as a pandoc filter and put inro your project folder and point to it when running quarto command (either via commandline or by putting it into you `_quart.yml` project settings.
+I found a filter on the Obsidian forum and modified it to support Quarto callouts. You need to save the filter as `obsidian-callouts.lua` in your project's `filters` folder.
 
-In my case, I created `obsidian-callouts.lua` in `filters` folder and I point to it in the `_quarto,yml` in the root of the folder in the following section (I excluded irrelevant details):
+Then point to it in `_quarto.yml`:
 
 ``` yml
-project:
-  output-dir: _output
 filters:
 - filters/obsidian-callouts.lua
 ```
 
-Content of the file `obsidian-callouts.lua` :
+Content of the file `obsidian-callouts.lua` is in the following gist :
 
-``` lua
-local stringify = (require "pandoc.utils").stringify
+{{< gist danieltomasz 31d298aca2969adaf60d8841b68005e2 >}}
 
-function BlockQuote (el)
-    start = el.content[1]
-    if (start.t == "Para" and start.content[1].t == "Str" and
-        start.content[1].text:match("^%[!%w+%][-+]?$")) then
-        _, _, ctype = start.content[1].text:find("%[!(%w+)%]")
-        el.content:remove(1)
-        start.content:remove(1)
-        local class = "callout-" .. ctype:lower()
-        div = pandoc.Div(el.content, {class = class})
-        div.attributes["data-callout"] = ctype:lower()
-        div.attributes["title"] = stringify(start.content):gsub("^ ", "")
-        return div
-    else
-        return el
-    end
-end
-```
+This makes Obsidian's callout syntax compile properly in Quarto.
 
-As a source I used this thread from Obsidian forum[^1]
+# Tweaking Obsidian CSS
 
-[^1]: https://forum.obsidian.md/t/rendering-callouts-similarly-in-pandoc/40020/6
-
-### Tweaks to obsidian CSS
-
-By default Obsidian recognize only `note` and `warning` callouts, to have the other 3 callouts the same icons and colors as in Quarto add the following CSS snippet `quarto-callout-styllling` to hidden `.snippets` folder and turn it on in the Obsidian appearance section of settings
+By default Obsidian only styles `note` and `warning` callouts. To match Quarto, add this CSS:
 
 ``` css
 /* See https://lucide.dev for icon codes */
@@ -114,20 +91,11 @@ By default Obsidian recognize only `note` and `warning` callouts, to have the ot
 }
 ```
 
-### Comparison
+Now the callouts look the same in Obsidian and compiled PDFs!
 
-After applying the css could see the difference between callouts in Live Preview in Obsidian
-
-![Image](https://user-images.githubusercontent.com/7980381/242414671-abd8b360-3a98-4fa0-90ea-d62c453855f0.png)
-
-and PDF generated via Quarto
-
-![Image](https://user-images.githubusercontent.com/7980381/242414991-78ff1f8b-e361-400e-a664-2599f7867c1d.png)
-
-Below is the markdown used to generate it
+Below is the Obsidian markdown that can be used to generate the basic 5 types of callouts that map nicely to Quarto types:
 
 ``` markdown
-
 > [!note] My note
 >
 > Note content
@@ -149,18 +117,24 @@ Below is the markdown used to generate it
 > Note content
 ```
 
-### Attention !
+Obsidian support for callouts is much more [extensive](https://help.obsidian.md/Editing+and+formatting/Callouts).
 
-While those snippets will ensure that your notes will render nicely in Obsidian, it may cause other editors that support (only about people) Quarto to offer the same (altough) it will compile nicely to pdf/html.
+## Caveat
 
-I didn't extensively test this Lua filter, so it might easily go broke in more complex cases and if you will try to use the callouts outside the one defined in Quarto by default.
+This approach makes callouts render nicely in Obsidian, but may break other Quarto-supporting editors. Test thoroughly before relying on it.
 
-### More about how to use Quarto in Obsidian
+Remember that in order for callouts to work you need to leave a empty line starting with `>` between title and content. If you want a line break in the rendered callout, you might need the same trick.
 
-In general, I enabled Obsidian to see quarto files as md files via plugin, and then use `obsidian-shellcomands` with `quarto render {{file_path:absolute}} --to pdf` to render the file inside Obsidian (you can install quarto via installer from website, or homebrew on MacOS)
+Since Quarto 1.3 callouts are represented as a [custom AST node](In Quarto 1.3, callouts are represented as a custom AST node.). (A version of Lua filter that generated native Pandoc Divs)[https://forum.obsidian.md/t/rendering-callouts-similarly-in-pandoc/40020/6] will not work with latest Quarto.
 
-I also assigned this shellcomand to a button in my GUI via `commander` plugin (so I dont need to invoke it every time via command switcher when I want to re-run it on a file.
+## More Obsidian + Quarto Tips
 
-I created rudimentary plugin to support QMD files in Obsidian, in the `Readme.md` you could find more advices how to streamline work with your qmd files in Quarto[^2].
+I use plugins to preview Quarto files in Obsidian:
 
-[^2]: [danieltomasz/qmd-as-md-obsidian: A plugin for Obsidian which allows editing of `qmd` Quarto files.](https://github.com/danieltomasz/qmd-as-md-obsidian)
+- `obsidian-shellcommands` to run `quarto render`
+- Custom button with `commander` to rerun compilation
+- `qmd-as-md-obsidian` for basic `qmd` support
+
+See the [plugin README](https://github.com/danieltomasz/qmd-as-md-obsidian) for more workflow advice.
+
+Let me know if you have any other questions!

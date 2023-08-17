@@ -16,6 +16,8 @@ tag:
 	git tag -a ${TAG} && \
 	git push origin --tags
 
+draft-branch.md
+
 
 %.md:
 	hugo new content/drafts/$@
