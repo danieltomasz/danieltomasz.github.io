@@ -4,7 +4,7 @@ date: "2023-05-31"
 url: "/2023/obsidian-quarto-callouts"
 draft: false
 tags:
-- Quatro
+- Quarto
 - Obsidian
 - Lua
 - CSS

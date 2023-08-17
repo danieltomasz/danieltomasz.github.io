@@ -6,7 +6,7 @@ lastmod:
 draft: false
 summary: Why I switched  back to Hugo from Quarto
 tags:
-- Quatro
+- Quarto
 - Hugo
 - Blogging
 ---

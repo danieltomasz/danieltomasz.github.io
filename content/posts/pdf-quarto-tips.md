@@ -5,7 +5,7 @@ date: "2023-08-04"
 draft: false
 lastmod: "2023-08-04"
 tags:
-- Quatro
+- Quarto
 - Latex
 ---
 
