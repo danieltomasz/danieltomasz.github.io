@@ -5,42 +5,40 @@ noComment: true
 
 # Daniel Borek
 
-Hi!  
-My name is Daniel and I analyse data using Python and R.
+Hi! I'm Daniel and I analyse data using Python and R.
 
-## An academic
+## An Academic
 
-I studied physics within [a MISMaP interdisciplinary programme](http://mismap.uw.edu.pl/en/) and philosophy at University of Warsaw.
+I studied physics within [an  interdisciplinary MISMaP  program](http://mismap.uw.edu.pl/en/) and philosophy at the University of Warsaw.
 
-My doctoral research at Ghent University focuses on spectral parametrization of neural oscillations.  
-It draws on my computational background to shed light on the brain's rhythmic (and non-rhythmic) activity.
+My doctoral research at Ghent University focuses on the spectral parametrization of neural oscillations. It applies my computational background to elucidate the brain's rhythmic (and non-rhythmic) activity.
 
-I am applying my skills and knowledge of statistical inference, data analysing techniques, and data visualisation to problems of understanding human brain.
+I'm leveraging my skills in statistical inference, data analysis, and visualization to understand the human brain.
 
-My general scientific interests are neurophysiology, computational cognitive science, metascience (research on research, especially reproducibility and open science) and philosophy of science.
+My broad scientific interests include neurophysiology, computational cognitive science, metascience (especially reproducibility and open science), and philosophy of science.
 
-## … And data scientist/analyst
+## …And Data Scientist
 
-In my projects, I'm constantly switching between Python and R.
+In my work, I constantly switch between Python and R.
 
-Before starting PhD, I worked as a data analyst in the area of health policy, doing data analysis, data visualisation and report automation in R.
+Before my PhD, I worked as a data analyst in health policy, doing analysis, visualization, and report automation in R.
 
-I did traineeship at the European Commission, DG Research and Innovation, where I contributed to monitoring of digital and data-sharing aspects of some EU-funded projects on health research.
+I completed a traineeship at the European Commission's DG Research and Innovation, contributing to the monitoring of digital and data-sharing aspects of some EU-funded health research projects.
 
-I am passionate about health data and using data visualisation to provide new insights.
+I'm passionate about health data and using visualisation to generate insights
 
 ## Hobbies
 
 I ❤️ cinema.
 
-Living in Brussels I spent some part of my free learning Dutch and French.
+Living in Brussels, I've spent time learning Dutch and French.
 
-I like listening to podcasts while I am cooking :smile:.
+I enjoy listening to podcasts while cooking :smile:.
 
-[Here]({{< relref "my-setup" >}}) you can read more about what I am using for programming and writing.
+Find out more [here]({{< relref "my-setup" >}}) about my tools for programming and writing.
 
 ## Contact
 
-You can find me on [Twitter](https://twitter.com/danielborek), [LinkedIn](https://www.linkedin.com/in/daniel-borek-209003a6/), [GitHub](https://github.com/danieltomasz), and [Mastodon](https://scholar.social/@dborek).
+Connect with me on [Twitter](https://twitter.com/danielborek), [LinkedIn](https://www.linkedin.com/in/daniel-borek-209003a6/), [GitHub](https://github.com/danieltomasz), and [Mastodon](https://scholar.social/@dborek).
 
-You might contact me via my [academic email](mailto:daniel.borek@ugent.be) as well.
+You can also reach me through my [academic email](mailto:daniel.borek@ugent.be).

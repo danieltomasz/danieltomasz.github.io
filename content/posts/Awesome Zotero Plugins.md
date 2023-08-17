@@ -30,4 +30,4 @@ As an avid Zotero user, I've tested my fair share of plugins to optimize my work
 - [GitHub - windingwind/zotero-pdf-preview: PDF Preview for Zotero.](https://github.com/windingwind/zotero-pdf-preview) Enables live PDF miniature previews right in my Zotero item info pane so I can quickly confirm I have looking into right paper without open the item. Current changes to PDF Reader (Zotero 7 beta 29) broke it, it still doesn't work as for the middle of August;
 - [GitHub - wshanks/Zutilo: Zotero plugin providing some additional editing features](https://github.com/wshanks/Zutilo) A nice collection of tools, still in the process of porting.
 
-There is more plugins that work on Zotero7 (I didnt posted because I didnt tested them), and even more great plugins still on Zotero 6.
+While Zotero 7 has some additional compatible plugins I don't use or haven't tested, many of the best plugins remain available only for Zotero 6."
