@@ -8,7 +8,7 @@ noComment: true
 Hi!  
 My name is Daniel and I analyse data using Python and R.
 
-## An Academic
+## An academic
 
 I studied physics within [a MISMaP interdisciplinary programme](http://mismap.uw.edu.pl/en/) and philosophy at University of Warsaw.
 
@@ -19,7 +19,7 @@ I am applying my skills and knowledge of statistical inference, data analysing t
 
 My general scientific interests are neurophysiology, computational cognitive science, metascience (research on research, especially reproducibility and open science) and philosophy of science.
 
-## … And Data scientist/analyst
+## … And data scientist/analyst
 
 In my projects, I'm constantly switching between Python and R.
 
