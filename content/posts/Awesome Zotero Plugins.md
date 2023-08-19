@@ -20,6 +20,15 @@ Recently, the devs shared a public beta of Zotero 7. otero 7. Most of the update
 
 What's exciting is the native support for Apple Silicon desktop devices and an [even better reader, with EPUB support and web annotation](https://forums.zotero.org/discussion/106716/available-for-beta-testing-updated-reader-with-epub-snapshot-support-and-new-annotation-types). An Android app is also in development.
 
+## Markdown translators
+
+https://github.com/erazlogo/zotero-markdown-translators
+
+<!--Markdow export 
+zotero://open-pdf/library/items/9WYPFUSR?page=9
+
+https://forums.zotero.org/discussion/90858/pdf-reader-and-zotero-open-pdf-links
+-->
 # Plugins I'm Using in Zotero 7
 
 As an avid Zotero user, I've tested my fair share of plugins to optimize my workflow. While Zotero is great on its own, plugin take it to the next level for managing citations and references. Unfortunately with the changes to Zotero app, many plugins doesnt support beta yet. Below those I am using and are ported (or will be ported soon):

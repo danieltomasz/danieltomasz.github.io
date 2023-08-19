@@ -1,5 +1,5 @@
 ---
-title: "Using Git/Obsidian Callouts in Quarto Markdown"
+title: "Using Wikilinks and Git/Obsidian Callouts in Quarto Markdown"
 date: "2023-05-31"
 url: "/2023/obsidian-quarto-callouts"
 draft: false
@@ -32,7 +32,7 @@ To use callouts in Quarto markdown (`qmd`) files, you need to use Pandoc's div s
 
 ```md
 ::: {.callout-note}
-This is a note callout 
+This is a note callout
 :::
 ```
 
@@ -91,7 +91,7 @@ By default Obsidian only styles `note` and `warning` callouts. To match Quarto, 
 }
 ```
 
-Now the callouts look the same in Obsidian and compiled PDFs!
+Now the callouts look (almost) the same in Obsidian and compiled PDFs!
 
 Below is the Obsidian markdown that can be used to generate the basic 5 types of callouts that map nicely to Quarto types:
 
@@ -126,6 +126,19 @@ This approach makes callouts render nicely in Obsidian, but may break other Quar
 Remember that in order for callouts to work you need to leave a empty line starting with `>` between title and content. If you want a line break in the rendered callout, you might need the same trick.
 
 Since Quarto 1.3 callouts are represented as a [custom AST node](In Quarto 1.3, callouts are represented as a custom AST node.). (A version of Lua filter that generated native Pandoc Divs)[https://forum.obsidian.md/t/rendering-callouts-similarly-in-pandoc/40020/6] will not work with latest Quarto.
+
+## Bonus: Wikilinks
+
+Obsidian also supports wikilinks, which are a great way to link between notes. They are not supported in Quarto, but you can use a Lua filter to convert them to regular text in the rendered file. Unfortunately, this version doesn't fully support aliases in wikilinks. Also be careful, as this gist is not thouroughly tested, but works in all simple cases I tested it.
+
+{{< gist danieltomasz bde887dcc775bd47acc0ddf993e3ec2b >}}
+
+Add it to `_quarto.yml` or the yaml header of your document:
+
+``` yml
+filters:
+- filters/wikilinks-filter.lua
+```
 
 ## More Obsidian + Quarto Tips
 
