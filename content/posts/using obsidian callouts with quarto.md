@@ -123,9 +123,9 @@ Obsidian support for callouts is much more [extensive](https://help.obsidian.md/
 
 This approach makes callouts render nicely in Obsidian, but may break other Quarto-supporting editors. Test thoroughly before relying on it.
 
-Remember that in order for callouts to work you need to leave a empty line starting with `>` between title and content. If you want a line break in the rendered callout, you might need the same trick.
+Remember that in order for callouts to work you need to leave an empty line starting with `>` between title and content. If you want a line break in the rendered callout, you might need the same trick.
 
-Since Quarto 1.3 callouts are represented as a [custom AST node](In Quarto 1.3, callouts are represented as a custom AST node.). (A version of Lua filter that generated native Pandoc Divs)[https://forum.obsidian.md/t/rendering-callouts-similarly-in-pandoc/40020/6] will not work with latest Quarto.
+Since Quarto 1.3 callouts are represented as a custom AST node. (An earlier version of Lua filter that generated native Pandoc Divs)[https://forum.obsidian.md/t/rendering-callouts-similarly-in-pandoc/40020/6] will not work with latest Quarto.
 
 ## Bonus: Wikilinks
 

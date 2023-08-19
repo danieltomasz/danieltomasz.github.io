@@ -1,10 +1,10 @@
 
 ---
 
-title: Zotero 7 is coming …  
-date: 2023-08-15  
-description:  
-draft: false  
+title: Zotero 7 is coming …
+date: 2023-08-15
+description:
+draft: false
 tags:
 - Zotero
 - Academia
@@ -20,11 +20,9 @@ Recently, the devs shared a public beta of Zotero 7. otero 7. Most of the update
 
 What's exciting is the native support for Apple Silicon desktop devices and an [even better reader, with EPUB support and web annotation](https://forums.zotero.org/discussion/106716/available-for-beta-testing-updated-reader-with-epub-snapshot-support-and-new-annotation-types). An Android app is also in development.
 
-## Markdown translators
 
-https://github.com/erazlogo/zotero-markdown-translators
 
-<!--Markdow export 
+<!--Markdow export
 zotero://open-pdf/library/items/9WYPFUSR?page=9
 
 https://forums.zotero.org/discussion/90858/pdf-reader-and-zotero-open-pdf-links
@@ -40,3 +38,9 @@ As an avid Zotero user, I've tested my fair share of plugins to optimize my work
 - [GitHub - wshanks/Zutilo: Zotero plugin providing some additional editing features](https://github.com/wshanks/Zutilo) A nice collection of tools, still in the process of porting.
 
 While Zotero 7 has some additional compatible plugins I don't use or haven't tested, many of the best plugins remain available only for Zotero 6."
+
+
+## Markdown translators
+
+Useful pair of Zotero translators when you want to link to Zotero item as Markdown link
+https://github.com/erazlogo/zotero-markdown-translators
