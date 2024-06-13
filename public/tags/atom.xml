@@ -6,7 +6,7 @@
     <description>Recent content in Tags on Daniel Borek</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 13 Jun 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 14 Jun 2024 00:47:01 +0200</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/atom.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Bibliography</title>
@@ -20,6 +20,20 @@
       <link>http://localhost:1313/tags/zotero/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/zotero/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tips</title>
+      <link>http://localhost:1313/tags/tips/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/tips/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Trivia</title>
+      <link>http://localhost:1313/tags/trivia/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/trivia/</guid>
       <description></description>
     </item>
     <item>

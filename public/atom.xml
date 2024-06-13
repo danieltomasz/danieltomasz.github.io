@@ -18,10 +18,10 @@
       <description>&lt;p&gt;After listening an episode of &lt;code&gt;PhD Life Coach&lt;/code&gt; podcast (reccomeded to everyone relared to academia) on &lt;a href=&#34;https://thephdlifecoach.buzzsprout.com/1992545/15220518-2-39-how-to-be-your-own-best-personal-assistant&#34;&gt;How to be your own best personal assistant&lt;/a&gt; Iearned that some academic people still spent their time on renaming pdfs downloaded from internet. I want to share an important message to those people :) :&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;If you deal if structured articles (web, pdf) please use Reference Mangers, even if you don&amp;rsquo;t cite those articles that often; It will remove many of your headeaches and you can have nice organisation of your research materials&lt;/li&gt;
-&lt;li&gt;Even if you want to store PDFs inside specific projects a Reference Mangers can be really useful by automatic file renaming for you (you can move this files to another folder later). If you need to standardize the naming convention for all your PDF files or want to include specific metadata in the file names, Zotero or other refernce mangers offers built-in functionalities and add-ons to achieve this efficiently.&lt;/li&gt;
+&lt;li&gt;Even if you want to store PDFs inside specific projects a Reference Mangers can be really useful by automatic file renaming for you (you can move this files to another folder later). If you need to standardize the naming convention for all your PDF files or want to include specific metadata in the file names, Zotero or other reference mangers offers built-in functionalities and add-ons to achieve this efficiently.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Here a quick tips how to rename files using Zotero.&lt;/p&gt;
-&lt;p&gt;I am using Zotero 7 Betal (which is really stable and availble from this page and I hope will soon realeased as stable version) so my description might be slightly differnt from what people using previous version may sees .&lt;/p&gt;
+&lt;p&gt;I am using &lt;a href=&#34;https://www.zotero.org/support/beta_builds&#34;&gt;Zotero 7 Beta&lt;/a&gt; (which offer nicer interface that &lt;a href=&#34;https://www.zotero.org/download/&#34;&gt;Zotero 6&lt;/a&gt;  and some additional features like epub or webpages annotation, and is really stable and I hope will soon released as stable version) so my description might be slightly different from what people using previous version may sees .&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;In Zotero Go to Edit &amp;gt; Preferences (or Zotero &amp;gt; Preferences on a Mac).&lt;/li&gt;
 &lt;li&gt;In the General tab, check the box •&lt;code&gt; Automatically rename locally added files&lt;/code&gt;&lt;/li&gt;
@@ -43,19 +43,49 @@
     </item>
     
     <item>
+      <title>Tips for using Github</title>
+      <link>http://localhost:1313/2024/untitled-1/</link>
+      <description>&lt;p&gt;GitHub is a powerful platform (if you stayed on it after it was bought by Microsoft) that you can use for version control with Git and collaborative software/project development.&lt;/p&gt;
+&lt;p&gt;Apart of its main purpose for mangaging and maintaining your projects,and many people are familiar with the basic functionalities of GitHub, there are several valuable features that even experienced users might overlook&lt;/p&gt;
+&lt;p&gt;This is a bit trivial information but I know that are some people (mostly academic colleagues) who were using Github and for whom this information was new when I shared with them. The post will be updated if I will learn about features.&lt;/p&gt;
+&lt;h1 id=&#34;if-you-are-a-student-ask-for-the-github-education-pack&#34;&gt;If You Are a Student, Ask for the GitHub Education Pack&lt;/h1&gt;
+&lt;p&gt;If you’re a student, you can apply for the GitHub Student Developer Pack, which offers free access to various developer tools, resources, and services. Some of the best perks include access to Microsoft Copilot inside VSCode, a license for PyCharm Professional Edition (which supports some great features), and a year of a Namecheap domain.&lt;/p&gt;
+&lt;p&gt;You also get a year of a free domain with a .me ending on Namecheap, a free 3-month individual subscription to DataCamp, and access to other perks. Some of these perks might not be as useful, but you may find something valuable, like computing credits on Azure and other services for machine learning. More details can be found here: &lt;a href=&#34;https://education.github.com/pack&#34;&gt;GitHub Education Pack&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;When applying, if you encounter verification issues, you might find useful this comment from related &lt;a href=&#34;https://github.com/orgs/community/discussions/61537&#34;&gt;discussion&lt;/a&gt; :&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;You are unlikely to be verified until you have completed your GitHub user profile with your full name as it appears in your academic affiliation document, plus a short bio.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Overall, having a good presence and short introduction on your profile is a good idea.&lt;/p&gt;
+&lt;p&gt;Even after successful verification, you might need to wait up to 72hours, and in peak times like the start of the semester even longer.&lt;/p&gt;
+&lt;h1 id=&#34;use-favorites-for-easy-access-to-repositories&#34;&gt;Use Favorites for Easy Access to Repositories&lt;/h1&gt;
+&lt;p&gt;The staring a favorites repo is a pretty standard feature, but a new shiny beta feature is “lists,” which you can create and add repositories to when starring them. This is useful for creating low-effort, different collections.&lt;/p&gt;
+&lt;h1 id=&#34;be-notified-about-releases-of-specific-packages&#34;&gt;Be Notified About Releases of Specific Packages&lt;/h1&gt;
+&lt;p&gt;To stay updated on the latest releases of specific packages or repositories, you can “Watch” the repository. This is one of the badges on the top of the repository view. By default, the “Participation and mentions” option is active. When you choose “Custom,” you can select “Releases Only” to stay informed about the latest updates.&lt;/p&gt;
+&lt;h1 id=&#34;utilize-github-pages-for-hosting&#34;&gt;Utilize GitHub Pages for Hosting&lt;/h1&gt;
+&lt;p&gt;GitHub Pages allows you to host static websites directly from your repositories. This is an excellent way to showcase your projects, create documentation, or even host a personal blog. It’s free and integrates seamlessly with your GitHub workflow.&lt;/p&gt;
+&lt;p&gt;For creating webpages you can use static site generators that use markdown.&lt;br&gt;
+Hugo and Jekyll are great for that (Hugo is really fast, i switched from Jekyll ), but if you work with code and often want to showcase you project notebooks as blogpost you might think about using Quarto for &lt;a href=&#34;https://quarto.org/docs/websites/website-blog.html&#34;&gt;blogging&lt;/a&gt; .&lt;/p&gt;
+&lt;h2 id=&#34;open-github-repository-on-the-web-in-vscode&#34;&gt;Open Github repository on the web in vscode&lt;/h2&gt;
+&lt;p&gt;You can open your repository in the vscode in your browser replacing &lt;code&gt;github.com&lt;/code&gt; by &lt;code&gt;vscode.dev&lt;/code&gt;. It may be useful when you travel and have only access to your tablet et cetera.&lt;/p&gt;
+</description>
+      <author>dtborek@gmail.com (Daniel Borek)</author>
+      <guid>http://localhost:1313/2024/untitled-1/</guid>
+      <pubDate>Thu, 13 Jun 2024 00:00:00 +0000</pubDate>
+    </item>
+    
+    <item>
       <title>Zotero 7 is coming …</title>
       <link>http://localhost:1313/2023/awesome-zotero-plugins/</link>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.zotero.org/&#34;&gt;Zotero&lt;/a&gt; is a free, open-source reference management software. It make the process of collecting and storing references pretty easy (sometimes too easy !).&lt;/p&gt;
 &lt;p&gt;The latest stable, big release version, Zotero 6, was introduced in March 2022. It brought a new built-in PDF viewer and annotation system, as well as iOS and iPadOS apps.&lt;/p&gt;
-&lt;h1 id=&#34;zotero-7-is-coming-&#34;&gt;Zotero 7 is Coming .&lt;/h1&gt;
-&lt;p&gt;Recently, the devs shared a public beta of Zotero 7. otero 7. Most of the updates are related to transitioning from the legacy Firefox 60 ESR, which Zotero was originally built on top of (Zotero started as a browser extension), to the newer Firefox 102 ESR now and Firefox 115 ESR before the release this year.&lt;/p&gt;
+&lt;h2 id=&#34;zotero-7-is-coming&#34;&gt;Zotero 7 is Coming&lt;/h2&gt;
+&lt;p&gt;Recently, the devs shared a public beta of Zotero 7. Most of the updates are related to transitioning from the legacy Firefox 60 ESR, which Zotero was originally built on top of (Zotero started as a browser extension), to the newer Firefox 102 ESR now and Firefox 115 ESR before the release this year.&lt;/p&gt;
 &lt;p&gt;What&amp;rsquo;s exciting is the native support for Apple Silicon desktop devices and an &lt;a href=&#34;https://forums.zotero.org/discussion/106716/available-for-beta-testing-updated-reader-with-epub-snapshot-support-and-new-annotation-types&#34;&gt;even better reader, with EPUB support and web annotation&lt;/a&gt;. An Android app is also in development.&lt;/p&gt;
 &lt;!--Markdow export
 zotero://open-pdf/library/items/9WYPFUSR?page=9
 
 https://forums.zotero.org/discussion/90858/pdf-reader-and-zotero-open-pdf-links
 --&gt;
-&lt;h1 id=&#34;plugins-im-using-in-zotero-7&#34;&gt;Plugins I&amp;rsquo;m Using in Zotero 7&lt;/h1&gt;
+&lt;h2 id=&#34;plugins-im-using-in-zotero-7&#34;&gt;Plugins I&amp;rsquo;m Using in Zotero 7&lt;/h2&gt;
 &lt;p&gt;As an avid Zotero user, I&amp;rsquo;ve tested my fair share of plugins to optimize my workflow. While Zotero is great on its own, plugin take it to the next level for managing citations and references. Unfortunately with the changes to Zotero app, many plugins doesnt support beta yet. Below those I am using and are ported (or will be ported soon):&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/retorquere/zotero-open-pdf&#34;&gt;GitHub - retorquere/zotero-open-pdf&lt;/a&gt;&lt;/li&gt;
@@ -66,7 +96,7 @@ https://forums.zotero.org/discussion/90858/pdf-reader-and-zotero-open-pdf-links
 &lt;/ul&gt;
 &lt;p&gt;While Zotero 7 has some additional compatible plugins I don&amp;rsquo;t use or haven&amp;rsquo;t tested, many of the best plugins remain available only for Zotero 6.&amp;quot;&lt;/p&gt;
 &lt;h2 id=&#34;markdown-translators&#34;&gt;Markdown translators&lt;/h2&gt;
-&lt;p&gt;Useful pair of Zotero translators when you want to link to Zotero item as Markdown link
+&lt;p&gt;Useful pair of Zotero translators when you want to link to Zotero item as Markdown link&lt;br&gt;
 &lt;a href=&#34;https://github.com/erazlogo/zotero-markdown-translators&#34;&gt;https://github.com/erazlogo/zotero-markdown-translators&lt;/a&gt;&lt;/p&gt;
 </description>
       <author>dtborek@gmail.com (Daniel Borek)</author>
@@ -389,15 +419,6 @@ I followed advice&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; clas
       <author>dtborek@gmail.com (Daniel Borek)</author>
       <guid>http://localhost:1313/2023/obsidian-quarto-callouts/</guid>
       <pubDate>Wed, 31 May 2023 00:00:00 +0000</pubDate>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://localhost:1313/1/untitled/</link>
-      <description></description>
-      <author>dtborek@gmail.com (Daniel Borek)</author>
-      <guid>http://localhost:1313/1/untitled/</guid>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
     </item>
     
   </channel>
