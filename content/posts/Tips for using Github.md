@@ -1,10 +1,11 @@
 ---
 title: "Tips for using Github"
-date: 2024-06-13
+date: 2024-06-14
+description:
 draft: false
-description: Somete tips the might be useful for someone"
-tags: ["trivia", "tips"]
-author: "Daniel Borek"
+tags:
+- Tips
+- Trivia
 ---
 
 GitHub is a powerful platform (if you stayed on it after it was bought by Microsoft) that you can use for version control with Git and collaborative software/project development.
@@ -21,7 +22,7 @@ You also get a year of a free domain with a .me ending on Namecheap, a free 3-mo
 
 When applying, if you encounter verification issues, you might find useful this comment from related [discussion](https://github.com/orgs/community/discussions/61537) :
 
-	You are unlikely to be verified until you have completed your GitHub user profile with your full name as it appears in your academic affiliation document, plus a short bio.
+>You are unlikely to be verified until you have completed your GitHub user profile with your full name as it appears in your academic affiliation document, plus a short bio.
 
 Overall, having a good presence and short introduction on your profile is a good idea.
 

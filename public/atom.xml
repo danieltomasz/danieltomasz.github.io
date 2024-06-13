@@ -7,7 +7,7 @@
     
     <language>en</language>
     <copyright>Copyright 2024, Daniel Borek</copyright>
-    <lastBuildDate>Thu, 13 Jun 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 14 Jun 2024 00:00:00 +0000</lastBuildDate>
     <generator>Hugo - gohugo.io</generator>
     <docs>http://cyber.harvard.edu/rss/rss.html</docs>
     <atom:link href="https://danielborek.me/atom.xml" rel="self" type="application/atom+xml"/>
@@ -39,36 +39,6 @@
 </description>
       <author>dtborek@gmail.com (Daniel Borek)</author>
       <guid>http://localhost:1313/2024/how-to-rename-files-using-zotero/</guid>
-      <pubDate>Thu, 13 Jun 2024 00:00:00 +0000</pubDate>
-    </item>
-    
-    <item>
-      <title>Tips for using Github</title>
-      <link>http://localhost:1313/2024/untitled-1/</link>
-      <description>&lt;p&gt;GitHub is a powerful platform (if you stayed on it after it was bought by Microsoft) that you can use for version control with Git and collaborative software/project development.&lt;/p&gt;
-&lt;p&gt;Apart of its main purpose for mangaging and maintaining your projects,and many people are familiar with the basic functionalities of GitHub, there are several valuable features that even experienced users might overlook&lt;/p&gt;
-&lt;p&gt;This is a bit trivial information but I know that are some people (mostly academic colleagues) who were using Github and for whom this information was new when I shared with them. The post will be updated if I will learn about features.&lt;/p&gt;
-&lt;h1 id=&#34;if-you-are-a-student-ask-for-the-github-education-pack&#34;&gt;If You Are a Student, Ask for the GitHub Education Pack&lt;/h1&gt;
-&lt;p&gt;If you’re a student, you can apply for the GitHub Student Developer Pack, which offers free access to various developer tools, resources, and services. Some of the best perks include access to Microsoft Copilot inside VSCode, a license for PyCharm Professional Edition (which supports some great features), and a year of a Namecheap domain.&lt;/p&gt;
-&lt;p&gt;You also get a year of a free domain with a .me ending on Namecheap, a free 3-month individual subscription to DataCamp, and access to other perks. Some of these perks might not be as useful, but you may find something valuable, like computing credits on Azure and other services for machine learning. More details can be found here: &lt;a href=&#34;https://education.github.com/pack&#34;&gt;GitHub Education Pack&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;When applying, if you encounter verification issues, you might find useful this comment from related &lt;a href=&#34;https://github.com/orgs/community/discussions/61537&#34;&gt;discussion&lt;/a&gt; :&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;You are unlikely to be verified until you have completed your GitHub user profile with your full name as it appears in your academic affiliation document, plus a short bio.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Overall, having a good presence and short introduction on your profile is a good idea.&lt;/p&gt;
-&lt;p&gt;Even after successful verification, you might need to wait up to 72hours, and in peak times like the start of the semester even longer.&lt;/p&gt;
-&lt;h1 id=&#34;use-favorites-for-easy-access-to-repositories&#34;&gt;Use Favorites for Easy Access to Repositories&lt;/h1&gt;
-&lt;p&gt;The staring a favorites repo is a pretty standard feature, but a new shiny beta feature is “lists,” which you can create and add repositories to when starring them. This is useful for creating low-effort, different collections.&lt;/p&gt;
-&lt;h1 id=&#34;be-notified-about-releases-of-specific-packages&#34;&gt;Be Notified About Releases of Specific Packages&lt;/h1&gt;
-&lt;p&gt;To stay updated on the latest releases of specific packages or repositories, you can “Watch” the repository. This is one of the badges on the top of the repository view. By default, the “Participation and mentions” option is active. When you choose “Custom,” you can select “Releases Only” to stay informed about the latest updates.&lt;/p&gt;
-&lt;h1 id=&#34;utilize-github-pages-for-hosting&#34;&gt;Utilize GitHub Pages for Hosting&lt;/h1&gt;
-&lt;p&gt;GitHub Pages allows you to host static websites directly from your repositories. This is an excellent way to showcase your projects, create documentation, or even host a personal blog. It’s free and integrates seamlessly with your GitHub workflow.&lt;/p&gt;
-&lt;p&gt;For creating webpages you can use static site generators that use markdown.&lt;br&gt;
-Hugo and Jekyll are great for that (Hugo is really fast, i switched from Jekyll ), but if you work with code and often want to showcase you project notebooks as blogpost you might think about using Quarto for &lt;a href=&#34;https://quarto.org/docs/websites/website-blog.html&#34;&gt;blogging&lt;/a&gt; .&lt;/p&gt;
-&lt;h2 id=&#34;open-github-repository-on-the-web-in-vscode&#34;&gt;Open Github repository on the web in vscode&lt;/h2&gt;
-&lt;p&gt;You can open your repository in the vscode in your browser replacing &lt;code&gt;github.com&lt;/code&gt; by &lt;code&gt;vscode.dev&lt;/code&gt;. It may be useful when you travel and have only access to your tablet et cetera.&lt;/p&gt;
-</description>
-      <author>dtborek@gmail.com (Daniel Borek)</author>
-      <guid>http://localhost:1313/2024/untitled-1/</guid>
       <pubDate>Thu, 13 Jun 2024 00:00:00 +0000</pubDate>
     </item>
     

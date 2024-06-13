@@ -6,13 +6,13 @@
     <description>Recent content in Trivia on Daniel Borek</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 14 Jun 2024 00:47:01 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 13 Jun 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/trivia/atom.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Tips for using Github</title>
-      <link>http://localhost:1313/2024/untitled-1/</link>
-      <pubDate>Tue, 21 May 2024 10:00:00 +0200</pubDate>
-      <guid>http://localhost:1313/2024/untitled-1/</guid>
+      <link>http://localhost:1313/2024/tips-for-using-github/</link>
+      <pubDate>Thu, 13 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/2024/tips-for-using-github/</guid>
       <description>GitHub is a powerful platform (if you stayed on it after it was bought by Microsoft) that you can use for version control with Git and collaborative software/project development.&#xA;Apart of its main purpose for mangaging and maintaining your projects,and many people are familiar with the basic functionalities of GitHub, there are several valuable features that even experienced users might overlook&#xA;This is a bit trivial information but I know that are some people (mostly academic colleagues) who were using Github and for whom this information was new when I shared with them.</description>
     </item>
   </channel>

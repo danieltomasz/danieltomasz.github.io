@@ -25,6 +25,8 @@ Before my PhD, I worked as a data analyst in health policy, doing analysis, visu
 
 I completed a traineeship at the European Commission's DG Research and Innovation, contributing to the monitoring of digital and data-sharing aspects of some EU-funded health research projects.
 
+Currently as a data analyst I try to do the usual data analyst job providing insights by creating Shiny apps and make sense from structured text data (think XMLs).
+
 I'm passionate about health data and using visualisation to generate insights
 
 ## Hobbies
