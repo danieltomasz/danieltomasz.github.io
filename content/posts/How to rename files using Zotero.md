@@ -13,11 +13,11 @@ tags:
 After listening an episode of `PhD Life Coach` podcast (reccomeded to everyone relared to academia) on [How to be your own best personal assistant](https://thephdlifecoach.buzzsprout.com/1992545/15220518-2-39-how-to-be-your-own-best-personal-assistant) Iearned that some academic people still spent their time on renaming pdfs downloaded from internet. I want to share an important message to those people :) :  
 
 1. If you deal if structured articles (web, pdf) please use Reference Mangers, even if you don't cite those articles that often; It will remove many of your headeaches and you can have nice organisation of your research materials
-2. Even if you want to store PDFs inside specific projects a Reference Mangers can be really useful by automatic file renaming for you (you can move this files to another folder later). If you need to standardize the naming convention for all your PDF files or want to include specific metadata in the file names, Zotero or other refernce mangers offers built-in functionalities and add-ons to achieve this efficiently.
+2. Even if you want to store PDFs inside specific projects a Reference Mangers can be really useful by automatic file renaming for you (you can move this files to another folder later). If you need to standardize the naming convention for all your PDF files or want to include specific metadata in the file names, Zotero or other reference mangers offers built-in functionalities and add-ons to achieve this efficiently.
 
 Here a quick tips how to rename files using Zotero.
 
-I am using Zotero 7 Betal (which is really stable and availble from this page and I hope will soon realeased as stable version) so my description might be slightly differnt from what people using previous version may sees .
+I am using [Zotero 7 Beta](https://www.zotero.org/support/beta_builds) (which offer nicer interface that [Zotero 6](https://www.zotero.org/download/)  and some additional features like epub or webpages annotation, and is really stable and I hope will soon released as stable version) so my description might be slightly different from what people using previous version may sees .
 
 - In Zotero Go to Edit > Preferences (or Zotero > Preferences on a Mac).
 - In the General tab, check the box •` Automatically rename locally added files`
