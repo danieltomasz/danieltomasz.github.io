@@ -1,0 +1,404 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    
+    <title>Daniel Borek</title>
+    <description>Instrumental reflexes</description>
+    <link>http://localhost:1313/</link>
+    
+    <language>en</language>
+    <copyright>Copyright 2024, Daniel Borek</copyright>
+    <lastBuildDate>Thu, 13 Jun 2024 00:00:00 +0000</lastBuildDate>
+    <generator>Hugo - gohugo.io</generator>
+    <docs>http://cyber.harvard.edu/rss/rss.html</docs>
+    <atom:link href="https://danielborek.me/atom.xml" rel="self" type="application/atom+xml"/>
+    
+    <item>
+      <title>How to autorename files using Zotero</title>
+      <link>http://localhost:1313/2024/how-to-rename-files-using-zotero/</link>
+      <description>&lt;p&gt;After listening an episode of &lt;code&gt;PhD Life Coach&lt;/code&gt; podcast (reccomeded to everyone relared to academia) on &lt;a href=&#34;https://thephdlifecoach.buzzsprout.com/1992545/15220518-2-39-how-to-be-your-own-best-personal-assistant&#34;&gt;How to be your own best personal assistant&lt;/a&gt; Iearned that some academic people still spent their time on renaming pdfs downloaded from internet. I want to share an important message to those people :) :&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;If you deal if structured articles (web, pdf) please use Reference Mangers, even if you don&amp;rsquo;t cite those articles that often; It will remove many of your headeaches and you can have nice organisation of your research materials&lt;/li&gt;
+&lt;li&gt;Even if you want to store PDFs inside specific projects a Reference Mangers can be really useful by automatic file renaming for you (you can move this files to another folder later). If you need to standardize the naming convention for all your PDF files or want to include specific metadata in the file names, Zotero or other refernce mangers offers built-in functionalities and add-ons to achieve this efficiently.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Here a quick tips how to rename files using Zotero.&lt;/p&gt;
+&lt;p&gt;I am using Zotero 7 Betal (which is really stable and availble from this page and I hope will soon realeased as stable version) so my description might be slightly differnt from what people using previous version may sees .&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;In Zotero Go to Edit &amp;gt; Preferences (or Zotero &amp;gt; Preferences on a Mac).&lt;/li&gt;
+&lt;li&gt;In the General tab, check the box •&lt;code&gt; Automatically rename locally added files&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The &amp;lsquo;Rename linked files&amp;rsquo; will matter only the files added to Zotero items arent story with Zotero folder (where every bibliographic item has its own folder with the not so meaningful alphanumeric name ) but out outside of Zotero (when you move the file, you will broke the link )&lt;/p&gt;
+&lt;p&gt;if you click &lt;code&gt;Customize Filename Format…&lt;/code&gt; you can customize the format,.&lt;/p&gt;
+&lt;p&gt;For example using filename template&lt;br&gt;
+&lt;code&gt;{{ firstCreator suffix=&amp;quot; - &amp;quot; }}{{ year suffix=&amp;quot; - &amp;quot; }}{{ title truncate=&amp;quot;100&amp;quot; }}&lt;/code&gt; the resulting name will result in the filename similar to the one below:&lt;br&gt;
+&lt;code&gt;Aljalal et al. - 2024 - Selecting EEG channels and features using multi-objective optimization for accurate MCI detection v.pdf&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;On the official documentation page you can find the options you can use explained in more depth &lt;a href=&#34;https://www.zotero.org/support/file_renaming&#34;&gt;file_renaming [Zotero Documentation]&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;You easily rename in bulk the files that you already downloaded and store in Zotero if for some reason you prefer to change the pattern in the future.&lt;/p&gt;
+&lt;p&gt;Zotero will add a great value to you ith its Browser Plugin Zotero Connector (which attomatical download and add pdf (if you have acces to it on publishers page) or snapshot of webpage to your local library ), and apperently this is not a comment knowledge, as prof. Inga Mewburn from [The Thesis Whisperer][thttps://thesiswhisperer.com/] blog and On the reg podcast recently admitted in one of the episosed that she learned about the connector after few years of using Zotero.&lt;/p&gt;
+&lt;p&gt;If you prefer to have linked files in one big folder, the Zotfile or other plugin that offer the same capabilities are something for you.&lt;/p&gt;
+&lt;p&gt;Even if you prefer have PDFs in the folders of your projects, you can always easily open folder conating the renamed files and move it to the project folder.&lt;/p&gt;
+</description>
+      <author>dtborek@gmail.com (Daniel Borek)</author>
+      <guid>http://localhost:1313/2024/how-to-rename-files-using-zotero/</guid>
+      <pubDate>Thu, 13 Jun 2024 00:00:00 +0000</pubDate>
+    </item>
+    
+    <item>
+      <title>Zotero 7 is coming …</title>
+      <link>http://localhost:1313/2023/awesome-zotero-plugins/</link>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.zotero.org/&#34;&gt;Zotero&lt;/a&gt; is a free, open-source reference management software. It make the process of collecting and storing references pretty easy (sometimes too easy !).&lt;/p&gt;
+&lt;p&gt;The latest stable, big release version, Zotero 6, was introduced in March 2022. It brought a new built-in PDF viewer and annotation system, as well as iOS and iPadOS apps.&lt;/p&gt;
+&lt;h1 id=&#34;zotero-7-is-coming-&#34;&gt;Zotero 7 is Coming .&lt;/h1&gt;
+&lt;p&gt;Recently, the devs shared a public beta of Zotero 7. otero 7. Most of the updates are related to transitioning from the legacy Firefox 60 ESR, which Zotero was originally built on top of (Zotero started as a browser extension), to the newer Firefox 102 ESR now and Firefox 115 ESR before the release this year.&lt;/p&gt;
+&lt;p&gt;What&amp;rsquo;s exciting is the native support for Apple Silicon desktop devices and an &lt;a href=&#34;https://forums.zotero.org/discussion/106716/available-for-beta-testing-updated-reader-with-epub-snapshot-support-and-new-annotation-types&#34;&gt;even better reader, with EPUB support and web annotation&lt;/a&gt;. An Android app is also in development.&lt;/p&gt;
+&lt;!--Markdow export
+zotero://open-pdf/library/items/9WYPFUSR?page=9
+
+https://forums.zotero.org/discussion/90858/pdf-reader-and-zotero-open-pdf-links
+--&gt;
+&lt;h1 id=&#34;plugins-im-using-in-zotero-7&#34;&gt;Plugins I&amp;rsquo;m Using in Zotero 7&lt;/h1&gt;
+&lt;p&gt;As an avid Zotero user, I&amp;rsquo;ve tested my fair share of plugins to optimize my workflow. While Zotero is great on its own, plugin take it to the next level for managing citations and references. Unfortunately with the changes to Zotero app, many plugins doesnt support beta yet. Below those I am using and are ported (or will be ported soon):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/retorquere/zotero-open-pdf&#34;&gt;GitHub - retorquere/zotero-open-pdf&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Since introduction of Zotero 6 users can opt to use new build-in PDF reader. I like the new new reader, but sometimes need to open the PDF in external PDF reader (PDF Expert in my case). This simple plugin lets you open PDF in external PDF reader via right click menu, instead of tedious opening in folder.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://retorque.re/zotero-better-bibtex/&#34;&gt;Better BibTeX for Zotero :: Better BibTeX for Zotero&lt;/a&gt;.A must-have for LaTeX/Obsidian/Pandoc users like myself. Provide citekeys. Ported with much of work due to many changes in Zotero 7.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/windingwind/zotero-pdf-preview&#34;&gt;GitHub - windingwind/zotero-pdf-preview: PDF Preview for Zotero.&lt;/a&gt; Enables live PDF miniature previews right in my Zotero item info pane so I can quickly confirm I have looking into right paper without open the item. Current changes to PDF Reader (Zotero 7 beta 29) broke it, it still doesn&amp;rsquo;t work as for the middle of August;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/wshanks/Zutilo&#34;&gt;GitHub - wshanks/Zutilo: Zotero plugin providing some additional editing features&lt;/a&gt; A nice collection of tools, still in the process of porting.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;While Zotero 7 has some additional compatible plugins I don&amp;rsquo;t use or haven&amp;rsquo;t tested, many of the best plugins remain available only for Zotero 6.&amp;quot;&lt;/p&gt;
+&lt;h2 id=&#34;markdown-translators&#34;&gt;Markdown translators&lt;/h2&gt;
+&lt;p&gt;Useful pair of Zotero translators when you want to link to Zotero item as Markdown link
+&lt;a href=&#34;https://github.com/erazlogo/zotero-markdown-translators&#34;&gt;https://github.com/erazlogo/zotero-markdown-translators&lt;/a&gt;&lt;/p&gt;
+</description>
+      <author>dtborek@gmail.com (Daniel Borek)</author>
+      <guid>http://localhost:1313/2023/awesome-zotero-plugins/</guid>
+      <pubDate>Tue, 15 Aug 2023 00:00:00 +0000</pubDate>
+    </item>
+    
+    <item>
+      <title>PDF tweaks and tips with Quarto</title>
+      <link>http://localhost:1313/2023/pdf-quarto-tips/</link>
+      <description>&lt;p&gt;&lt;em&gt;Disclaimer: This is work in progress, I will be updating this post as I standardize and create a separate template/extension repository.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;I wrote my master thesis in LaTeX, but given that markdown is a bit nicer to write, so I decided to switch with my PhD thesis to Markdown.&lt;br&gt;
+I was trying with Pandoc but last year I switched to Quarto, as it is more flexible, and it is easier to customize.&lt;/p&gt;
+&lt;h1 id=&#34;nicer-fonts-and-better-handling-of-figures&#34;&gt;Nicer Fonts and Better Handling of Figures&lt;/h1&gt;
+&lt;p&gt;I am sharing with you a fragment of my &lt;code&gt;_quarto.yml&lt;/code&gt; file, with some tweaks I am using to make my PDF output nicer.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000080&#34;&gt;format&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#000080&#34;&gt;pdf&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#000080&#34;&gt;link-citations&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#998;font-style:italic&#34;&gt;# &amp;lt;1&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#000080&#34;&gt;number-sections&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;false&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#000080&#34;&gt;reference-section-title&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;References&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#000080&#34;&gt;pdf-engine&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;xelatex&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#000080&#34;&gt;include-in-header&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;      &lt;/span&gt;&lt;span style=&#34;color:#000080&#34;&gt;text&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;|&lt;span style=&#34;color:#d14&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#d14&#34;&gt;        \usepackage{epigraph} 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#d14&#34;&gt;        %%
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#d14&#34;&gt;        %% Code related to fonts and how the output looks
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#d14&#34;&gt;        %%
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#d14&#34;&gt;        \usepackage{mathpazo}   % &amp;lt;2&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#d14&#34;&gt;        \usepackage[T1]{fontenc}
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#d14&#34;&gt;        \usepackage[sups,osf]{fbb} % osf (or tosf) for text, not math # &amp;lt;2&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#d14&#34;&gt;        \usepackage[scaled=.95]{cabin} % sans serif # &amp;lt;2&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#d14&#34;&gt;        \usepackage[varqu,varl]{inconsolata} % sans serif typewriter # &amp;lt;2&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#d14&#34;&gt;        %%
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#d14&#34;&gt;        %% Code related to figures in document
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#d14&#34;&gt;        %%
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#d14&#34;&gt;        \usepackage{float}  % &amp;lt;3&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#d14&#34;&gt;        \graphicspath{{figures}{chapters/figures}{../figures}{chapters}} # &amp;lt;4&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#d14&#34;&gt;        \let\origfigure\figure
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#d14&#34;&gt;        \let\endorigfigure\endfigure
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#d14&#34;&gt;        \renewenvironment{figure}[1][2] {
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#d14&#34;&gt;            \expandafter\origfigure\expandafter[H]
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#d14&#34;&gt;        } {
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#d14&#34;&gt;            \endorigfigure
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#d14&#34;&gt;        }&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;        
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I put number as comments, so you can better understand specific lines.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Some options for PDF output (more or less self-explanatory)&amp;gt;&lt;/li&gt;
+&lt;li&gt;The font use by default template are ugly format, this look similar but are nicer.&lt;/li&gt;
+&lt;li&gt;Forcing figures to be placed where they are in the text&lt;/li&gt;
+&lt;li&gt;Allowing to use figures from different folders, and allowing to use relative paths to figures.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;!--Those are setting I am using to render a working preview of a chapter.
+ The final version will be using a font provided by my university: --&gt;
+&lt;h1 id=&#34;use-profiles-to-compile-either-whole-book-or-thesis-or-single-chapter&#34;&gt;Use Profiles to Compile either Whole Book or Thesis or Single Chapter&lt;/h1&gt;
+&lt;p&gt;Since quarto 1.2 profiles are introduced &lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; In my use case I have on profile &lt;code&gt;_quarto-thesis.yml&lt;/code&gt; which include all chapters and preambles, and another &lt;code&gt;_quarto.yml&lt;/code&gt; which I can use just to compile the current markdown file; If I want to render whole thesis I just use &lt;code&gt;quarto render --profile thesis&lt;/code&gt;; you could have as many as you want of those profiles (I was procrastinating that way with different look and templates for my thesis :slight_smile: )&lt;/p&gt;
+&lt;h1 id=&#34;roman-numbering-for-front-matter-and-arabic-for-main-matter&#34;&gt;Roman Numbering for front Matter and Arabic for Main Matter&lt;/h1&gt;
+&lt;p&gt;I am inserting roman numbering for front matter and arabic for main matter.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000080&#34;&gt;format&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#000080&#34;&gt;pdf&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#000080&#34;&gt;include-before-body&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;        &lt;/span&gt;&lt;span style=&#34;color:#000080&#34;&gt;text&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;|&lt;span style=&#34;color:#d14&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#d14&#34;&gt;           \pagestyle{plain}
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#d14&#34;&gt;           \pagenumbering{roman}&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;           
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;In main tex I switch back to arabic numbering:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-tex&#34; data-lang=&#34;tex&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;\pagenumbering&lt;/span&gt;&lt;span style=&#34;color:#0086b3&#34;&gt;{&lt;/span&gt;arabic&lt;span style=&#34;color:#0086b3&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;problem-with-_indexmd_-and-inserted-blank-page&#34;&gt;Problem with &lt;em&gt;index.md&lt;/em&gt; and Inserted Blank Page&lt;/h1&gt;
+&lt;p&gt;As you write complex project, you want might want to have separate files for each chapter.&lt;br&gt;
+When you are using &lt;code&gt;quarto&lt;/code&gt; to render your project, you could put them inside &lt;code&gt;index.md&lt;/code&gt; in your root folder:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{{include &amp;#34;chapters/chapter1.qmd&amp;#34;}}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{{include &amp;#34;chapters/chapter2.qmd&amp;#34;}}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Using &lt;code&gt;include&lt;/code&gt; filter will add the content of the files to the &lt;code&gt;index.md&lt;/code&gt; file when compiling.&lt;br&gt;
+This is nice solution, but I have a problem when I want to use &lt;code&gt;quarto preview&lt;/code&gt; to update and monitor resulting pdf when I change something in source files.&lt;br&gt;
+Unfortunately, &lt;code&gt;quarto preview&lt;/code&gt; does not update output &lt;code&gt;.pdf&lt;/code&gt; file when files added with &lt;code&gt;include&lt;/code&gt; change, so I needed to choose another solution.&lt;/p&gt;
+&lt;p&gt;Alternative solution is to add chapters into you &lt;code&gt;_quarto.yml&lt;/code&gt; file:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000080&#34;&gt;project&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#000080&#34;&gt;output-dir&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;_output&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#000080&#34;&gt;execute-dir&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;file&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#000080&#34;&gt;book&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#000080&#34;&gt;title&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;Title of my  thesis or book&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#000080&#34;&gt;author&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#000080&#34;&gt;name&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;Author Name&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#000080&#34;&gt;chapters&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;- index.qmd&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;- chapters/chapter1.md&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;- chapters/chapter1.md&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I want to all of my content of to live in the &amp;lsquo;chapters&amp;rsquo; folder.&lt;br&gt;
+Unfortunately currently in &lt;code&gt;quatro&lt;/code&gt; users always need to include &lt;code&gt;index.md&lt;/code&gt; (it makes sense when generating &lt;code&gt;html&lt;/code&gt; as output, but not always when generating &lt;code&gt;pdf&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;I can leave the &lt;code&gt;index.md&lt;/code&gt; file empty, but then I will have an empty page between my table of content and first chapter.&lt;br&gt;
+I can include the first chapter into index.md but then we were hitting the same problem on smaller scale again.&lt;/p&gt;
+&lt;h2 id=&#34;my-solution&#34;&gt;My Solution&lt;/h2&gt;
+&lt;p&gt;By default, latex is adding a page break after each chapter, and the &lt;code&gt;index.md&lt;/code&gt; file is treated as a chapter, even if empty.&lt;br&gt;
+As a hack, I am hiding the problem by relaxing &lt;code&gt;\clearpage&lt;/code&gt; behaviour in latex.&lt;/p&gt;
+&lt;p&gt;I am leaving my &lt;code&gt;index.md&lt;/code&gt; file almost empty, I&amp;rsquo;m just adding this latex code &lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-tex&#34; data-lang=&#34;tex&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;\let\standardclearpage\clearpage&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;\let\clearpage\relax&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Then within my first chapter when my content start, I am returning to standard behaviour of &lt;code&gt;\clearpage&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-tex&#34; data-lang=&#34;tex&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;\let\clearpage\standardclearpage&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This way I am not adding any extra page between my table of content and first chapter, and I can use &lt;code&gt;quarto preview&lt;/code&gt; to monitor my changes.&lt;br&gt;
+In future the &lt;code&gt;quatro&lt;/code&gt; behaviour might change regarding inclusion of `index.md``, you can follow discussion here:&lt;/p&gt;
+&lt;h1 id=&#34;useful-materials&#34;&gt;Useful Materials&lt;/h1&gt;
+&lt;p&gt;I just saw this post published on the blog of Cameron Patrick, it contains more useful information about writing thesis with &lt;code&gt;quarto&lt;/code&gt;: &lt;a href=&#34;https://cameronpatrick.com/post/2023/07/quarto-thesis-formatting/.&#34;&gt;https://cameronpatrick.com/post/2023/07/quarto-thesis-formatting/.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I am personally using modified &lt;code&gt;quarto-thesis&lt;/code&gt; template for my thesis, you can find it here: &lt;a href=&#34;https://github.com/nmfs-opensci/quarto-thesis&#34;&gt;https://github.com/nmfs-opensci/quarto-thesis&lt;/a&gt;&lt;br&gt;
+If you don&amp;rsquo;t use quarto, but you want to play with it, you can modify it online on the Posit virtual &lt;code&gt;Rstudio&lt;/code&gt; instance &lt;a href=&#34;https://rstudio.cloud/content/4383755&#34;&gt;https://rstudio.cloud/content/4383755&lt;/a&gt; (free account required)&lt;/p&gt;
+&lt;h1 id=&#34;references&#34;&gt;References&lt;/h1&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://quarto.org/docs/projects/profiles.html&#34;&gt;Quarto - Project Profiles&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://tex.stackexchange.com/a/176109&#34;&gt;https://tex.stackexchange.com/a/176109&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+      <author>dtborek@gmail.com (Daniel Borek)</author>
+      <guid>http://localhost:1313/2023/pdf-quarto-tips/</guid>
+      <pubDate>Fri, 04 Aug 2023 00:00:00 +0000</pubDate>
+    </item>
+    
+    <item>
+      <title>From Quarto with love (but back to Hugo)</title>
+      <link>http://localhost:1313/2023/back-to-hugo/</link>
+      <description>&lt;p&gt;I&amp;rsquo;ve been using different static site generators over the years - Jekyll, Hugo, and most recently Quarto. In this post I&amp;rsquo;ll share my experiences and how I&amp;rsquo;m now using Hugo and Quarto together for my blog.&lt;/p&gt;
+&lt;h1 id=&#34;why-i-switched-back-to-hugo&#34;&gt;Why I Switched back to Hugo&lt;/h1&gt;
+&lt;p&gt;I used Jekyll years ago (you can see one of the pages I created &lt;a href=&#34;https://brainhackwarsaw2017.github.io/&#34;&gt;here&lt;/a&gt;), then switched to Hugo, and about a year ago I started using Quarto.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Quarto&lt;/strong&gt; is great for scientific publishing, but I found it too limiting for a personal blog:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Every post must be in its own folder with an &lt;code&gt;index.qmd&lt;/code&gt; file. This works well for showcasing content, but isn&amp;rsquo;t convenient for writing.&lt;/li&gt;
+&lt;li&gt;As a scientific publishing tool, the blog features remain an afterthought. The Quarto team is great about adding features, but blog improvements happen slowly.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;So I decided to switch back to &lt;strong&gt;Hugo&lt;/strong&gt; as my static site generator for the flexibility.&lt;/p&gt;
+&lt;p&gt;Fortunately, there&amp;rsquo;s no need to fully abandon Quarto. &lt;a href=&#34;https://quarto.org/docs/output-formats/hugo.html&#34;&gt;Quarto has built-in support for outputting to Hugo&lt;/a&gt;. I can use Quarto to render my posts written in &lt;code&gt;qmd&lt;/code&gt; format into Markdown that Hugo can use.&lt;/p&gt;
+&lt;h1 id=&#34;quarto-loves-hugo&#34;&gt;Quarto Loves Hugo&lt;/h1&gt;
+&lt;p&gt;Here is a quick overview of how I have Hugo and Quarto working together:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I added some config settings to my Hugo &lt;code&gt;config.toml&lt;/code&gt; file:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ignoreFiles = [ &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;\\.qmd$&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;\\.ipynb$&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;\\.py$&amp;#34;&lt;/span&gt; ]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[markup]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  defaultMarkdownHandler = &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;goldmark&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  [markup.goldmark.renderer]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    unsafe = &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;I have a &lt;code&gt;content/posts&lt;/code&gt; folder containing subfolders for each post, with a &lt;code&gt;index.qmd&lt;/code&gt; file inside.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;I put this &lt;code&gt;_quarto.yml&lt;/code&gt; in the Hugo root directory:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000080&#34;&gt;project&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#000080&#34;&gt;type&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;hugo&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#000080&#34;&gt;format&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#000080&#34;&gt;hugo-md&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#000080&#34;&gt;code-fold&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#000080&#34;&gt;html-math-method&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;webtex&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#000080&#34;&gt;execute&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#000080&#34;&gt;warning&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;false&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;To create post written in &lt;code&gt;qmd&lt;/code&gt; files, I run &lt;code&gt;quarto render&lt;/code&gt; which outputs Markdown from my &lt;code&gt;qmd&lt;/code&gt; posts into the Hugo content folder.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I also found two nice blog posts from people using Quarto with Hugo:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://cedricbatailler.me/blog/2022-apero/&#34;&gt;🪄 Quarto, Hugo, Apero | Cédric Batailler&lt;/a&gt;. Cédric is using lovely Apero theme. I am finding this theme great, but I choose to stick with minimalism of lines theme.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.paulrjohnson.net/2022/09/setting-up-a-hugo-website-with-quarto/&#34;&gt;Setting up a Hugo Website with Quarto | Paul Johnson&lt;/a&gt;. Paul is using a PaperMod theme, which is also very nice. He is a bit more technical in his post&lt;/li&gt;
+&lt;li&gt;Paul Johnson describe how he render mermaid diagrams (supported in Quarto) in &lt;a href=&#34;https://www.paulrjohnson.net/2022/09/rendering-mermaid-diagrams-on-a-hugo-website-using-quarto/&#34;&gt;this blogpost&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;customizing-the-theme&#34;&gt;Customizing the Theme&lt;/h1&gt;
+&lt;p&gt;I started from the lines theme, you can find it &lt;a href=&#34;https://github.com/ronv/lines&#34;&gt;here&lt;/a&gt;.&lt;br&gt;
+Later I mixed it with another theme, &lt;a href=&#34;https://github.com/ronv/simplist&#34;&gt;simplist&lt;/a&gt; by the same author and I added my custom CSS parts.&lt;/p&gt;
+&lt;h1 id=&#34;more-customisation&#34;&gt;More Customisation&lt;/h1&gt;
+&lt;p&gt;I started with the Lines theme, customised it with styles from the Simplist theme, and added some of my own CSS.&lt;/p&gt;
+&lt;h2 id=&#34;hugo-and-github-pages&#34;&gt;Hugo and GitHub Pages&lt;/h2&gt;
+&lt;p&gt;I followed &lt;a href=&#34;https://gohugo.io/hosting-and-deployment/hosting-on-github/&#34;&gt;Hugo&amp;rsquo;s GitHub Pages guide&lt;/a&gt; but ran into some issues:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The theme submodule wasn&amp;rsquo;t syncing properly. I had to manually add the &lt;code&gt;.gitmodules&lt;/code&gt; file.&lt;/li&gt;
+&lt;li&gt;The theme&amp;rsquo;s example content was cluttering my published site. I forked the theme and removed the examples.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Here is my final &lt;code&gt;.gitmodules&lt;/code&gt; file:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[submodule &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;themes/lines&amp;#34;&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    path = &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;themes/lines&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    url = &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;https://github.com/danieltomasz/lines.git&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;hugo-and-code-highlighting&#34;&gt;Hugo and Code Highlighting&lt;/h2&gt;
+&lt;p&gt;To get code highlighting in backticks markdown fences I enabled:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;pygmentsStyle = &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;pygments&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;pygmentsCodefences = &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;adding-comments-with-giscus&#34;&gt;Adding Comments with &lt;code&gt;giscus&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;I followed various blogpost with the configuration advices.&lt;br&gt;
+By default, &lt;code&gt;giscus&lt;/code&gt; is adding comments to every page, but I wanted to have comments only on my posts.&lt;br&gt;
+I followed advice&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; and I wrapped my addition of &lt;code&gt;giscus&lt;/code&gt; partial into &lt;code&gt;footer.html&lt;/code&gt; with &lt;code&gt;if&lt;/code&gt; statement:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-hugo&#34; data-lang=&#34;hugo&#34;&gt;{{ if not .Params.noComment }}
+    {{ partial &amp;#34;giscus&amp;#34; . }}
+{{ end }}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;When I don&amp;rsquo;t want to include a comments block, I am adding this in the frontmatter of the post (yaml):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000080&#34;&gt;noComment&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Some other useful links: &lt;a href=&#34;https://www.brycewray.com/posts/2022/05/tips-using-giscus/&#34;&gt;https://www.brycewray.com/posts/2022/05/tips-using-giscus/&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;date-of-last-edit-directly-from-github&#34;&gt;Date of Last Edit Directly from Github&lt;/h2&gt;
+&lt;p&gt;Some advice how to set up it: &lt;a href=&#34;https://makewithhugo.com/add-a-last-edited-date/&#34;&gt;Add a Last Edited Date to Posts · Make with Hugo&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;One caveat: setting &lt;code&gt;enableGitInfo&lt;/code&gt; to &lt;code&gt;true&lt;/code&gt; in your site’s configuration file sometimes is not enough&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;. You have to add &lt;code&gt;--enableGitInfo&lt;/code&gt; to get &lt;code&gt;.GitInfo&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hugo serve --enableGitInfo
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://discourse.gohugo.io/t/how-to-disable-comments-in-specific-pages/22177/2&#34;&gt;How to disable comments in specific pages? - support - HUGO&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://djangocas.dev/blog/add-git-commit-date-as-last-update-date-in-hugo-page/&#34;&gt;Add git commit date as last update date in hugo page&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+      <author>dtborek@gmail.com (Daniel Borek)</author>
+      <guid>http://localhost:1313/2023/back-to-hugo/</guid>
+      <pubDate>Thu, 03 Aug 2023 00:00:00 +0000</pubDate>
+    </item>
+    
+    <item>
+      <title>Using Wikilinks and Git/Obsidian Callouts in Quarto Markdown</title>
+      <link>http://localhost:1313/2023/obsidian-quarto-callouts/</link>
+      <description>&lt;h1 id=&#34;about-callouts&#34;&gt;About Callouts&lt;/h1&gt;
+&lt;p&gt;&lt;em&gt;Disclaimer: Previous version of this post was originally published as a &lt;a href=&#34;https://gist.github.com/danieltomasz/87b1321e23c045309d2571f525f856cf&#34;&gt;public gist&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Callouts are a great way to highlight important details in your text by adding boxes with icons. Many flavours of markdown support them (but might use different syntax).&lt;/p&gt;
+&lt;p&gt;Quarto supports 5 callout types:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;note&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;warning&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;important&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tip&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;caution&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Each type has a different color and icon. You can see examples in the &lt;a href=&#34;https://quarto.org/docs/authoring/callouts.html&#34;&gt;Quarto documentation&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;the-problem&#34;&gt;The Problem&lt;/h2&gt;
+&lt;p&gt;To use callouts in Quarto markdown (&lt;code&gt;qmd&lt;/code&gt;) files, you need to use Pandoc&amp;rsquo;s div syntax:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-md&#34; data-lang=&#34;md&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;::: {.callout-note}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;This is a note callout
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;:::
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;But Obsidian doesn&amp;rsquo;t recognise this syntax. Instead, it uses:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;gt; &lt;/span&gt;&lt;span style=&#34;color:#000;font-style:italic&#34;&gt;[!note] My note
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#000;font-style:italic&#34;&gt;&amp;gt; Note content
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;So there&amp;rsquo;s no easy way to preview nice callouts in Obsidian before compiling to PDF.&lt;/p&gt;
+&lt;p&gt;Github also introduced callouts into its markdown flavour with the same syntax under name of &lt;a href=&#34;https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts&#34;&gt;Alerts&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;lua-filters-to-the-rescue&#34;&gt;Lua Filters to the Rescue&lt;/h1&gt;
+&lt;p&gt;Pandoc supports Lua filters that can modify the markdown before compilation.&lt;/p&gt;
+&lt;p&gt;I found a filter on the Obsidian forum and modified it to support Quarto callouts. You need to save the filter as &lt;code&gt;obsidian-callouts.lua&lt;/code&gt; in your project&amp;rsquo;s &lt;code&gt;filters&lt;/code&gt; folder.&lt;/p&gt;
+&lt;p&gt;Then point to it in &lt;code&gt;_quarto.yml&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000080&#34;&gt;filters&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;- filters/obsidian-callouts.lua&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Content of the file &lt;code&gt;obsidian-callouts.lua&lt;/code&gt; is in the following gist :&lt;/p&gt;
+&lt;script src=&#34;https://gist.github.com/danieltomasz/31d298aca2969adaf60d8841b68005e2.js&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;This makes Obsidian&amp;rsquo;s callout syntax compile properly in Quarto.&lt;/p&gt;
+&lt;h1 id=&#34;tweaking-obsidian-css&#34;&gt;Tweaking Obsidian CSS&lt;/h1&gt;
+&lt;p&gt;By default Obsidian only styles &lt;code&gt;note&lt;/code&gt; and &lt;code&gt;warning&lt;/code&gt; callouts. To match Quarto, add this CSS:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#998;font-style:italic&#34;&gt;/* See https://lucide.dev for icon codes */&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#998;font-style:italic&#34;&gt;/* annotation */&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;.&lt;span style=&#34;color:#458;font-weight:bold&#34;&gt;callout&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#000080&#34;&gt;data-callout&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;important&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;]&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#008080&#34;&gt;--callout-color&lt;/span&gt;: &lt;span style=&#34;color:#099&#34;&gt;251&lt;/span&gt;, &lt;span style=&#34;color:#099&#34;&gt;70&lt;/span&gt;, &lt;span style=&#34;color:#099&#34;&gt;76&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#008080&#34;&gt;--callout-icon&lt;/span&gt;: lucide-alert-circle
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;.&lt;span style=&#34;color:#458;font-weight:bold&#34;&gt;callout&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#000080&#34;&gt;data-callout&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;tip&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;]&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#008080&#34;&gt;--callout-color&lt;/span&gt;: &lt;span style=&#34;color:#099&#34;&gt;28&lt;/span&gt;, &lt;span style=&#34;color:#099&#34;&gt;207&lt;/span&gt;, &lt;span style=&#34;color:#099&#34;&gt;110&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#008080&#34;&gt;--callout-icon&lt;/span&gt;: lucide-lightbulb
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;.&lt;span style=&#34;color:#458;font-weight:bold&#34;&gt;callout&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#000080&#34;&gt;data-callout&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;caution&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;]&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#008080&#34;&gt;--callout-color&lt;/span&gt;: &lt;span style=&#34;color:#099&#34;&gt;255&lt;/span&gt;,&lt;span style=&#34;color:#099&#34;&gt;153&lt;/span&gt;,&lt;span style=&#34;color:#099&#34;&gt;102&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#008080&#34;&gt;--callout-icon&lt;/span&gt;: lucide-flame
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now the callouts look (almost) the same in Obsidian and compiled PDFs!&lt;/p&gt;
+&lt;p&gt;Below is the Obsidian markdown that can be used to generate the basic 5 types of callouts that map nicely to Quarto types:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;gt; &lt;/span&gt;&lt;span style=&#34;color:#000;font-style:italic&#34;&gt;[!note] My note
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#000;font-style:italic&#34;&gt;&amp;gt; Note content
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;gt; &lt;/span&gt;&lt;span style=&#34;color:#000;font-style:italic&#34;&gt;[!warning] My note
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#000;font-style:italic&#34;&gt;&amp;gt; Note content
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;gt; &lt;/span&gt;&lt;span style=&#34;color:#000;font-style:italic&#34;&gt;[!important] My note
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#000;font-style:italic&#34;&gt;&amp;gt; Note content
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;gt; &lt;/span&gt;&lt;span style=&#34;color:#000;font-style:italic&#34;&gt;[!tip] My note
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#000;font-style:italic&#34;&gt;&amp;gt; Note content
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;gt; &lt;/span&gt;&lt;span style=&#34;color:#000;font-style:italic&#34;&gt;[!caution] My note
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#000;font-style:italic&#34;&gt;&amp;gt; Note content
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Obsidian support for callouts is much more &lt;a href=&#34;https://help.obsidian.md/Editing+and+formatting/Callouts&#34;&gt;extensive&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;caveat&#34;&gt;Caveat&lt;/h2&gt;
+&lt;p&gt;This approach makes callouts render nicely in Obsidian, but may break other Quarto-supporting editors. Test thoroughly before relying on it.&lt;/p&gt;
+&lt;p&gt;Remember that in order for callouts to work you need to leave an empty line starting with &lt;code&gt;&amp;gt;&lt;/code&gt; between title and content. If you want a line break in the rendered callout, you might need the same trick.&lt;/p&gt;
+&lt;p&gt;Since Quarto 1.3 callouts are represented as a custom AST node. (An earlier version of Lua filter that generated native Pandoc Divs)[https://forum.obsidian.md/t/rendering-callouts-similarly-in-pandoc/40020/6] will not work with latest Quarto.&lt;/p&gt;
+&lt;h2 id=&#34;bonus-wikilinks&#34;&gt;Bonus: Wikilinks&lt;/h2&gt;
+&lt;p&gt;Obsidian also supports wikilinks, which are a great way to link between notes. They are not supported in Quarto, but you can use a Lua filter to convert them to regular text in the rendered file. Unfortunately, this version doesn&amp;rsquo;t fully support aliases in wikilinks. Also be careful, as this gist is not thouroughly tested, but works in all simple cases I tested it.&lt;/p&gt;
+&lt;script src=&#34;https://gist.github.com/danieltomasz/bde887dcc775bd47acc0ddf993e3ec2b.js&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Add it to &lt;code&gt;_quarto.yml&lt;/code&gt; or the yaml header of your document:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000080&#34;&gt;filters&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;- filters/wikilinks-filter.lua&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;more-obsidian--quarto-tips&#34;&gt;More Obsidian + Quarto Tips&lt;/h2&gt;
+&lt;p&gt;I use plugins to preview Quarto files in Obsidian:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;obsidian-shellcommands&lt;/code&gt; to run &lt;code&gt;quarto render&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Custom button with &lt;code&gt;commander&lt;/code&gt; to rerun compilation&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;qmd-as-md-obsidian&lt;/code&gt; for basic &lt;code&gt;qmd&lt;/code&gt; support&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;See the &lt;a href=&#34;https://github.com/danieltomasz/qmd-as-md-obsidian&#34;&gt;plugin README&lt;/a&gt; for more workflow advice.&lt;/p&gt;
+&lt;p&gt;Let me know if you have any other questions!&lt;/p&gt;
+</description>
+      <author>dtborek@gmail.com (Daniel Borek)</author>
+      <guid>http://localhost:1313/2023/obsidian-quarto-callouts/</guid>
+      <pubDate>Wed, 31 May 2023 00:00:00 +0000</pubDate>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://localhost:1313/1/untitled/</link>
+      <description></description>
+      <author>dtborek@gmail.com (Daniel Borek)</author>
+      <guid>http://localhost:1313/1/untitled/</guid>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+    </item>
+    
+  </channel>
+</rss>

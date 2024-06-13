@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Quarto on Daniel Borek</title>
+    <link>http://localhost:1313/tags/quarto/</link>
+    <description>Recent content in Quarto on Daniel Borek</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 19 Aug 2023 16:11:11 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/quarto/atom.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PDF tweaks and tips with Quarto</title>
+      <link>http://localhost:1313/2023/pdf-quarto-tips/</link>
+      <pubDate>Fri, 04 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/2023/pdf-quarto-tips/</guid>
+      <description>Disclaimer: This is work in progress, I will be updating this post as I standardize and create a separate template/extension repository.&#xA;I wrote my master thesis in LaTeX, but given that markdown is a bit nicer to write, so I decided to switch with my PhD thesis to Markdown.&#xA;I was trying with Pandoc but last year I switched to Quarto, as it is more flexible, and it is easier to customize.</description>
+    </item>
+    <item>
+      <title>From Quarto with love (but back to Hugo)</title>
+      <link>http://localhost:1313/2023/back-to-hugo/</link>
+      <pubDate>Thu, 03 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/2023/back-to-hugo/</guid>
+      <description>Why I switched  back to Hugo from Quarto</description>
+    </item>
+    <item>
+      <title>Using Wikilinks and Git/Obsidian Callouts in Quarto Markdown</title>
+      <link>http://localhost:1313/2023/obsidian-quarto-callouts/</link>
+      <pubDate>Wed, 31 May 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/2023/obsidian-quarto-callouts/</guid>
+      <description>About Callouts Disclaimer: Previous version of this post was originally published as a public gist&#xA;Callouts are a great way to highlight important details in your text by adding boxes with icons. Many flavours of markdown support them (but might use different syntax).&#xA;Quarto supports 5 callout types:&#xA;note warning important tip caution. Each type has a different color and icon. You can see examples in the Quarto documentation.&#xA;The Problem To use callouts in Quarto markdown (qmd) files, you need to use Pandoc&amp;rsquo;s div syntax:</description>
+    </item>
+  </channel>
+</rss>
