@@ -2,18 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Github on Daniel Borek</title>
-    <link>http://localhost:62585/tags/github/</link>
+    <link>http://localhost:1313/tags/github/</link>
     <description>Recent content in Github on Daniel Borek</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 14 Jun 2024 01:00:00 -0700</lastBuildDate>
-    <atom:link href="http://localhost:62585/tags/github/atom.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Github Education Pack and other tips</title>
-      <link>http://localhost:62585/2024/zotero-rename-files/</link>
-      <pubDate>Fri, 14 Jun 2024 01:00:00 -0700</pubDate>
-      <guid>http://localhost:62585/2024/zotero-rename-files/</guid>
-      <description>GitHub is a powerful platform (if you stayed on it after it was bought by Microsoft) that you can use for version control with Git and collaborative software/project development.&#xA;Apart of its main purpose for managing and maintaining your projects, and many people are familiar with the basic functionalities of GitHub, there are several valuable features that even experienced users might overlook&#xA;This is a bit trivial information but I know that are some people (mostly academic colleagues) who were using Github and for whom this information was new when I shared with them.</description>
-    </item>
+    <atom:link href="http://localhost:1313/tags/github/atom.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

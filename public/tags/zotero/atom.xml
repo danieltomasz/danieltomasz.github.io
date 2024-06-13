@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Zotero on Daniel Borek</title>
-    <link>http://localhost:62585/tags/zotero/</link>
+    <link>http://localhost:1313/tags/zotero/</link>
     <description>Recent content in Zotero on Daniel Borek</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 13 Jun 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:62585/tags/zotero/atom.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/zotero/atom.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to autorename files using Zotero</title>
-      <link>http://localhost:62585/2024/zotero-rename-files/</link>
+      <link>http://localhost:1313/2024/zotero-rename-files/</link>
       <pubDate>Thu, 13 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:62585/2024/zotero-rename-files/</guid>
+      <guid>http://localhost:1313/2024/zotero-rename-files/</guid>
       <description>File renaming automation with Zotero</description>
     </item>
     <item>
       <title>Zotero 7 is coming …</title>
-      <link>http://localhost:62585/2023/zotero-7/</link>
+      <link>http://localhost:1313/2023/zotero-7/</link>
       <pubDate>Tue, 15 Aug 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:62585/2023/zotero-7/</guid>
+      <guid>http://localhost:1313/2023/zotero-7/</guid>
       <description>Zotero is a free, open-source reference management software. It make the process of collecting and storing references pretty easy (sometimes too easy !).&#xA;The latest stable, big release version, Zotero 6, was introduced in March 2022. It brought a new built-in PDF viewer and annotation system, as well as iOS and iPadOS apps.&#xA;Zotero 7 is Coming Recently, the devs shared a public beta of Zotero 7. Most of the updates are related to transitioning from the legacy Firefox 60 ESR, which Zotero was originally built on top of (Zotero started as a browser extension), to the newer Firefox 102 ESR now and Firefox 115 ESR before the release this year.</description>
     </item>
   </channel>

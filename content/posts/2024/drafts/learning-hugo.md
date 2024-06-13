@@ -7,6 +7,12 @@ tags:
 - Hugo
 ---
 
+### How to render blog with future 
+
+`hugo server --buildFuture`
+
+###  Tutorials
+
 Great tutorials for beginners about deployment  of your page with Hugo and github pages (this is how I doing with my blog) is here [Blogging with Hugo and GitHub Pages](https://carpentries-incubator.github.io/blogging-with-hugo-and-github-pages/aio/index.html)
 
 Customization of the site
@@ -26,3 +32,6 @@ git submodule update --remote --merge
 https://harrycresswell.com/writing/menus-in-hugo/
 https://www.bram.us/2020/01/10/smooth-scrolling-sticky-scrollspy-navigation/
 https://ma.ttias.be/adding-a-sticky-table-of-contents-in-hugo-to-posts/
+
+
+v
