@@ -1,6 +1,4 @@
-
 ---
-
 title: Zotero 7 is coming …
 date: 2023-08-15
 description:
@@ -14,20 +12,19 @@ tags:
 
 The latest stable, big release version, Zotero 6, was introduced in March 2022. It brought a new built-in PDF viewer and annotation system, as well as iOS and iPadOS apps.
 
-# Zotero 7 is Coming .
+## Zotero 7 is Coming
 
-Recently, the devs shared a public beta of Zotero 7. otero 7. Most of the updates are related to transitioning from the legacy Firefox 60 ESR, which Zotero was originally built on top of (Zotero started as a browser extension), to the newer Firefox 102 ESR now and Firefox 115 ESR before the release this year.
+Recently, the devs shared a public beta of Zotero 7. Most of the updates are related to transitioning from the legacy Firefox 60 ESR, which Zotero was originally built on top of (Zotero started as a browser extension), to the newer Firefox 102 ESR now and Firefox 115 ESR before the release this year.
 
 What's exciting is the native support for Apple Silicon desktop devices and an [even better reader, with EPUB support and web annotation](https://forums.zotero.org/discussion/106716/available-for-beta-testing-updated-reader-with-epub-snapshot-support-and-new-annotation-types). An Android app is also in development.
-
-
 
 <!--Markdow export
 zotero://open-pdf/library/items/9WYPFUSR?page=9
 
 https://forums.zotero.org/discussion/90858/pdf-reader-and-zotero-open-pdf-links
 -->
-# Plugins I'm Using in Zotero 7
+
+## Plugins I'm Using in Zotero 7
 
 As an avid Zotero user, I've tested my fair share of plugins to optimize my workflow. While Zotero is great on its own, plugin take it to the next level for managing citations and references. Unfortunately with the changes to Zotero app, many plugins doesnt support beta yet. Below those I am using and are ported (or will be ported soon):
 
@@ -39,8 +36,7 @@ As an avid Zotero user, I've tested my fair share of plugins to optimize my work
 
 While Zotero 7 has some additional compatible plugins I don't use or haven't tested, many of the best plugins remain available only for Zotero 6."
 
-
 ## Markdown translators
 
-Useful pair of Zotero translators when you want to link to Zotero item as Markdown link
-https://github.com/erazlogo/zotero-markdown-translators
+Useful pair of Zotero translators when you want to link to Zotero item as Markdown link  
+<https://github.com/erazlogo/zotero-markdown-translators>
