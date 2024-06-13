@@ -1,7 +1,7 @@
 ---
 title: "Tips for using Github"
 date: 2024-05-21T10:00:00+02:00
-draft: true
+draft: false
 description: Somete tips the might be useful for someone"
 tags: ["trivia", "tips"]
 author: "Daniel Borek"
