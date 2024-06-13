@@ -7,9 +7,11 @@ tags: ["trivia", "tips"]
 author: "Daniel Borek"
 ---
 
-GitHub is a powerful platform (if you stayed on it after it was bought by Microsoft).
+GitHub is a powerful platform (if you stayed on it after it was bought by Microsoft) that you can use for version control with Git and collaborative software/project development.
 
-This is a bit trivial information but I know that are some people (colleagues) who were using Github and for whom this information was new when I shared with them. The post will be updated if I will learn about features.
+Apart of its main purpose for mangaging and maintaining your projects,and many people are familiar with the basic functionalities of GitHub, there are several valuable features that even experienced users might overlook
+
+This is a bit trivial information but I know that are some people (mostly academic colleagues) who were using Github and for whom this information was new when I shared with them. The post will be updated if I will learn about features.
 
 # If You Are a Student, Ask for the GitHub Education Pack
 
@@ -21,7 +23,7 @@ When applying, if you encounter verification issues, you might find useful this 
 
 	You are unlikely to be verified until you have completed your GitHub user profile with your full name as it appears in your academic affiliation document, plus a short bio.
 
-Overall,  having a good presence and short introduction on your profile is a good idea.
+Overall, having a good presence and short introduction on your profile is a good idea.
 
 Even after successful verification, you might need to wait up to 72hours, and in peak times like the start of the semester even longer.
 
@@ -39,3 +41,7 @@ GitHub Pages allows you to host static websites directly from your repositories.
 
 For creating webpages you can use static site generators that use markdown.  
 Hugo and Jekyll are great for that (Hugo is really fast, i switched from Jekyll ), but if you work with code and often want to showcase you project notebooks as blogpost you might think about using Quarto for [blogging](https://quarto.org/docs/websites/website-blog.html) .
+
+## Open Github repository on the web in vscode
+
+You can open your repository in the vscode in your browser replacing `github.com` by `vscode.dev`. It may be useful when you travel and have only access to your tablet et cetera.
