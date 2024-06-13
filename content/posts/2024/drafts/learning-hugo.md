@@ -11,6 +11,8 @@ tags:
 
 `hugo server --buildFuture`
 
+### Use urls to set constant name of the post
+
 ###  Tutorials
 
 Great tutorials for beginners about deployment  of your page with Hugo and github pages (this is how I doing with my blog) is here [Blogging with Hugo and GitHub Pages](https://carpentries-incubator.github.io/blogging-with-hugo-and-github-pages/aio/index.html)
