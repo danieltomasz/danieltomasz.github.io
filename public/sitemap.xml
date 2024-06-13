@@ -2,117 +2,132 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2024-06-14T00:00:00+00:00</lastmod>
+    <loc>http://localhost:62585/</loc>
+    <lastmod>2024-06-14T01:00:00-07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2024-06-14T00:00:00+00:00</lastmod>
+    <loc>http://localhost:62585/tags/github/</loc>
+    <lastmod>2024-06-14T01:00:00-07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/tags/bibliography/</loc>
-    <lastmod>2024-06-13T23:24:05+02:00</lastmod>
+    <loc>http://localhost:62585/2024/zotero-rename-files/</loc>
+    <lastmod>2024-06-14T01:00:00-07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/2024/zotero-rename-files/</loc>
-    <lastmod>2024-06-13T23:24:05+02:00</lastmod>
+    <loc>http://localhost:62585/posts/</loc>
+    <lastmod>2024-06-14T01:00:00-07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2024-06-14T00:29:09+02:00</lastmod>
+    <loc>http://localhost:62585/tags/</loc>
+    <lastmod>2024-06-14T01:00:00-07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/tags/zotero/</loc>
-    <lastmod>2024-06-14T00:29:09+02:00</lastmod>
+    <loc>http://localhost:62585/tags/tips/</loc>
+    <lastmod>2024-06-14T01:00:00-07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/tags/academia/</loc>
-    <lastmod>2024-06-14T00:29:09+02:00</lastmod>
+    <loc>http://localhost:62585/tags/bibliography/</loc>
+    <lastmod>2024-06-13T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/2023/zotero-7/</loc>
-    <lastmod>2024-06-14T00:29:09+02:00</lastmod>
+    <loc>http://localhost:62585/2024/zotero-rename-files/</loc>
+    <lastmod>2024-06-13T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/tags/latex/</loc>
-    <lastmod>2023-08-04T00:00:00+00:00</lastmod>
+    <loc>http://localhost:62585/tags/zotero/</loc>
+    <lastmod>2024-06-13T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/2023/pdf-quarto-tips/</loc>
-    <lastmod>2023-08-04T00:00:00+00:00</lastmod>
+    <loc>http://localhost:62585/tags/academia/</loc>
+    <lastmod>2023-08-15T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/tags/quarto/</loc>
-    <lastmod>2023-08-19T16:11:11+02:00</lastmod>
+    <loc>http://localhost:62585/2023/zotero-7/</loc>
+    <lastmod>2023-08-15T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/tags/blogging/</loc>
-    <lastmod>2023-08-17T22:38:42+02:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/2023/back-to-hugo/</loc>
-    <lastmod>2023-08-17T22:38:42+02:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/tags/hugo/</loc>
-    <lastmod>2023-08-17T22:38:42+02:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/tags/css/</loc>
-    <lastmod>2023-08-19T16:11:11+02:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/tags/lua/</loc>
-    <lastmod>2023-08-19T16:11:11+02:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/tags/obsidian/</loc>
-    <lastmod>2023-08-19T16:11:11+02:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/2023/obsidian-quarto-callouts/</loc>
-    <lastmod>2023-08-19T16:11:11+02:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/drafts/listened-to/</loc>
+    <loc>http://localhost:62585/drafts/</loc>
     <lastmod>2023-08-17T22:35:29+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>http://localhost:62585/tags/latex/</loc>
+    <lastmod>2023-08-04T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:62585/2023/quarto-tips/</loc>
+    <lastmod>2023-08-04T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:62585/tags/quarto/</loc>
+    <lastmod>2023-08-04T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:62585/tags/blogging/</loc>
+    <lastmod>2023-08-03T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:62585/2023/back-to-hugo/</loc>
+    <lastmod>2023-08-03T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:62585/tags/hugo/</loc>
+    <lastmod>2023-08-03T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:62585/tags/css/</loc>
+    <lastmod>2023-05-31T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:62585/tags/lua/</loc>
+    <lastmod>2023-05-31T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:62585/tags/obsidian/</loc>
+    <lastmod>2023-05-31T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:62585/2023/obsidian-quarto-callouts/</loc>
+    <lastmod>2023-05-31T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:62585/drafts/listened-to/</loc>
+    <lastmod>2023-08-17T22:35:29+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:62585/about/</loc>
     <lastmod>2024-06-14T01:00:57+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/drafts/</loc>
+    <loc>http://localhost:62585/my-setup/</loc>
     <lastmod>2023-08-17T22:35:29+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/my-setup/</loc>
-    <lastmod>2023-08-17T22:35:29+02:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/pages/</loc>
+    <loc>http://localhost:62585/pages/</loc>
     <lastmod>2024-06-14T01:00:57+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

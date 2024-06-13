@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Bibliography on Daniel Borek</title>
-    <link>http://localhost:1313/tags/bibliography/</link>
+    <link>http://localhost:62585/tags/bibliography/</link>
     <description>Recent content in Bibliography on Daniel Borek</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 13 Jun 2024 23:24:05 +0200</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/bibliography/atom.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 13 Jun 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:62585/tags/bibliography/atom.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to autorename files using Zotero</title>
-      <link>http://localhost:1313/2024/zotero-rename-files/</link>
+      <link>http://localhost:62585/2024/zotero-rename-files/</link>
       <pubDate>Thu, 13 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/2024/zotero-rename-files/</guid>
+      <guid>http://localhost:62585/2024/zotero-rename-files/</guid>
       <description>File renaming automation with Zotero</description>
     </item>
   </channel>

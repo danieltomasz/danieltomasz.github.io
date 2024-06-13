@@ -3,18 +3,49 @@
     
     <title>Daniel Borek</title>
     <description>Instrumental reflexes</description>
-    <link>http://localhost:58912/</link>
+    <link>http://localhost:62585/</link>
     
     <language>en</language>
     <copyright>Copyright 2024, Daniel Borek</copyright>
-    <lastBuildDate>Fri, 14 Jun 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 14 Jun 2024 01:00:00 -0700</lastBuildDate>
     <generator>Hugo - gohugo.io</generator>
     <docs>http://cyber.harvard.edu/rss/rss.html</docs>
     <atom:link href="https://danielborek.me/atom.xml" rel="self" type="application/atom+xml"/>
     
     <item>
+      <title>Github Education Pack and other tips</title>
+      <link>http://localhost:62585/2024/zotero-rename-files/</link>
+      <description>&lt;p&gt;GitHub is a powerful platform (if you stayed on it after it was bought by Microsoft) that you can use for version control with Git and collaborative software/project development.&lt;/p&gt;
+&lt;p&gt;Apart of its main purpose for managing and maintaining your projects, and many people are familiar with the basic functionalities of GitHub, there are several valuable features that even experienced users might overlook&lt;/p&gt;
+&lt;p&gt;This is a bit trivial information but I know that are some people (mostly academic colleagues) who were using Github and for whom this information was new when I shared with them. The post will be updated if I will learn about features.&lt;/p&gt;
+&lt;h1 id=&#34;if-you-are-a-student-ask-for-the-github-education-pack&#34;&gt;If You Are a Student, Ask for the GitHub Education Pack&lt;/h1&gt;
+&lt;p&gt;If you’re a student, you can apply for the GitHub Student Developer Pack, which offers free access to various developer tools, resources, and services. Some of the best perks include access to Microsoft Copilot inside VSCode, a license for PyCharm Professional Edition (which supports some great features), and a year of a Namecheap domain.&lt;/p&gt;
+&lt;p&gt;You also get a year of a free domain with a .me ending on Namecheap, a free 3-month individual subscription to DataCamp, and access to other perks. Some of these perks might not be as useful, but you may find something valuable, like computing credits on Azure and other services for machine learning. More details can be found here: &lt;a href=&#34;https://education.github.com/pack&#34;&gt;GitHub Education Pack&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;When applying, if you encounter verification issues, you might find useful this comment from related &lt;a href=&#34;https://github.com/orgs/community/discussions/61537&#34;&gt;discussion&lt;/a&gt; :&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;You are unlikely to be verified until you have completed your GitHub user profile with your full name as it appears in your academic affiliation document, plus a short bio.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Overall, having a good presence and short introduction on your profile is a good idea.&lt;/p&gt;
+&lt;p&gt;Even after successful verification, you might need to wait up to 72hours, and in peak times like the start of the semester even longer.&lt;/p&gt;
+&lt;h1 id=&#34;use-favorites-for-easy-access-to-repositories&#34;&gt;Use Favorites for Easy Access to Repositories&lt;/h1&gt;
+&lt;p&gt;The staring a favorites repo is a pretty standard feature, but a new shiny beta feature is “lists,” which you can create and add repositories to when starring them. This is useful for creating low-effort, different collections.&lt;/p&gt;
+&lt;h1 id=&#34;be-notified-about-releases-of-specific-packages&#34;&gt;Be Notified About Releases of Specific Packages&lt;/h1&gt;
+&lt;p&gt;To stay updated on the latest releases of specific packages or repositories, you can “Watch” the repository. This is one of the badges on the top of the repository view. By default, the “Participation and mentions” option is active. When you choose “Custom,” you can select “Releases Only” to stay informed about the latest updates.&lt;/p&gt;
+&lt;h1 id=&#34;utilize-github-pages-for-hosting&#34;&gt;Utilize GitHub Pages for Hosting&lt;/h1&gt;
+&lt;p&gt;GitHub Pages allows you to host static websites directly from your repositories. This is an excellent way to showcase your projects, create documentation, or even host a personal blog. It’s free and integrates seamlessly with your GitHub workflow.&lt;/p&gt;
+&lt;p&gt;For creating webpages you can use static site generators that use markdown.&lt;br&gt;
+Hugo and Jekyll are great for that (Hugo is really fast, i switched from Jekyll ), but if you work with code and often want to showcase you project notebooks as blogpost you might think about using Quarto for &lt;a href=&#34;https://quarto.org/docs/websites/website-blog.html&#34;&gt;blogging&lt;/a&gt; .&lt;/p&gt;
+&lt;h2 id=&#34;open-github-repository-on-the-web-in-vscode&#34;&gt;Open Github repository on the web in vscode&lt;/h2&gt;
+&lt;p&gt;You can open your repository in the vscode in your browser replacing &lt;code&gt;github.com&lt;/code&gt; by &lt;code&gt;vscode.dev&lt;/code&gt;. It may be useful when you travel and have only access to your tablet et cetera.&lt;/p&gt;
+</description>
+      <author>dtborek@gmail.com (Daniel Borek)</author>
+      <guid>http://localhost:62585/2024/zotero-rename-files/</guid>
+      <pubDate>Fri, 14 Jun 2024 01:00:00 -0700</pubDate>
+    </item>
+    
+    <item>
       <title>How to autorename files using Zotero</title>
-      <link>http://localhost:58912/2024/zotero-rename-files/</link>
+      <link>http://localhost:62585/2024/zotero-rename-files/</link>
       <description>&lt;p&gt;After listening an episode of &lt;code&gt;PhD Life Coach&lt;/code&gt; podcast (reccomeded to everyone relared to academia) on &lt;a href=&#34;https://thephdlifecoach.buzzsprout.com/1992545/15220518-2-39-how-to-be-your-own-best-personal-assistant&#34;&gt;How to be your own best personal assistant&lt;/a&gt; Iearned that some academic people still spent their time on renaming pdfs downloaded from internet. I want to share an important message to those people :) :&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;If you deal if structured articles (web, pdf) please use Reference Mangers, even if you don&amp;rsquo;t cite those articles that often; It will remove many of your headeaches and you can have nice organisation of your research materials&lt;/li&gt;
@@ -38,13 +69,13 @@
 &lt;p&gt;Even if you prefer have PDFs in the folders of your projects, you can always easily open folder conating the renamed files and move it to the project folder.&lt;/p&gt;
 </description>
       <author>dtborek@gmail.com (Daniel Borek)</author>
-      <guid>http://localhost:58912/2024/zotero-rename-files/</guid>
+      <guid>http://localhost:62585/2024/zotero-rename-files/</guid>
       <pubDate>Thu, 13 Jun 2024 00:00:00 +0000</pubDate>
     </item>
     
     <item>
       <title>Zotero 7 is coming …</title>
-      <link>http://localhost:58912/2023/zotero-7/</link>
+      <link>http://localhost:62585/2023/zotero-7/</link>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.zotero.org/&#34;&gt;Zotero&lt;/a&gt; is a free, open-source reference management software. It make the process of collecting and storing references pretty easy (sometimes too easy !).&lt;/p&gt;
 &lt;p&gt;The latest stable, big release version, Zotero 6, was introduced in March 2022. It brought a new built-in PDF viewer and annotation system, as well as iOS and iPadOS apps.&lt;/p&gt;
 &lt;h2 id=&#34;zotero-7-is-coming&#34;&gt;Zotero 7 is Coming&lt;/h2&gt;
@@ -70,13 +101,13 @@ https://forums.zotero.org/discussion/90858/pdf-reader-and-zotero-open-pdf-links
 &lt;a href=&#34;https://github.com/erazlogo/zotero-markdown-translators&#34;&gt;https://github.com/erazlogo/zotero-markdown-translators&lt;/a&gt;&lt;/p&gt;
 </description>
       <author>dtborek@gmail.com (Daniel Borek)</author>
-      <guid>http://localhost:58912/2023/zotero-7/</guid>
+      <guid>http://localhost:62585/2023/zotero-7/</guid>
       <pubDate>Tue, 15 Aug 2023 00:00:00 +0000</pubDate>
     </item>
     
     <item>
       <title>PDF tweaks and tips with Quarto</title>
-      <link>http://localhost:58912/2023/pdf-quarto-tips/</link>
+      <link>http://localhost:62585/2023/quarto-tips/</link>
       <description>&lt;p&gt;&lt;em&gt;Disclaimer: This is work in progress, I will be updating this post as I standardize and create a separate template/extension repository.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;I wrote my master thesis in LaTeX, but given that markdown is a bit nicer to write, so I decided to switch with my PhD thesis to Markdown.&lt;br&gt;
 I was trying with Pandoc but last year I switched to Quarto, as it is more flexible, and it is easier to customize.&lt;/p&gt;
@@ -185,13 +216,13 @@ If you don&amp;rsquo;t use quarto, but you want to play with it, you can modify 
 &lt;/div&gt;
 </description>
       <author>dtborek@gmail.com (Daniel Borek)</author>
-      <guid>http://localhost:58912/2023/pdf-quarto-tips/</guid>
+      <guid>http://localhost:62585/2023/quarto-tips/</guid>
       <pubDate>Fri, 04 Aug 2023 00:00:00 +0000</pubDate>
     </item>
     
     <item>
       <title>From Quarto with love (but back to Hugo)</title>
-      <link>http://localhost:58912/2023/back-to-hugo/</link>
+      <link>http://localhost:62585/2023/back-to-hugo/</link>
       <description>&lt;p&gt;I&amp;rsquo;ve been using different static site generators over the years - Jekyll, Hugo, and most recently Quarto. In this post I&amp;rsquo;ll share my experiences and how I&amp;rsquo;m now using Hugo and Quarto together for my blog.&lt;/p&gt;
 &lt;h1 id=&#34;why-i-switched-back-to-hugo&#34;&gt;Why I Switched back to Hugo&lt;/h1&gt;
 &lt;p&gt;I used Jekyll years ago (you can see one of the pages I created &lt;a href=&#34;https://brainhackwarsaw2017.github.io/&#34;&gt;here&lt;/a&gt;), then switched to Hugo, and about a year ago I started using Quarto.&lt;/p&gt;
@@ -284,13 +315,13 @@ I followed advice&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; clas
 &lt;/div&gt;
 </description>
       <author>dtborek@gmail.com (Daniel Borek)</author>
-      <guid>http://localhost:58912/2023/back-to-hugo/</guid>
+      <guid>http://localhost:62585/2023/back-to-hugo/</guid>
       <pubDate>Thu, 03 Aug 2023 00:00:00 +0000</pubDate>
     </item>
     
     <item>
       <title>Using Wikilinks and Git/Obsidian Callouts in Quarto Markdown</title>
-      <link>http://localhost:58912/2023/obsidian-quarto-callouts/</link>
+      <link>http://localhost:62585/2023/obsidian-quarto-callouts/</link>
       <description>&lt;h1 id=&#34;about-callouts&#34;&gt;About Callouts&lt;/h1&gt;
 &lt;p&gt;&lt;em&gt;Disclaimer: Previous version of this post was originally published as a &lt;a href=&#34;https://gist.github.com/danieltomasz/87b1321e23c045309d2571f525f856cf&#34;&gt;public gist&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Callouts are a great way to highlight important details in your text by adding boxes with icons. Many flavours of markdown support them (but might use different syntax).&lt;/p&gt;
@@ -387,7 +418,7 @@ I followed advice&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; clas
 &lt;p&gt;Let me know if you have any other questions!&lt;/p&gt;
 </description>
       <author>dtborek@gmail.com (Daniel Borek)</author>
-      <guid>http://localhost:58912/2023/obsidian-quarto-callouts/</guid>
+      <guid>http://localhost:62585/2023/obsidian-quarto-callouts/</guid>
       <pubDate>Wed, 31 May 2023 00:00:00 +0000</pubDate>
     </item>
     

@@ -1,6 +1,7 @@
 ---
 title: "From Quarto with love (but back to Hugo)"
 description: "Why I switched from Quarto to Hugo - some thoughts on my blogging setup"
+url: "/2023/back-to-hugo"
 date: "2023-08-03"
 lastmod: 
 draft: false

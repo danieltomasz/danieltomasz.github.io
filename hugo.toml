@@ -23,7 +23,8 @@ enableEmoji =true
   orgName = "Daniel Borek"
   orgLocal = ""
   disableComments = false
-
+  buildFuture = true
+  
 [params.giscus]
  repo="danieltomasz/danieltomasz.github.io"
  repo-id="MDEwOlJlcG9zaXRvcnkzMzM0MDUzMzY="

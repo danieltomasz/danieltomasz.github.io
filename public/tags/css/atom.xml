@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>CSS on Daniel Borek</title>
-    <link>http://localhost:58912/tags/css/</link>
+    <link>http://localhost:62585/tags/css/</link>
     <description>Recent content in CSS on Daniel Borek</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 19 Aug 2023 16:11:11 +0200</lastBuildDate>
-    <atom:link href="http://localhost:58912/tags/css/atom.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 31 May 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:62585/tags/css/atom.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Using Wikilinks and Git/Obsidian Callouts in Quarto Markdown</title>
-      <link>http://localhost:58912/2023/obsidian-quarto-callouts/</link>
+      <link>http://localhost:62585/2023/obsidian-quarto-callouts/</link>
       <pubDate>Wed, 31 May 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:58912/2023/obsidian-quarto-callouts/</guid>
+      <guid>http://localhost:62585/2023/obsidian-quarto-callouts/</guid>
       <description>About Callouts Disclaimer: Previous version of this post was originally published as a public gist&#xA;Callouts are a great way to highlight important details in your text by adding boxes with icons. Many flavours of markdown support them (but might use different syntax).&#xA;Quarto supports 5 callout types:&#xA;note warning important tip caution. Each type has a different color and icon. You can see examples in the Quarto documentation.&#xA;The Problem To use callouts in Quarto markdown (qmd) files, you need to use Pandoc&amp;rsquo;s div syntax:</description>
     </item>
   </channel>

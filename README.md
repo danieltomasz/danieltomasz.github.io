@@ -9,8 +9,6 @@ Currently, I am based in Brussels, Belgium.
 
 You can find me on [Twitter](https://twitter.com/danielborek), [GitHub](https://github.com/danieltomasz), and [Mastodon](https://scholar.social/@dborek)
 
-## TODO
+### How to render blog with future 
 
-- Fix favicons
-- Fix rendering time of editing  from github
-- Add analytics?
+`hugo server --buildFuture`

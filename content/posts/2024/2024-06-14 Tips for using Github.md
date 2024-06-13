@@ -1,12 +1,10 @@
 ---
-title: "Tips for using Github"
-date: "2024-06-14"
-url: "/2024/tips-github"
-description:
+title: "Github Education Pack and other tips"
+description: "Autorenaming - another reason that Zotero is great"
+url: "/2024/zotero-rename-files"
+date: "2024-06-14T1:00:00-07:00"
 draft: false
-tags:
-- Tips
-- Trivia
+tags: [tips, github]
 ---
 
 GitHub is a powerful platform (if you stayed on it after it was bought by Microsoft) that you can use for version control with Git and collaborative software/project development.

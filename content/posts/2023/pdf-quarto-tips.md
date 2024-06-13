@@ -1,6 +1,7 @@
 ---
 title: "PDF tweaks and tips with Quarto"
 description: "Some tips and tricks for writing thesis with Quarto"
+url: "/2023/quarto-tips"
 date: "2023-08-04"
 draft: false
 lastmod: "2023-08-04"
