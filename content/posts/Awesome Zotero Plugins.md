@@ -1,6 +1,7 @@
 ---
 title: Zotero 7 is coming …
 date: 2023-08-15
+url: "/2023/zotero-7"
 description:
 draft: false
 tags:

@@ -3,7 +3,7 @@
     
     <title>Daniel Borek</title>
     <description>Instrumental reflexes</description>
-    <link>http://localhost:1313/</link>
+    <link>http://localhost:58912/</link>
     
     <language>en</language>
     <copyright>Copyright 2024, Daniel Borek</copyright>
@@ -14,7 +14,7 @@
     
     <item>
       <title>How to autorename files using Zotero</title>
-      <link>http://localhost:1313/2024/how-to-rename-files-using-zotero/</link>
+      <link>http://localhost:58912/2024/zotero-rename-files/</link>
       <description>&lt;p&gt;After listening an episode of &lt;code&gt;PhD Life Coach&lt;/code&gt; podcast (reccomeded to everyone relared to academia) on &lt;a href=&#34;https://thephdlifecoach.buzzsprout.com/1992545/15220518-2-39-how-to-be-your-own-best-personal-assistant&#34;&gt;How to be your own best personal assistant&lt;/a&gt; Iearned that some academic people still spent their time on renaming pdfs downloaded from internet. I want to share an important message to those people :) :&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;If you deal if structured articles (web, pdf) please use Reference Mangers, even if you don&amp;rsquo;t cite those articles that often; It will remove many of your headeaches and you can have nice organisation of your research materials&lt;/li&gt;
@@ -38,13 +38,13 @@
 &lt;p&gt;Even if you prefer have PDFs in the folders of your projects, you can always easily open folder conating the renamed files and move it to the project folder.&lt;/p&gt;
 </description>
       <author>dtborek@gmail.com (Daniel Borek)</author>
-      <guid>http://localhost:1313/2024/how-to-rename-files-using-zotero/</guid>
+      <guid>http://localhost:58912/2024/zotero-rename-files/</guid>
       <pubDate>Thu, 13 Jun 2024 00:00:00 +0000</pubDate>
     </item>
     
     <item>
       <title>Zotero 7 is coming …</title>
-      <link>http://localhost:1313/2023/awesome-zotero-plugins/</link>
+      <link>http://localhost:58912/2023/zotero-7/</link>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.zotero.org/&#34;&gt;Zotero&lt;/a&gt; is a free, open-source reference management software. It make the process of collecting and storing references pretty easy (sometimes too easy !).&lt;/p&gt;
 &lt;p&gt;The latest stable, big release version, Zotero 6, was introduced in March 2022. It brought a new built-in PDF viewer and annotation system, as well as iOS and iPadOS apps.&lt;/p&gt;
 &lt;h2 id=&#34;zotero-7-is-coming&#34;&gt;Zotero 7 is Coming&lt;/h2&gt;
@@ -70,13 +70,13 @@ https://forums.zotero.org/discussion/90858/pdf-reader-and-zotero-open-pdf-links
 &lt;a href=&#34;https://github.com/erazlogo/zotero-markdown-translators&#34;&gt;https://github.com/erazlogo/zotero-markdown-translators&lt;/a&gt;&lt;/p&gt;
 </description>
       <author>dtborek@gmail.com (Daniel Borek)</author>
-      <guid>http://localhost:1313/2023/awesome-zotero-plugins/</guid>
+      <guid>http://localhost:58912/2023/zotero-7/</guid>
       <pubDate>Tue, 15 Aug 2023 00:00:00 +0000</pubDate>
     </item>
     
     <item>
       <title>PDF tweaks and tips with Quarto</title>
-      <link>http://localhost:1313/2023/pdf-quarto-tips/</link>
+      <link>http://localhost:58912/2023/pdf-quarto-tips/</link>
       <description>&lt;p&gt;&lt;em&gt;Disclaimer: This is work in progress, I will be updating this post as I standardize and create a separate template/extension repository.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;I wrote my master thesis in LaTeX, but given that markdown is a bit nicer to write, so I decided to switch with my PhD thesis to Markdown.&lt;br&gt;
 I was trying with Pandoc but last year I switched to Quarto, as it is more flexible, and it is easier to customize.&lt;/p&gt;
@@ -185,13 +185,13 @@ If you don&amp;rsquo;t use quarto, but you want to play with it, you can modify 
 &lt;/div&gt;
 </description>
       <author>dtborek@gmail.com (Daniel Borek)</author>
-      <guid>http://localhost:1313/2023/pdf-quarto-tips/</guid>
+      <guid>http://localhost:58912/2023/pdf-quarto-tips/</guid>
       <pubDate>Fri, 04 Aug 2023 00:00:00 +0000</pubDate>
     </item>
     
     <item>
       <title>From Quarto with love (but back to Hugo)</title>
-      <link>http://localhost:1313/2023/back-to-hugo/</link>
+      <link>http://localhost:58912/2023/back-to-hugo/</link>
       <description>&lt;p&gt;I&amp;rsquo;ve been using different static site generators over the years - Jekyll, Hugo, and most recently Quarto. In this post I&amp;rsquo;ll share my experiences and how I&amp;rsquo;m now using Hugo and Quarto together for my blog.&lt;/p&gt;
 &lt;h1 id=&#34;why-i-switched-back-to-hugo&#34;&gt;Why I Switched back to Hugo&lt;/h1&gt;
 &lt;p&gt;I used Jekyll years ago (you can see one of the pages I created &lt;a href=&#34;https://brainhackwarsaw2017.github.io/&#34;&gt;here&lt;/a&gt;), then switched to Hugo, and about a year ago I started using Quarto.&lt;/p&gt;
@@ -284,13 +284,13 @@ I followed advice&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; clas
 &lt;/div&gt;
 </description>
       <author>dtborek@gmail.com (Daniel Borek)</author>
-      <guid>http://localhost:1313/2023/back-to-hugo/</guid>
+      <guid>http://localhost:58912/2023/back-to-hugo/</guid>
       <pubDate>Thu, 03 Aug 2023 00:00:00 +0000</pubDate>
     </item>
     
     <item>
       <title>Using Wikilinks and Git/Obsidian Callouts in Quarto Markdown</title>
-      <link>http://localhost:1313/2023/obsidian-quarto-callouts/</link>
+      <link>http://localhost:58912/2023/obsidian-quarto-callouts/</link>
       <description>&lt;h1 id=&#34;about-callouts&#34;&gt;About Callouts&lt;/h1&gt;
 &lt;p&gt;&lt;em&gt;Disclaimer: Previous version of this post was originally published as a &lt;a href=&#34;https://gist.github.com/danieltomasz/87b1321e23c045309d2571f525f856cf&#34;&gt;public gist&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Callouts are a great way to highlight important details in your text by adding boxes with icons. Many flavours of markdown support them (but might use different syntax).&lt;/p&gt;
@@ -387,7 +387,7 @@ I followed advice&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; clas
 &lt;p&gt;Let me know if you have any other questions!&lt;/p&gt;
 </description>
       <author>dtborek@gmail.com (Daniel Borek)</author>
-      <guid>http://localhost:1313/2023/obsidian-quarto-callouts/</guid>
+      <guid>http://localhost:58912/2023/obsidian-quarto-callouts/</guid>
       <pubDate>Wed, 31 May 2023 00:00:00 +0000</pubDate>
     </item>
     

@@ -1,14 +1,14 @@
 ---
 title: "From Quarto with love (but back to Hugo)"
-description: "Why I switched from Quarto to Hugo  - some thoughts on my blogging setup"
+description: "Why I switched from Quarto to Hugo - some thoughts on my blogging setup"
 date: "2023-08-03"
-lastmod:
+lastmod: 
 draft: false
-summary: Why I switched  back to Hugo from Quarto
+summary: "Why I switched back to Hugo from Quarto"
 tags:
-- Quarto
-- Hugo
-- Blogging
+  - Quarto
+  - Hugo
+  - Blogging
 ---
 
 I've been using different static site generators over the years - Jekyll, Hugo, and most recently Quarto. In this post I'll share my experiences and how I'm now using Hugo and Quarto together for my blog.

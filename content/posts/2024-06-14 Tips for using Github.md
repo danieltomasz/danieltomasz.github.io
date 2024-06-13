@@ -1,6 +1,7 @@
 ---
 title: "Tips for using Github"
-date: 2024-06-14
+date: "2024-06-14"
+url: "/2024/tips-github"
 description:
 draft: false
 tags:
@@ -10,7 +11,7 @@ tags:
 
 GitHub is a powerful platform (if you stayed on it after it was bought by Microsoft) that you can use for version control with Git and collaborative software/project development.
 
-Apart of its main purpose for mangaging and maintaining your projects,and many people are familiar with the basic functionalities of GitHub, there are several valuable features that even experienced users might overlook
+Apart of its main purpose for managing and maintaining your projects, and many people are familiar with the basic functionalities of GitHub, there are several valuable features that even experienced users might overlook
 
 This is a bit trivial information but I know that are some people (mostly academic colleagues) who were using Github and for whom this information was new when I shared with them. The post will be updated if I will learn about features.
 

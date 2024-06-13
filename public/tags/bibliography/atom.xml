@@ -10,9 +10,9 @@
     <atom:link href="http://localhost:1313/tags/bibliography/atom.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to autorename files using Zotero</title>
-      <link>http://localhost:1313/2024/how-to-rename-files-using-zotero/</link>
+      <link>http://localhost:1313/2024/zotero-rename-files/</link>
       <pubDate>Thu, 13 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/2024/how-to-rename-files-using-zotero/</guid>
+      <guid>http://localhost:1313/2024/zotero-rename-files/</guid>
       <description>File renaming automation with Zotero</description>
     </item>
   </channel>

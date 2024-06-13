@@ -1,13 +1,11 @@
 ---
 title: "How to autorename files using Zotero"
 description: "Autorenaming - another reason that Zotero is great"
+url: "/2024/zotero-rename-files"
 date: "2024-06-13"
-lastmod:
 draft: false
 summary: File renaming automation with Zotero
-tags:
-- Zotero
-- Bibliography
+tags: [Zotero, Bibliography]
 ---
 
 After listening an episode of `PhD Life Coach` podcast (reccomeded to everyone relared to academia) on [How to be your own best personal assistant](https://thephdlifecoach.buzzsprout.com/1992545/15220518-2-39-how-to-be-your-own-best-personal-assistant) Iearned that some academic people still spent their time on renaming pdfs downloaded from internet. I want to share an important message to those people :) :  
