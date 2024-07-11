@@ -13,9 +13,9 @@ Apart of its main purpose for managing and maintaining your projects, and many p
 
 This is a bit trivial information but I know that are some people (mostly academic colleagues) who were using Github and for whom this information was new when I shared with them. The post will be updated if I will learn about features.
 
-# If You Are a Student, Ask for the GitHub Education Pack
+## If You Are a Student, Ask for the GitHub Education Pack
 
-If you’re a student, you can apply for the GitHub Student Developer Pack, which offers free access to various developer tools, resources, and services. Some of the best perks include access to Microsoft Copilot inside VSCode, a license for PyCharm Professional Edition (which supports some great features), and a year of a Namecheap domain.
+If you are a student, you can apply for the GitHub Student Developer Pack, which offers free access to various developer tools, resources, and services. Some of the best perks include access to Microsoft Copilot inside VSCode, a license for PyCharm Professional Edition (which supports some great features), and a year of a Namecheap domain.
 
 You also get a year of a free domain with a .me ending on Namecheap, a free 3-month individual subscription to DataCamp, and access to other perks. Some of these perks might not be as useful, but you may find something valuable, like computing credits on Azure and other services for machine learning. More details can be found here: [GitHub Education Pack](https://education.github.com/pack)
 
@@ -27,15 +27,15 @@ Overall, having a good presence and short introduction on your profile is a good
 
 Even after successful verification, you might need to wait up to 72hours, and in peak times like the start of the semester even longer.
 
-# Use Favorites for Easy Access to Repositories
+## Use Favorites for Easy Access to Repositories
 
  The staring a favorites repo is a pretty standard feature, but a new shiny beta feature is “lists,” which you can create and add repositories to when starring them. This is useful for creating low-effort, different collections.
 
-# Be Notified About Releases of Specific Packages
+## Be Notified About Releases of Specific Packages
 
 To stay updated on the latest releases of specific packages or repositories, you can “Watch” the repository. This is one of the badges on the top of the repository view. By default, the “Participation and mentions” option is active. When you choose “Custom,” you can select “Releases Only” to stay informed about the latest updates.
 
-# Utilize GitHub Pages for Hosting
+## Utilize GitHub Pages for Hosting
 
 GitHub Pages allows you to host static websites directly from your repositories. This is an excellent way to showcase your projects, create documentation, or even host a personal blog. It’s free and integrates seamlessly with your GitHub workflow.  
 
