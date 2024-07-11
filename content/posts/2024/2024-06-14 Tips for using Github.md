@@ -1,7 +1,7 @@
 ---
 title: "Github Education Pack and other tips"
-description: "Autorenaming - another reason that Zotero is great"
-url: "/2024/zotero-rename-files"
+description: "Some tips for using Github that you might not know about"
+url: "/2024/git-github-tips"
 date: "2024-06-14T1:00:00-07:00"
 draft: false
 tags: [tips, github]
