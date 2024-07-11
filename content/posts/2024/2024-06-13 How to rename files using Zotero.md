@@ -1,5 +1,5 @@
 ---
-title: "How to make your reaserch life easier with Zotero: automate download and renamingfiles"
+title: "How to make your research life easier with Zotero: automate download and renaming files"
 description: "Autorenaming - another reason that Zotero is great"
 url: "/2024/zotero-rename-files"
 date: "2024-06-13"
