@@ -7,7 +7,10 @@ draft: false
 tags:
 - Zotero
 - Academia
+lastmod: "2024-09-05"
 ---
+
+Edit 1: Zotero 7 was realeased officialy in August 2024.
 
 [Zotero](https://www.zotero.org/) is a free, open-source reference management software. It make the process of collecting and storing references pretty easy (sometimes too easy !).
 
@@ -37,7 +40,14 @@ As an avid Zotero user, I've tested my fair share of plugins to optimize my work
 
 While Zotero 7 has some additional compatible plugins I don't use or haven't tested, many of the best plugins remain available only for Zotero 6."
 
+_Edit 2:_ Some additional extensions not mentioned earlier, that I am currently using (in 2024):
+- [justinribeiro/zotero-google-scholar-citation-count: Zotero plugin for fetching number of citations from Google Scholar.](https://github.com/justinribeiro/zotero-google-scholar-citation-count)
+- [daeh/zotero-markdb-connect: Zotero plugin that links your Markdown database to Zotero. Jump directly from Zotero Items to connected Markdown files. Automatically tags Zotero Items so you can easily see which papers you've made notes for.](https://github.com/daeh/zotero-markdb-connect#readme)
+- [Zoplicate | A plugin that does one thing only - Detect and manage duplicate items in Zotero.](https://chenglongma.com/zoplicate/)
+- [github-young/zotero-better-authors: Customize the displayed authors list](https://github.com/github-young/zotero-better-authors#readme)
+
 ## Markdown translators
 
 Useful pair of Zotero translators when you want to link to Zotero item as Markdown link  
 <https://github.com/erazlogo/zotero-markdown-translators>
+
