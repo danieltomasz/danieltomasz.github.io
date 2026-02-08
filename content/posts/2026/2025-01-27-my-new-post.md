@@ -11,11 +11,11 @@ I did indexing in the abstract mode only — 1 chunk per paper — 6k papers use
 
 Disclaimer: to get some of the setup running I used debugging session with chatbot, and the big part of the content of the post was first dictated by me, then via open model to text (Parakeet on MacWhisper) and cleaned via chatbot, and finally checked and edited by me.
 
-# Why use your own library?
+## Why use your own library?
 
 There is a risk of chatbots hallucinating when you work in research — and one of the worst kinds is hallucinated bibliography. The AI just makes up references that don't exist. The best way to limit this is to not rely on internet sources you can't verify, but to ground the conversation in your own bibliography instead. Especially when you've accumulated several thousand papers over your whole research career — sometimes you forget you have something relevant sitting in your library. This tutorial is about chatting with your own curated database of publications. You still need to be careful and verify what the AI says, but you can really limit the risk of total hallucination by grounding it in your own papers. It's useful when the topic you're working on connects to things you already collected — you ask for context and it pulls from what you know is real.
 
-# Cost and setup
+## Cost and setup
 
 With Zotero MCP, the local part — indexing and searching your library (if you use open source embeddings) — is completely free. What costs money is the AI inference, meaning the chatbot subscription you use to actually have a conversation (Claude, ChatGPT, Mistral, etc.). Similarly, ZotSeek does the retrieval and semantic search part entirely for free and locally — after the initial indexing, it works without any additional computation, you only need to re-index when you add new PDFs to your library.
 
