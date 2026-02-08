@@ -3,7 +3,7 @@
     
     <title>Daniel Borek</title>
     <description>Instrumental reflexes</description>
-    <link>http://localhost:1313/</link>
+    <link>http://localhost:64385/</link>
     
     <language>en</language>
     <copyright>Copyright 2026, Daniel Borek</copyright>
@@ -14,7 +14,7 @@
     
     <item>
       <title>Connecting Zotero to AI Assistants via MCP</title>
-      <link>http://localhost:1313/2026/zotero-mcp-ai/</link>
+      <link>http://localhost:64385/2026/zotero-mcp-ai/</link>
       <description>&lt;p&gt;If you use &lt;a href=&#34;https://www.zotero.org/&#34;&gt;Zotero&lt;/a&gt; for managing your research library, you might want to talk to your papers using an AI assistant. The &lt;a href=&#34;https://modelcontextprotocol.io/introduction&#34;&gt;Model Context Protocol (MCP)&lt;/a&gt; makes this possible — your AI can search, summarize, and analyze your local Zotero library without uploading anything to third-party servers. Or you can use semantic search with &lt;a href=&#34;https://github.com/introfini/ZotSeek&#34;&gt;ZotSeek&lt;/a&gt; to resurface your hidden relevant paper and have better semantic search when the keyword isn&amp;rsquo;t in the title or abstract.
 I did indexing in the abstract mode only — 1 chunk per paper — 6k papers use 20MB disc space and took a bit less than 1 hour to index.&lt;/p&gt;
 &lt;p&gt;Disclaimer: to get some of the setup running I used debugging session with chatbot, and the big part of the content of the post was first dictated by me, then via open model to text (Parakeet on MacWhisper) and cleaned via chatbot, and finally checked and edited by me.&lt;/p&gt;
@@ -127,13 +127,13 @@ I did indexing in the abstract mode only — 1 chunk per paper — 6k papers use
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The &lt;code&gt;--fulltext&lt;/code&gt; flag indexes the full text of your PDFs, which is slower but gives much better results. Without it, only metadata is indexed.&lt;/p&gt;
 </description>
       <author>dtborek@gmail.com (Daniel Borek)</author>
-      <guid>http://localhost:1313/2026/zotero-mcp-ai/</guid>
+      <guid>http://localhost:64385/2026/zotero-mcp-ai/</guid>
       <pubDate>Sun, 08 Feb 2026 00:00:00 +0000</pubDate>
     </item>
     
     <item>
       <title>Tracking Word Count Progress in Git</title>
-      <link>http://localhost:1313/2024/count-progress-git/</link>
+      <link>http://localhost:64385/2024/count-progress-git/</link>
       <description>&lt;p&gt;I created a simple script to count word changes in my git repository. I&amp;rsquo;m trying Typst now for writing an article in VSCode, and there&amp;rsquo;s no good extension to quantify daily progress. This script looks at your commits, counts words added, deleted, and duplicated in the files of the extension by your choice (by default .typ and .md files). It shows a daily breakdown of writing progress.&lt;/p&gt;
 &lt;p&gt;Got the idea from a &lt;a href=&#34;//www.gijsvandam.nl/post/measuring-your-writing-progress-with-a-git-word-count/&#34;&gt;Gijs van Dam&amp;rsquo;s blog post&lt;/a&gt; (who described logic behind  the word change calculation).  I adapted it by adding Typst and extending the way it display the output.  I add some additions like  handling the first commit: The script checks if it&amp;rsquo;s dealing with the first commit in the repo, which doesn&amp;rsquo;t have a parent to compare against and it stops.&lt;/p&gt;
 &lt;p&gt;It&amp;rsquo;s been helpful for tracking my word count (and writing it was a nice excuse to not writing the text  I supposed to write). Below you can find the gist with the latest version.&lt;/p&gt;
@@ -141,13 +141,13 @@ I did indexing in the abstract mode only — 1 chunk per paper — 6k papers use
 
 </description>
       <author>dtborek@gmail.com (Daniel Borek)</author>
-      <guid>http://localhost:1313/2024/count-progress-git/</guid>
+      <guid>http://localhost:64385/2024/count-progress-git/</guid>
       <pubDate>Thu, 05 Sep 2024 01:00:00 -0700</pubDate>
     </item>
     
     <item>
       <title>Github Education Pack and other tips</title>
-      <link>http://localhost:1313/2024/git-github-tips/</link>
+      <link>http://localhost:64385/2024/git-github-tips/</link>
       <description>&lt;p&gt;GitHub is a powerful platform (if you stayed on it after it was bought by Microsoft) that you can use for version control with Git and collaborative software/project development.&lt;/p&gt;
 &lt;p&gt;Apart of its main purpose for managing and maintaining your projects, and many people are familiar with the basic functionalities of GitHub, there are several valuable features that even experienced users might overlook&lt;/p&gt;
 &lt;p&gt;This is a bit trivial information but I know that are some people (mostly academic colleagues) who were using Github and for whom this information was new when I shared with them. The post will be updated if I will learn about features.&lt;/p&gt;
@@ -172,13 +172,13 @@ Hugo and Jekyll are great for that (Hugo is really fast, i switched from Jekyll 
 &lt;p&gt;You can open your repository in the vscode in your browser replacing &lt;code&gt;github.com&lt;/code&gt; by &lt;code&gt;vscode.dev&lt;/code&gt;. It may be useful when you travel and have only access to your tablet et cetera.&lt;/p&gt;
 </description>
       <author>dtborek@gmail.com (Daniel Borek)</author>
-      <guid>http://localhost:1313/2024/git-github-tips/</guid>
+      <guid>http://localhost:64385/2024/git-github-tips/</guid>
       <pubDate>Fri, 14 Jun 2024 01:00:00 -0700</pubDate>
     </item>
     
     <item>
       <title>Streamline Your Research: Zotero&#39;s File Management Tricks</title>
-      <link>http://localhost:1313/2024/zotero-rename-files/</link>
+      <link>http://localhost:64385/2024/zotero-rename-files/</link>
       <description>&lt;p&gt;After listening an episode of &lt;code&gt;PhD Life Coach&lt;/code&gt; podcast (recommend to everyone related to academia) on &lt;a href=&#34;https://thephdlifecoach.buzzsprout.com/1992545/15220518-2-39-how-to-be-your-own-best-personal-assistant&#34;&gt;How to be your own best personal assistant&lt;/a&gt; Iearned that some academic people still spent their time on renaming pdfs downloaded from internet. I want to share an important message to those people :) :&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;If you deal if structured articles (web, pdf) please use Reference Mangers, even if you don&amp;rsquo;t cite those articles that often; It will remove many of your headaches and you can have nice organization of your research materials&lt;/li&gt;
@@ -203,13 +203,13 @@ Hugo and Jekyll are great for that (Hugo is really fast, i switched from Jekyll 
 &lt;p&gt;I didn&amp;rsquo;t create here a full tutorial or covered many helpful features of Zotero, but you can find many great tutorials on the internet. I am also a big fan of integrating Zotero with &lt;a href=&#34;https://obsidian.md/&#34;&gt;Obsidian&lt;/a&gt;, you could find some example vault how it could be used here:&lt;a href=&#34;https://github.com/rlaker/Obsidian-for-Academia&#34;&gt;rlaker/Obsidian-for-Academia: Demo vault to explain how to use Obsidian, git and Zotero&lt;/a&gt; with another writeup here: &lt;a href=&#34;https://radoncnotes.com/2024/03/08/integrating-obsidian-with-zotero/&#34;&gt;Integrating Obsidian with Zotero – RadOncNotes&lt;/a&gt;.&lt;/p&gt;
 </description>
       <author>dtborek@gmail.com (Daniel Borek)</author>
-      <guid>http://localhost:1313/2024/zotero-rename-files/</guid>
+      <guid>http://localhost:64385/2024/zotero-rename-files/</guid>
       <pubDate>Thu, 13 Jun 2024 00:00:00 +0000</pubDate>
     </item>
     
     <item>
       <title>Zotero 7 is coming …</title>
-      <link>http://localhost:1313/2023/zotero-7/</link>
+      <link>http://localhost:64385/2023/zotero-7/</link>
       <description>&lt;p&gt;Edit 1: Zotero 7 was realeased officialy in August 2024.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.zotero.org/&#34;&gt;Zotero&lt;/a&gt; is a free, open-source reference management software. It make the process of collecting and storing references pretty easy (sometimes too easy !).&lt;/p&gt;
 &lt;p&gt;The latest stable, big release version, Zotero 6, was introduced in March 2022. It brought a new built-in PDF viewer and annotation system, as well as iOS and iPadOS apps.&lt;/p&gt;
@@ -243,13 +243,13 @@ https://forums.zotero.org/discussion/90858/pdf-reader-and-zotero-open-pdf-links
 &lt;a href=&#34;https://github.com/erazlogo/zotero-markdown-translators&#34;&gt;https://github.com/erazlogo/zotero-markdown-translators&lt;/a&gt;&lt;/p&gt;
 </description>
       <author>dtborek@gmail.com (Daniel Borek)</author>
-      <guid>http://localhost:1313/2023/zotero-7/</guid>
+      <guid>http://localhost:64385/2023/zotero-7/</guid>
       <pubDate>Tue, 15 Aug 2023 00:00:00 +0000</pubDate>
     </item>
     
     <item>
       <title>PDF tweaks and tips with Quarto</title>
-      <link>http://localhost:1313/2023/quarto-tips/</link>
+      <link>http://localhost:64385/2023/quarto-tips/</link>
       <description>&lt;p&gt;&lt;em&gt;Disclaimer: This is work in progress, I will be updating this post as I standardize and create a separate template/extension repository.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;I wrote my master thesis in LaTeX, but given that markdown is a bit nicer to write, so I decided to switch with my PhD thesis to Markdown.&lt;br&gt;
 I was trying with Pandoc but last year I switched to Quarto, as it is more flexible, and it is easier to customize.&lt;/p&gt;
@@ -358,13 +358,13 @@ If you don&amp;rsquo;t use quarto, but you want to play with it, you can modify 
 &lt;/div&gt;
 </description>
       <author>dtborek@gmail.com (Daniel Borek)</author>
-      <guid>http://localhost:1313/2023/quarto-tips/</guid>
+      <guid>http://localhost:64385/2023/quarto-tips/</guid>
       <pubDate>Fri, 04 Aug 2023 00:00:00 +0000</pubDate>
     </item>
     
     <item>
       <title>From Quarto with love (but back to Hugo)</title>
-      <link>http://localhost:1313/2023/back-to-hugo/</link>
+      <link>http://localhost:64385/2023/back-to-hugo/</link>
       <description>&lt;p&gt;I&amp;rsquo;ve been using different static site generators over the years - Jekyll, Hugo, and most recently Quarto. In this post I&amp;rsquo;ll share my experiences and how I&amp;rsquo;m now using Hugo and Quarto together for my blog.&lt;/p&gt;
 &lt;h1 id=&#34;why-i-switched-back-to-hugo&#34;&gt;Why I Switched back to Hugo&lt;/h1&gt;
 &lt;p&gt;I used Jekyll years ago (you can see one of the pages I created &lt;a href=&#34;https://brainhackwarsaw2017.github.io/&#34;&gt;here&lt;/a&gt;), then switched to Hugo, and about a year ago I started using Quarto.&lt;/p&gt;
@@ -457,13 +457,13 @@ I followed advice&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; clas
 &lt;/div&gt;
 </description>
       <author>dtborek@gmail.com (Daniel Borek)</author>
-      <guid>http://localhost:1313/2023/back-to-hugo/</guid>
+      <guid>http://localhost:64385/2023/back-to-hugo/</guid>
       <pubDate>Thu, 03 Aug 2023 00:00:00 +0000</pubDate>
     </item>
     
     <item>
       <title>Using Wikilinks and Git/Obsidian Callouts in Quarto Markdown</title>
-      <link>http://localhost:1313/2023/obsidian-quarto-callouts/</link>
+      <link>http://localhost:64385/2023/obsidian-quarto-callouts/</link>
       <description>&lt;h1 id=&#34;about-callouts&#34;&gt;About Callouts&lt;/h1&gt;
 &lt;p&gt;&lt;em&gt;Disclaimer: Previous version of this post was originally published as a &lt;a href=&#34;https://gist.github.com/danieltomasz/87b1321e23c045309d2571f525f856cf&#34;&gt;public gist&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Callouts are a great way to highlight important details in your text by adding boxes with icons. Many flavours of markdown support them (but might use different syntax).&lt;/p&gt;
@@ -560,7 +560,7 @@ I followed advice&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; clas
 &lt;p&gt;Let me know if you have any other questions!&lt;/p&gt;
 </description>
       <author>dtborek@gmail.com (Daniel Borek)</author>
-      <guid>http://localhost:1313/2023/obsidian-quarto-callouts/</guid>
+      <guid>http://localhost:64385/2023/obsidian-quarto-callouts/</guid>
       <pubDate>Wed, 31 May 2023 00:00:00 +0000</pubDate>
     </item>
     

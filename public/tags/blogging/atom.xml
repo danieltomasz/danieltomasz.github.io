@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blogging on Daniel Borek</title>
-    <link>http://localhost:1313/tags/blogging/</link>
+    <link>http://localhost:64385/tags/blogging/</link>
     <description>Recent content in Blogging on Daniel Borek</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 14 Jun 2024 01:51:24 +0200</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/blogging/atom.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:64385/tags/blogging/atom.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>From Quarto with love (but back to Hugo)</title>
-      <link>http://localhost:1313/2023/back-to-hugo/</link>
+      <link>http://localhost:64385/2023/back-to-hugo/</link>
       <pubDate>Thu, 03 Aug 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/2023/back-to-hugo/</guid>
+      <guid>http://localhost:64385/2023/back-to-hugo/</guid>
       <description>Why I switched back to Hugo from Quarto</description>
     </item>
   </channel>

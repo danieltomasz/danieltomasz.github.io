@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>AI on Daniel Borek</title>
-    <link>http://localhost:1313/tags/ai/</link>
+    <link>http://localhost:64385/tags/ai/</link>
     <description>Recent content in AI on Daniel Borek</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 08 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/ai/atom.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 08 Feb 2026 20:37:06 +0100</lastBuildDate>
+    <atom:link href="http://localhost:64385/tags/ai/atom.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Connecting Zotero to AI Assistants via MCP</title>
-      <link>http://localhost:1313/2026/02/2025-01-27-my-new-post/</link>
+      <link>http://localhost:64385/2026/zotero-mcp-ai/</link>
       <pubDate>Sun, 08 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/2026/02/2025-01-27-my-new-post/</guid>
-      <description>&lt;p&gt;If you use &lt;a href=&#34;https://www.zotero.org/&#34;&gt;Zotero&lt;/a&gt; for managing your research library, you might want to talk to your papers using an AI assistant. The &lt;a href=&#34;https://modelcontextprotocol.io/introduction&#34;&gt;Model Context Protocol (MCP)&lt;/a&gt; makes this possible — your AI can search, summarize, and analyze your local Zotero library without uploading anything to third-party servers.&lt;/p&gt;&#xA;&lt;p&gt;Before diving into the MCP setup, worth mentioning &lt;a href=&#34;https://github.com/introfini/ZotSeek&#34;&gt;ZotSeek&lt;/a&gt; — a Zotero plugin that adds AI-powered semantic search directly inside Zotero. It runs 100% locally using a bundled embedding model, so you can find papers by meaning, not just keywords, without leaving the app. Great complement to the MCP approach described below.&lt;/p&gt;</description>
+      <guid>http://localhost:64385/2026/zotero-mcp-ai/</guid>
+      <description>&lt;p&gt;If you use &lt;a href=&#34;https://www.zotero.org/&#34;&gt;Zotero&lt;/a&gt; for managing your research library, you might want to talk to your papers using an AI assistant. The &lt;a href=&#34;https://modelcontextprotocol.io/introduction&#34;&gt;Model Context Protocol (MCP)&lt;/a&gt; makes this possible — your AI can search, summarize, and analyze your local Zotero library without uploading anything to third-party servers. Or you can use semantic search with &lt;a href=&#34;https://github.com/introfini/ZotSeek&#34;&gt;ZotSeek&lt;/a&gt; to resurface your hidden relevant paper and have better semantic search when the keyword isn&amp;rsquo;t in the title or abstract.&#xA;I did indexing in the abstract mode only — 1 chunk per paper — 6k papers use 20MB disc space and took a bit less than 1 hour to index.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

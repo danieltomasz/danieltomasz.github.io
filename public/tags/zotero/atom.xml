@@ -2,24 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Zotero on Daniel Borek</title>
-    <link>http://localhost:1313/tags/zotero/</link>
+    <link>http://localhost:64385/tags/zotero/</link>
     <description>Recent content in Zotero on Daniel Borek</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 05 Sep 2024 22:36:52 +0200</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/zotero/atom.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 08 Feb 2026 20:37:06 +0100</lastBuildDate>
+    <atom:link href="http://localhost:64385/tags/zotero/atom.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Connecting Zotero to AI Assistants via MCP</title>
+      <link>http://localhost:64385/2026/zotero-mcp-ai/</link>
+      <pubDate>Sun, 08 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:64385/2026/zotero-mcp-ai/</guid>
+      <description>&lt;p&gt;If you use &lt;a href=&#34;https://www.zotero.org/&#34;&gt;Zotero&lt;/a&gt; for managing your research library, you might want to talk to your papers using an AI assistant. The &lt;a href=&#34;https://modelcontextprotocol.io/introduction&#34;&gt;Model Context Protocol (MCP)&lt;/a&gt; makes this possible — your AI can search, summarize, and analyze your local Zotero library without uploading anything to third-party servers. Or you can use semantic search with &lt;a href=&#34;https://github.com/introfini/ZotSeek&#34;&gt;ZotSeek&lt;/a&gt; to resurface your hidden relevant paper and have better semantic search when the keyword isn&amp;rsquo;t in the title or abstract.&#xA;I did indexing in the abstract mode only — 1 chunk per paper — 6k papers use 20MB disc space and took a bit less than 1 hour to index.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Streamline Your Research: Zotero&#39;s File Management Tricks</title>
-      <link>http://localhost:1313/2024/zotero-rename-files/</link>
+      <link>http://localhost:64385/2024/zotero-rename-files/</link>
       <pubDate>Thu, 13 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/2024/zotero-rename-files/</guid>
+      <guid>http://localhost:64385/2024/zotero-rename-files/</guid>
       <description>File renaming automation with Zotero</description>
     </item>
     <item>
       <title>Zotero 7 is coming …</title>
-      <link>http://localhost:1313/2023/zotero-7/</link>
+      <link>http://localhost:64385/2023/zotero-7/</link>
       <pubDate>Tue, 15 Aug 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/2023/zotero-7/</guid>
+      <guid>http://localhost:64385/2023/zotero-7/</guid>
       <description>&lt;p&gt;Edit 1: Zotero 7 was realeased officialy in August 2024.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.zotero.org/&#34;&gt;Zotero&lt;/a&gt; is a free, open-source reference management software. It make the process of collecting and storing references pretty easy (sometimes too easy !).&lt;/p&gt;&#xA;&lt;p&gt;The latest stable, big release version, Zotero 6, was introduced in March 2022. It brought a new built-in PDF viewer and annotation system, as well as iOS and iPadOS apps.&lt;/p&gt;&#xA;&lt;h2 id=&#34;zotero-7-is-coming&#34;&gt;Zotero 7 is Coming&lt;/h2&gt;&#xA;&lt;p&gt;Recently, the devs shared a public beta of Zotero 7. Most of the updates are related to transitioning from the legacy Firefox 60 ESR, which Zotero was originally built on top of (Zotero started as a browser extension), to the newer Firefox 102 ESR now and Firefox 115 ESR before the release this year.&lt;/p&gt;</description>
     </item>
   </channel>
