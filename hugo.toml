@@ -86,11 +86,12 @@ ignoreFiles = [ "\\.qmd$", "\\.ipynb$", "\\.py$" ]
 
 [taxonomies]
   tag = "tags"
+  author = "authors"
 
 
 [permalinks]
 #  posts = "/:year/:month/:day/:filename"
-  posts = "/:year/:filename"
+  posts = "/:year/:month/:contentbasename"
   pages = "/:slug"
 
 [outputs]
@@ -142,15 +143,6 @@ ignoreFiles = [ "\\.qmd$", "\\.ipynb$", "\\.py$" ]
 
 
 [privacy]
-  [privacy.disqus]
-    disable = true
-  [privacy.googleAnalytics]
-    disable = true
-  [privacy.instagram]
-    disable = true
-  [privacy.twitter]
-    disable = true
-  [privacy.vimeo]
-    disable = true
-  [privacy.youtube]
-    disable = true
+  [privacy.x]
+    disable = false
+    # Remove any [privacy.twitter] section if it exists

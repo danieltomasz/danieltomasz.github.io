@@ -6,10 +6,10 @@
     <description>Recent content in Zotero on Daniel Borek</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 13 Jun 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 05 Sep 2024 22:36:52 +0200</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/zotero/atom.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>How to autorename files using Zotero</title>
+      <title>Streamline Your Research: Zotero&#39;s File Management Tricks</title>
       <link>http://localhost:1313/2024/zotero-rename-files/</link>
       <pubDate>Thu, 13 Jun 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/2024/zotero-rename-files/</guid>
@@ -20,7 +20,7 @@
       <link>http://localhost:1313/2023/zotero-7/</link>
       <pubDate>Tue, 15 Aug 2023 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/2023/zotero-7/</guid>
-      <description>Zotero is a free, open-source reference management software. It make the process of collecting and storing references pretty easy (sometimes too easy !).&#xA;The latest stable, big release version, Zotero 6, was introduced in March 2022. It brought a new built-in PDF viewer and annotation system, as well as iOS and iPadOS apps.&#xA;Zotero 7 is Coming Recently, the devs shared a public beta of Zotero 7. Most of the updates are related to transitioning from the legacy Firefox 60 ESR, which Zotero was originally built on top of (Zotero started as a browser extension), to the newer Firefox 102 ESR now and Firefox 115 ESR before the release this year.</description>
+      <description>&lt;p&gt;Edit 1: Zotero 7 was realeased officialy in August 2024.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.zotero.org/&#34;&gt;Zotero&lt;/a&gt; is a free, open-source reference management software. It make the process of collecting and storing references pretty easy (sometimes too easy !).&lt;/p&gt;&#xA;&lt;p&gt;The latest stable, big release version, Zotero 6, was introduced in March 2022. It brought a new built-in PDF viewer and annotation system, as well as iOS and iPadOS apps.&lt;/p&gt;&#xA;&lt;h2 id=&#34;zotero-7-is-coming&#34;&gt;Zotero 7 is Coming&lt;/h2&gt;&#xA;&lt;p&gt;Recently, the devs shared a public beta of Zotero 7. Most of the updates are related to transitioning from the legacy Firefox 60 ESR, which Zotero was originally built on top of (Zotero started as a browser extension), to the newer Firefox 102 ESR now and Firefox 115 ESR before the release this year.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

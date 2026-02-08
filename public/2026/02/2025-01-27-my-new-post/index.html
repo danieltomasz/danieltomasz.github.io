@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content=" Daniel Borek - http://localhost:1313/">
+  <title>Connecting Zotero to AI Assistants via MCP | Daniel Borek</title>
+  <meta name="description" content="Instrumental reflexes">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Connecting Zotero to AI Assistants via MCP">
+  <meta name="twitter:description" content="If you use Zotero for managing your research library, you might want to talk to your papers using an AI assistant. The Model Context Protocol (MCP) makes this possible — your AI can search, summarize, and analyze your local Zotero library without uploading anything to third-party servers. Or you can use semantic search with ZotSeek to resurface your hidden relevant paper and have better semantic search when the keyword isn’t in the title or abstract.">
+
+<meta property="og:url" content="http://localhost:1313/2026/02/2025-01-27-my-new-post/">
+  <meta property="og:site_name" content="Daniel Borek">
+  <meta property="og:title" content="Connecting Zotero to AI Assistants via MCP">
+  <meta property="og:description" content="If you use Zotero for managing your research library, you might want to talk to your papers using an AI assistant. The Model Context Protocol (MCP) makes this possible — your AI can search, summarize, and analyze your local Zotero library without uploading anything to third-party servers. Or you can use semantic search with ZotSeek to resurface your hidden relevant paper and have better semantic search when the keyword isn’t in the title or abstract.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-02-08T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-02-08T00:00:00+00:00">
+    <meta property="article:tag" content="Zotero">
+    <meta property="article:tag" content="AI">
+    <meta property="article:tag" content="MCP">
+
+
+  <meta itemprop="name" content="Connecting Zotero to AI Assistants via MCP">
+  <meta itemprop="description" content="If you use Zotero for managing your research library, you might want to talk to your papers using an AI assistant. The Model Context Protocol (MCP) makes this possible — your AI can search, summarize, and analyze your local Zotero library without uploading anything to third-party servers. Or you can use semantic search with ZotSeek to resurface your hidden relevant paper and have better semantic search when the keyword isn’t in the title or abstract.">
+  <meta itemprop="datePublished" content="2026-02-08T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2026-02-08T00:00:00+00:00">
+  <meta itemprop="wordCount" content="1096">
+  <meta itemprop="keywords" content="Zotero,AI,MCP">
+  <link rel="canonical" href="http://localhost:1313/2026/02/2025-01-27-my-new-post/">
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
+  <link href="https://www.google-analytics.com" rel="preconnect" crossorigin>
+  <link rel="alternate" type="application/atom+xml" title="Daniel Borek" href="http://localhost:1313/atom.xml" />
+  <link rel="alternate" type="application/json" title="Daniel Borek" href="http://localhost:1313/feed.json" />
+  
+  <style>*{line-height:1.6em;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica,helvetica neue,ubuntu,roboto,noto,segoe ui,arial,sans-serif;padding:2rem;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}main{max-width:70ch;padding:2ch;margin:auto}rig header,footer{margin-top:4rem;margin-bottom:4rem}h1:first-child{margin:0}img{display:block;max-width:100%}.meta{color:#777}.meta span a{color:#777;display:inline;text-decoration:none}.divider{display:inline-block;flex:1;border-top:1px solid #ddd;margin:0 10px}.lista .meta{align-items:center;display:flex;padding-bottom:.85em}a,a:visited{color:initial}.list{list-style-type:none;padding-left:0;margin:0}.list li{margin-bottom:.5rem}time{color:#777;font-variant-numeric:tabular-nums}blockquote{border-left:2px solid #777;padding:.5rem 1rem;margin:2rem 0}table{border-collapse:collapse;text-align:left;width:100%}table th,table td{padding:10px 20px}.posts ul,header ul,footer ul{list-style:none}.posts,header ul,footer ul{padding:0}.posts li{align-items:center;display:flex;justify-content:space-between;margin-bottom:.7rem}.posts li a,.posts li div{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-decoration:none}.posts li time{padding-left:1rem;white-space:nowrap;font-variant-numeric:tabular-nums}code,pre{color:#353535;font-family:San Francisco Mono,Monaco,consolas,lucida console,dejavu sans mono,bitstream vera sans mono,monospace;font-size:normal;border:1px solid #353535;font-size:small}code{padding:.1rem;border:none}pre{padding:.5rem;overflow-x:auto}pre code{border:none}header li,footer li{display:inline;text-transform:uppercase}header a,footer a{text-decoration:none}header ul,footer ul{justify-content:space-between;display:flex}[aria-current=page]{text-decoration:line-through}header,section,footer{padding:1rem 0}.lista li{list-style-type:none}.lista ul{display:flex;list-style-type:none}.nav{padding-top:-3em}ul{list-style-type:square}ul,ol{padding-left:1.2rem}header li,footer li{display:inline;text-transform:uppercase}header a,footer a{text-decoration:none}header ul,footer ul{justify-content:space-between;display:flex}[aria-current=page]{text-decoration:line-through}blockquote{border-left:5px solid #353535;padding-left:1rem}.posts ul,header ul,footer ul{list-style:none}.posts,header ul,footer ul{padding:0}.posts footer{padding-top:-10em}.posts li{align-items:center;display:flex;justify-content:space-between}.posts li a,.posts li div{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-decoration:none}.posts li time{padding-left:1rem;white-space:nowrap;font-variant-numeric:tabular-nums}</style>
+
+  
+
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "articleSection": "posts",
+    "name": "Connecting Zotero to AI Assistants via MCP",
+    "headline": "Connecting Zotero to AI Assistants via MCP",
+    "alternativeHeadline": "",
+    "description": "\u003cp\u003eIf you use \u003ca href=\u0022https:\/\/www.zotero.org\/\u0022\u003eZotero\u003c\/a\u003e for managing your research library, you might want to talk to your papers using an AI assistant. The \u003ca href=\u0022https:\/\/modelcontextprotocol.io\/introduction\u0022\u003eModel Context Protocol (MCP)\u003c\/a\u003e makes this possible — your AI can search, summarize, and analyze your local Zotero library without uploading anything to third-party servers. Or you can use semantic search with \u003ca href=\u0022https:\/\/github.com\/introfini\/ZotSeek\u0022\u003eZotSeek\u003c\/a\u003e to resurface your hidden relevant paper and have better semantic search when the keyword isn\u0026rsquo;t in the title or abstract.\u003c\/p\u003e",
+    "inLanguage": "en-us",
+    "isFamilyFriendly": "true",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http:\/\/localhost:1313\/2026\/02\/2025-01-27-my-new-post\/"
+    },
+    "author" : {
+        "@type": "Person",
+        "name": "Daniel Borek"
+    },
+    "creator" : {
+        "@type": "Person",
+        "name": "Daniel Borek"
+    },
+    "accountablePerson" : {
+        "@type": "Person",
+        "name": "Daniel Borek"
+    },
+    "copyrightHolder" : "Daniel Borek",
+    "copyrightYear" : "2026",
+    "dateCreated": "2026-02-08T00:00:00.00Z",
+    "datePublished": "2026-02-08T00:00:00.00Z",
+    "dateModified": "2026-02-08T00:00:00.00Z",
+    "publisher":{
+        "@type":"Organization",
+        "name": "Daniel Borek",
+        "url": "http://localhost:1313/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "http:\/\/localhost:1313\/",
+            "width":"32",
+            "height":"32"
+        }
+    },
+    "image": "http://localhost:1313/",
+    "url" : "http:\/\/localhost:1313\/2026\/02\/2025-01-27-my-new-post\/",
+    "wordCount" : "1096",
+    "genre" : [ "Zotero" , "AI" , "MCP" ],
+    "keywords" : [ "Zotero" , "AI" , "MCP" ]
+}
+</script>
+
+
+</head>
+<body>
+<main>
+      <header>
+    <nav>
+      
+   <ul>
+    
+    <li>
+      
+      
+      
+      
+      <a href="/" >about</a>
+    </li>
+  
+    <li>
+      
+      
+      
+      
+      <a href="/posts/" >index</a>
+    </li>
+  
+    <li>
+      
+      
+      
+      
+      <a href="/atom.xml" >rss</a>
+    </li>
+  
+   </ul>
+    </nav>
+  </header>
+    <hr>
+
+
+
+  <section>
+
+      
+      <h2 itemprop="name headline">Connecting Zotero to AI Assistants via MCP</h2>
+      
+      
+
+      <p class="meta">
+
+        <time itemprop="datePublished" datetime="2026-02-08"> February 08, 2026</time> &bull;
+        <a href='/tags/zotero'>Zotero</a>, <a href='/tags/ai'>AI</a>, <a href='/tags/mcp'>MCP</a>
+        
+             <span class="date-info italic"> <br> Edited on 08.02.2026</span>
+         
+        </p>
+
+
+      
+
+      <span itemprop="articleBody">
+      <p>If you use <a href="https://www.zotero.org/">Zotero</a> for managing your research library, you might want to talk to your papers using an AI assistant. The <a href="https://modelcontextprotocol.io/introduction">Model Context Protocol (MCP)</a> makes this possible — your AI can search, summarize, and analyze your local Zotero library without uploading anything to third-party servers. Or you can use semantic search with <a href="https://github.com/introfini/ZotSeek">ZotSeek</a> to resurface your hidden relevant paper and have better semantic search when the keyword isn&rsquo;t in the title or abstract.</p>
+<p>Disclaimer: to get some of the setup running I used debugging session with chatbot, and the big part of the content of the post was first dictated by me, then via open model to text (Parakeet on MacWhisper) and cleaned via chatbot, and finally checked and edited by me.</p>
+<h1 id="why-use-your-own-library">Why use your own library?</h1>
+<p>There is a risk of chatbots hallucinating when you work in research — and one of the worst kinds is hallucinated bibliography. The AI just makes up references that don&rsquo;t exist. The best way to limit this is to not rely on internet sources you can&rsquo;t verify, but to ground the conversation in your own bibliography instead. Especially when you&rsquo;ve accumulated several thousand papers over your whole research career — sometimes you forget you have something relevant sitting in your library. This tutorial is about chatting with your own curated database of publications. You still need to be careful and verify what the AI says, but you can really limit the risk of total hallucination by grounding it in your own papers. It&rsquo;s useful when the topic you&rsquo;re working on connects to things you already collected — you ask for context and it pulls from what you know is real.</p>
+<h1 id="cost-and-setup">Cost and setup</h1>
+<p>With Zotero MCP, the local part — indexing and searching your library (if you use open source embeddings) — is completely free. What costs money is the AI inference, meaning the chatbot subscription you use to actually have a conversation (Claude, ChatGPT, Mistral, etc.). Similarly, ZotSeek does the retrieval and semantic search part entirely for free and locally — after the initial indexing, it works without any additional computation, you only need to re-index when you add new PDFs to your library.</p>
+<p>So in practice: the search/RAG layer is free, the chat layer requires a subscription. But many of you probably already have one — you&rsquo;d just use tokens from your existing plan a bit faster.</p>
+<p>Personally, I use Claude — the setup is the easiest. But I also wanted to test a European alternative, so I set it up with Mistral Le Chat as well. If you&rsquo;re a student, Mistral has a cheap subscription around €7. The quality is a bit below the latest biggest models from Anthropic or OpenAI, but you can still get a lot of value from it. The Mistral setup is more convoluted though — I figured it out together with Gemini, so I put more details in that section below.</p>
+<p><strong>A word on security:</strong> when using the Mistral/ngrok setup, be careful not to expose your computer to the outside. Always use a password and <strong>do not share your ngrok links</strong> with anyone.</p>
+<p>One more thing — there&rsquo;s also <a href="https://github.com/lifan0127/ai-research-assistant">ARIA</a>, a plugin that lets you chat with your PDFs directly inside the Zotero application using your own API keys. It costs additional tokens and I haven&rsquo;t used it much myself, but if you want to stay entirely within Zotero, check it out.</p>
+<p>I&rsquo;m also maintaining a <a href="https://github.com/stars/danieltomasz/lists/zotero-plugins">curated list of useful Zotero plugins</a> on GitHub — I&rsquo;ll be adding new ones as I discover them.</p>
+<h2 id="install-zotero-mcp">Install Zotero-MCP</h2>
+<p>The tool we need is <a href="https://github.com/54yyyu/zotero-mcp">zotero-mcp</a> (<a href="https://stevenyuyy.us/zotero-mcp/index.html">documentation</a>). It works with Claude Desktop, ChatGPT, Mistral Le Chat, and other MCP-compatible clients.</p>
+<h3 id="prerequisites">Prerequisites</h3>
+<ul>
+<li><strong>Zotero 7+</strong> running on your computer</li>
+<li><strong>Python</strong> installed (with <code>uv</code> package manager recommended)</li>
+<li>In Zotero: go to <strong>Settings &gt; Advanced</strong> and ensure <strong>&ldquo;Allow other applications on this computer to communicate with Zotero&rdquo;</strong> is <strong>checked</strong></li>
+</ul>
+<h3 id="install">Install</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>uv tool install <span style="color:#0a3069">&#34;git+https://github.com/54yyyu/zotero-mcp.git&#34;</span>
+</span></span></code></pre></div><h2 id="setup-for-claude-desktop-recommended">Setup for Claude Desktop (recommended)</h2>
+<p>The simplest path. Just run:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>zotero-mcp setup
+</span></span></code></pre></div><p>This auto-configures your <code>claude_desktop_config.json</code>. Restart Claude Desktop and you&rsquo;re done — Zotero tools will appear in your conversation.</p>
+<p>If you prefer manual config, add this to your <code>claude_desktop_config.json</code>:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#0550ae">&#34;mcpServers&#34;</span><span style="color:#1f2328">:</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#0550ae">&#34;zotero&#34;</span><span style="color:#1f2328">:</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#0550ae">&#34;command&#34;</span><span style="color:#1f2328">:</span> <span style="color:#0a3069">&#34;zotero-mcp&#34;</span><span style="color:#1f2328">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#0550ae">&#34;env&#34;</span><span style="color:#1f2328">:</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#0550ae">&#34;ZOTERO_LOCAL&#34;</span><span style="color:#1f2328">:</span> <span style="color:#0a3069">&#34;true&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
+</span></span></code></pre></div><h2 id="setup-for-chatgpt">Setup for ChatGPT</h2>
+<p>ChatGPT also supports MCP now, but requires a slightly different configuration:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install git+https://github.com/54yyyu/zotero-mcp.git
+</span></span><span style="display:flex;"><span>zotero-mcp setup --no-claude
+</span></span></code></pre></div><p>The <code>--no-claude</code> flag creates a standalone configuration optimized for ChatGPT&rsquo;s specific tool naming requirements.</p>
+<h2 id="setup-for-mistral-le-chat">Setup for Mistral Le Chat</h2>
+<p>Mistral Le Chat supports MCP via remote connectors, which makes the setup more involved — you need to expose your local MCP server through a secure tunnel using <code>ngrok</code>.</p>
+<p>You will additionally need <strong>ngrok</strong> installed and authenticated.</p>
+<h3 id="step-1-start-the-mcp-server">Step 1: Start the MCP Server</h3>
+<p>Open your terminal and run the server in SSE (Server-Sent Events) mode:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>uv tool run zotero-mcp serve --transport sse --port <span style="color:#0550ae">8000</span>
+</span></span></code></pre></div><p>Keep this terminal open.</p>
+<h3 id="step-2-open-a-secure-tunnel">Step 2: Open a Secure Tunnel</h3>
+<p>Open a <strong>new</strong> terminal tab. Protect the tunnel with a password so the public cannot access your library.</p>
+<p><em>(Use <strong>single quotes</strong> <code>'</code> around the credentials to prevent Zsh errors)</em></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ngrok http <span style="color:#0550ae">8000</span> --basic-auth<span style="color:#0550ae">=</span><span style="color:#0a3069">&#39;admin:secret&#39;</span>
+</span></span></code></pre></div><p>Replace <code>admin:secret</code> with your own username:password if desired. <strong>Copy the Forwarding URL</strong> from the screen (e.g., <code>https://xyz-123.ngrok-free.app</code>).</p>
+<h3 id="step-3-get-your-auth-token">Step 3: Get Your Auth Token</h3>
+<p>Mistral needs your password encoded in Base64. Run this in a <strong>third</strong> terminal tab:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#6639ba">echo</span> -n <span style="color:#0a3069">&#39;admin:secret&#39;</span> <span style="color:#1f2328">|</span> base64
+</span></span></code></pre></div><p><strong>Output Example:</strong> <code>YWRtaW46c2VjcmV0</code> — copy the string from your console.</p>
+<h3 id="step-4-configure-mistral-le-chat">Step 4: Configure Mistral Le Chat</h3>
+<p>Go to <a href="https://chat.mistral.ai/">Mistral Le Chat</a> &gt; <strong>Connectors</strong> (plug icon) &gt; <strong>+ Add Connector</strong> &gt; <strong>Custom MCP Connector</strong>.</p>
+<table>
+  <thead>
+      <tr>
+          <th><strong>Field</strong></th>
+          <th><strong>Setting</strong></th>
+          <th><strong>Note</strong></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Connector Server</strong></td>
+          <td><code>https://YOUR-NGROK-URL/sse</code></td>
+          <td><strong>Must</strong> end in <code>/sse</code></td>
+      </tr>
+      <tr>
+          <td><strong>Authentication</strong></td>
+          <td><code>API Token Authentication</code></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td><strong>Header Name</strong></td>
+          <td><code>Authorization</code></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td><strong>Header Type</strong></td>
+          <td><code>Basic</code></td>
+          <td>Select from the dropdown</td>
+      </tr>
+      <tr>
+          <td><strong>Header Value</strong></td>
+          <td><code>YWRtaW46c2VjcmV0</code></td>
+          <td>Paste <strong>only</strong> the Base64 code, don&rsquo;t type &ldquo;Basic&rdquo; here</td>
+      </tr>
+  </tbody>
+</table>
+<p>Click <strong>Create</strong>.</p>
+<h3 id="troubleshooting-mistral">Troubleshooting (Mistral)</h3>
+<ul>
+<li><strong>&ldquo;404 Not Found&rdquo;</strong> — You forgot to add <code>/sse</code> to the end of the URL.</li>
+<li><strong>&ldquo;401 Unauthorized&rdquo;</strong> — The Base64 code is wrong, or you typed &ldquo;Basic&rdquo; twice (once in the dropdown, once in the text box).</li>
+<li><strong>&ldquo;MCP connection requires additional information&hellip;&rdquo;</strong> — Usually a malformed URL or header. Try the nuclear option below.</li>
+</ul>
+<p><strong>The &ldquo;Nuclear Option&rdquo;:</strong> If the dropdown menus are fighting you, bypass them by putting the credentials directly in the URL. Set Authentication to <strong>None</strong> and URL to: <code>https://admin:secret@your-ngrok-url.ngrok-free.app/sse</code></p>
+<h2 id="optional-enable-semantic-search">Optional: Enable Semantic Search</h2>
+<p>For AI-powered similarity search across your library (beyond basic keyword matching):</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>zotero-mcp setup --semantic-config-only
+</span></span><span style="display:flex;"><span>zotero-mcp update-db --fulltext
+</span></span></code></pre></div><p>The <code>--fulltext</code> flag indexes the full text of your PDFs, which is slower but gives much better results. Without it, only metadata is indexed.</p>
+
+      </span>
+
+
+    </section>
+    
+
+<footer>
+
+    
+    <script src="https://giscus.app/client.js"
+    data-repo="danieltomasz/danieltomasz.github.io"
+    data-repo-id=""
+    data-category="Comments"
+    data-category-id=""
+    data-mapping="title"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="light"
+    data-lang="en"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async>
+  </script>
+    
+
+    <nav>
+    <ul>
+        <li>
+        © 2026
+        </li>
+    </ul>
+    </nav>
+    
+</footer>
+
+  </main>
+</body>
+

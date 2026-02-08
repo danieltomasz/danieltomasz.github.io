@@ -3,49 +3,215 @@
     
     <title>Daniel Borek</title>
     <description>Instrumental reflexes</description>
-    <link>http://localhost:60341/</link>
+    <link>http://localhost:1313/</link>
     
     <language>en</language>
-    <copyright>Copyright 2024, Daniel Borek</copyright>
-    <lastBuildDate>Thu, 13 Jun 2024 00:00:00 +0000</lastBuildDate>
+    <copyright>Copyright 2026, Daniel Borek</copyright>
+    <lastBuildDate>Sun, 08 Feb 2026 00:00:00 +0000</lastBuildDate>
     <generator>Hugo - gohugo.io</generator>
     <docs>http://cyber.harvard.edu/rss/rss.html</docs>
     <atom:link href="https://danielborek.me/atom.xml" rel="self" type="application/atom+xml"/>
     
     <item>
-      <title>How to autorename files using Zotero</title>
-      <link>http://localhost:60341/2024/zotero-rename-files/</link>
-      <description>&lt;p&gt;After listening an episode of &lt;code&gt;PhD Life Coach&lt;/code&gt; podcast (reccomeded to everyone relared to academia) on &lt;a href=&#34;https://thephdlifecoach.buzzsprout.com/1992545/15220518-2-39-how-to-be-your-own-best-personal-assistant&#34;&gt;How to be your own best personal assistant&lt;/a&gt; Iearned that some academic people still spent their time on renaming pdfs downloaded from internet. I want to share an important message to those people :) :&lt;/p&gt;
+      <title>Connecting Zotero to AI Assistants via MCP</title>
+      <link>http://localhost:1313/2026/zotero-mcp-ai/</link>
+      <description>&lt;p&gt;If you use &lt;a href=&#34;https://www.zotero.org/&#34;&gt;Zotero&lt;/a&gt; for managing your research library, you might want to talk to your papers using an AI assistant. The &lt;a href=&#34;https://modelcontextprotocol.io/introduction&#34;&gt;Model Context Protocol (MCP)&lt;/a&gt; makes this possible — your AI can search, summarize, and analyze your local Zotero library without uploading anything to third-party servers. Or you can use semantic search with &lt;a href=&#34;https://github.com/introfini/ZotSeek&#34;&gt;ZotSeek&lt;/a&gt; to resurface your hidden relevant paper and have better semantic search when the keyword isn&amp;rsquo;t in the title or abstract.
+I did indexing in the abstract mode only — 1 chunk per paper — 6k papers use 20MB disc space and took a bit less than 1 hour to index.&lt;/p&gt;
+&lt;p&gt;Disclaimer: to get some of the setup running I used debugging session with chatbot, and the big part of the content of the post was first dictated by me, then via open model to text (Parakeet on MacWhisper) and cleaned via chatbot, and finally checked and edited by me.&lt;/p&gt;
+&lt;h1 id=&#34;why-use-your-own-library&#34;&gt;Why use your own library?&lt;/h1&gt;
+&lt;p&gt;There is a risk of chatbots hallucinating when you work in research — and one of the worst kinds is hallucinated bibliography. The AI just makes up references that don&amp;rsquo;t exist. The best way to limit this is to not rely on internet sources you can&amp;rsquo;t verify, but to ground the conversation in your own bibliography instead. Especially when you&amp;rsquo;ve accumulated several thousand papers over your whole research career — sometimes you forget you have something relevant sitting in your library. This tutorial is about chatting with your own curated database of publications. You still need to be careful and verify what the AI says, but you can really limit the risk of total hallucination by grounding it in your own papers. It&amp;rsquo;s useful when the topic you&amp;rsquo;re working on connects to things you already collected — you ask for context and it pulls from what you know is real.&lt;/p&gt;
+&lt;h1 id=&#34;cost-and-setup&#34;&gt;Cost and setup&lt;/h1&gt;
+&lt;p&gt;With Zotero MCP, the local part — indexing and searching your library (if you use open source embeddings) — is completely free. What costs money is the AI inference, meaning the chatbot subscription you use to actually have a conversation (Claude, ChatGPT, Mistral, etc.). Similarly, ZotSeek does the retrieval and semantic search part entirely for free and locally — after the initial indexing, it works without any additional computation, you only need to re-index when you add new PDFs to your library.&lt;/p&gt;
+&lt;p&gt;So in practice: the search/RAG layer is free, the chat layer requires a subscription. But many of you probably already have one — you&amp;rsquo;d just use tokens from your existing plan a bit faster.&lt;/p&gt;
+&lt;p&gt;Personally, I use Claude — the setup is the easiest. But I also wanted to test a European alternative, so I set it up with Mistral Le Chat as well. If you&amp;rsquo;re a student, Mistral has a cheap subscription around €7. The quality is a bit below the latest biggest models from Anthropic or OpenAI, but you can still get a lot of value from it. The Mistral setup is more convoluted though — I figured it out together with Gemini, so I put more details in that section below.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;A word on security:&lt;/strong&gt; when using the Mistral/ngrok setup, be careful not to expose your computer to the outside. Always use a password and &lt;strong&gt;do not share your ngrok links&lt;/strong&gt; with anyone.&lt;/p&gt;
+&lt;p&gt;One more thing — there&amp;rsquo;s also &lt;a href=&#34;https://github.com/lifan0127/ai-research-assistant&#34;&gt;ARIA&lt;/a&gt;, a plugin that lets you chat with your PDFs directly inside the Zotero application using your own API keys. It costs additional tokens and I haven&amp;rsquo;t used it much myself, but if you want to stay entirely within Zotero, check it out.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m also maintaining a &lt;a href=&#34;https://github.com/stars/danieltomasz/lists/zotero-plugins&#34;&gt;curated list of useful Zotero plugins&lt;/a&gt; on GitHub — I&amp;rsquo;ll be adding new ones as I discover them.&lt;/p&gt;
+&lt;p&gt;I also assume you have minimal experience with command line and Python installation; instead of &lt;code&gt;uv&lt;/code&gt; you can install the MCP server via &lt;code&gt;pipx&lt;/code&gt; or other way to make it available to your environment. This setup is tested on macOS, but it should work on other OSes. It will also serve as a reminder for me — every time there is a new ngrok instance you need to repeat the Mistral setup. Claude Zotero MCP is available only locally via the Claude desktop app. I am not related to development of any of these tools — you can always ask me questions, but if you find a bug or something is not clear in the documentation, let the developers know via GitHub issue (and thank them ;)&lt;/p&gt;
+&lt;h2 id=&#34;install-zotero-mcp&#34;&gt;Install Zotero-MCP&lt;/h2&gt;
+&lt;p&gt;The tool we need is &lt;a href=&#34;https://github.com/54yyyu/zotero-mcp&#34;&gt;zotero-mcp&lt;/a&gt; (&lt;a href=&#34;https://stevenyuyy.us/zotero-mcp/index.html&#34;&gt;documentation&lt;/a&gt;). It works with Claude Desktop, ChatGPT, Mistral Le Chat, and other MCP-compatible clients.&lt;/p&gt;
+&lt;h3 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Zotero 7+&lt;/strong&gt; running on your computer&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Python&lt;/strong&gt; installed (with &lt;code&gt;uv&lt;/code&gt; package manager recommended)&lt;/li&gt;
+&lt;li&gt;In Zotero: go to &lt;strong&gt;Settings &amp;gt; Advanced&lt;/strong&gt; and ensure &lt;strong&gt;&amp;ldquo;Allow other applications on this computer to communicate with Zotero&amp;rdquo;&lt;/strong&gt; is &lt;strong&gt;checked&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;install&#34;&gt;Install&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;uv tool install &lt;span style=&#34;color:#0a3069&#34;&gt;&amp;#34;git+https://github.com/54yyyu/zotero-mcp.git&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;setup-for-claude-desktop-recommended&#34;&gt;Setup for Claude Desktop (recommended)&lt;/h2&gt;
+&lt;p&gt;The simplest path. Just run:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;zotero-mcp setup
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This auto-configures your &lt;code&gt;claude_desktop_config.json&lt;/code&gt;. Restart Claude Desktop and you&amp;rsquo;re done — Zotero tools will appear in your conversation.&lt;/p&gt;
+&lt;p&gt;If you prefer manual config, add this to your &lt;code&gt;claude_desktop_config.json&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#0550ae&#34;&gt;&amp;#34;mcpServers&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#1f2328&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#0550ae&#34;&gt;&amp;#34;zotero&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#1f2328&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#0550ae&#34;&gt;&amp;#34;command&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0a3069&#34;&gt;&amp;#34;zotero-mcp&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#0550ae&#34;&gt;&amp;#34;env&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#1f2328&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#0550ae&#34;&gt;&amp;#34;ZOTERO_LOCAL&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0a3069&#34;&gt;&amp;#34;true&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#1f2328&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#1f2328&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#1f2328&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;setup-for-chatgpt&#34;&gt;Setup for ChatGPT&lt;/h2&gt;
+&lt;p&gt;ChatGPT also supports MCP now, but requires a slightly different configuration:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;pip install git+https://github.com/54yyyu/zotero-mcp.git
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;zotero-mcp setup --no-claude
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The &lt;code&gt;--no-claude&lt;/code&gt; flag creates a standalone configuration optimized for ChatGPT&amp;rsquo;s specific tool naming requirements.&lt;/p&gt;
+&lt;h2 id=&#34;setup-for-mistral-le-chat&#34;&gt;Setup for Mistral Le Chat&lt;/h2&gt;
+&lt;p&gt;Mistral Le Chat supports MCP via remote connectors, which makes the setup more involved — you need to expose your local MCP server through a secure tunnel using &lt;code&gt;ngrok&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;You will additionally need &lt;strong&gt;ngrok&lt;/strong&gt; installed and authenticated.&lt;/p&gt;
+&lt;h3 id=&#34;step-1-start-the-mcp-server&#34;&gt;Step 1: Start the MCP Server&lt;/h3&gt;
+&lt;p&gt;Open your terminal and run the server in SSE (Server-Sent Events) mode:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;uv tool run zotero-mcp serve --transport sse --port &lt;span style=&#34;color:#0550ae&#34;&gt;8000&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Keep this terminal open.&lt;/p&gt;
+&lt;h3 id=&#34;step-2-open-a-secure-tunnel&#34;&gt;Step 2: Open a Secure Tunnel&lt;/h3&gt;
+&lt;p&gt;Open a &lt;strong&gt;new&lt;/strong&gt; terminal tab. Protect the tunnel with a password so the public cannot access your library.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;(Use &lt;strong&gt;single quotes&lt;/strong&gt; &lt;code&gt;&#39;&lt;/code&gt; around the credentials to prevent Zsh errors)&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ngrok http &lt;span style=&#34;color:#0550ae&#34;&gt;8000&lt;/span&gt; --basic-auth&lt;span style=&#34;color:#0550ae&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#0a3069&#34;&gt;&amp;#39;admin:secret&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Replace &lt;code&gt;admin:secret&lt;/code&gt; with your own username:password if desired. &lt;strong&gt;Copy the Forwarding URL&lt;/strong&gt; from the screen (e.g., &lt;code&gt;https://xyz-123.ngrok-free.app&lt;/code&gt;).&lt;/p&gt;
+&lt;h3 id=&#34;step-3-get-your-auth-token&#34;&gt;Step 3: Get Your Auth Token&lt;/h3&gt;
+&lt;p&gt;Mistral needs your password encoded in Base64. Run this in a &lt;strong&gt;third&lt;/strong&gt; terminal tab:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#6639ba&#34;&gt;echo&lt;/span&gt; -n &lt;span style=&#34;color:#0a3069&#34;&gt;&amp;#39;admin:secret&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#1f2328&#34;&gt;|&lt;/span&gt; base64
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Output Example:&lt;/strong&gt; &lt;code&gt;YWRtaW46c2VjcmV0&lt;/code&gt; — copy the string from your console.&lt;/p&gt;
+&lt;h3 id=&#34;step-4-configure-mistral-le-chat&#34;&gt;Step 4: Configure Mistral Le Chat&lt;/h3&gt;
+&lt;p&gt;Go to &lt;a href=&#34;https://chat.mistral.ai/&#34;&gt;Mistral Le Chat&lt;/a&gt; &amp;gt; &lt;strong&gt;Connectors&lt;/strong&gt; (plug icon) &amp;gt; &lt;strong&gt;+ Add Connector&lt;/strong&gt; &amp;gt; &lt;strong&gt;Custom MCP Connector&lt;/strong&gt;.&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;&lt;strong&gt;Field&lt;/strong&gt;&lt;/th&gt;
+          &lt;th&gt;&lt;strong&gt;Setting&lt;/strong&gt;&lt;/th&gt;
+          &lt;th&gt;&lt;strong&gt;Note&lt;/strong&gt;&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Connector Server&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;https://YOUR-NGROK-URL/sse&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;Must&lt;/strong&gt; end in &lt;code&gt;/sse&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Authentication&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;API Token Authentication&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Header Name&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;Authorization&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Header Type&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;Basic&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Select from the dropdown&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Header Value&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;YWRtaW46c2VjcmV0&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Paste &lt;strong&gt;only&lt;/strong&gt; the Base64 code&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Click &lt;strong&gt;Create&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;troubleshooting-mistral&#34;&gt;Troubleshooting (Mistral)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&amp;ldquo;404 Not Found&amp;rdquo;&lt;/strong&gt; — You forgot to add &lt;code&gt;/sse&lt;/code&gt; to the end of the URL.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&amp;ldquo;401 Unauthorized&amp;rdquo;&lt;/strong&gt; — The Base64 code is wrong, or you typed &amp;ldquo;Basic&amp;rdquo; twice (once in the dropdown, once in the text box).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&amp;ldquo;MCP connection requires additional information&amp;hellip;&amp;rdquo;&lt;/strong&gt; — Usually a malformed URL or header. Try the nuclear option below.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;The &amp;ldquo;Nuclear Option&amp;rdquo;:&lt;/strong&gt; If the dropdown menus are fighting you, bypass them by putting the credentials directly in the URL. Set Authentication to &lt;strong&gt;None&lt;/strong&gt; and URL to: &lt;code&gt;https://admin:secret@your-ngrok-url.ngrok-free.app/sse&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;optional-enable-semantic-search&#34;&gt;Optional: Enable Semantic Search&lt;/h2&gt;
+&lt;p&gt;For AI-powered similarity search across your library (beyond basic keyword matching):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;zotero-mcp setup --semantic-config-only
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;zotero-mcp update-db --fulltext
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The &lt;code&gt;--fulltext&lt;/code&gt; flag indexes the full text of your PDFs, which is slower but gives much better results. Without it, only metadata is indexed.&lt;/p&gt;
+</description>
+      <author>dtborek@gmail.com (Daniel Borek)</author>
+      <guid>http://localhost:1313/2026/zotero-mcp-ai/</guid>
+      <pubDate>Sun, 08 Feb 2026 00:00:00 +0000</pubDate>
+    </item>
+    
+    <item>
+      <title>Tracking Word Count Progress in Git</title>
+      <link>http://localhost:1313/2024/count-progress-git/</link>
+      <description>&lt;p&gt;I created a simple script to count word changes in my git repository. I&amp;rsquo;m trying Typst now for writing an article in VSCode, and there&amp;rsquo;s no good extension to quantify daily progress. This script looks at your commits, counts words added, deleted, and duplicated in the files of the extension by your choice (by default .typ and .md files). It shows a daily breakdown of writing progress.&lt;/p&gt;
+&lt;p&gt;Got the idea from a &lt;a href=&#34;//www.gijsvandam.nl/post/measuring-your-writing-progress-with-a-git-word-count/&#34;&gt;Gijs van Dam&amp;rsquo;s blog post&lt;/a&gt; (who described logic behind  the word change calculation).  I adapted it by adding Typst and extending the way it display the output.  I add some additions like  handling the first commit: The script checks if it&amp;rsquo;s dealing with the first commit in the repo, which doesn&amp;rsquo;t have a parent to compare against and it stops.&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s been helpful for tracking my word count (and writing it was a nice excuse to not writing the text  I supposed to write). Below you can find the gist with the latest version.&lt;/p&gt;
+&lt;script src=&#34;https://gist.github.com/danieltomasz/e3be94d7f03ade2eb030edf63920e95a.js&#34;&gt;&lt;/script&gt;
+
+</description>
+      <author>dtborek@gmail.com (Daniel Borek)</author>
+      <guid>http://localhost:1313/2024/count-progress-git/</guid>
+      <pubDate>Thu, 05 Sep 2024 01:00:00 -0700</pubDate>
+    </item>
+    
+    <item>
+      <title>Github Education Pack and other tips</title>
+      <link>http://localhost:1313/2024/git-github-tips/</link>
+      <description>&lt;p&gt;GitHub is a powerful platform (if you stayed on it after it was bought by Microsoft) that you can use for version control with Git and collaborative software/project development.&lt;/p&gt;
+&lt;p&gt;Apart of its main purpose for managing and maintaining your projects, and many people are familiar with the basic functionalities of GitHub, there are several valuable features that even experienced users might overlook&lt;/p&gt;
+&lt;p&gt;This is a bit trivial information but I know that are some people (mostly academic colleagues) who were using Github and for whom this information was new when I shared with them. The post will be updated if I will learn about features.&lt;/p&gt;
+&lt;h2 id=&#34;if-you-are-a-student-ask-for-the-github-education-pack&#34;&gt;If You Are a Student, Ask for the GitHub Education Pack&lt;/h2&gt;
+&lt;p&gt;If you are a student, you can apply for the GitHub Student Developer Pack, which offers free access to various developer tools, resources, and services. Some of the best perks include access to Microsoft Copilot inside VSCode, a license for PyCharm Professional Edition (which supports some great features), and a year of a Namecheap domain.&lt;/p&gt;
+&lt;p&gt;You also get a year of a free domain with a .me ending on Namecheap, a free 3-month individual subscription to DataCamp, and access to other perks. Some of these perks might not be as useful, but you may find something valuable, like computing credits on Azure and other services for machine learning. More details can be found here: &lt;a href=&#34;https://education.github.com/pack&#34;&gt;GitHub Education Pack&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;When applying, if you encounter verification issues, you might find useful this comment from related &lt;a href=&#34;https://github.com/orgs/community/discussions/61537&#34;&gt;discussion&lt;/a&gt; :&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;You are unlikely to be verified until you have completed your GitHub user profile with your full name as it appears in your academic affiliation document, plus a short bio.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Overall, having a good presence and short introduction on your profile is a good idea.&lt;/p&gt;
+&lt;p&gt;Even after successful verification, you might need to wait up to 72hours, and in peak times like the start of the semester even longer.&lt;/p&gt;
+&lt;h2 id=&#34;use-favorites-for-easy-access-to-repositories&#34;&gt;Use Favorites for Easy Access to Repositories&lt;/h2&gt;
+&lt;p&gt;The staring a favorites repo is a pretty standard feature, but a new shiny beta feature is “lists,” which you can create and add repositories to when starring them. This is useful for creating low-effort, different collections.&lt;/p&gt;
+&lt;h2 id=&#34;be-notified-about-releases-of-specific-packages&#34;&gt;Be Notified About Releases of Specific Packages&lt;/h2&gt;
+&lt;p&gt;To stay updated on the latest releases of specific packages or repositories, you can “Watch” the repository. This is one of the badges on the top of the repository view. By default, the “Participation and mentions” option is active. When you choose “Custom,” you can select “Releases Only” to stay informed about the latest updates.&lt;/p&gt;
+&lt;h2 id=&#34;utilize-github-pages-for-hosting&#34;&gt;Utilize GitHub Pages for Hosting&lt;/h2&gt;
+&lt;p&gt;GitHub Pages allows you to host static websites directly from your repositories. This is an excellent way to showcase your projects, create documentation, or even host a personal blog. It’s free and integrates seamlessly with your GitHub workflow.&lt;/p&gt;
+&lt;p&gt;For creating webpages you can use static site generators that use markdown.&lt;br&gt;
+Hugo and Jekyll are great for that (Hugo is really fast, i switched from Jekyll ), but if you work with code and often want to showcase you project notebooks as blogpost you might think about using Quarto for &lt;a href=&#34;https://quarto.org/docs/websites/website-blog.html&#34;&gt;blogging&lt;/a&gt; .&lt;/p&gt;
+&lt;h2 id=&#34;open-github-repository-on-the-web-in-vscode&#34;&gt;Open Github repository on the web in vscode&lt;/h2&gt;
+&lt;p&gt;You can open your repository in the vscode in your browser replacing &lt;code&gt;github.com&lt;/code&gt; by &lt;code&gt;vscode.dev&lt;/code&gt;. It may be useful when you travel and have only access to your tablet et cetera.&lt;/p&gt;
+</description>
+      <author>dtborek@gmail.com (Daniel Borek)</author>
+      <guid>http://localhost:1313/2024/git-github-tips/</guid>
+      <pubDate>Fri, 14 Jun 2024 01:00:00 -0700</pubDate>
+    </item>
+    
+    <item>
+      <title>Streamline Your Research: Zotero&#39;s File Management Tricks</title>
+      <link>http://localhost:1313/2024/zotero-rename-files/</link>
+      <description>&lt;p&gt;After listening an episode of &lt;code&gt;PhD Life Coach&lt;/code&gt; podcast (recommend to everyone related to academia) on &lt;a href=&#34;https://thephdlifecoach.buzzsprout.com/1992545/15220518-2-39-how-to-be-your-own-best-personal-assistant&#34;&gt;How to be your own best personal assistant&lt;/a&gt; Iearned that some academic people still spent their time on renaming pdfs downloaded from internet. I want to share an important message to those people :) :&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;If you deal if structured articles (web, pdf) please use Reference Mangers, even if you don&amp;rsquo;t cite those articles that often; It will remove many of your headeaches and you can have nice organisation of your research materials&lt;/li&gt;
+&lt;li&gt;If you deal if structured articles (web, pdf) please use Reference Mangers, even if you don&amp;rsquo;t cite those articles that often; It will remove many of your headaches and you can have nice organization of your research materials&lt;/li&gt;
 &lt;li&gt;Even if you want to store PDFs inside specific projects a Reference Mangers can be really useful by automatic file renaming for you (you can move this files to another folder later). If you need to standardize the naming convention for all your PDF files or want to include specific metadata in the file names, Zotero or other reference mangers offers built-in functionalities and add-ons to achieve this efficiently.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Here a quick tips how to rename files using Zotero.&lt;/p&gt;
 &lt;p&gt;I am using &lt;a href=&#34;https://www.zotero.org/support/beta_builds&#34;&gt;Zotero 7 Beta&lt;/a&gt; (which offer nicer interface that &lt;a href=&#34;https://www.zotero.org/download/&#34;&gt;Zotero 6&lt;/a&gt;  and some additional features like epub or webpages annotation, and is really stable and I hope will soon released as stable version) so my description might be slightly different from what people using previous version may sees .&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;In Zotero Go to Edit &amp;gt; Preferences (or Zotero &amp;gt; Preferences on a Mac).&lt;/li&gt;
-&lt;li&gt;In the General tab, check the box •&lt;code&gt; Automatically rename locally added files&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;In Zotero go to &lt;code&gt;Edit&lt;/code&gt; &amp;gt; &lt;code&gt;Preferences&lt;/code&gt; (or &lt;code&gt;Zotero&lt;/code&gt; &amp;gt; &lt;code&gt;Preferences&lt;/code&gt; on a Mac).&lt;/li&gt;
+&lt;li&gt;In the General tab, check the box •&lt;code&gt;Automatically rename locally added files&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The &amp;lsquo;Rename linked files&amp;rsquo; will matter only the files added to Zotero items arent story with Zotero folder (where every bibliographic item has its own folder with the not so meaningful alphanumeric name ) but out outside of Zotero (when you move the file, you will broke the link )&lt;/p&gt;
+&lt;p&gt;The &amp;lsquo;Rename linked files&amp;rsquo; will matter only the files added to Zotero items aren&amp;rsquo;t story with Zotero folder (where every bibliographic item has its own folder with the not so meaningful alphanumeric name ) but out outside of Zotero (when you move the file, you will broke the link )&lt;/p&gt;
 &lt;p&gt;if you click &lt;code&gt;Customize Filename Format…&lt;/code&gt; you can customize the format,.&lt;/p&gt;
 &lt;p&gt;For example using filename template&lt;br&gt;
-&lt;code&gt;{{ firstCreator suffix=&amp;quot; - &amp;quot; }}{{ year suffix=&amp;quot; - &amp;quot; }}{{ title truncate=&amp;quot;100&amp;quot; }}&lt;/code&gt; the resulting name will result in the filename similar to the one below:&lt;br&gt;
+&lt;code&gt;{{ firstCreator suffix=&amp;quot; - &amp;quot; }}{{ year suffix=&amp;quot; - &amp;quot; }}{{ title truncate=&amp;quot;100&amp;quot; }}&lt;/code&gt; the resulting name will result in the filename similar to the one below:
 &lt;code&gt;Aljalal et al. - 2024 - Selecting EEG channels and features using multi-objective optimization for accurate MCI detection v.pdf&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;On the official documentation page you can find the options you can use explained in more depth &lt;a href=&#34;https://www.zotero.org/support/file_renaming&#34;&gt;file_renaming [Zotero Documentation]&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;You easily rename in bulk the files that you already downloaded and store in Zotero if for some reason you prefer to change the pattern in the future.&lt;/p&gt;
-&lt;p&gt;Zotero will add a great value to you ith its Browser Plugin Zotero Connector (which attomatical download and add pdf (if you have acces to it on publishers page) or snapshot of webpage to your local library ), and apperently this is not a comment knowledge, as prof. Inga Mewburn from [The Thesis Whisperer][thttps://thesiswhisperer.com/] blog and On the reg podcast recently admitted in one of the episosed that she learned about the connector after few years of using Zotero.&lt;/p&gt;
+&lt;p&gt;Zotero is  adding a great QoL value  with its Browser Plugin Zotero Connector (which automatically  download and add pdf (if you have access to it on publishers page) or snapshot of webpage to your local library ), and apparently this is not a comment knowledge, as prof. Inga Mewburn from [The Thesis Whisperer][thttps://thesiswhisperer.com/] blog and On the reg podcast recently admitted in one of the episodes that she learned about the connector after few years of using Zotero.&lt;/p&gt;
 &lt;p&gt;If you prefer to have linked files in one big folder, the Zotfile or other plugin that offer the same capabilities are something for you.&lt;/p&gt;
-&lt;p&gt;Even if you prefer have PDFs in the folders of your projects, you can always easily open folder conating the renamed files and move it to the project folder.&lt;/p&gt;
+&lt;p&gt;Even if you prefer have PDFs in the folders of your projects, you can always easily open folder containing the renamed files and move it to the project folder.&lt;/p&gt;
+&lt;p&gt;I didn&amp;rsquo;t create here a full tutorial or covered many helpful features of Zotero, but you can find many great tutorials on the internet. I am also a big fan of integrating Zotero with &lt;a href=&#34;https://obsidian.md/&#34;&gt;Obsidian&lt;/a&gt;, you could find some example vault how it could be used here:&lt;a href=&#34;https://github.com/rlaker/Obsidian-for-Academia&#34;&gt;rlaker/Obsidian-for-Academia: Demo vault to explain how to use Obsidian, git and Zotero&lt;/a&gt; with another writeup here: &lt;a href=&#34;https://radoncnotes.com/2024/03/08/integrating-obsidian-with-zotero/&#34;&gt;Integrating Obsidian with Zotero – RadOncNotes&lt;/a&gt;.&lt;/p&gt;
 </description>
       <author>dtborek@gmail.com (Daniel Borek)</author>
-      <guid>http://localhost:60341/2024/zotero-rename-files/</guid>
+      <guid>http://localhost:1313/2024/zotero-rename-files/</guid>
       <pubDate>Thu, 13 Jun 2024 00:00:00 +0000</pubDate>
     </item>
     
     <item>
       <title>Zotero 7 is coming …</title>
-      <link>http://localhost:60341/2023/zotero-7/</link>
-      <description>&lt;p&gt;&lt;a href=&#34;https://www.zotero.org/&#34;&gt;Zotero&lt;/a&gt; is a free, open-source reference management software. It make the process of collecting and storing references pretty easy (sometimes too easy !).&lt;/p&gt;
+      <link>http://localhost:1313/2023/zotero-7/</link>
+      <description>&lt;p&gt;Edit 1: Zotero 7 was realeased officialy in August 2024.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.zotero.org/&#34;&gt;Zotero&lt;/a&gt; is a free, open-source reference management software. It make the process of collecting and storing references pretty easy (sometimes too easy !).&lt;/p&gt;
 &lt;p&gt;The latest stable, big release version, Zotero 6, was introduced in March 2022. It brought a new built-in PDF viewer and annotation system, as well as iOS and iPadOS apps.&lt;/p&gt;
 &lt;h2 id=&#34;zotero-7-is-coming&#34;&gt;Zotero 7 is Coming&lt;/h2&gt;
 &lt;p&gt;Recently, the devs shared a public beta of Zotero 7. Most of the updates are related to transitioning from the legacy Firefox 60 ESR, which Zotero was originally built on top of (Zotero started as a browser extension), to the newer Firefox 102 ESR now and Firefox 115 ESR before the release this year.&lt;/p&gt;
@@ -65,52 +231,59 @@ https://forums.zotero.org/discussion/90858/pdf-reader-and-zotero-open-pdf-links
 &lt;li&gt;&lt;a href=&#34;https://github.com/wshanks/Zutilo&#34;&gt;GitHub - wshanks/Zutilo: Zotero plugin providing some additional editing features&lt;/a&gt; A nice collection of tools, still in the process of porting.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;While Zotero 7 has some additional compatible plugins I don&amp;rsquo;t use or haven&amp;rsquo;t tested, many of the best plugins remain available only for Zotero 6.&amp;quot;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Edit 2:&lt;/em&gt; Some additional extensions not mentioned earlier, that I am currently using (in 2024):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/justinribeiro/zotero-google-scholar-citation-count&#34;&gt;justinribeiro/zotero-google-scholar-citation-count: Zotero plugin for fetching number of citations from Google Scholar.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/daeh/zotero-markdb-connect#readme&#34;&gt;daeh/zotero-markdb-connect: Zotero plugin that links your Markdown database to Zotero. Jump directly from Zotero Items to connected Markdown files. Automatically tags Zotero Items so you can easily see which papers you&amp;rsquo;ve made notes for.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://chenglongma.com/zoplicate/&#34;&gt;Zoplicate | A plugin that does one thing only - Detect and manage duplicate items in Zotero.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/github-young/zotero-better-authors#readme&#34;&gt;github-young/zotero-better-authors: Customize the displayed authors list&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;markdown-translators&#34;&gt;Markdown translators&lt;/h2&gt;
 &lt;p&gt;Useful pair of Zotero translators when you want to link to Zotero item as Markdown link&lt;br&gt;
 &lt;a href=&#34;https://github.com/erazlogo/zotero-markdown-translators&#34;&gt;https://github.com/erazlogo/zotero-markdown-translators&lt;/a&gt;&lt;/p&gt;
 </description>
       <author>dtborek@gmail.com (Daniel Borek)</author>
-      <guid>http://localhost:60341/2023/zotero-7/</guid>
+      <guid>http://localhost:1313/2023/zotero-7/</guid>
       <pubDate>Tue, 15 Aug 2023 00:00:00 +0000</pubDate>
     </item>
     
     <item>
       <title>PDF tweaks and tips with Quarto</title>
-      <link>http://localhost:60341/2023/quarto-tips/</link>
+      <link>http://localhost:1313/2023/quarto-tips/</link>
       <description>&lt;p&gt;&lt;em&gt;Disclaimer: This is work in progress, I will be updating this post as I standardize and create a separate template/extension repository.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;I wrote my master thesis in LaTeX, but given that markdown is a bit nicer to write, so I decided to switch with my PhD thesis to Markdown.&lt;br&gt;
 I was trying with Pandoc but last year I switched to Quarto, as it is more flexible, and it is easier to customize.&lt;/p&gt;
 &lt;h1 id=&#34;nicer-fonts-and-better-handling-of-figures&#34;&gt;Nicer Fonts and Better Handling of Figures&lt;/h1&gt;
 &lt;p&gt;I am sharing with you a fragment of my &lt;code&gt;_quarto.yml&lt;/code&gt; file, with some tweaks I am using to make my PDF output nicer.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000080&#34;&gt;format&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#000080&#34;&gt;pdf&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#000080&#34;&gt;link-citations&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#998;font-style:italic&#34;&gt;# &amp;lt;1&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#000080&#34;&gt;number-sections&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;false&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#000080&#34;&gt;reference-section-title&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;References&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#000080&#34;&gt;pdf-engine&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;xelatex&lt;span style=&#34;color:#bbb&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#000080&#34;&gt;include-in-header&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;      &lt;/span&gt;&lt;span style=&#34;color:#000080&#34;&gt;text&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;|&lt;span style=&#34;color:#d14&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#d14&#34;&gt;        \usepackage{epigraph} 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#d14&#34;&gt;        %%
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#d14&#34;&gt;        %% Code related to fonts and how the output looks
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#d14&#34;&gt;        %%
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#d14&#34;&gt;        \usepackage{mathpazo}   % &amp;lt;2&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#d14&#34;&gt;        \usepackage[T1]{fontenc}
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#d14&#34;&gt;        \usepackage[sups,osf]{fbb} % osf (or tosf) for text, not math # &amp;lt;2&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#d14&#34;&gt;        \usepackage[scaled=.95]{cabin} % sans serif # &amp;lt;2&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#d14&#34;&gt;        \usepackage[varqu,varl]{inconsolata} % sans serif typewriter # &amp;lt;2&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#d14&#34;&gt;        %%
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#d14&#34;&gt;        %% Code related to figures in document
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#d14&#34;&gt;        %%
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#d14&#34;&gt;        \usepackage{float}  % &amp;lt;3&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#d14&#34;&gt;        \graphicspath{{figures}{chapters/figures}{../figures}{chapters}} # &amp;lt;4&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#d14&#34;&gt;        \let\origfigure\figure
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#d14&#34;&gt;        \let\endorigfigure\endfigure
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#d14&#34;&gt;        \renewenvironment{figure}[1][2] {
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#d14&#34;&gt;            \expandafter\origfigure\expandafter[H]
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#d14&#34;&gt;        } {
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#d14&#34;&gt;            \endorigfigure
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#d14&#34;&gt;        }&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;        
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#fff&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#0550ae&#34;&gt;format&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#fff&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#fff&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#0550ae&#34;&gt;pdf&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#fff&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#fff&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#0550ae&#34;&gt;link-citations&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#fff&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#cf222e&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color:#fff&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#57606a&#34;&gt;# &amp;lt;1&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#fff&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#fff&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#0550ae&#34;&gt;number-sections&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#fff&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#cf222e&#34;&gt;false&lt;/span&gt;&lt;span style=&#34;color:#fff&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#fff&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#0550ae&#34;&gt;reference-section-title&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#fff&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#0a3069&#34;&gt;&amp;#34;References&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#fff&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#fff&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#0550ae&#34;&gt;pdf-engine&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#fff&#34;&gt; &lt;/span&gt;xelatex&lt;span style=&#34;color:#fff&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#fff&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#0550ae&#34;&gt;include-in-header&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#fff&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#fff&#34;&gt;      &lt;/span&gt;&lt;span style=&#34;color:#0550ae&#34;&gt;text&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#fff&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;|&lt;/span&gt;&lt;span style=&#34;color:#0a3069&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#0a3069&#34;&gt;        \usepackage{epigraph} 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#0a3069&#34;&gt;        %%
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#0a3069&#34;&gt;        %% Code related to fonts and how the output looks
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#0a3069&#34;&gt;        %%
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#0a3069&#34;&gt;        \usepackage{mathpazo}   % &amp;lt;2&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#0a3069&#34;&gt;        \usepackage[T1]{fontenc}
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#0a3069&#34;&gt;        \usepackage[sups,osf]{fbb} % osf (or tosf) for text, not math # &amp;lt;2&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#0a3069&#34;&gt;        \usepackage[scaled=.95]{cabin} % sans serif # &amp;lt;2&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#0a3069&#34;&gt;        \usepackage[varqu,varl]{inconsolata} % sans serif typewriter # &amp;lt;2&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#0a3069&#34;&gt;        %%
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#0a3069&#34;&gt;        %% Code related to figures in document
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#0a3069&#34;&gt;        %%
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#0a3069&#34;&gt;        \usepackage{float}  % &amp;lt;3&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#0a3069&#34;&gt;        \graphicspath{{figures}{chapters/figures}{../figures}{chapters}} # &amp;lt;4&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#0a3069&#34;&gt;        \let\origfigure\figure
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#0a3069&#34;&gt;        \let\endorigfigure\endfigure
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#0a3069&#34;&gt;        \renewenvironment{figure}[1][2] {
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#0a3069&#34;&gt;            \expandafter\origfigure\expandafter[H]
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#0a3069&#34;&gt;        } {
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#0a3069&#34;&gt;            \endorigfigure
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#0a3069&#34;&gt;        }&lt;/span&gt;&lt;span style=&#34;color:#fff&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I put number as comments, so you can better understand specific lines.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Some options for PDF output (more or less self-explanatory)&amp;gt;&lt;/li&gt;
@@ -124,35 +297,35 @@ I was trying with Pandoc but last year I switched to Quarto, as it is more flexi
 &lt;p&gt;Since quarto 1.2 profiles are introduced &lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; In my use case I have on profile &lt;code&gt;_quarto-thesis.yml&lt;/code&gt; which include all chapters and preambles, and another &lt;code&gt;_quarto.yml&lt;/code&gt; which I can use just to compile the current markdown file; If I want to render whole thesis I just use &lt;code&gt;quarto render --profile thesis&lt;/code&gt;; you could have as many as you want of those profiles (I was procrastinating that way with different look and templates for my thesis :slight_smile: )&lt;/p&gt;
 &lt;h1 id=&#34;roman-numbering-for-front-matter-and-arabic-for-main-matter&#34;&gt;Roman Numbering for front Matter and Arabic for Main Matter&lt;/h1&gt;
 &lt;p&gt;I am inserting roman numbering for front matter and arabic for main matter.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000080&#34;&gt;format&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#000080&#34;&gt;pdf&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#000080&#34;&gt;include-before-body&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;        &lt;/span&gt;&lt;span style=&#34;color:#000080&#34;&gt;text&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;|&lt;span style=&#34;color:#d14&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#d14&#34;&gt;           \pagestyle{plain}
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#d14&#34;&gt;           \pagenumbering{roman}&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;           
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#fff&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#0550ae&#34;&gt;format&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#fff&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#fff&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#0550ae&#34;&gt;pdf&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#fff&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#fff&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#0550ae&#34;&gt;include-before-body&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#fff&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#fff&#34;&gt;        &lt;/span&gt;&lt;span style=&#34;color:#0550ae&#34;&gt;text&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#fff&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;|&lt;/span&gt;&lt;span style=&#34;color:#0a3069&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#0a3069&#34;&gt;           \pagestyle{plain}
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#0a3069&#34;&gt;           \pagenumbering{roman}&lt;/span&gt;&lt;span style=&#34;color:#fff&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;In main tex I switch back to arabic numbering:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-tex&#34; data-lang=&#34;tex&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;\pagenumbering&lt;/span&gt;&lt;span style=&#34;color:#0086b3&#34;&gt;{&lt;/span&gt;arabic&lt;span style=&#34;color:#0086b3&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;problem-with-_indexmd_-and-inserted-blank-page&#34;&gt;Problem with &lt;em&gt;index.md&lt;/em&gt; and Inserted Blank Page&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-tex&#34; data-lang=&#34;tex&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#cf222e&#34;&gt;\pagenumbering&lt;/span&gt;&lt;span style=&#34;color:#6639ba&#34;&gt;{&lt;/span&gt;arabic&lt;span style=&#34;color:#6639ba&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;problem-with-indexmd-and-inserted-blank-page&#34;&gt;Problem with &lt;em&gt;index.md&lt;/em&gt; and Inserted Blank Page&lt;/h1&gt;
 &lt;p&gt;As you write complex project, you want might want to have separate files for each chapter.&lt;br&gt;
 When you are using &lt;code&gt;quarto&lt;/code&gt; to render your project, you could put them inside &lt;code&gt;index.md&lt;/code&gt; in your root folder:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{{include &amp;#34;chapters/chapter1.qmd&amp;#34;}}
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{{include &amp;#34;chapters/chapter1.qmd&amp;#34;}}
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{{include &amp;#34;chapters/chapter2.qmd&amp;#34;}}
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Using &lt;code&gt;include&lt;/code&gt; filter will add the content of the files to the &lt;code&gt;index.md&lt;/code&gt; file when compiling.&lt;br&gt;
 This is nice solution, but I have a problem when I want to use &lt;code&gt;quarto preview&lt;/code&gt; to update and monitor resulting pdf when I change something in source files.&lt;br&gt;
 Unfortunately, &lt;code&gt;quarto preview&lt;/code&gt; does not update output &lt;code&gt;.pdf&lt;/code&gt; file when files added with &lt;code&gt;include&lt;/code&gt; change, so I needed to choose another solution.&lt;/p&gt;
 &lt;p&gt;Alternative solution is to add chapters into you &lt;code&gt;_quarto.yml&lt;/code&gt; file:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000080&#34;&gt;project&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#000080&#34;&gt;output-dir&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;_output&lt;span style=&#34;color:#bbb&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#000080&#34;&gt;execute-dir&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;file&lt;span style=&#34;color:#bbb&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#000080&#34;&gt;book&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#000080&#34;&gt;title&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;Title of my  thesis or book&lt;span style=&#34;color:#bbb&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#000080&#34;&gt;author&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#000080&#34;&gt;name&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;Author Name&lt;span style=&#34;color:#bbb&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#000080&#34;&gt;chapters&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;- index.qmd&lt;span style=&#34;color:#bbb&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;- chapters/chapter1.md&lt;span style=&#34;color:#bbb&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;- chapters/chapter1.md&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#0550ae&#34;&gt;project&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#fff&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#fff&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#0550ae&#34;&gt;output-dir&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#fff&#34;&gt; &lt;/span&gt;_output&lt;span style=&#34;color:#fff&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#fff&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#0550ae&#34;&gt;execute-dir&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#fff&#34;&gt; &lt;/span&gt;file&lt;span style=&#34;color:#fff&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#fff&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#0550ae&#34;&gt;book&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#fff&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#fff&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#0550ae&#34;&gt;title&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#fff&#34;&gt; &lt;/span&gt;Title of my  thesis or book&lt;span style=&#34;color:#fff&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#fff&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#0550ae&#34;&gt;author&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#fff&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#fff&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#0550ae&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#fff&#34;&gt; &lt;/span&gt;Author Name&lt;span style=&#34;color:#fff&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#fff&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#0550ae&#34;&gt;chapters&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#fff&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#fff&#34;&gt;    &lt;/span&gt;- index.qmd&lt;span style=&#34;color:#fff&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#fff&#34;&gt;    &lt;/span&gt;- chapters/chapter1.md&lt;span style=&#34;color:#fff&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#fff&#34;&gt;    &lt;/span&gt;- chapters/chapter1.md&lt;span style=&#34;color:#fff&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I want to all of my content of to live in the &amp;lsquo;chapters&amp;rsquo; folder.&lt;br&gt;
 Unfortunately currently in &lt;code&gt;quatro&lt;/code&gt; users always need to include &lt;code&gt;index.md&lt;/code&gt; (it makes sense when generating &lt;code&gt;html&lt;/code&gt; as output, but not always when generating &lt;code&gt;pdf&lt;/code&gt;).&lt;/p&gt;
 &lt;p&gt;I can leave the &lt;code&gt;index.md&lt;/code&gt; file empty, but then I will have an empty page between my table of content and first chapter.&lt;br&gt;
@@ -161,10 +334,10 @@ I can include the first chapter into index.md but then we were hitting the same 
 &lt;p&gt;By default, latex is adding a page break after each chapter, and the &lt;code&gt;index.md&lt;/code&gt; file is treated as a chapter, even if empty.&lt;br&gt;
 As a hack, I am hiding the problem by relaxing &lt;code&gt;\clearpage&lt;/code&gt; behaviour in latex.&lt;/p&gt;
 &lt;p&gt;I am leaving my &lt;code&gt;index.md&lt;/code&gt; file almost empty, I&amp;rsquo;m just adding this latex code &lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-tex&#34; data-lang=&#34;tex&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;\let\standardclearpage\clearpage&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;\let\clearpage\relax&lt;/span&gt; 
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-tex&#34; data-lang=&#34;tex&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#cf222e&#34;&gt;\let\standardclearpage\clearpage&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#cf222e&#34;&gt;\let\clearpage\relax&lt;/span&gt; 
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Then within my first chapter when my content start, I am returning to standard behaviour of &lt;code&gt;\clearpage&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-tex&#34; data-lang=&#34;tex&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;\let\clearpage\standardclearpage&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-tex&#34; data-lang=&#34;tex&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#cf222e&#34;&gt;\let\clearpage\standardclearpage&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This way I am not adding any extra page between my table of content and first chapter, and I can use &lt;code&gt;quarto preview&lt;/code&gt; to monitor my changes.&lt;br&gt;
 In future the &lt;code&gt;quatro&lt;/code&gt; behaviour might change regarding inclusion of `index.md``, you can follow discussion here:&lt;/p&gt;
 &lt;h1 id=&#34;useful-materials&#34;&gt;Useful Materials&lt;/h1&gt;
@@ -185,13 +358,13 @@ If you don&amp;rsquo;t use quarto, but you want to play with it, you can modify 
 &lt;/div&gt;
 </description>
       <author>dtborek@gmail.com (Daniel Borek)</author>
-      <guid>http://localhost:60341/2023/quarto-tips/</guid>
+      <guid>http://localhost:1313/2023/quarto-tips/</guid>
       <pubDate>Fri, 04 Aug 2023 00:00:00 +0000</pubDate>
     </item>
     
     <item>
       <title>From Quarto with love (but back to Hugo)</title>
-      <link>http://localhost:60341/2023/back-to-hugo/</link>
+      <link>http://localhost:1313/2023/back-to-hugo/</link>
       <description>&lt;p&gt;I&amp;rsquo;ve been using different static site generators over the years - Jekyll, Hugo, and most recently Quarto. In this post I&amp;rsquo;ll share my experiences and how I&amp;rsquo;m now using Hugo and Quarto together for my blog.&lt;/p&gt;
 &lt;h1 id=&#34;why-i-switched-back-to-hugo&#34;&gt;Why I Switched back to Hugo&lt;/h1&gt;
 &lt;p&gt;I used Jekyll years ago (you can see one of the pages I created &lt;a href=&#34;https://brainhackwarsaw2017.github.io/&#34;&gt;here&lt;/a&gt;), then switched to Hugo, and about a year ago I started using Quarto.&lt;/p&gt;
@@ -207,12 +380,12 @@ If you don&amp;rsquo;t use quarto, but you want to play with it, you can modify 
 &lt;ul&gt;
 &lt;li&gt;I added some config settings to my Hugo &lt;code&gt;config.toml&lt;/code&gt; file:&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ignoreFiles = [ &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;\\.qmd$&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;\\.ipynb$&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;\\.py$&amp;#34;&lt;/span&gt; ]
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;ignoreFiles&lt;/span&gt; &lt;span style=&#34;color:#1f2328&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#1f2328&#34;&gt;[&lt;/span&gt; &lt;span style=&#34;color:#0a3069&#34;&gt;&amp;#34;\\.qmd$&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#0a3069&#34;&gt;&amp;#34;\\.ipynb$&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#0a3069&#34;&gt;&amp;#34;\\.py$&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#1f2328&#34;&gt;]&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[markup]
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  defaultMarkdownHandler = &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;goldmark&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  [markup.goldmark.renderer]
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    unsafe = &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;markup&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#1f2328&#34;&gt;defaultMarkdownHandler&lt;/span&gt; &lt;span style=&#34;color:#1f2328&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#0a3069&#34;&gt;&amp;#34;goldmark&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#1f2328&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;markup&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;goldmark&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;renderer&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#1f2328&#34;&gt;unsafe&lt;/span&gt; &lt;span style=&#34;color:#1f2328&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#cf222e&#34;&gt;true&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;I have a &lt;code&gt;content/posts&lt;/code&gt; folder containing subfolders for each post, with a &lt;code&gt;index.qmd&lt;/code&gt; file inside.&lt;/p&gt;
@@ -221,14 +394,14 @@ If you don&amp;rsquo;t use quarto, but you want to play with it, you can modify 
 &lt;p&gt;I put this &lt;code&gt;_quarto.yml&lt;/code&gt; in the Hugo root directory:&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000080&#34;&gt;project&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#000080&#34;&gt;type&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;hugo&lt;span style=&#34;color:#bbb&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#000080&#34;&gt;format&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#000080&#34;&gt;hugo-md&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#000080&#34;&gt;code-fold&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#000080&#34;&gt;html-math-method&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;webtex&lt;span style=&#34;color:#bbb&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#000080&#34;&gt;execute&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#000080&#34;&gt;warning&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;false&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#0550ae&#34;&gt;project&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#fff&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#fff&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#0550ae&#34;&gt;type&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#fff&#34;&gt; &lt;/span&gt;hugo&lt;span style=&#34;color:#fff&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#0550ae&#34;&gt;format&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#fff&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#fff&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#0550ae&#34;&gt;hugo-md&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#fff&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#fff&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#0550ae&#34;&gt;code-fold&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#fff&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#cf222e&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color:#fff&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#fff&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#0550ae&#34;&gt;html-math-method&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#fff&#34;&gt; &lt;/span&gt;webtex&lt;span style=&#34;color:#fff&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#0550ae&#34;&gt;execute&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#fff&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#fff&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#0550ae&#34;&gt;warning&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#fff&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#cf222e&#34;&gt;false&lt;/span&gt;&lt;span style=&#34;color:#fff&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;To create post written in &lt;code&gt;qmd&lt;/code&gt; files, I run &lt;code&gt;quarto render&lt;/code&gt; which outputs Markdown from my &lt;code&gt;qmd&lt;/code&gt; posts into the Hugo content folder.&lt;/li&gt;
 &lt;/ul&gt;
@@ -250,13 +423,13 @@ Later I mixed it with another theme, &lt;a href=&#34;https://github.com/ronv/sim
 &lt;li&gt;The theme&amp;rsquo;s example content was cluttering my published site. I forked the theme and removed the examples.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Here is my final &lt;code&gt;.gitmodules&lt;/code&gt; file:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[submodule &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;themes/lines&amp;#34;&lt;/span&gt;]
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    path = &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;themes/lines&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    url = &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;https://github.com/danieltomasz/lines.git&amp;#34;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;submodule&lt;/span&gt; &lt;span style=&#34;color:#0a3069&#34;&gt;&amp;#34;themes/lines&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#1f2328&#34;&gt;path&lt;/span&gt; &lt;span style=&#34;color:#1f2328&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#0a3069&#34;&gt;&amp;#34;themes/lines&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#1f2328&#34;&gt;url&lt;/span&gt; &lt;span style=&#34;color:#1f2328&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#0a3069&#34;&gt;&amp;#34;https://github.com/danieltomasz/lines.git&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;hugo-and-code-highlighting&#34;&gt;Hugo and Code Highlighting&lt;/h2&gt;
 &lt;p&gt;To get code highlighting in backticks markdown fences I enabled:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;pygmentsStyle = &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;pygments&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;pygmentsCodefences = &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;true&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;pygmentsStyle&lt;/span&gt; &lt;span style=&#34;color:#1f2328&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#0a3069&#34;&gt;&amp;#34;pygments&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;pygmentsCodefences&lt;/span&gt; &lt;span style=&#34;color:#1f2328&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#cf222e&#34;&gt;true&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;adding-comments-with-giscus&#34;&gt;Adding Comments with &lt;code&gt;giscus&lt;/code&gt;&lt;/h2&gt;
 &lt;p&gt;I followed various blogpost with the configuration advices.&lt;br&gt;
 By default, &lt;code&gt;giscus&lt;/code&gt; is adding comments to every page, but I wanted to have comments only on my posts.&lt;br&gt;
@@ -265,12 +438,12 @@ I followed advice&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; clas
     {{ partial &amp;#34;giscus&amp;#34; . }}
 {{ end }}
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;When I don&amp;rsquo;t want to include a comments block, I am adding this in the frontmatter of the post (yaml):&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000080&#34;&gt;noComment&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#0550ae&#34;&gt;noComment&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#fff&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#cf222e&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color:#fff&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Some other useful links: &lt;a href=&#34;https://www.brycewray.com/posts/2022/05/tips-using-giscus/&#34;&gt;https://www.brycewray.com/posts/2022/05/tips-using-giscus/&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;date-of-last-edit-directly-from-github&#34;&gt;Date of Last Edit Directly from Github&lt;/h2&gt;
 &lt;p&gt;Some advice how to set up it: &lt;a href=&#34;https://makewithhugo.com/add-a-last-edited-date/&#34;&gt;Add a Last Edited Date to Posts · Make with Hugo&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;One caveat: setting &lt;code&gt;enableGitInfo&lt;/code&gt; to &lt;code&gt;true&lt;/code&gt; in your site’s configuration file sometimes is not enough&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;. You have to add &lt;code&gt;--enableGitInfo&lt;/code&gt; to get &lt;code&gt;.GitInfo&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hugo serve --enableGitInfo
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hugo serve --enableGitInfo
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
 &lt;hr&gt;
 &lt;ol&gt;
@@ -284,13 +457,13 @@ I followed advice&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; clas
 &lt;/div&gt;
 </description>
       <author>dtborek@gmail.com (Daniel Borek)</author>
-      <guid>http://localhost:60341/2023/back-to-hugo/</guid>
+      <guid>http://localhost:1313/2023/back-to-hugo/</guid>
       <pubDate>Thu, 03 Aug 2023 00:00:00 +0000</pubDate>
     </item>
     
     <item>
       <title>Using Wikilinks and Git/Obsidian Callouts in Quarto Markdown</title>
-      <link>http://localhost:60341/2023/obsidian-quarto-callouts/</link>
+      <link>http://localhost:1313/2023/obsidian-quarto-callouts/</link>
       <description>&lt;h1 id=&#34;about-callouts&#34;&gt;About Callouts&lt;/h1&gt;
 &lt;p&gt;&lt;em&gt;Disclaimer: Previous version of this post was originally published as a &lt;a href=&#34;https://gist.github.com/danieltomasz/87b1321e23c045309d2571f525f856cf&#34;&gt;public gist&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Callouts are a great way to highlight important details in your text by adding boxes with icons. Many flavours of markdown support them (but might use different syntax).&lt;/p&gt;
@@ -305,89 +478,89 @@ I followed advice&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; clas
 &lt;p&gt;Each type has a different color and icon. You can see examples in the &lt;a href=&#34;https://quarto.org/docs/authoring/callouts.html&#34;&gt;Quarto documentation&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;the-problem&#34;&gt;The Problem&lt;/h2&gt;
 &lt;p&gt;To use callouts in Quarto markdown (&lt;code&gt;qmd&lt;/code&gt;) files, you need to use Pandoc&amp;rsquo;s div syntax:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-md&#34; data-lang=&#34;md&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;::: {.callout-note}
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-md&#34; data-lang=&#34;md&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;::: {.callout-note}
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;This is a note callout
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;:::
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;But Obsidian doesn&amp;rsquo;t recognise this syntax. Instead, it uses:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;gt; &lt;/span&gt;&lt;span style=&#34;color:#000;font-style:italic&#34;&gt;[!note] My note
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#000;font-style:italic&#34;&gt;&amp;gt; Note content
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#cf222e&#34;&gt;&amp;gt; &lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;[!note] My note
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#cf222e&#34;&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;&amp;gt; Note content
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;So there&amp;rsquo;s no easy way to preview nice callouts in Obsidian before compiling to PDF.&lt;/p&gt;
 &lt;p&gt;Github also introduced callouts into its markdown flavour with the same syntax under name of &lt;a href=&#34;https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts&#34;&gt;Alerts&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&#34;lua-filters-to-the-rescue&#34;&gt;Lua Filters to the Rescue&lt;/h1&gt;
 &lt;p&gt;Pandoc supports Lua filters that can modify the markdown before compilation.&lt;/p&gt;
 &lt;p&gt;I found a filter on the Obsidian forum and modified it to support Quarto callouts. You need to save the filter as &lt;code&gt;obsidian-callouts.lua&lt;/code&gt; in your project&amp;rsquo;s &lt;code&gt;filters&lt;/code&gt; folder.&lt;/p&gt;
 &lt;p&gt;Then point to it in &lt;code&gt;_quarto.yml&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000080&#34;&gt;filters&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;- filters/obsidian-callouts.lua&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#0550ae&#34;&gt;filters&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#fff&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;- filters/obsidian-callouts.lua&lt;span style=&#34;color:#fff&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Content of the file &lt;code&gt;obsidian-callouts.lua&lt;/code&gt; is in the following gist :&lt;/p&gt;
 &lt;script src=&#34;https://gist.github.com/danieltomasz/31d298aca2969adaf60d8841b68005e2.js&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;This makes Obsidian&amp;rsquo;s callout syntax compile properly in Quarto.&lt;/p&gt;
 &lt;h1 id=&#34;tweaking-obsidian-css&#34;&gt;Tweaking Obsidian CSS&lt;/h1&gt;
 &lt;p&gt;By default Obsidian only styles &lt;code&gt;note&lt;/code&gt; and &lt;code&gt;warning&lt;/code&gt; callouts. To match Quarto, add this CSS:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#998;font-style:italic&#34;&gt;/* See https://lucide.dev for icon codes */&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#57606a&#34;&gt;/* See https://lucide.dev for icon codes */&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#998;font-style:italic&#34;&gt;/* annotation */&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;.&lt;span style=&#34;color:#458;font-weight:bold&#34;&gt;callout&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#000080&#34;&gt;data-callout&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;important&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;]&lt;/span&gt; {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#008080&#34;&gt;--callout-color&lt;/span&gt;: &lt;span style=&#34;color:#099&#34;&gt;251&lt;/span&gt;, &lt;span style=&#34;color:#099&#34;&gt;70&lt;/span&gt;, &lt;span style=&#34;color:#099&#34;&gt;76&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#008080&#34;&gt;--callout-icon&lt;/span&gt;: lucide-alert-circle
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#57606a&#34;&gt;/* annotation */&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;callout&lt;/span&gt;&lt;span style=&#34;color:#0550ae&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#0550ae&#34;&gt;data-callout&lt;/span&gt;&lt;span style=&#34;color:#0550ae&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#0a3069&#34;&gt;&amp;#34;important&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#0550ae&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color:#1f2328&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#953800&#34;&gt;--callout-color&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0550ae&#34;&gt;251&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#0550ae&#34;&gt;70&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#0550ae&#34;&gt;76&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#953800&#34;&gt;--callout-icon&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;:&lt;/span&gt; lucide-alert-circle
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;.&lt;span style=&#34;color:#458;font-weight:bold&#34;&gt;callout&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#000080&#34;&gt;data-callout&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;tip&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;]&lt;/span&gt; {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#008080&#34;&gt;--callout-color&lt;/span&gt;: &lt;span style=&#34;color:#099&#34;&gt;28&lt;/span&gt;, &lt;span style=&#34;color:#099&#34;&gt;207&lt;/span&gt;, &lt;span style=&#34;color:#099&#34;&gt;110&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#008080&#34;&gt;--callout-icon&lt;/span&gt;: lucide-lightbulb
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;callout&lt;/span&gt;&lt;span style=&#34;color:#0550ae&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#0550ae&#34;&gt;data-callout&lt;/span&gt;&lt;span style=&#34;color:#0550ae&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#0a3069&#34;&gt;&amp;#34;tip&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#0550ae&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color:#1f2328&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#953800&#34;&gt;--callout-color&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0550ae&#34;&gt;28&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#0550ae&#34;&gt;207&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#0550ae&#34;&gt;110&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#953800&#34;&gt;--callout-icon&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;:&lt;/span&gt; lucide-lightbulb
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;.&lt;span style=&#34;color:#458;font-weight:bold&#34;&gt;callout&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#000080&#34;&gt;data-callout&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;caution&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;]&lt;/span&gt; {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#008080&#34;&gt;--callout-color&lt;/span&gt;: &lt;span style=&#34;color:#099&#34;&gt;255&lt;/span&gt;,&lt;span style=&#34;color:#099&#34;&gt;153&lt;/span&gt;,&lt;span style=&#34;color:#099&#34;&gt;102&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#008080&#34;&gt;--callout-icon&lt;/span&gt;: lucide-flame
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;callout&lt;/span&gt;&lt;span style=&#34;color:#0550ae&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#0550ae&#34;&gt;data-callout&lt;/span&gt;&lt;span style=&#34;color:#0550ae&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#0a3069&#34;&gt;&amp;#34;caution&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#0550ae&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color:#1f2328&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#953800&#34;&gt;--callout-color&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0550ae&#34;&gt;255&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#0550ae&#34;&gt;153&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#0550ae&#34;&gt;102&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#953800&#34;&gt;--callout-icon&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;:&lt;/span&gt; lucide-flame
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now the callouts look (almost) the same in Obsidian and compiled PDFs!&lt;/p&gt;
 &lt;p&gt;Below is the Obsidian markdown that can be used to generate the basic 5 types of callouts that map nicely to Quarto types:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;gt; &lt;/span&gt;&lt;span style=&#34;color:#000;font-style:italic&#34;&gt;[!note] My note
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#000;font-style:italic&#34;&gt;&amp;gt; Note content
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;gt; &lt;/span&gt;&lt;span style=&#34;color:#000;font-style:italic&#34;&gt;[!warning] My note
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#000;font-style:italic&#34;&gt;&amp;gt; Note content
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;gt; &lt;/span&gt;&lt;span style=&#34;color:#000;font-style:italic&#34;&gt;[!important] My note
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#000;font-style:italic&#34;&gt;&amp;gt; Note content
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;gt; &lt;/span&gt;&lt;span style=&#34;color:#000;font-style:italic&#34;&gt;[!tip] My note
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#000;font-style:italic&#34;&gt;&amp;gt; Note content
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;gt; &lt;/span&gt;&lt;span style=&#34;color:#000;font-style:italic&#34;&gt;[!caution] My note
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#000;font-style:italic&#34;&gt;&amp;gt; Note content
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#cf222e&#34;&gt;&amp;gt; &lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;[!note] My note
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#cf222e&#34;&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;&amp;gt; Note content
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#cf222e&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#cf222e&#34;&gt;&amp;gt; &lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;[!warning] My note
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#cf222e&#34;&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;&amp;gt; Note content
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#cf222e&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#cf222e&#34;&gt;&amp;gt; &lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;[!important] My note
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#cf222e&#34;&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;&amp;gt; Note content
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#cf222e&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#cf222e&#34;&gt;&amp;gt; &lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;[!tip] My note
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#cf222e&#34;&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;&amp;gt; Note content
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#cf222e&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#cf222e&#34;&gt;&amp;gt; &lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;[!caution] My note
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#cf222e&#34;&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;&amp;gt; Note content
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Obsidian support for callouts is much more &lt;a href=&#34;https://help.obsidian.md/Editing+and+formatting/Callouts&#34;&gt;extensive&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;caveat&#34;&gt;Caveat&lt;/h2&gt;
 &lt;p&gt;This approach makes callouts render nicely in Obsidian, but may break other Quarto-supporting editors. Test thoroughly before relying on it.&lt;/p&gt;
 &lt;p&gt;Remember that in order for callouts to work you need to leave an empty line starting with &lt;code&gt;&amp;gt;&lt;/code&gt; between title and content. If you want a line break in the rendered callout, you might need the same trick.&lt;/p&gt;
-&lt;p&gt;Since Quarto 1.3 callouts are represented as a custom AST node. (An earlier version of Lua filter that generated native Pandoc Divs)[https://forum.obsidian.md/t/rendering-callouts-similarly-in-pandoc/40020/6] will not work with latest Quarto.&lt;/p&gt;
+&lt;p&gt;Since Quarto 1.3 callouts are represented as a custom AST node. &lt;a href=&#34;https://forum.obsidian.md/t/rendering-callouts-similarly-in-pandoc/40020/6&#34;&gt;An earlier version of Lua filter that generated native Pandoc Divs&lt;/a&gt; will not work with latest Quarto.&lt;/p&gt;
 &lt;h2 id=&#34;bonus-wikilinks&#34;&gt;Bonus: Wikilinks&lt;/h2&gt;
 &lt;p&gt;Obsidian also supports wikilinks, which are a great way to link between notes. They are not supported in Quarto, but you can use a Lua filter to convert them to regular text in the rendered file. Unfortunately, this version doesn&amp;rsquo;t fully support aliases in wikilinks. Also be careful, as this gist is not thouroughly tested, but works in all simple cases I tested it.&lt;/p&gt;
 &lt;script src=&#34;https://gist.github.com/danieltomasz/bde887dcc775bd47acc0ddf993e3ec2b.js&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;Add it to &lt;code&gt;_quarto.yml&lt;/code&gt; or the yaml header of your document:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000080&#34;&gt;filters&lt;/span&gt;:&lt;span style=&#34;color:#bbb&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bbb&#34;&gt;&lt;/span&gt;- filters/wikilinks-filter.lua&lt;span style=&#34;color:#bbb&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#0550ae&#34;&gt;filters&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#fff&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;- filters/wikilinks-filter.lua&lt;span style=&#34;color:#fff&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;more-obsidian--quarto-tips&#34;&gt;More Obsidian + Quarto Tips&lt;/h2&gt;
 &lt;p&gt;I use plugins to preview Quarto files in Obsidian:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;obsidian-shellcommands&lt;/code&gt; to run &lt;code&gt;quarto render&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Custom button with &lt;code&gt;commander&lt;/code&gt; to rerun compilation&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;qmd-as-md-obsidian&lt;/code&gt; for basic &lt;code&gt;qmd&lt;/code&gt; support&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;obsidian-shellcommands&lt;/code&gt; to run &lt;code&gt;quarto render&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Custom button with &lt;code&gt;commander&lt;/code&gt; to rerun compilation&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;qmd-as-md-obsidian&lt;/code&gt; for basic &lt;code&gt;qmd&lt;/code&gt; support&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;See the &lt;a href=&#34;https://github.com/danieltomasz/qmd-as-md-obsidian&#34;&gt;plugin README&lt;/a&gt; for more workflow advice.&lt;/p&gt;
 &lt;p&gt;Let me know if you have any other questions!&lt;/p&gt;
 </description>
       <author>dtborek@gmail.com (Daniel Borek)</author>
-      <guid>http://localhost:60341/2023/obsidian-quarto-callouts/</guid>
+      <guid>http://localhost:1313/2023/obsidian-quarto-callouts/</guid>
       <pubDate>Wed, 31 May 2023 00:00:00 +0000</pubDate>
     </item>
     

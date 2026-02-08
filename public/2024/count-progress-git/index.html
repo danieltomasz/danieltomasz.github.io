@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content=" Daniel Borek - http://localhost:1313/">
+  <title>Tracking Word Count Progress in Git | Daniel Borek</title>
+  <meta name="description" content="Count your progres with Typst project">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Tracking Word Count Progress in Git">
+  <meta name="twitter:description" content="Count your progres with Typst project">
+
+<meta property="og:url" content="http://localhost:1313/2024/count-progress-git/">
+  <meta property="og:site_name" content="Daniel Borek">
+  <meta property="og:title" content="Tracking Word Count Progress in Git">
+  <meta property="og:description" content="Count your progres with Typst project">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-09-05T01:00:00-07:00">
+    <meta property="article:modified_time" content="2024-09-05T22:23:00+02:00">
+    <meta property="article:tag" content="Git">
+    <meta property="article:tag" content="Typst">
+    <meta property="article:tag" content="Bash">
+    <meta property="article:tag" content="Productivity">
+
+
+  <meta itemprop="name" content="Tracking Word Count Progress in Git">
+  <meta itemprop="description" content="Count your progres with Typst project">
+  <meta itemprop="datePublished" content="2024-09-05T01:00:00-07:00">
+  <meta itemprop="dateModified" content="2024-09-05T22:23:00+02:00">
+  <meta itemprop="wordCount" content="166">
+  <meta itemprop="keywords" content="Git,Typst,Bash,Productivity">
+  <link rel="canonical" href="http://localhost:1313/2024/count-progress-git/">
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
+  <link href="https://www.google-analytics.com" rel="preconnect" crossorigin>
+  <link rel="alternate" type="application/atom+xml" title="Daniel Borek" href="http://localhost:1313/atom.xml" />
+  <link rel="alternate" type="application/json" title="Daniel Borek" href="http://localhost:1313/feed.json" />
+  
+  <style>*{line-height:1.6em;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica,helvetica neue,ubuntu,roboto,noto,segoe ui,arial,sans-serif;padding:2rem;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}main{max-width:70ch;padding:2ch;margin:auto}rig header,footer{margin-top:4rem;margin-bottom:4rem}h1:first-child{margin:0}img{display:block;max-width:100%}.meta{color:#777}.meta span a{color:#777;display:inline;text-decoration:none}.divider{display:inline-block;flex:1;border-top:1px solid #ddd;margin:0 10px}.lista .meta{align-items:center;display:flex;padding-bottom:.85em}a,a:visited{color:initial}.list{list-style-type:none;padding-left:0;margin:0}.list li{margin-bottom:.5rem}time{color:#777;font-variant-numeric:tabular-nums}blockquote{border-left:2px solid #777;padding:.5rem 1rem;margin:2rem 0}table{border-collapse:collapse;text-align:left;width:100%}table th,table td{padding:10px 20px}.posts ul,header ul,footer ul{list-style:none}.posts,header ul,footer ul{padding:0}.posts li{align-items:center;display:flex;justify-content:space-between;margin-bottom:.7rem}.posts li a,.posts li div{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-decoration:none}.posts li time{padding-left:1rem;white-space:nowrap;font-variant-numeric:tabular-nums}code,pre{color:#353535;font-family:San Francisco Mono,Monaco,consolas,lucida console,dejavu sans mono,bitstream vera sans mono,monospace;font-size:normal;border:1px solid #353535;font-size:small}code{padding:.1rem;border:none}pre{padding:.5rem;overflow-x:auto}pre code{border:none}header li,footer li{display:inline;text-transform:uppercase}header a,footer a{text-decoration:none}header ul,footer ul{justify-content:space-between;display:flex}[aria-current=page]{text-decoration:line-through}header,section,footer{padding:1rem 0}.lista li{list-style-type:none}.lista ul{display:flex;list-style-type:none}.nav{padding-top:-3em}ul{list-style-type:square}ul,ol{padding-left:1.2rem}header li,footer li{display:inline;text-transform:uppercase}header a,footer a{text-decoration:none}header ul,footer ul{justify-content:space-between;display:flex}[aria-current=page]{text-decoration:line-through}blockquote{border-left:5px solid #353535;padding-left:1rem}.posts ul,header ul,footer ul{list-style:none}.posts,header ul,footer ul{padding:0}.posts footer{padding-top:-10em}.posts li{align-items:center;display:flex;justify-content:space-between}.posts li a,.posts li div{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-decoration:none}.posts li time{padding-left:1rem;white-space:nowrap;font-variant-numeric:tabular-nums}</style>
+
+  
+
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "articleSection": "posts",
+    "name": "Tracking Word Count Progress in Git",
+    "headline": "Tracking Word Count Progress in Git",
+    "alternativeHeadline": "",
+    "description": "Count your progres with Typst project",
+    "inLanguage": "en-us",
+    "isFamilyFriendly": "true",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http:\/\/localhost:1313\/2024\/count-progress-git\/"
+    },
+    "author" : {
+        "@type": "Person",
+        "name": "Daniel Borek"
+    },
+    "creator" : {
+        "@type": "Person",
+        "name": "Daniel Borek"
+    },
+    "accountablePerson" : {
+        "@type": "Person",
+        "name": "Daniel Borek"
+    },
+    "copyrightHolder" : "Daniel Borek",
+    "copyrightYear" : "2024",
+    "dateCreated": "2024-09-05T01:00:00.00Z",
+    "datePublished": "2024-09-05T01:00:00.00Z",
+    "dateModified": "2024-09-05T22:23:00.00Z",
+    "publisher":{
+        "@type":"Organization",
+        "name": "Daniel Borek",
+        "url": "http://localhost:1313/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "http:\/\/localhost:1313\/",
+            "width":"32",
+            "height":"32"
+        }
+    },
+    "image": "http://localhost:1313/",
+    "url" : "http:\/\/localhost:1313\/2024\/count-progress-git\/",
+    "wordCount" : "166",
+    "genre" : [ "git" , "typst" , "bash" , "productivity" ],
+    "keywords" : [ "git" , "typst" , "bash" , "productivity" ]
+}
+</script>
+
+
+</head>
+<body>
+<main>
+      <header>
+    <nav>
+      
+   <ul>
+    
+    <li>
+      
+      
+      
+      
+      <a href="/" >about</a>
+    </li>
+  
+    <li>
+      
+      
+      
+      
+      <a href="/posts/" >index</a>
+    </li>
+  
+    <li>
+      
+      
+      
+      
+      <a href="/atom.xml" >rss</a>
+    </li>
+  
+   </ul>
+    </nav>
+  </header>
+    <hr>
+
+
+
+  <section>
+
+      
+      <h2 itemprop="name headline">Tracking Word Count Progress in Git</h2>
+      
+      
+
+      <p class="meta">
+
+        <time itemprop="datePublished" datetime="2024-09-05"> September 05, 2024</time> &bull;
+        <a href='/tags/git'>git</a>, <a href='/tags/typst'>typst</a>, <a href='/tags/bash'>bash</a>, <a href='/tags/productivity'>productivity</a>
+        
+             <span class="date-info italic"> <br> Edited on 05.09.2024</span>
+         
+        </p>
+
+
+      
+
+      <span itemprop="articleBody">
+      <p>I created a simple script to count word changes in my git repository. I&rsquo;m trying Typst now for writing an article in VSCode, and there&rsquo;s no good extension to quantify daily progress. This script looks at your commits, counts words added, deleted, and duplicated in the files of the extension by your choice (by default .typ and .md files). It shows a daily breakdown of writing progress.</p>
+<p>Got the idea from a <a href="//www.gijsvandam.nl/post/measuring-your-writing-progress-with-a-git-word-count/">Gijs van Dam&rsquo;s blog post</a> (who described logic behind  the word change calculation).  I adapted it by adding Typst and extending the way it display the output.  I add some additions like  handling the first commit: The script checks if it&rsquo;s dealing with the first commit in the repo, which doesn&rsquo;t have a parent to compare against and it stops.</p>
+<p>It&rsquo;s been helpful for tracking my word count (and writing it was a nice excuse to not writing the text  I supposed to write). Below you can find the gist with the latest version.</p>
+<script src="https://gist.github.com/danieltomasz/e3be94d7f03ade2eb030edf63920e95a.js"></script>
+
+
+      </span>
+
+
+    </section>
+    
+
+<footer>
+
+    
+    <script src="https://giscus.app/client.js"
+    data-repo="danieltomasz/danieltomasz.github.io"
+    data-repo-id=""
+    data-category="Comments"
+    data-category-id=""
+    data-mapping="title"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="light"
+    data-lang="en"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async>
+  </script>
+    
+
+    <nav>
+    <ul>
+        <li>
+        © 2026
+        </li>
+    </ul>
+    </nav>
+    
+</footer>
+
+  </main>
+</body>
+

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bash on Daniel Borek</title>
+    <link>http://localhost:1313/tags/bash/</link>
+    <description>Recent content in Bash on Daniel Borek</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 05 Sep 2024 22:23:00 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/bash/atom.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tracking Word Count Progress in Git</title>
+      <link>http://localhost:1313/2024/count-progress-git/</link>
+      <pubDate>Thu, 05 Sep 2024 01:00:00 -0700</pubDate>
+      <guid>http://localhost:1313/2024/count-progress-git/</guid>
+      <description>&lt;p&gt;I created a simple script to count word changes in my git repository. I&amp;rsquo;m trying Typst now for writing an article in VSCode, and there&amp;rsquo;s no good extension to quantify daily progress. This script looks at your commits, counts words added, deleted, and duplicated in  the files of  the extension by  your choice (by default .typ and .md files). It shows a daily breakdown of writing progress.&lt;/p&gt;&#xA;&lt;p&gt;Got the idea from a &lt;a href=&#34;//www.gijsvandam.nl/post/measuring-your-writing-progress-with-a-git-word-count/&#34;&gt;Gijs van Dam&amp;rsquo;s blog post &lt;/a&gt; (who described logic behind  the word change calculation).  I adapted it by adding Typst and extending the way it display the output.  I add some additions like  handling the first commit: The script checks if it&amp;rsquo;s dealing with the first commit in the repo, which doesn&amp;rsquo;t have a parent to compare against and it stops.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

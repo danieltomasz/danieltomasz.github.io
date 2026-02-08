@@ -3,13 +3,14 @@
         "**/.git": true,
         "**/.svn": true,
         "**/.hg": true,
-        "**/CVS": true,
         "**/.DS_Store": true,
         "**/Thumbs.db": true,
+        "**/CVS": true,
         ".git": true
     },
     "explorerExclude.backup": {},
     "yaml.schemas": {
         "https://json.schemastore.org/hugo.json": "file:///Users/daniel/PhD/thesis-vault/blog/.github/workflows/hugo.yaml"
-    }
+    },
+    "hide-files.files": []
 }

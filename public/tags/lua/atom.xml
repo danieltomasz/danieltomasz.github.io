@@ -6,14 +6,14 @@
     <description>Recent content in Lua on Daniel Borek</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 31 May 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 14 Jun 2024 01:51:24 +0200</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/lua/atom.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Using Wikilinks and Git/Obsidian Callouts in Quarto Markdown</title>
       <link>http://localhost:1313/2023/obsidian-quarto-callouts/</link>
       <pubDate>Wed, 31 May 2023 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/2023/obsidian-quarto-callouts/</guid>
-      <description>About Callouts Disclaimer: Previous version of this post was originally published as a public gist&#xA;Callouts are a great way to highlight important details in your text by adding boxes with icons. Many flavours of markdown support them (but might use different syntax).&#xA;Quarto supports 5 callout types:&#xA;note warning important tip caution. Each type has a different color and icon. You can see examples in the Quarto documentation.&#xA;The Problem To use callouts in Quarto markdown (qmd) files, you need to use Pandoc&amp;rsquo;s div syntax:</description>
+      <description>&lt;h1 id=&#34;about-callouts&#34;&gt;About Callouts&lt;/h1&gt;&#xA;&lt;p&gt;&lt;em&gt;Disclaimer: Previous version of this post was originally published as a &lt;a href=&#34;https://gist.github.com/danieltomasz/87b1321e23c045309d2571f525f856cf&#34;&gt;public gist&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;Callouts are a great way to highlight important details in your text by adding boxes with icons. Many flavours of markdown support them (but might use different syntax).&lt;/p&gt;&#xA;&lt;p&gt;Quarto supports 5 callout types:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;note&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;warning&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;important&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;tip&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;caution&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Each type has a different color and icon. You can see examples in the &lt;a href=&#34;https://quarto.org/docs/authoring/callouts.html&#34;&gt;Quarto documentation&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-problem&#34;&gt;The Problem&lt;/h2&gt;&#xA;&lt;p&gt;To use callouts in Quarto markdown (&lt;code&gt;qmd&lt;/code&gt;) files, you need to use Pandoc&amp;rsquo;s div syntax:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
