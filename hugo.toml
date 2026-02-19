@@ -26,20 +26,19 @@ enableEmoji =true
   buildFuture = true
   
 [params.giscus]
- repo="danieltomasz/danieltomasz.github.io"
- repo-id="MDEwOlJlcG9zaXRvcnkzMzM0MDUzMzY="
- category="Comments"
- category-id="DIC_kwDOE99cmM4CVDXo"
- mapping="title"
- strict="0"
- reactions-enabled="1"
- emit-metadata="1"
- input-position="bottom"
- theme="light"
- lang="en"
- loading="lazy"
- crossorigin="anonymous"
- reactionsEnabled = "1"
+  repo = "danieltomasz/danieltomasz.github.io"
+  repoID = "MDEwOlJlcG9zaXRvcnkzMzM0MDUzMzY="
+  category = "Comments"
+  categoryID = "DIC_kwDOE99cmM4CVDXo"
+  mapping = "title"
+  strict = "0"
+  reactionsEnabled = "1"
+  emitMetadata = "1"
+  inputPosition = "bottom"
+  theme = "light"
+  lang = "en"
+  loading = "lazy"
+  crossorigin = "anonymous"
 
 [params.assets]
     favicon = "img/favicon.ico"
