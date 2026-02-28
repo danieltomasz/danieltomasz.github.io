@@ -85,14 +85,25 @@ If you prefer manual config, add this to your `claude_desktop_config.json`:
 
 ## Setup for ChatGPT
 
-ChatGPT also supports MCP now, but requires a slightly different configuration:
+According to the MCP documentation, ChatGPT also supports MCP now, but the MCP requires a slightly different configuration:
 
 ```bash
-pip install git+https://github.com/54yyyu/zotero-mcp.git
+uv tool install zotero-mcp-server
 zotero-mcp setup --no-claude
 ```
 
 The `--no-claude` flag creates a standalone configuration optimized for ChatGPT's specific tool naming requirements.
+
+Other option is to use OpenAI codex directly with you installed MCP
+
+```bash
+codex mcp add zotero \
+  --env ZOTERO_LOCAL=true \
+  --env ZOTERO_EMBEDDING_MODEL=default \
+  -- /Users/daniel/.local/bin/zotero-mcp
+  ```
+
+And the just have conversation in termin in mode `/plan`
 
 ## Setup for Mistral Le Chat
 
