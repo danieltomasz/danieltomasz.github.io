@@ -18,9 +18,9 @@ Even with your own library as the source, the AI can still get creative with wha
 
 ## Cost and setup
 
-With Zotero MCP, the local part — indexing and searching your library (if you use open-source embeddings) — is completely free. What costs money is AI inference, meaning the chatbot subscription you use to actually have a conversation (Claude, ChatGPT, Mistral, etc.). Similarly, ZotSeek does the retrieval and semantic search part entirely for free and locally — after the initial indexing, it works without any additional computation; you only need to re-index when you add new PDFs to your library.
+With Zotero MCP, the local part — indexing and searching your library (if you use open-source embeddings) — is completely free. What costs money is AI inference, meaning the chatbot subscription you use to actually have a conversation (Claude, ChatGPT, Mistral, etc.). Similarly, ZotSeek does the retrieval and semantic search part entirely for free and locally — after the initial indexing, it works without any additional computation; you only need to re-index when you add new PDFs to your library (I wrote more details about the setup of it in the last sections of this blogposs)
 
-So in practice: the search/RAG layer is free, the chat layer requires a subscription. But many of you probably already have one — you'd just use tokens from your existing plan a bit faster.
+So in practice: the search/RAG layer is free, the chat layer requires a subscription or your local compute resources. But many of you probably already have one — you'd just use tokens from your existing plan a bit faster.
 
 Personally, I use Claude — the setup is the easiest. But I also wanted to test a European alternative, so I set it up with Mistral Le Chat as well. If you're a student, Mistral has a cheap subscription around €7. The quality is a bit below the latest biggest models from Anthropic or OpenAI, but you can still get a lot of value from it. The Mistral setup is more convoluted though — I figured it out together with Gemini, so I put more details in that section below.
 
@@ -56,16 +56,39 @@ _Note:_ You can either [install uv](https://docs.astral.sh/uv/getting-started/in
 
 ```bash
 uv tool install zotero-mcp-server
+zotero-mcp setup  # Auto-configure (Claude Desktop supported)
 ```
+
+During the setup you will have occasion to  configure the semantic search.
+After setup, initialize your search database:
+
+```bash
+# Build with full-text extraction (slower, more comprehensive)
+zotero-mcp update-db --fulltext
+```
+
+## Optional: Enable Semantic Search
+
+For AI-powered similarity search across your library (beyond basic keyword matching):
+
+```bash
+zotero-mcp setup --semantic-config-only
+zotero-mcp update-db --fulltext
+```
+
+The `--fulltext` flag indexes the full text of your PDFs, which is slower but gives much better results. Without it, only metadata is indexed.
+
+For more details and more options check the github repository of the MCP and [semantic search section](https://github.com/54yyyu/zotero-mcp#-semantic-search).
 
 ## Setup for Claude Desktop (recommended)
 
-The simplest path. Just run:
+When you installed and have run  the command
 
 ```bash
 zotero-mcp setup  # Auto-configure (Claude Desktop supported)
 ```
 
+you've alreade done that.
 This auto-configures your `claude_desktop_config.json`. Restart Claude Desktop and you're done — Zotero tools will appear in your conversation.
 
 If you prefer manual config, add this to your `claude_desktop_config.json`:
@@ -107,13 +130,33 @@ And the just have conversation in termin in mode `/plan`
 
 ## Setup for Mistral Le Chat
 
-Mistral Le Chat supports MCP via remote connectors, which makes the setup more involved — you need to expose your local MCP server through a secure tunnel using `ngrok`.
+Mistral Le Chat supports MCP via remote connectors, which means you need to expose your local MCP server through a secure tunnel. This section covers both the one-time setup and the daily workflow.
 
-You will additionally need **ngrok** installed and authenticated.
+**The mental model**: Your Zotero library is a locked room. The MCP Server is the librarian inside. ngrok punches a temporary (or permanent) tunnel through your firewall so Mistral can talk to the librarian.
+
+You will need ngrok installed and authenticated — we cover that first.
+
+### Step 0: Install ngrok and Claim Your Permanent Address
+
+By default, ngrok gives you a random address that changes every time you restart it, which means re-configuring Mistral every day. To avoid this, claim one free permanent domain — you only do this once.
+
+Install ngrok (using the same brew tool as before):
+
+```bash
+brew install --cask ngrok
+```
+
+Connect your account: Go to ngrok.com, sign up for a free account, and paste the auth command it gives you:
+
+```bash
+ngrok config add-authtoken YOUR_PERSONAL_TOKEN_HERE
+```
+
+**Optional — Claim a permanent domain:** By default, ngrok gives you a random URL that changes every time you restart it, which means updating Mistral's connector every day. To avoid this, log into your [ngrok Dashboard](https://dashboard.ngrok.com/cloud-edge/domains), click **"Create Domain"**, and copy the free address it gives you (e.g. `fancy-shrimp-1.ngrok-free.app`). This becomes your permanent "phone number."
 
 ### Step 1: Start the MCP Server
 
-Open your terminal and run the server in SSE (Server-Sent Events) mode:
+TThis section assumes you have already installed and configured `zotero-mcp` on your computer using previous step. Open your terminal and run the server in SSE mode:
 
 ```bash
 uv tool run zotero-mcp serve --transport sse --port 8000
@@ -123,25 +166,31 @@ Keep this terminal open.
 
 ### Step 2: Open a Secure Tunnel
 
-Open a **new** terminal tab. Protect the tunnel with a password so the public cannot access your library.
+Open a **new** terminal tab and run:
+
+```bash
+ngrok http 8000 --basic-auth='admin:your-password'
+```
 
 _(Use **single quotes** `'` around the credentials to prevent Zsh errors)_
 
-```bash
-ngrok http 8000 --basic-auth='admin:secret'
-```
+You will see a deprecation warning — this is expected, the flag still works. Copy the **Forwarding URL** from the output (e.g. `https://xyz-123.ngrok-free.app`).
 
-Replace `admin:secret` with your own username:password if desired. **Copy the Forwarding URL** from the screen (e.g., `https://xyz-123.ngrok-free.app`).
+If you claimed a permanent domain in Step 0, use instead:
+
+```bash
+ngrok http 8000 --url=YOUR-DOMAIN.ngrok-free.app --basic-auth='admin:your-password'
+```
 
 ### Step 3: Get Your Auth Token
 
-Mistral needs your password encoded in Base64. Run this in a **third** terminal tab:
+Mistral needs your credentials encoded in Base64. Run this in a **third** terminal tab:
 
 ```bash
-echo -n 'admin:secret' | base64
+echo -n 'admin:your-password' | base64
 ```
 
-**Output Example:** `YWRtaW46c2VjcmV0` — copy the string from your console.
+Copy the output string (e.g. `YWRtaW46eW91ci1wYXNzd29yZA==`).
 
 ### Step 4: Configure Mistral Le Chat
 
@@ -157,24 +206,23 @@ Go to [Mistral Le Chat](https://chat.mistral.ai/) > **Connectors** (plug icon) >
 
 Click **Create**.
 
+### Daily Workflow
+
+Every time you want to chat with your papers:
+
+1. Open Terminal → run the **MCP Server** command (Step 1).
+2. Open a second tab → run the **ngrok** command (Step 2).
+3. Open Mistral and start chatting.
+
+If you set up a permanent domain, you never have to touch the Mistral connector again. If not, you will need to repeat Steps 3 and 4 each time your ngrok URL changes.
+
 ### Troubleshooting (Mistral)
 
 - **"404 Not Found"** — You forgot to add `/sse` to the end of the URL.
-- **"401 Unauthorized"** — The Base64 code is wrong, or you typed "Basic" twice (once in the dropdown, once in the text box).
+- **"401 Unauthorized"** — The Base64 string doesn't match the credentials you passed to `--basic-auth`. Re-run the `echo` command and paste the fresh output. Or you typed "Basic" twice (once in the dropdown, once in the text box).
 - **"MCP connection requires additional information..."** — Usually a malformed URL or header. Try the nuclear option below.
 
 **The "Nuclear Option":** If the dropdown menus are fighting you, bypass them by putting the credentials directly in the URL. Set Authentication to **None** and URL to: `https://admin:secret@your-ngrok-url.ngrok-free.app/sse`
-
-## Optional: Enable Semantic Search
-
-For AI-powered similarity search across your library (beyond basic keyword matching):
-
-```bash
-zotero-mcp setup --semantic-config-only
-zotero-mcp update-db --fulltext
-```
-
-The `--fulltext` flag indexes the full text of your PDFs, which is slower but gives much better results. Without it, only metadata is indexed.
 
 ### Bonus: How to use ZotSeek directly in Zotero?
 
