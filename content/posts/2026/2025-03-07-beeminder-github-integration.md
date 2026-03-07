@@ -87,7 +87,7 @@ That is all the plumbing. Every time you push, GitHub Actions runs the workflow,
 
 ## A small note
 
-This counts commits in the push payload, not some mystical global GitHub essence. For normal use that is fine. If you work across several repositories, this gives you one combined Beeminder graph without depending on the old GitHub integration.
+This counts commits in the push payload. For normal use that is fine. If you work across several repositories, this gives you one combined Beeminder graph without depending on the old GitHub integration.
 
 If you only want to count pushes on `main`, change this:
 
@@ -97,3 +97,51 @@ on:
     branches:
       - main
 ```
+
+## Option 2: Count only your own commits
+
+If you work in shared repositories, you may want to count only commits authored by you. In that case, you can filter commits by the email stored in your Git metadata. I have not battle-tested this setup yet in a repository with more active contributors, so treat it as a proposition of a workaround rather than something fully verified under shared-repo conditions.
+
+```yaml
+name: Send my commits to Beeminder
+
+on:
+  push:
+
+jobs:
+  beemind:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Send only my commit count to Beeminder
+        env:
+          AUTHOR_EMAIL: your.email@example.com
+          BEFORE: ${{ github.event.before }}
+          AFTER: ${{ github.event.after }}
+          BEEMINDER_USERNAME: ${{ secrets.BEEMINDER_USERNAME }}
+          BEEMINDER_TOKEN: ${{ secrets.BEEMINDER_TOKEN }}
+          BEEMINDER_GOAL: ${{ secrets.BEEMINDER_GOAL }}
+          REPO: ${{ github.repository }}
+          SHA: ${{ github.sha }}
+          REF: ${{ github.ref }}
+        run: |
+          count=$(git log --format='%ae' "${BEFORE}..${AFTER}" \
+            | awk -v author="$AUTHOR_EMAIL" '$0 == author {c++} END {print c+0}')
+
+          if [ "$count" -eq 0 ]; then
+            echo "No matching authored commits to send"
+            exit 0
+          fi
+
+          curl -sS -X POST "https://www.beeminder.com/api/v1/users/${BEEMINDER_USERNAME}/goals/${BEEMINDER_GOAL}/datapoints.json" \
+            -d "auth_token=${BEEMINDER_TOKEN}" \
+            -d "value=${count}" \
+            -d "comment=${REPO} ${REF} ${SHA}" \
+            -d "requestid=${REPO}-${SHA}"
+```
+
+To find the email you should put in `AUTHOR_EMAIL`, check the one Git actually uses in your commits rather than only the one stored in your general config. In a repository, you can run `git log -1 --format='%ae'` to print the author email from your most recent commit, which is usually the safest value to use here. You can also inspect your configured email with `git config user.email` for the current repository or `git config --global user.email` for your global Git setup.
