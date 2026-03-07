@@ -16,7 +16,7 @@ There is a risk of chatbots hallucinating when you work in research — and one 
 
 Even with your own library as the source, the AI can still get creative with what it attributes to your papers — it connects things very well, sometimes too well, adding claims that are only loosely present in the original text. Please read carefully and verify any 'discoveries' made by your AI companion :)
 
-## Cost and setup
+## What is free, what costs money
 
 With Zotero MCP, the local part — indexing and searching your library (if you use open-source embeddings) — is completely free. What costs money is AI inference, meaning the chatbot subscription you use to actually have a conversation (Claude, ChatGPT, Mistral, etc.). Similarly, ZotSeek does the retrieval and semantic search part entirely for free and locally — after the initial indexing, it works without any additional computation; you only need to re-index when you add new PDFs to your library (I wrote more details about the setup of it in the last sections of this blogposs)
 
@@ -224,7 +224,7 @@ If you set up a permanent domain, you never have to touch the Mistral connector 
 
 **The "Nuclear Option":** If the dropdown menus are fighting you, bypass them by putting the credentials directly in the URL. Set Authentication to **None** and URL to: `https://admin:secret@your-ngrok-url.ngrok-free.app/sse`
 
-### Bonus: How to use ZotSeek directly in Zotero?
+## Bonus: How to use ZotSeek directly in Zotero?
 
 ZotSeek uses semantic search, which means you can find similar papers by meaning, not just keywords. It is 100% local, and no data leaves your machine.
 
@@ -244,3 +244,46 @@ I advise first picking the `Abstract only` option for indexing, and automaticall
 You can also run the "Update index" action (located at the bottom of the settings pane; you will probably need to scroll to it) to index unindexed items in your library.
 
 I did indexing in abstract-only mode — 1 chunk per paper — and 6k papers used 20 MB of disk space and took a bit less than 1 hour to index.
+
+## Other tools worth checking
+
+### MCP for Various scientific engines  search
+
+If you already installed uv for Zotero MCP, another useful companion tool is paper-find-mcp. Instead of searching your own Zotero library, it lets your AI assistant search across external academic sources such as arXiv, PubMed, bioRxiv, medRxiv, IACR, Google Scholar et cetera.
+
+It is available on [PyPI](https://pypi.org/project/paper-find-mcp/) as paper-find-mcp, and the project documents both uv/pip installation and Claude Desktop configuration via an MCP server entry in claude_desktop_config.json.
+
+If you already installed uv to use with Zotero mcp in previous step,  you can easily install this package via:
+
+```bash
+uv pip install paper-find-mcp
+```
+
+After installing, you  only need to add new mcp defnition to claude config file (the example below), pleasebe careful with correctly closing json brackets.
+
+```bash
+open ~/Library/Application Support/Claude/claude_desktop_config.json
+```
+
+```json
+{
+  "mcpServers": {
+    "paper_find_server": {
+      "command": "uvx",
+      "args": ["paper-find-mcp"],
+      "env": {
+        "SEMANTIC_SCHOLAR_API_KEY": "",
+        "CROSSREF_MAILTO": "your_email@example.com",
+        "NCBI_API_KEY": "",
+        "PAPER_DOWNLOAD_PATH": "~/paper_downloads"
+      }
+    }
+  },
+    "preferences": {
+      "chromeExtensionEnabled": false,
+      "coworkScheduledTasksEnabled": true,
+      "sidebarMode": "chat",
+      "coworkWebSearchEnabled": true
+    }
+  }
+  ```
