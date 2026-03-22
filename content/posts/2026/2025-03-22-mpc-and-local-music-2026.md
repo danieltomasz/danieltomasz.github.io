@@ -1,6 +1,6 @@
 ---
 title: "Listening to Local Music with MPD on Mac in 2026"
-date: 2026-03-07
+date: 2026-03-22
 tags: ["mpd", "music"]
 draft: false
 ---
