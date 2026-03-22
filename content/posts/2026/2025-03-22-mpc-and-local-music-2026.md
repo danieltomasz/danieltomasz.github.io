@@ -20,7 +20,7 @@ I was a long-time ago a Foobar2000 user, but a while back I switched to MPD and 
 
  MPD is a solution for that, and its biggest advantage is its extendability via players and the fact that it does not get in your way when you need something minimal.  Rigelian is really nice, but I often prefer just to listen to music in my terminal. Sometimes I still use ncmpcpp as a command-line client, but recently I switched to `rmpc`. It is like `ncmpcpp`, but it offers a nice cover view out of the box, at least in the `ghostty` terminal. The latest release from February 2026 has a bug preventing it from displaying covers in `iTerm`, though this was fixed on `main` and has not yet been released. I tried to make covers available in `ncmpcpp`, but on Mac it seems to be a bit harder than on Linux, so I gave up :)
 
-TTo keep my metadata clean and download covers I am using [Mp3tag](https://www.mp3tag.de/en/).
+To keep my metadata clean and download covers I am using [Mp3tag](https://www.mp3tag.de/en/).
 
 P.S. I still scrobble music on Last.fm, and many of my friends do too. I have been doing this since 2008, although I created a new account in 2011 and had a few years off from more active music listening practices in between. I remember the time when Last.fm felt more like a social network; now it is only a shadow of its former glory. Call me old-school, but I really enjoy documenting my listening practices, not only on Last.fm but also on Rate Your Music. It is also still a great way to peek at what your friends are listening to and what albums to try next, especially lists on Rate Your Music(the lists were hot there long before Letterboxd). Scrobbling still gives a kind of continuity to my listening, even when the software around it changes.
 
@@ -66,7 +66,7 @@ audio_output {
 ```
 
 ```bash
-
+# part of .zshrc
 album_cache_file="$HOME/.cache/mpd-albums.tsv"
 album_history_file="$HOME/.cache/mpd-last-album.tsv"
 
