@@ -106,6 +106,24 @@ If you prefer manual config, add this to your `claude_desktop_config.json`:
 }
 ```
 
+## Qwen Desktop/Studio
+
+Assuming you have uv installed and configure zotero-mcp in other steps, add this directly to the qwen app (tested on MacOS only)
+
+```json
+{
+  "mcpServers": {
+    "zotero": {
+      "command": "uvx",
+      "args": ["zotero-mcp"],
+      "env": {
+        "ZOTERO_LOCAL": "true"
+      }
+    }
+  }
+}
+```
+
 ## Setup for ChatGPT
 
 According to the MCP documentation, ChatGPT also supports MCP now, but the MCP requires a slightly different configuration:
