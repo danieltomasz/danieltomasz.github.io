@@ -109,7 +109,7 @@ If you prefer manual config, add this to your `claude_desktop_config.json`:
 Setup for Claude code (assuming mcp server is instlled already):
 
 ```bash
-claude mcp add --scope user zotero /Users/daniel/.local/bin/zotero-mcp \
+claude mcp add --scope user zotero ~/.local/bin/zotero-mcp \
   -e ZOTERO_LOCAL=true \
   -e ZOTERO_EMBEDDING_MODEL=default
 ```
@@ -121,6 +121,7 @@ claude mcp list
 ```
 
 In a fresh session (or after /mcp reconnect), the Zotero tools become available.
+In case of issues use absolute path to your user instead of `~`.
 
 ## Qwen Desktop/Studio
 
